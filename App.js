@@ -6,10 +6,12 @@ import store from './src/redux/store';
 
 import Auth from './src/screens/Auth';
 
+import colors from './src/utils/colors';
+
 const App = () => {
   return (
     <Provider store={store}>
-      <StatusBar barStyle="dark-content" backgroundColor="#00A79B" />
+      <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
       <SafeAreaView>
         <Auth />
       </SafeAreaView>

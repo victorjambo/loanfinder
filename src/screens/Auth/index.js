@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {
-  StyleSheet,
   ScrollView,
   View,
   Text,
@@ -10,14 +9,13 @@ import {
   Animated,
   TouchableOpacity,
   LayoutAnimation,
-  Dimensions,
 } from 'react-native';
 import {Input, Button} from 'react-native-elements';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import img from '../../assets/09.png';
-
-const {width} = Dimensions.get('window');
+import img from '../../../assets/09.png';
+import styles from './Auth.styles';
+import colors from '../../utils/colors';
 
 const REGISTER_HEIGHT = 290;
 const LOGIN_HEIGHT = 437;
@@ -157,115 +155,15 @@ const Auth = () => {
           style={styles.skip}
           onPress={() => console.log('SKIP')}>
           <Text style={styles.skipText}>Skip </Text>
-          <FontAwesome name="chevron-right" size={14} color="#00B4AC" />
+          <FontAwesome
+            name="chevron-right"
+            size={14}
+            color={colors.primaryText}
+          />
         </TouchableOpacity>
       </ScrollView>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  skip: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    padding: 25,
-    alignItems: 'center',
-  },
-  skipText: {
-    fontSize: 16,
-    color: Colors.black,
-  },
-  img: {
-    position: 'relative',
-    height: '100%',
-  },
-  header: {
-    padding: 34,
-  },
-  title: {
-    fontSize: 34,
-    fontWeight: '800',
-  },
-  subTitle: {
-    marginTop: 8,
-    fontSize: 20,
-    fontWeight: '400',
-  },
-  white: {
-    color: Colors.white,
-  },
-  imgBg: {
-    flex: 1,
-    justifyContent: 'flex-end',
-  },
-  imgBgBack: {
-    flexDirection: 'row',
-    paddingBottom: 80,
-    alignItems: 'center',
-  },
-  imgBgBackText: {
-    color: Colors.white,
-    fontSize: 20,
-  },
-  line: {
-    borderBottomColor: Colors.white,
-    borderBottomWidth: 4,
-    marginBottom: 8,
-    width: 90,
-    borderRadius: 100 / 2,
-  },
-  section: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  middle: {
-    flex: 2,
-    justifyContent: 'flex-start',
-    alignSelf: 'stretch',
-  },
-  bottom: {
-    flex: 1,
-    alignSelf: 'stretch',
-    margin: 20,
-  },
-  scrollView: {
-    backgroundColor: Colors.white,
-    height: '100%',
-  },
-  body: {
-    backgroundColor: Colors.white,
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    padding: 20,
-  },
-  sectionContainer: {
-    margin: 32,
-    paddingHorizontal: 24,
-  },
-  switcherContainer: {
-    paddingTop: 20,
-    flexDirection: 'row',
-  },
-  switcher: {
-    color: '#00B4AC',
-    marginLeft: 5,
-    fontWeight: 'bold',
-  },
-  btn: {
-    alignSelf: 'stretch',
-    marginBottom: 10,
-    backgroundColor: '#00A79B',
-    width: width / 2,
-  },
-  inputContainer: {
-    paddingRight: 15,
-    paddingLeft: 15,
-    paddingBottom: 15,
-  },
-  input: {
-    padding: 15,
-  },
-});
 
 export default Auth;
