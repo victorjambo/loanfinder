@@ -12,7 +12,7 @@ import {
   LayoutAnimation,
   Dimensions,
 } from 'react-native';
-import {Input, Button, CheckBox} from 'react-native-elements';
+import {Input, Button} from 'react-native-elements';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import img from '../../assets/09.png';
@@ -27,9 +27,7 @@ const Auth = () => {
   const LOGIN = 'LOGIN';
   const anim = new Animated.Value(0);
   const [form, setForm] = useState(LOGIN);
-  const [check, setCheck] = useState(false);
   const isRegister = form === REGISTER;
-  const [clickEvent, setclickEvent] = useState('');
   const [heightAnim] = useState(new Animated.Value(LOGIN_HEIGHT));
 
   useEffect(() => {
@@ -42,9 +40,6 @@ const Auth = () => {
   });
 
   const fadeIn = (delay, from = 0) => {
-    if (clickEvent) {
-      return;
-    }
     return {
       opacity: anim.interpolate({
         inputRange: [delay, Math.min(delay + 500, 3000)],
@@ -131,18 +126,6 @@ const Auth = () => {
 
             <Animated.View
               style={[styles.section, styles.bottom, fadeIn(700, -20)]}>
-              {isRegister && (
-                <CheckBox
-                  title="I have accepted the Terms & Condition"
-                  checked={check}
-                  containerStyle={styles.checkBox}
-                  onPress={() => {
-                    setclickEvent('checkbox');
-                    setCheck(!check);
-                  }}
-                />
-              )}
-
               <Button
                 buttonStyle={styles.btn}
                 title={form === LOGIN ? LOGIN : REGISTER}
@@ -223,9 +206,6 @@ const styles = StyleSheet.create({
   imgBgBackText: {
     color: Colors.white,
     fontSize: 20,
-  },
-  checkBox: {
-    marginBottom: 24,
   },
   line: {
     borderBottomColor: Colors.white,
