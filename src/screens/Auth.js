@@ -81,7 +81,7 @@ const Auth = () => {
                     LayoutAnimation.spring();
                     setForm(isRegister ? LOGIN : REGISTER);
                   }}>
-                  <FontAwesome name="chevron-left" size={24} color="white" />
+                  <FontAwesome name="chevron-left" size={20} color="white" />
                   <Text style={styles.imgBgBackText}> Back</Text>
                 </TouchableOpacity>
               )}
@@ -170,12 +170,28 @@ const Auth = () => {
             </Animated.View>
           </Animated.View>
         </View>
+        <TouchableOpacity
+          style={styles.skip}
+          onPress={() => console.log('SKIP')}>
+          <Text style={styles.skipText}>Skip </Text>
+          <FontAwesome name="chevron-right" size={14} color="#00B4AC" />
+        </TouchableOpacity>
       </ScrollView>
     </>
   );
 };
 
 const styles = StyleSheet.create({
+  skip: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    padding: 25,
+    alignItems: 'center',
+  },
+  skipText: {
+    fontSize: 16,
+    color: Colors.black,
+  },
   img: {
     position: 'relative',
     height: '100%',
@@ -202,11 +218,11 @@ const styles = StyleSheet.create({
   imgBgBack: {
     flexDirection: 'row',
     paddingBottom: 80,
+    alignItems: 'center',
   },
   imgBgBackText: {
     color: Colors.white,
     fontSize: 20,
-    marginTop: -2,
   },
   checkBox: {
     marginBottom: 24,
@@ -235,6 +251,7 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     backgroundColor: Colors.white,
+    height: '100%',
   },
   body: {
     backgroundColor: Colors.white,
