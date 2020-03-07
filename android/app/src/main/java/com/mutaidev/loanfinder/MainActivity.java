@@ -1,4 +1,4 @@
-package com.loanfinder;
+package com.mutaidev.loanfinder;
 
 import com.facebook.react.ReactActivity;
 

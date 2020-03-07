@@ -1,4 +1,4 @@
-package com.loanfinder;
+package com.mutaidev.loanfinder;
 
 import android.app.Application;
 import android.content.Context;
