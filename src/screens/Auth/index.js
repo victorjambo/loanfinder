@@ -33,15 +33,14 @@ const Auth = ({login}) => {
   const [email, setEmail] = useState(INITIAL_VALUE);
   const [username, setUsername] = useState(INITIAL_VALUE);
   const [password, setPassword] = useState(INITIAL_VALUE);
-  const [heightAnim] = useState(new Animated.Value(LOGIN_HEIGHT));
+  const [height] = useState(new Animated.Value(LOGIN_HEIGHT));
 
   const isRegister = form === REGISTER;
 
   useEffect(() => {
-    const height = isRegister ? REGISTER_HEIGHT : LOGIN_HEIGHT;
     Animated.timing(anim, {toValue: 3000, duration: 2000}).start();
-    Animated.timing(heightAnim, {
-      toValue: height,
+    Animated.timing(height, {
+      toValue: isRegister ? REGISTER_HEIGHT : LOGIN_HEIGHT,
       duration: 500,
     }).start();
   });
@@ -51,7 +50,7 @@ const Auth = ({login}) => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={styles.scrollView}>
-        <Animated.View style={{height: heightAnim}}>
+        <Animated.View style={{height}}>
           <ImageBackgroundContainer isRegister={isRegister} setForm={setForm} />
         </Animated.View>
 
