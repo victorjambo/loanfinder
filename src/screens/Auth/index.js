@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {
@@ -12,15 +13,18 @@ import {
 } from 'react-native';
 import {Input, Button} from 'react-native-elements';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {bindActionCreators} from 'redux';
 
 import img from '../../../assets/09.png';
 import styles from './Auth.styles';
 import colors from '../../utils/colors';
 
+import {loginRequest} from '../../redux/actions';
+
 const REGISTER_HEIGHT = 290;
 const LOGIN_HEIGHT = 437;
 
-const Auth = () => {
+const Auth = ({navigation, login}) => {
   const REGISTER = 'REGISTER';
   const LOGIN = 'LOGIN';
   const anim = new Animated.Value(0);
@@ -127,7 +131,7 @@ const Auth = () => {
               <Button
                 buttonStyle={styles.btn}
                 title={form === LOGIN ? LOGIN : REGISTER}
-                onPress={() => console.log(form)}
+                onPress={login}
               />
 
               <TouchableOpacity
@@ -166,4 +170,15 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+const mapStateToProps = state => ({
+  auth: state.auth,
+});
+
+const mapDispatchToProps = dispatch => ({
+  login: bindActionCreators(loginRequest, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Auth);

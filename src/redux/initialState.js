@@ -7,4 +7,7 @@ export default {
   connection: {
     isConnected: true,
   },
+  auth: {
+    isLoggedIn: false,
+  },
 };
