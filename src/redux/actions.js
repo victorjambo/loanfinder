@@ -1,4 +1,5 @@
 import NetInfo from '@react-native-community/netinfo';
+import auth from '@react-native-firebase/auth';
 
 import {HIDE_BANNER, NETWORK, LOGIN_REQUEST} from './consts';
 
@@ -15,12 +16,18 @@ export const checkConnection = () => {
   };
 };
 
-export const loginRequest = () => ({
-  type: LOGIN_REQUEST,
-  payload: true,
-});
-
 export const hideBanner = () => ({
   type: HIDE_BANNER,
   payload: false,
 });
+
+export const loginSuccess = () => ({
+  type: LOGIN_REQUEST,
+  payload: true,
+});
+
+export const loginRequest = () => {
+  return dispatch => {
+    dispatch(loginSuccess);
+  };
+};

@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "63604553901",
+    "firebase_url": "https://mutaidev-21e91.firebaseio.com",
+    "project_id": "mutaidev-21e91",
+    "storage_bucket": "mutaidev-21e91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63604553901:android:7afeb30a1452148ef4ee24",
+        "android_client_info": {
+          "package_name": "com.loanfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63604553901-goh9urt9jluqojvu64486tf1trvr1jue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDHAjnGxE_N7DW6JXbbE9iMpm7jAGjwio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63604553901-goh9urt9jluqojvu64486tf1trvr1jue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63604553901:android:8429963a80193195f4ee24",
+        "android_client_info": {
+          "package_name": "com.mutaidev.jokes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63604553901-goh9urt9jluqojvu64486tf1trvr1jue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDHAjnGxE_N7DW6JXbbE9iMpm7jAGjwio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63604553901-goh9urt9jluqojvu64486tf1trvr1jue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63604553901:android:5a57c90c35e311dff4ee24",
+        "android_client_info": {
+          "package_name": "com.mutaidev.stack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63604553901-h618rs68pfl0u6m6adp6mar3r79v3bf0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mutaidev.stack",
+            "certificate_hash": "640255a855821e167c9c890bac1b42a52e2739f7"
+          }
+        },
+        {
+          "client_id": "63604553901-goh9urt9jluqojvu64486tf1trvr1jue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDHAjnGxE_N7DW6JXbbE9iMpm7jAGjwio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63604553901-goh9urt9jluqojvu64486tf1trvr1jue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

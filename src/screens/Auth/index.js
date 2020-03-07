@@ -1,12 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {
   ScrollView,
   View,
   Text,
-  ImageBackground,
   Animated,
   TouchableOpacity,
   LayoutAnimation,
@@ -15,22 +13,29 @@ import {Input, Button} from 'react-native-elements';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {bindActionCreators} from 'redux';
 
-import img from '../../../assets/09.png';
-import styles from './Auth.styles';
+import styles from './styles';
 import colors from '../../utils/colors';
 
 import {loginRequest} from '../../redux/actions';
+import ImageBackgroundContainer from './ImageBackgroundContainer';
+import SkipContainer from './SkipContainer';
 
 const REGISTER_HEIGHT = 290;
 const LOGIN_HEIGHT = 437;
+const INITIAL_VALUE = '';
+const REGISTER = 'REGISTER';
+const LOGIN = 'LOGIN';
 
-const Auth = ({navigation, login}) => {
-  const REGISTER = 'REGISTER';
-  const LOGIN = 'LOGIN';
+const Auth = ({login}) => {
   const anim = new Animated.Value(0);
+
   const [form, setForm] = useState(LOGIN);
-  const isRegister = form === REGISTER;
+  const [email, setEmail] = useState(INITIAL_VALUE);
+  const [username, setUsername] = useState(INITIAL_VALUE);
+  const [password, setPassword] = useState(INITIAL_VALUE);
   const [heightAnim] = useState(new Animated.Value(LOGIN_HEIGHT));
+
+  const isRegister = form === REGISTER;
 
   useEffect(() => {
     const height = isRegister ? REGISTER_HEIGHT : LOGIN_HEIGHT;
@@ -41,71 +46,24 @@ const Auth = ({navigation, login}) => {
     }).start();
   });
 
-  const fadeIn = (delay, from = 0) => {
-    return {
-      opacity: anim.interpolate({
-        inputRange: [delay, Math.min(delay + 500, 3000)],
-        outputRange: [0, 1],
-        extrapolate: 'clamp',
-      }),
-      transform: [
-        {
-          translateY: anim.interpolate({
-            inputRange: [delay, Math.min(delay + 500, 3000)],
-            outputRange: [from, 0],
-            extrapolate: 'clamp',
-          }),
-        },
-      ],
-    };
-  };
-
   return (
     <>
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={styles.scrollView}>
         <Animated.View style={{height: heightAnim}}>
-          <ImageBackground
-            resizeMode="cover"
-            source={img}
-            style={[styles.img, styles.header]}>
-            <View style={styles.imgBg}>
-              {isRegister && (
-                <TouchableOpacity
-                  style={styles.imgBgBack}
-                  onPress={() => {
-                    LayoutAnimation.spring();
-                    setForm(isRegister ? LOGIN : REGISTER);
-                  }}>
-                  <FontAwesome name="chevron-left" size={20} color="white" />
-                  <Text style={styles.imgBgBackText}> Back</Text>
-                </TouchableOpacity>
-              )}
-
-              <View style={styles.line} />
-              <Text style={[styles.title, styles.white]}>
-                {isRegister ? 'Create Account' : 'Welcome back'}
-              </Text>
-              {!isRegister && (
-                <View>
-                  <Text style={[styles.subTitle, styles.white]}>
-                    to Loan Finder
-                  </Text>
-                </View>
-              )}
-            </View>
-          </ImageBackground>
+          <ImageBackgroundContainer isRegister={isRegister} setForm={setForm} />
         </Animated.View>
 
         <View style={styles.body}>
-          <Animated.View
-            style={[styles.section, styles.middle, fadeIn(700, -20)]}>
+          <Animated.View style={[styles.section, styles.middle]}>
             <Input
               containerStyle={styles.inputContainer}
               inputStyle={styles.input}
               placeholder="Username"
-              leftIcon={<AntDesign name="user" size={24} color="#8E939C" />}
+              value={username}
+              onChangeText={setUsername}
+              leftIcon={<AntDesign name="user" size={24} color={colors.grey} />}
             />
 
             {isRegister && (
@@ -114,7 +72,11 @@ const Auth = ({navigation, login}) => {
                 inputStyle={styles.input}
                 placeholder="Email"
                 keyboardType="email-address"
-                leftIcon={<AntDesign name="mail" size={24} color="#8E939C" />}
+                value={email}
+                onChangeText={setEmail}
+                leftIcon={
+                  <AntDesign name="mail" size={24} color={colors.grey} />
+                }
               />
             )}
 
@@ -123,11 +85,14 @@ const Auth = ({navigation, login}) => {
               inputStyle={styles.input}
               placeholder="Password"
               secureTextEntry
-              leftIcon={<AntDesign name="lock1" size={24} color="#8E939C" />}
+              value={password}
+              onChangeText={setPassword}
+              leftIcon={
+                <AntDesign name="lock1" size={24} color={colors.grey} />
+              }
             />
 
-            <Animated.View
-              style={[styles.section, styles.bottom, fadeIn(700, -20)]}>
+            <Animated.View style={[styles.section, styles.bottom]}>
               <Button
                 buttonStyle={styles.btn}
                 title={form === LOGIN ? LOGIN : REGISTER}
@@ -155,16 +120,7 @@ const Auth = ({navigation, login}) => {
             </Animated.View>
           </Animated.View>
         </View>
-        <TouchableOpacity
-          style={styles.skip}
-          onPress={() => console.log('SKIP')}>
-          <Text style={styles.skipText}>Skip </Text>
-          <FontAwesome
-            name="chevron-right"
-            size={14}
-            color={colors.primaryText}
-          />
-        </TouchableOpacity>
+        <SkipContainer />
       </ScrollView>
     </>
   );
