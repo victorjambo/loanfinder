@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:63604553901:android:7afeb30a1452148ef4ee24",
         "android_client_info": {
-          "package_name": "com.mutaidev.loanfinder"
+          "package_name": "com.mutaidev.bbi"
         }
       },
       "oauth_client": [
@@ -40,6 +40,35 @@
         "mobilesdk_app_id": "1:63604553901:android:8429963a80193195f4ee24",
         "android_client_info": {
           "package_name": "com.mutaidev.jokes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63604553901-goh9urt9jluqojvu64486tf1trvr1jue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDHAjnGxE_N7DW6JXbbE9iMpm7jAGjwio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63604553901-goh9urt9jluqojvu64486tf1trvr1jue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63604553901:android:f5d3261e0530b9b6f4ee24",
+        "android_client_info": {
+          "package_name": "com.mutaidev.loanfinder"
         }
       },
       "oauth_client": [

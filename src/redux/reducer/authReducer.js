@@ -1,4 +1,9 @@
-import {LOGIN_REQUEST, LOGIN_SUCCESS} from '../consts';
+import {
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  SET_USER_INFO,
+  LOGOUT_SUCCESS,
+} from '../consts';
 import initialState from '../initialState';
 
 const authReducer = (state = initialState.auth, action) => {
@@ -12,6 +17,16 @@ const authReducer = (state = initialState.auth, action) => {
       return {
         ...state,
         isLoggedIn: true,
+      };
+    case SET_USER_INFO:
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case LOGOUT_SUCCESS:
+      return {
+        ...state,
+        logoutSuccess: true,
       };
     default:
       return state;

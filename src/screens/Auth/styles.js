@@ -106,6 +106,26 @@ const styles = StyleSheet.create({
   input: {
     padding: 15,
   },
+  googleContainer: {
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  googleLinesContainter: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingTop: 5,
+    paddingBottom: 5,
+  },
+  googleLine: {
+    borderBottomColor: colors.grey,
+    borderBottomWidth: 2,
+    width: width / 3,
+    borderRadius: 100 / 2,
+  },
+  googleButton: {
+    padding: 0,
+  },
 });
 
 export default styles;

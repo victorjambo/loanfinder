@@ -19,6 +19,7 @@ import colors from '../../utils/colors';
 import {loginRequest} from '../../redux/actions';
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
+import GoogleButton from './GoogleButton';
 
 const REGISTER_HEIGHT = 290;
 const LOGIN_HEIGHT = 437;
@@ -56,6 +57,7 @@ const Auth = ({login}) => {
 
         <View style={styles.body}>
           <Animated.View style={[styles.section, styles.middle]}>
+            <GoogleButton />
             <Input
               containerStyle={styles.inputContainer}
               inputStyle={styles.input}

@@ -9,7 +9,16 @@ export default {
   },
   auth: {
     isLoggedIn: false,
-    user: {},
+    user: {
+      displayName: null,
+      email: '',
+      emailVerified: false,
+      isAnonymous: false,
+      phoneNumber: null,
+      photoURL: null,
+      providerId: 'firebase',
+      uid: '',
+    },
   },
   appState: {
     showSpinner: false,
