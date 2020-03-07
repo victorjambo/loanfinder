@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import store from './src/redux/store';
 
 import Navigator from './src/Navigation';
+import OverlaySpinner from './src/Components/OverlaySpinner';
 
 import colors from './src/utils/colors';
 
@@ -14,6 +15,7 @@ const App = () => {
     <Provider store={store}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
       <Navigator />
+      <OverlaySpinner />
     </Provider>
   );
 };

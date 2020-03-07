@@ -11,4 +11,7 @@ export default {
     isLoggedIn: false,
     user: {},
   },
+  appState: {
+    showSpinner: false,
+  },
 };

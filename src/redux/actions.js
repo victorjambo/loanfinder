@@ -1,7 +1,13 @@
 import NetInfo from '@react-native-community/netinfo';
 import auth from '@react-native-firebase/auth';
 
-import {HIDE_BANNER, NETWORK, LOGIN_SUCCESS} from './consts';
+import {
+  HIDE_BANNER,
+  NETWORK,
+  LOGIN_SUCCESS,
+  SHOW_SPINNER,
+  HIDE_SPINNER,
+} from './consts';
 
 const setConnection = status => ({
   type: NETWORK,
@@ -30,3 +36,11 @@ export const loginRequest = () => {
     dispatch(loginSuccess());
   };
 };
+
+export const showSpinner = () => ({
+  type: SHOW_SPINNER,
+});
+
+export const hideSpinner = () => ({
+  type: HIDE_SPINNER,
+});
