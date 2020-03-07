@@ -3,6 +3,7 @@ import {
   LOGIN_SUCCESS,
   SET_USER_INFO,
   LOGOUT_SUCCESS,
+  SKIP_AUTH,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -27,6 +28,11 @@ const authReducer = (state = initialState.auth, action) => {
       return {
         ...state,
         logoutSuccess: true,
+      };
+    case SKIP_AUTH:
+      return {
+        ...state,
+        skipAuth: true,
       };
     default:
       return state;

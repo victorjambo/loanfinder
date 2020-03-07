@@ -7,7 +7,6 @@ import styles from './styles';
 import colors from '../../utils/colors';
 
 const OverlaySpinner = ({showSpinner}) => {
-  console.log(showSpinner);
   return (
     showSpinner && (
       <View style={styles.container}>

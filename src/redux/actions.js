@@ -10,6 +10,7 @@ import {
   SET_USER_INFO,
   ERRORS,
   LOGOUT_SUCCESS,
+  SKIP_AUTH,
 } from './consts';
 import {logError} from '../utils/analytics';
 
@@ -71,7 +72,7 @@ export const loginRequest = (email, password) => {
       .catch(error => {
         dispatch(hideSpinner());
         logError(ERRORS.ERROR_FIREBASE_LOGIN, error);
-        console.log(error);
+        console.log(ERRORS.ERROR_FIREBASE_LOGIN, error);
       });
   };
 };
@@ -90,7 +91,7 @@ export const loginAndSignupWithGoogleAuth = () => {
       .catch(error => {
         dispatch(hideSpinner());
         logError(ERRORS.ERROR_GOOGLE_AUTH, error);
-        console.log(error);
+        console.log(ERRORS.ERROR_GOOGLE_AUTH, error);
       });
   };
 };
@@ -114,4 +115,11 @@ export const logoutRequest = () => {
 
 export const logoutSuccess = () => ({
   type: LOGOUT_SUCCESS,
+});
+
+/**
+ * skip Auth
+ */
+export const skipAuth = () => ({
+  type: SKIP_AUTH,
 });

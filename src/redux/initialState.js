@@ -9,6 +9,7 @@ export default {
   },
   auth: {
     isLoggedIn: false,
+    skipAuth: false,
     user: {
       displayName: null,
       email: '',

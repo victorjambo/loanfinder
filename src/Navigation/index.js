@@ -8,7 +8,7 @@ import Tabs from './BottomTabNavigator';
 const Navigator = ({auth}) => {
   return (
     <NavigationContainer>
-      {auth.isLoggedIn ? <Tabs /> : <StackNavigator />}
+      {auth.isLoggedIn || auth.skipAuth ? <Tabs /> : <StackNavigator />}
     </NavigationContainer>
   );
 };

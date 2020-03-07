@@ -58,28 +58,28 @@ const Auth = ({login}) => {
         <View style={styles.body}>
           <Animated.View style={[styles.section, styles.middle]}>
             <GoogleButton />
-            <Input
-              containerStyle={styles.inputContainer}
-              inputStyle={styles.input}
-              placeholder="Username"
-              value={username}
-              onChangeText={setUsername}
-              leftIcon={<AntDesign name="user" size={24} color={colors.grey} />}
-            />
-
             {isRegister && (
               <Input
                 containerStyle={styles.inputContainer}
                 inputStyle={styles.input}
-                placeholder="Email"
-                keyboardType="email-address"
-                value={email}
-                onChangeText={setEmail}
+                placeholder="Username"
+                value={username}
+                onChangeText={setUsername}
                 leftIcon={
-                  <AntDesign name="mail" size={24} color={colors.grey} />
+                  <AntDesign name="user" size={24} color={colors.grey} />
                 }
               />
             )}
+
+            <Input
+              containerStyle={styles.inputContainer}
+              inputStyle={styles.input}
+              placeholder="Email"
+              keyboardType="email-address"
+              value={email}
+              onChangeText={setEmail}
+              leftIcon={<AntDesign name="mail" size={24} color={colors.grey} />}
+            />
 
             <Input
               containerStyle={styles.inputContainer}
@@ -97,7 +97,7 @@ const Auth = ({login}) => {
               <Button
                 buttonStyle={styles.btn}
                 title={form === LOGIN ? LOGIN : REGISTER}
-                onPress={login}
+                onPress={() => login(email, password)}
               />
 
               <TouchableOpacity
