@@ -6,7 +6,6 @@ import StackNavigator from './StackNavigator';
 import Tabs from './BottomTabNavigator';
 
 const Navigator = ({auth}) => {
-  console.log('fe', auth);
   return (
     <NavigationContainer>
       {auth.isLoggedIn ? <Tabs /> : <StackNavigator />}
