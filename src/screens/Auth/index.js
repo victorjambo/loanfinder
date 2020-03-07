@@ -20,12 +20,18 @@ import {loginRequest} from '../../redux/actions';
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
 import GoogleButton from './GoogleButton';
+import validateInput from '../../utils/validator';
 
 const REGISTER_HEIGHT = 290;
 const LOGIN_HEIGHT = 437;
 const INITIAL_VALUE = '';
 const REGISTER = 'REGISTER';
 const LOGIN = 'LOGIN';
+const INITIAL_ERROR = {
+  email: '',
+  username: '',
+  password: '',
+};
 
 const Auth = ({login}) => {
   const anim = new Animated.Value(0);
@@ -34,6 +40,7 @@ const Auth = ({login}) => {
   const [email, setEmail] = useState(INITIAL_VALUE);
   const [username, setUsername] = useState(INITIAL_VALUE);
   const [password, setPassword] = useState(INITIAL_VALUE);
+  const [errMsg, setErrMsg] = useState(INITIAL_ERROR);
   const [height] = useState(new Animated.Value(LOGIN_HEIGHT));
 
   const isRegister = form === REGISTER;
@@ -45,6 +52,15 @@ const Auth = ({login}) => {
       duration: 500,
     }).start();
   });
+
+  const handleSubmit = () => {
+    const {errors, isValid} = validateInput({email, password});
+    if (isValid) {
+      isRegister ? null : login(email, password);
+    } else {
+      setErrMsg(errors);
+    }
+  };
 
   return (
     <>
@@ -62,9 +78,10 @@ const Auth = ({login}) => {
               <Input
                 containerStyle={styles.inputContainer}
                 inputStyle={styles.input}
-                placeholder="Username"
+                placeholder="Display name"
                 value={username}
                 onChangeText={setUsername}
+                errorMessage={errMsg.username}
                 leftIcon={
                   <AntDesign name="user" size={24} color={colors.grey} />
                 }
@@ -78,6 +95,7 @@ const Auth = ({login}) => {
               keyboardType="email-address"
               value={email}
               onChangeText={setEmail}
+              errorMessage={errMsg.email}
               leftIcon={<AntDesign name="mail" size={24} color={colors.grey} />}
             />
 
@@ -88,6 +106,7 @@ const Auth = ({login}) => {
               secureTextEntry
               value={password}
               onChangeText={setPassword}
+              errorMessage={errMsg.password}
               leftIcon={
                 <AntDesign name="lock1" size={24} color={colors.grey} />
               }
@@ -97,7 +116,7 @@ const Auth = ({login}) => {
               <Button
                 buttonStyle={styles.btn}
                 title={form === LOGIN ? LOGIN : REGISTER}
-                onPress={() => login(email, password)}
+                onPress={handleSubmit}
               />
 
               <TouchableOpacity
