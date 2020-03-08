@@ -9,9 +9,13 @@ import {HOME, APPVIEW} from './routes';
 const Stack = createStackNavigator();
 
 const PrivateScreens = () => (
-  <Stack.Navigator>
+  <Stack.Navigator screenOptions={{headerTintColor: 'white'}}>
     <Stack.Screen name={HOME} component={Tabs} options={{headerShown: false}} />
-    <Stack.Screen name={APPVIEW} component={AppView} />
+    <Stack.Screen
+      name={APPVIEW}
+      component={AppView}
+      options={{headerTransparent: true, title: ''}}
+    />
   </Stack.Navigator>
 );
 
