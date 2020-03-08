@@ -2,13 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 
-import StackNavigator from './StackNavigator';
-import Tabs from './BottomTabNavigator';
+import AuthScreen from './AuthScreen';
+import PrivateScreens from './PrivateScreens';
 
 const Navigator = ({auth}) => {
   return (
     <NavigationContainer>
-      {auth.isLoggedIn || auth.skipAuth ? <Tabs /> : <StackNavigator />}
+      {auth.isLoggedIn || auth.skipAuth ? <PrivateScreens /> : <AuthScreen />}
     </NavigationContainer>
   );
 };
