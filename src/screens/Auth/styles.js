@@ -7,9 +7,9 @@ const {width} = Dimensions.get('window');
 const styles = StyleSheet.create({
   skip: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    padding: 25,
+    paddingRight: 25,
     alignItems: 'center',
+    alignSelf: 'flex-end',
   },
   skipText: {
     fontSize: 16,
