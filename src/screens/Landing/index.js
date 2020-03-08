@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, FlatList, StyleSheet} from 'react-native';
+import {View, Text, FlatList, StyleSheet} from 'react-native';
 
 import colors from '../../utils/colors';
-import App from '../Apps/App';
+import TopApps from '../Apps/TopApps';
+import FeaturedApps from '../Apps/FeaturedApps';
 
 const data = [
   {
@@ -60,20 +61,48 @@ const data = [
 const Landing = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <FlatList
-        keyExtractor={item => item.id}
-        data={data}
-        renderItem={({item}) => <App item={item} navigation={navigation} />}
-      />
+      <View style={styles.featured}>
+        <Text style={styles.header}>Featured Apps</Text>
+        <FlatList
+          horizontal
+          keyExtractor={item => item.id}
+          data={data}
+          renderItem={({item}) => (
+            <FeaturedApps item={item} navigation={navigation} />
+          )}
+        />
+      </View>
+      <View style={styles.top}>
+        <Text style={styles.header}>Top Apps</Text>
+        <FlatList
+          keyExtractor={item => item.id}
+          data={data}
+          renderItem={({item}) => (
+            <TopApps item={item} navigation={navigation} />
+          )}
+        />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: colors.primaryOffset,
     height: '100%',
     paddingTop: 20,
+  },
+  header: {
+    fontSize: 24,
+    paddingVertical: 5,
+    paddingLeft: 30,
+  },
+  featured: {
+    flex: 3,
+  },
+  top: {
+    flex: 9,
   },
 });
 

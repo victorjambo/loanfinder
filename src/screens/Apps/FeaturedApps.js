@@ -1,12 +1,18 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ActivityIndicator,
+} from 'react-native';
 import {Image} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import img from '../../../assets/tala.png';
 import colors from '../../utils/colors';
 
-const App = ({navigation, item}) => {
+const FeaturedApps = ({navigation, item}) => {
   return (
     <TouchableOpacity
       style={[styles.container, styles.shadow, styles.radius]}
@@ -20,13 +26,13 @@ const App = ({navigation, item}) => {
             styles.shadow,
             styles.radiusRound,
           ]}
-          borderRadius={100 / 2}
+          borderRadius={20}
+          PlaceholderContent={<ActivityIndicator />}
         />
         <View style={styles.textContainer}>
           <Text style={styles.name}>{item.name}</Text>
           <Text>{item.location}</Text>
         </View>
-        <Icon name="ellipsis1" color="#C3C6D1" size={30} style={styles.icon} />
       </View>
     </TouchableOpacity>
   );
@@ -37,17 +43,17 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     marginHorizontal: 30,
-    padding: 20,
-    // backgroundColor: '#465DE2',
-    backgroundColor: 'white',
+    padding: 10,
+    backgroundColor: colors.white,
     borderRadius: 20,
+    alignSelf: 'center',
   },
   row: {
     flexDirection: 'row',
   },
   img: {
-    width: 50,
-    height: 50,
+    width: 100,
+    height: 100,
   },
   imgContainer: {
     marginRight: 20,
@@ -81,4 +87,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default FeaturedApps;
