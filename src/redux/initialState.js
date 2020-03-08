@@ -23,5 +23,6 @@ export default {
   },
   appState: {
     showSpinner: false,
+    showToast: false,
   },
 };

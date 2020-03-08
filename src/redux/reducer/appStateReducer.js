@@ -1,4 +1,4 @@
-import {SHOW_SPINNER, HIDE_SPINNER} from '../consts';
+import {SHOW_SPINNER, HIDE_SPINNER, SHOW_TOAST, HIDE_TOAST} from '../consts';
 import initialState from '../initialState';
 
 const appStateReducer = (state = initialState.appState, action) => {
@@ -12,6 +12,16 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         showSpinner: false,
+      };
+    case SHOW_TOAST:
+      return {
+        ...state,
+        showToast: true,
+      };
+    case HIDE_TOAST:
+      return {
+        ...state,
+        showToast: false,
       };
     default:
       return state;
