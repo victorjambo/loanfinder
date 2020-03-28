@@ -10,12 +10,13 @@ import {Image} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import colors from '../../utils/colors';
+import {APPVIEW} from '../../Navigation/routes';
 
 const TopApps = ({navigation, item}) => {
   return (
     <TouchableOpacity
       style={[styles.container, styles.shadow, styles.radius]}
-      onPress={() => navigation.navigate('AppView', {item})}>
+      onPress={() => navigation.navigate(APPVIEW.name, {item})}>
       <View style={styles.row}>
         <Image
           source={{uri: item.media.image.icon}}
