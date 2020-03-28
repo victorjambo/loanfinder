@@ -9,17 +9,16 @@ import {
 import {Image} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import img from '../../../assets/tala.png';
 import colors from '../../utils/colors';
 
 const TopApps = ({navigation, item}) => {
   return (
     <TouchableOpacity
       style={[styles.container, styles.shadow, styles.radius]}
-      onPress={() => navigation.navigate('AppView')}>
+      onPress={() => navigation.navigate('AppView', {item})}>
       <View style={styles.row}>
         <Image
-          source={img}
+          source={{uri: item.media.image.icon}}
           style={styles.img}
           containerStyle={[
             styles.imgContainer,
@@ -30,8 +29,8 @@ const TopApps = ({navigation, item}) => {
           PlaceholderContent={<ActivityIndicator />}
         />
         <View style={styles.textContainer}>
-          <Text style={styles.name}>{item.name}</Text>
-          <Text>{item.location}</Text>
+          <Text style={styles.name}>{item.title}</Text>
+          <Text>{item.version}</Text>
         </View>
         <Icon name="ellipsis1" color="#C3C6D1" size={30} style={styles.icon} />
       </View>

@@ -5,9 +5,9 @@
     "descriptionHTML": "Join millions of satisfied Tala customers who have grown their businesses, paid for school fees, and managed expenses with peace of mind.<br> <br><b>How simple is the process?</b><br>\u2022 Download the Tala app<br>\u2022 Fill out our quick loan application in the Tala mobile app <br>\u2022 Verify your identity through our secure system<br>\u2022 Get cash sent directly to your M-Pesa in an instant<br><br><b>How do I repay my loan?</b><br>\u2022 Repay your loan with M-PESA Xpress or through our Paybill 851900 and the phone number you sign up with<br>\u2022 You can pay in full or make partial payments, anytime on or before your due date<br>\u2022 Easy repayment schedule keeps you on track with your payments<br><br><b>The benefits of Tala in-app features at your fingertips:</b><br>\u2022 Personal security PIN to ensure protection<br>\u2022 Track your credit with My Tala Status<br>\u2022 Easy repayment schedule that keeps you on track with your payments<br>\u2022 Millions of Tala customer success stories to inspire you on your journey<br><br><b>What are my loan terms?</b><br>Customers can express a preference for loan terms up to 90 days.<br>\u2022 60-day loan payment terms have a one-time fee of 10-25%* <br>\u2022 90-day loan payment terms have a one-time fee of 13-33%* <br>\u2022 Grow with Tala and build your limit up to KSh 30,000 by making your loan repayments on time<br>\u2022 For example, for a 60-day loan with principal amount of KSh 1,000, the service fee would be KSh250 and the total amount due would be KSh 1,250.<br><br>Depending on the loan amount for which you are eligible, you have the option to choose repayment terms for up to 90 days. Customers have the option to select a term as short as 21 days.<br><br><br><br>Have questions? Visit www.tala.co.ke to check out our FAQs <br>Ready to get started? Download the Tala app and apply for a loan today.<br><br>Privacy and permissions: When you download Tala, we will ask to scan your M-Pesa SMS and other information in order to verify your identity, creditworthiness, and provide you the fastest loan in Kenya. We take privacy very seriously and your personal information will never be shared without your direct permission.<br><br><br>Terms and Conditions: Tala charges a one-time service fee of 5-33%* of principal amount. Repayment schedules may vary. There is no minimum payment period for repayment; customers may make payments towards their principal at any time following disbursement. A one-time late fee of 8% of principal amount and interest may be applied to loans past due. No other fees will be charged after this time. Additional terms and conditions apply.<br>*Effective APR: 52.7-231%. Tala will never charge you more than the amount of your service fee (plus a one-time late fee if you do not pay by the due date). Fees do not compound or accrue.",
     "summary": "Kenya\u2019s #1 lending app, bringing you instant loans directly to your M-Pesa.",
     "installs": "5,000,000+",
-    "score": 4.55564,
+    "score": 4.5544662,
     "scoreText": "4.6",
-    "ratings": 396132,
+    "ratings": 396155,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -51,7 +51,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.inventureaccess.safarirahisi"
   },
   {
     "title": "Timiza",
@@ -59,9 +60,9 @@
     "descriptionHTML": "Do your banking at the touch of a button with Timiza from Absa Bank Kenya!<br><br>With Timiza you can do your banking on your phone whether you want to open an account, get an instant loan, transfer funds or purchase insurance.  But that\u2019s not all.  If registered for Timiza, you can also save and earn returns with our Zidisha savings account.<br><br>Get started with Timiza:<br><br>\u2022\tOpen an Account instantly.<br>\u2022\tSave and earn rewards with Zidisha.<br>\u2022\tGet instant loans on your phone.<br>\u2022\tDeposit funds into Timiza.<br>\u2022\tPurchase insurance.<br>\u2022\tBuy airtime.<br>\u2022\tPay for KPLC/ZUKU/DSTV/GOTV bills.<br><br>What are the requirements for a customer to have a Timiza Account?<br><br>\u2022\tBe a registered Safaricom Subscriber.<br>\u2022\tBe a registered Safaricom M-PESA customer.<br>\u2022\tHave an active Safaricom M-PESA account/line.<br>\u2022\tHold a Kenyan National Identification Document (ID) Kindly note that Kenyan passports are not allowed.<br><br>Timiza Tariff and Guides<br><br>Please refer to the Timiza Tariff and frequently asked questions on the link below:<br><br>https://www.absabank.co.ke/personal/ways-to-bank/timiza/<br><br>Who is eligible for a Timiza Loan?<br><br>In order to qualify for a loan, you need to be an M-PESA subscriber for more than 6 months, actively use other Safaricom services such as voice, data and M-PESA. You will also need to have a good rating at the Credit Reference Bureau [CRB] and by Safaricom on Okoa Jahazi.  <br><br>What are the features of the Timiza Loan?<br><br>\u2022\tIf you qualify, your loan limit will be displayed when you log in to your Timiza account <br>        and you can borrow.<br>\u2022\tTimiza Loan attracts an interest charge of 1.083% charged once and a facilitation fee \t <br>       of 5% of the amount borrowed for a term of 30 days. <br>\u2022\tLoan is disbursed to the Customer\u2019s Timiza account (not directly to M-PESA). The <br>        Customer will access the funds by withdrawing from Timiza to M-PESA<br>\u2022\tTo grow your loan limit:<br>        o\tIncrease activity on your TIMIZA Account by transacting on other services \t <br>                offered on Timiza. For example, Deposit cash, Purchase airtime, Pay your utility <br>                bills, Subscribe to Insurance.<br>        o\tOpen and Increase savings on your Zidisha savings account on Timiza<br>        o\tIncrease usage of M-PESA services<br><br>Absa Bank Kenya Plc is regulated by the Central Bank of Kenya.",
     "summary": "Convenience and Style",
     "installs": "1,000,000+",
-    "score": 3.8460443,
+    "score": 3.8468661,
     "scoreText": "3.8",
-    "ratings": 14208,
+    "ratings": 14215,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -104,7 +105,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "craftsilicon.barclays"
   },
   {
     "title": "OKash - Safe\u00a0Loan App in Kenya",
@@ -112,9 +114,9 @@
     "descriptionHTML": "Loan Products:<br>Tenure: From 91 days to 365 days.<br>Loan Amount: from Kes.1,500 to Kes. 70,000.<br>The maximum APR is 36%.<br>Origination Fee: Range from Kes.100 \u2013 Kes. 600.<br>For example, 91 - day loan payment terms have an origination fee of 8.7%. For the loan processed with principal amount of 1,000, the origination fee would be Kes.87,the total amount due would be Kes.1,087.<br><br>OKash provides great services for you to access credit anytime, anywhere. Anyone among 18-55 can borrow Kes. 1,500 ~70,000 from OKash and receive the cash via M-Pesa. It&#39;s a safe and reliable way to access credit when you need it.<br><br>CONTACT US<br>We&#39;re always excited to hear from you! Should you have any queries, suggestions or feedback, please e-mail us at help@o-kash.com\u00a0or call 020-7659988.<br>Facebook page: @OKashOfficial<br>Address: Kalamu House, Westlands, Grevillea Grove, Nairobi City, Kenya.",
     "summary": "Safe Loan / Online Loan Application",
     "installs": "1,000,000+",
-    "score": 4.1709824,
+    "score": 4.168218,
     "scoreText": "4.2",
-    "ratings": 73292,
+    "ratings": 73303,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -156,61 +158,8 @@
         "size": null,
         "url": null
       }
-    }
-  },
-  {
-    "title": "Tala - Instant Loans to Your M-Pesa",
-    "description": "Join millions of satisfied Tala customers who have grown their businesses, paid for school fees, and managed expenses with peace of mind.\r\n \r\nHow simple is the process?\r\n\u2022 Download the Tala app\r\n\u2022 Fill out our quick loan application in the Tala mobile app \r\n\u2022 Verify your identity through our secure system\r\n\u2022 Get cash sent directly to your M-Pesa in an instant\r\n\r\nHow do I repay my loan?\r\n\u2022 Repay your loan with M-PESA Xpress or through our Paybill 851900 and the phone number you sign up with\r\n\u2022 You can pay in full or make partial payments, anytime on or before your due date\r\n\u2022 Easy repayment schedule keeps you on track with your payments\r\n\r\nThe benefits of Tala in-app features at your fingertips:\r\n\u2022 Personal security PIN to ensure protection\r\n\u2022 Track your credit with My Tala Status\r\n\u2022 Easy repayment schedule that keeps you on track with your payments\r\n\u2022 Millions of Tala customer success stories to inspire you on your journey\r\n\r\nWhat are my loan terms?\r\nCustomers can express a preference for loan terms up to 90 days.\r\n\u2022 60-day loan payment terms have a one-time fee of 10-25%* \r\n\u2022 90-day loan payment terms have a one-time fee of 13-33%* \r\n\u2022 Grow with Tala and build your limit up to KSh 30,000 by making your loan repayments on time\r\n\u2022 For example, for a 60-day loan with principal amount of KSh 1,000, the service fee would be KSh250 and the total amount due would be KSh 1,250.\r\n\r\nDepending on the loan amount for which you are eligible, you have the option to choose repayment terms for up to 90 days. Customers have the option to select a term as short as 21 days.\r\n\r\n\r\n\r\nHave questions? Visit www.tala.co.ke to check out our FAQs \r\nReady to get started? Download the Tala app and apply for a loan today.\r\n\r\nPrivacy and permissions: When you download Tala, we will ask to scan your M-Pesa SMS and other information in order to verify your identity, creditworthiness, and provide you the fastest loan in Kenya. We take privacy very seriously and your personal information will never be shared without your direct permission.\r\n\r\n\r\nTerms and Conditions: Tala charges a one-time service fee of 5-33%* of principal amount. Repayment schedules may vary. There is no minimum payment period for repayment; customers may make payments towards their principal at any time following disbursement. A one-time late fee of 8% of principal amount and interest may be applied to loans past due. No other fees will be charged after this time. Additional terms and conditions apply.\r\n*Effective APR: 52.7-231%. Tala will never charge you more than the amount of your service fee (plus a one-time late fee if you do not pay by the due date). Fees do not compound or accrue.",
-    "descriptionHTML": "Join millions of satisfied Tala customers who have grown their businesses, paid for school fees, and managed expenses with peace of mind.<br> <br><b>How simple is the process?</b><br>\u2022 Download the Tala app<br>\u2022 Fill out our quick loan application in the Tala mobile app <br>\u2022 Verify your identity through our secure system<br>\u2022 Get cash sent directly to your M-Pesa in an instant<br><br><b>How do I repay my loan?</b><br>\u2022 Repay your loan with M-PESA Xpress or through our Paybill 851900 and the phone number you sign up with<br>\u2022 You can pay in full or make partial payments, anytime on or before your due date<br>\u2022 Easy repayment schedule keeps you on track with your payments<br><br><b>The benefits of Tala in-app features at your fingertips:</b><br>\u2022 Personal security PIN to ensure protection<br>\u2022 Track your credit with My Tala Status<br>\u2022 Easy repayment schedule that keeps you on track with your payments<br>\u2022 Millions of Tala customer success stories to inspire you on your journey<br><br><b>What are my loan terms?</b><br>Customers can express a preference for loan terms up to 90 days.<br>\u2022 60-day loan payment terms have a one-time fee of 10-25%* <br>\u2022 90-day loan payment terms have a one-time fee of 13-33%* <br>\u2022 Grow with Tala and build your limit up to KSh 30,000 by making your loan repayments on time<br>\u2022 For example, for a 60-day loan with principal amount of KSh 1,000, the service fee would be KSh250 and the total amount due would be KSh 1,250.<br><br>Depending on the loan amount for which you are eligible, you have the option to choose repayment terms for up to 90 days. Customers have the option to select a term as short as 21 days.<br><br><br><br>Have questions? Visit www.tala.co.ke to check out our FAQs <br>Ready to get started? Download the Tala app and apply for a loan today.<br><br>Privacy and permissions: When you download Tala, we will ask to scan your M-Pesa SMS and other information in order to verify your identity, creditworthiness, and provide you the fastest loan in Kenya. We take privacy very seriously and your personal information will never be shared without your direct permission.<br><br><br>Terms and Conditions: Tala charges a one-time service fee of 5-33%* of principal amount. Repayment schedules may vary. There is no minimum payment period for repayment; customers may make payments towards their principal at any time following disbursement. A one-time late fee of 8% of principal amount and interest may be applied to loans past due. No other fees will be charged after this time. Additional terms and conditions apply.<br>*Effective APR: 52.7-231%. Tala will never charge you more than the amount of your service fee (plus a one-time late fee if you do not pay by the due date). Fees do not compound or accrue.",
-    "summary": "Kenya\u2019s #1 lending app, bringing you instant loans directly to your M-Pesa.",
-    "installs": "5,000,000+",
-    "score": 4.55564,
-    "scoreText": "4.6",
-    "ratings": 396133,
-    "free": true,
-    "currency": "USD",
-    "priceText": "Free",
-    "inAppPurchase": false,
-    "inAppPurchase_range": null,
-    "requirements": "4.1 and up",
-    "privacyPolicy": "https://api.inventureaccess.com/v1/android/PrivacyPolicy?country=KE",
-    "category": "Finance",
-    "categoryId": "FINANCE",
-    "contentRating": "Everyone",
-    "contentRatingDescription": null,
-    "released": "Mar 19, 2014",
-    "updated": "11 Mar 2020 04:34:02 PM",
-    "version": "7.56.3",
-    "size": "7.1M",
-    "recentChanges": "Have questions about Tala? We\u2019ve made it easier than ever to get your questions answered instantly with our new in-app help center!",
-    "adSupported": false,
-    "media": {
-      "image": {
-        "icon": "https://lh3.googleusercontent.com/M3ckFvi_qmwyf90ezhYx0FkbdQ4igX_bZJAE3fjMFnoHE2n36wrR3W8WTaIIjw_3icI",
-        "headerImage": "https://lh3.googleusercontent.com/mO1zvIS4GzBkrLFwlSRRUUaYdmCRD-cVP29ILlpMyF0PiEYWMS-KiBW8EeOwHk2_5vY",
-        "screenshot": [
-          "https://lh3.googleusercontent.com/S4pJvJINye2W14lBecuhX0Dk8D8jbZUYfRgPGMmxSLRTvCEiN3Nbkz-k6tLUhbhpQA",
-          "https://lh3.googleusercontent.com/zAIWuRBvfevHsYiruEqMacltgPtHOvmy5uoy-R-_kugxzpzQ_pJJH37QaSjMZBi82nZb",
-          "https://lh3.googleusercontent.com/p6EVmuAthP1JLnUtB2sZN88GwHykUmPfX5A-_HN46PmihtcY44Gw08V1hLlCrAqL0FYL",
-          "https://lh3.googleusercontent.com/As8Cg9Y_YSoMdrEU2i9bduTwkdgC8P_8VFeJ-0E_H7LAifb0wbyMswGMv4SCxtBkbAc",
-          "https://lh3.googleusercontent.com/aN1VGnDoSU93iSilcipVoc8VLKUZVYlEZ9lZC5O4FTgkZm9rLmWetvs1CXslLxJ6ow",
-          "https://lh3.googleusercontent.com/h1NWn0PKK2656G2zYLe_jok09AdpZy1vQiFhFD1TbUdWYUC4BUCvNk52dt_TG4Ck2j4"
-        ]
-      }
     },
-    "developer": {
-      "id": "8038249337315394554",
-      "name": "Tala Mobile",
-      "email": "hellokenya@talamobile.com",
-      "website": "https://tala.co.ke",
-      "address": "1633 26th St.\n3rd Floor\nSanta Monica, CA\n90404"
-    },
-    "download": {
-      "apk": {
-        "size": null,
-        "url": null
-      }
-    }
+    "id": "com.oplay.microloan.kenya"
   },
   {
     "title": "Branch - Personal Finance Loans",
@@ -218,9 +167,9 @@
     "descriptionHTML": "Branch makes it easy for you to access loans for the way you live. Sign up in seconds, apply for a loan and receive your money straight to your account. It&#39;s a fast, convenient and reliable way to access credit.<br><br>RATES AND FEES<br><br>India<br>Loan Amounts: INR 750 to INR 50,000<br>APR: 31% to 36%<br>Example Fees: For a loan of INR 9,000, an interest fee of INR 548, a processing fee of INR 800, and GST of INR 144. No late fees or rollover charges.<br><br>Kenya<br>Loan Amounts: Ksh 250 to Ksh 70,000<br>APR: 22% to 240%<br>Example Fees: For a loan of Ksh 10,000, a flat fee of Ksh 2,160. No late fees, rollover charges, or origination fees.<br><br>Nigeria<br>Loan Amounts: \u20a61,000 to \u20a6200,000<br>APRs: 33% to 261%<br>Example Fees: For a loan of \u20a640,000, a flat fee of \u20a68,800. No late fees, rollover charges, or origination fees.<br><br>Mexico<br>Loan Amounts: $200 to $20,000<br>APR: 29% to 487%<br>Example Fees: For a loan of $3,250, a flat fee of $1,250. No late fees, rollover charges, or origination fees.<br><br>Repayment Terms for All Loans<br>Depending on the loan amount for which you are eligible, you have the option to choose repayment terms for up to 336 days. Every loan amount we offer has the option to repay in a minimum of 60 days.  Choose the loan term that\u2019s right for you within the app.<br><br>IT&#39;S EASY TO GET STARTED<br><br>* Create your account<br>* Apply in seconds<br>* Receive your loan straight into your mobile money or bank account<br>* Build your loan limit every time you repay a loan <br><br><br>KEY BRANCH FEATURES: LOANS ARE JUST A TOUCH AWAY<br><br>Available in Kenya, Nigeria, Mexico, and India. You can get up to Ksh 70,000, \u20a6150,000, 20,000 pesos, or 50,000 rupees. Get the right loan for you!<br><br>Branch puts you in control of your finances. The Branch app lets you apply for credit on the go and it works 24/7.<br><br>Questions? We provide world-class support for your financial needs, 24 hours a day. Message us within the app and receive an answer in minutes!<br><br>* No paperwork, collateral or office visits needed<br>* Use your money the way you want to -- for home or business<br>* No late charges or rollover fees <br>* Get access to bigger loans, lower fees, and flexible payment terms as you repay<br>* Loans are approved and in your account fast<br><br>Plus! Branch gives you world-class personal finance and credit services. Get access to credit to build the life you want -- for your business, your home, your family, your life. <br><br>FEATURED IN<br><br>TechCrunch - Forbes - Bloomberg TV - Huffington Post - Wall Street Journal<br><br>CNBC Africa - K24 - KTN - KBC - Business Daily - Daily Nation - The Standard <br><br><br>SAFE AND SECURE<br><br>Branch makes getting a personal loan simple by using the data on your phone including your SMS history to verify your identity and create a credit score. We encrypt the data you choose to share with us to protect your privacy. We take your privacy very seriously and promise to never share your information with third parties.<br><br><br>CONTACT US<br><br>We&#39;re always excited to hear from you! If you have any feedback, questions, or concerns, please e-mail us at support@branch.co or find us on Facebook!<br><br>Follow us on Twitter: twitter.com/branch_co<br>Like us on Facebook: facebook.com/branchkenya or facebook.com/branchnigeria<br>Visit our website: branch.co",
     "summary": "Financial Access. Anytime, anywhere.",
     "installs": "10,000,000+",
-    "score": 4.418325,
+    "score": 4.413064,
     "scoreText": "4.4",
-    "ratings": 286101,
+    "ratings": 286167,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -266,7 +215,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.branch_international.branch.branch_demo_android"
   },
   {
     "title": "iPesa - Easy and Fast Credit Loans to M-PESA",
@@ -274,9 +224,9 @@
     "descriptionHTML": "**The reliable Loan App iPesa offer:<br>1. Loan Amount: 500 Ksh ~ 50,000 Ksh<br>2. Loan Term: the shortest tenor is 91 days, the longest is 180 days<br>3. Interest rate:  12% APR<br>4. Service Fee: 0%<br>5. Loan request: Need to be at least 18 years old or above<br><br>**Example: If the loan amount is 500 Ksh, the loan term is 180days, and the Interest rate is 12%, the total Interest should be 500 Ksh * 12% = 60 Ksh. <br><br>To apply for a loan, you just need to follow several easy steps:<br>1. Register with your M-Pesa number<br>2. Apply for the exact loan amount you need<br>3. Get approved and receive the money in minutes<br>4. Repay on time to get a credit limit of 50,000 Ksh<br><br>Privacy and Permissions: iPesa makes getting a personal loan simple by using the data on your phone including your SMS history to verify your identity and create a credit score. We encrypt the data you choose to share with us to protect your privacy. We take your privacy very seriously and promise to never share your information with third parties.<br><br>CONTACT US<br>Facebook page: https://www.facebook.com/iPesaKenya/<br>E-mail: service@ipesa.cc<br>office address: ADLIFE PLAZA, CHANIA AVENUE,\u00a0NAIROBI",
     "summary": "Fast &amp; Reliable Loans to M-PESA in Kenya, your 24/7 mobile finance provider",
     "installs": "1,000,000+",
-    "score": 4.481196,
+    "score": 4.5171456,
     "scoreText": "4.5",
-    "ratings": 11058,
+    "ratings": 11094,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -319,7 +269,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.xgo.credit"
   },
   {
     "title": "Zenka Loan App - Kenya",
@@ -327,9 +278,9 @@
     "descriptionHTML": "Zenka is the most flexible personal loan platform on the market, giving Kenyans more control over their finances with its unique features. We offer a simple registration and application process, after which you will receive your loan straight to your M-Pesa account.<br><br>Money on your account in just 5 minutes!<br><br>What are my loan terms?<br><br>Customers can express a preference for loans of 61 days.<br>- 61-day loan payment terms have a one-time processing fee of 9-29%*<br>- Processing Fee: Range from KSh 45 - KSh 870 for a one-time charge.<br>- Loan Amount: from KSh 500 to KSh 30,000.<br>- Grow with Zenka and build your limit up to KSh 30,000 by making your loan repayments on time<br><br>For example, for a 61-day loan with a principal amount of KSh 1,000, the processing fee would be KSh290 and the total amount due would be KSh 1,290.<br><br>Customers have the option to repay their loan amounts even up to 12 months (ZenkaFlexi option).<br><br>Have questions? Visit www.zenka.co.ke to check out our FAQs<br>Ready to get started? Download the Zenka app and apply for a loan today.<br><br>Privacy and permissions: When you download Zenka, we will ask to scan your M-Pesa SMS and other information in order to verify your identity, creditworthiness, and provide you with the fastest loan in Kenya. We take privacy very seriously, and your personal information will never be shared without your direct permission.<br><br>Terms and Conditions: Zenka charges a one-time processing fee of 9-29%* of the principal amount. There is no minimum payment period for repayment; customers may make payments towards their principal at any time following disbursement. Additional terms and conditions apply.<br>Effective APR: 70.7%-224.89%. Zenka is totally transparent with the fees applied.<br><br>How does it work?<br><br>1. Download Zenka App<br>Visit the Google Play Store. Search for Zenka Loan App and download it on your mobile.<br><br>2. Fill the short application form<br>After downloading our app, choose how much money you need and sign up with Zenka.<br><br>3. Receive money on your M-Pesa account<br>Your application will be evaluated, and when it is approved, you will receive money on your M-Pesa account.<br><br>4. Need additional financing?<br>Make use of our flexible additional amount feature that allows you to top up your existing loan with extra cash, up to your current credit limit.<br><br>5. Need more time to repay?<br>Loan extensions give you more control over your loan by letting you postpone your due date by 7, 14 or 30 days.<br><br>6. Repay on time and build a positive credit history<br>Timely repayment increases your credit limit and allows you to apply for higher amounts in the future.<br><br><br>What&#39;s so special about us?<br>Additional amount and extensions do the job!<br><br>- Considering additional financing? Don&#39;t miss on great opportunities and top up your existing loan with just a few clicks!<br>- Need more time to repay? Get control over the unexpected by extending your due date. Enjoy the flexibility we offer.<br>- Achieve financial harmony! Realize your ideas and needs with our instant personal loans.<br><br><br><b>Contact information:</b><br><br>Call center: + 254 020 765 0878<br>Email: support@zenka.co.ke<br><br>Zenka Finance Limited<br>Mirage Tower 2, 12th floor, <br>P.O. BOX 29107-00100<br>Nairobi<br>Kenya",
     "summary": "Introducing a quick and easy tool to get a loan straight to your M-Pesa account.",
     "installs": "1,000,000+",
-    "score": 4.386054,
+    "score": 4.376697,
     "scoreText": "4.4",
-    "ratings": 31898,
+    "ratings": 31933,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -370,7 +321,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.zenkafinance.microloans"
   },
   {
     "title": "Berry - Simple Swift Loans",
@@ -378,9 +330,9 @@
     "descriptionHTML": "Berry, Kenya\u2019s unique mobile money lending App, credits you with low-cost loans with flexible repayment schedules. Get the cash simply and swiftly straight to your mobile wallet.<br><br>How do I get a loan?<br><br>\u2022\tDownload the app from Google Play store<br>\u2022\tRegister with the Berry application<br>\u2022\tGet your loan approval on fly<br>\u2022\tOur secure system verifies your identity in a few<br>\u2022\tYour loan amount will be deposited in your Mpesa account<br><br>Minimum and Maximum loan amounts in Berry?<br>Any qualified user can avail a minimum of KES 500 as a first loan and can build up to KES 15000 <br><br>How do I repay my loan?<br>To make Berry loan repayments: Open the Berry App and click on Pay Now. Berry Payment procedure is self-explanatory and will guide you thru. Else...,<br><br>\u2022\tGo to your Safaricom menu and select M-Pesa<br>\u2022\tFrom your M-Pesa menu select Lipa na M-Pesa<br>\u2022\tSelect the Pay Bill option<br>\u2022\tEnter the business number 977888<br>\u2022\tEnter your registered phone number as the account number<br>\u2022\tEnter your payment amount<br>\u2022\tEnter your M-Pesa PIN<br>\u2022\tConfirm that all details are correct and press OK.<br><br>Privacy and Permissions:<br><br>Once you download Berry, we will ask you to provide permissions to scan your SMS in order to validate your identity and creditworthiness. Instant loans amount will be credited directly into your M-Pesa account. We\u2019ve taken thorough steps to secure your private data you share with us using advanced encryption mechanisms. We take your privacy very seriously and promise to never share your information to anyone. <br><br>Terms and Conditions: <br><br>Berry is very flexible and charges affordable and low service fee ranging from 9% to 16%. <br><br>\u2022\tThe minimum loan amount is KES 500 and Maximum loan amount may range till KES 50000.<br>\u2022\tBerry charges a service fee of 9-19% of principal amount. <br>\u2022\tThe customer determines their own repayment schedule meaning customers may make payments towards their principal at any time after disbursement. <br>\u2022\tIf a customer has not paid the Processing fee+ the principle amount on the due date, Berry extends a further 7 days to allow the customer to make the payment. <br>\u2022\tOnly after the grace period (7 days) has elapsed, a onetime late payment fee of 15% (processing fee+ the principle amount) be charged. No other fees will be charged after this time. <br><br><br>Important to note: All the above information will be displayed in a broken-down form for the customer on the App upon qualifying for a specific amount before a customer accepts to take up the facility. <br><br>Sample Loan: <br>\u2022\tBorrowed amount: 1000 KES <br>\u2022\tService/Processing Fee: 150 KES <br>\u2022\tExpected Payback amount 1150 KES<br>\u2022\tEffective APR: 180%. You will not be charged more than the amount of your interest (plus a one-time extension fee if you do not pay on time).",
     "summary": "Berry, Kenya&#39;s newest mobile money lending App",
     "installs": "100,000+",
-    "score": 3.3619404,
+    "score": 3.3717473,
     "scoreText": "3.4",
-    "ratings": 5465,
+    "ratings": 5472,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -424,7 +376,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.berry.berryapp"
   },
   {
     "title": "Saida - Pay, Bills, Save, Loans & More",
@@ -432,7 +385,7 @@
     "descriptionHTML": "Saida is a <b>simple, smart, transparent alternative</b> for your daily finances. Just add money, set budgets, spend it to buy airtime, pay bills, send to people, save and see a nice summary of your spending.<br><br><b>4 Ways Saida makes your life easier</b><br><br><b>Painless Transfers</b><br>Easily send money to your friends and contacts to their MPesa. <br>     - Most times it is cheaper than what you are used to.<br>     - You can add a message to let the person know why you sent the money<br>     - Saida will tell you how much &quot;Ya kutoa&quot; is and you can add it.<br><br><b>Easy Bill Payments</b><br>You can make instant payments to the following billers. <br>     - Kenya Power - Postpaid, Tokens - you get a 1% cash bonus. Tokens are instant! <br>           - You can also check your outstanding Kenya Power bill for postpaid or confirm your meter number to avoid mistakes<br>     -  Nairobi Water, DsTV, GoTV, Zuku Internet &amp; Zuku Home<br><br><b>Buying Airtime</b><br>You can buy Airtel Airtime, Safaricom Airtime or Telkom Airtime for yourself or someone else. You earn 2% cash bonus when you buy airtime. If you struggle buying Airtel or Telcom Airtime this is the app for you.<br><br><b>Budgeting</b><br>Create a budget, add some money and Saida will automatically help you stay within your budget. Want to only spend Ksh 100 daily or Ksh 5000 weekly - we can help<br><br><b>Savings</b><br>Create saving goals, start saving, we will cheer you on and reach your goals. Our savings are offered in partnership in Fund Managers regulated by the Capital Markets Authority. We invite a select number of customers to save<br><br><b>Advances &amp; Loans</b><br>Use Saida frequently and you will unlock our credit facilities. Your usage may qualify you for cash loans repayable in 2.5 months. Using Saida for 1 month is enough to build a credit limit. We do not offer instant loans the day you download the app.<br><br><b>Privacy</b><br><br>Privacy and Permissions: Saida collects personal information about you that we use to determine your identify you, provide you the service and check loan eligibility - we use this information in accordance with our privacy policy which is listed on the details of this app. If you apply for a loan Saida will ask to scan your M-Pesa SMS, phone number, email address and national ID to verify your identity to comply with KYC (know your customer) regulations, creditworthiness checks. The privacy policy is also available within your app. Your personal information will never be shared without your direct consent.<br><br><b>Loan Terms</b><br>Saida charges a service fee of 0 - 21% per month (APR 0% -252%) of the amount lent to you based on how we rate your creditworthiness. The amount can be repaid within 2.5 - 6 months and the schedule may vary depending on your credit rating. Late fees are not charged and a one time debt collection fee may be charged if your loan is later than 35 days. Additional Terms &amp; Conditions may apply - you may see this on your Loans Page on Saida.<br><br>An example is if you borrow Ksh 1,000 for 7.5% fee for 2.5 months, you will repay Ksh 1,075 within 2.5 months. There are no penalties for early repayment. If you are late by more than 60 days, a penalty of 10% will be applied to the overdue amount. (Ksh 107.5) - no further penalties or charges will apply again.<br><br><h3><b>Contact</b></h3><br>If you face any challenges with the app, we&#39;re happy to help - email us at hello@getsaida.com You can also send us a direct message from the app.",
     "summary": "Just Load Money, Buy Airtime, Pay Bills, Send to People, Save, Borrow",
     "installs": "500,000+",
-    "score": 3.7554672,
+    "score": 3.7527308,
     "scoreText": "3.8",
     "ratings": 10165,
     "free": true,
@@ -479,7 +432,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "greenshoe.com.fulani"
   },
   {
     "title": "Saida - Loans To Your M-Pesa",
@@ -487,9 +441,9 @@
     "descriptionHTML": "Saida Lite is a Saida version with limited features.<br><br><br><h3><b>Loans</b></h3><br><b>- Flexible Terms</b><br>We offer short to medium term loans. Use the loan to settle your bills, buy more stock for your business or meet an unexpected need. <br><br><br><b>- Easy Repayment</b><br>Repay your loans on time and your loan amount will increase and your interest rate will reduce as well. Stuck repaying? Request up to two weeks grace period from the app.<br><br><br><b>- Transparent Loans</b><br>Fill out a loan application form and we will give you a response within 24 hours. An example of how much you would repay is shown below as well as additional important information.<br><br><h3><b>Savings</b></h3><br><b>- Made easy with goals</b><br>Its as easy as <b>Name</b> Your Goal. <b>Lock</b> Your Goal. <b>Achieve</b> Your Goal. You can set savings goals like school fees, new smartphone, a holiday e.t.c.<br><br><br><b>- Regulated Savings</b><br> Our savings goals are provided in partnership with Investment Banks that are regulated in Kenya - this means your money is kept securely and invested under the watch of regulators in Kenya.<br><br><br><b>- Free To Save</b><br>We refund any MPesa transaction charges you incur while saving your money.<br><br><h3><b>Bill Payments</b></h3><br><b>- All your usual bills</b><br>Kenya Power Tokens, KPLC Postpaid, Safaricom Airtime, Airtel Airtime, Telkom Airtime, Zuku, DsTV, GoTV, Nairobi Water and more.  We&#39;ll remember your Account numbers so you don&#39;t have to enter them every time.<br><br><br><b>- Useful Reminders</b><br>We can remind you when your payments are due or even give you a loan to pay your bills and you can repay later. <br><br><br><h3><b>Privacy</b></h3><br><br>Privacy and Permissions: Saida collects personal information about you that we use to determine your loan eligibility - we use this information in accordance with our privacy policy which is listed on the details of this app. We take privacy very seriously and your personal information will never be shared without your direct consent.<br><br><h3><b>Loan Terms</b></h3><br>* The minimum loan term is 2.5 months, maximum is 6 months.<br>* A service fee of 3 - 21% per month / APR 36% -252% is charged based on our estimation of your credit limit.<br>* Repayment is every 2 weeks until the full amount is repaid.<br>* Late fees are not charged and a one time debt collection fee may be charged if your loan is later than 35 days. <br>* Additional Terms &amp; Conditions may apply - you may see this on your Loans Page on Saida.<br><br><b>Representative Example</b><br>An example is if you borrow Ksh 1,000 for 7.5% fee for 2.5 months, you will repay Ksh 1,075 within 2.5 months in 5 bi weekly installments of 215.  So week 2 repay 215, week 4 215 and so on until the 10th week (two and half months) <br>There are no penalties for early repayment. If you are late by more than 60 days, a penalty of 10% will be applied to the overdue amount. (Ksh 107.5) - no further penalties or charges will apply again.<br><br><h3><b>Contact</b></h3><br>If you face any challenges with the app, we&#39;re happy to help - email us at hello@getsaida.com You can also send us a direct message from the app.",
     "summary": "Loans, Payments &amp; more.",
     "installs": "10,000+",
-    "score": 3.1956522,
-    "scoreText": "3.2",
-    "ratings": 46,
+    "score": 3.1489363,
+    "scoreText": "3.1",
+    "ratings": 47,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -532,7 +486,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.saida.lite"
   },
   {
     "title": "Zash Loan",
@@ -540,9 +495,9 @@
     "descriptionHTML": "\u2022 Loan Amount: KSh 500 \u2013 KSh 50,000<br>\u2022 Loan Term: the shortest term is 91 days, the longest is 120 days<br>\u2022 Maximum interest rate: 20% per year<br>\u2022 APR:24%<br>\u2022 Loan Amount: KSh 500 \u2013 KSh 50,000\u2028<br><br>As a digital lending platform, Zash Loan will charge a service fees according to the product you choose, which is used for credit score assessment, account management, and payment cost.\u2028<br><br>Example: If you choose a loan limit of KES10,000 with a period of 1 year, after deducting service fees, the total interest must be paid: 10,000 * 0,0005 * 365 = KES1828<br><br>Zash Loan can give a quick loan to help everyone in Kenya who need money to grow their businesses, pay for school fees, buy things or finance any other emergencies.<br>As an online lending platform, Zash Loan will charge different origination fees according to the product you choose, which is used for credit score assessment, account management, and payment cost.<br><br>-Why loan from Zash Loan?<br>\u2022 No credit history required<br>\u2022 Paperless and digital process on your mobile<br>\u2022 Get 7/24 access to loan anytime and anywhere<br>\u2022 Speedy review in 30 minutes<br>\u2022 Disburse to your bank account or M-PESA directly in 5 minutes once approved<br>\u2022 Available across Kenya<br>\u2022 As the credit score grows, the loan amount gradually increases<br>\u2022 Variety of convenient repayment methods<br>-Eligibility:<br>\u2022 Kenya Resident <br>\u2022 18-60 years old<br>\u2022 has a monthly source of income.<br>-how to repay the loan?<br>\u2022 through our M-pesa Paybill 733555 and the account no. is the mpesa phone number you sign up with<br>\u2022 enter the amount you pay and enter the pin of M-pesa<br>\u2022 No transaction cost when you repay<br>\u2022 good repayment will increase your credit<br>-Security:<br>Your data is safe with us. It is transferred over a secure HTTPS connection to us, and we do not share it with anyone without your consent except the Lenders. All the transactions are secured via a 128-bit SSL encryption.\u2028CONTACT US\u2028!<br>We\u2019re always excited to hear from you! If you have any feedback, questions, or concerns, please e-mail us at cs@zashloan.com\u2028<br>Address: One Padmore Place\uff0cGeorge Padmore Road\uff0cNairobi City\uff0cKenya",
     "summary": "an application for mobile instant loan online",
     "installs": "500,000+",
-    "score": 4.0818896,
+    "score": 4.106948,
     "scoreText": "4.1",
-    "ratings": 12950,
+    "ratings": 12983,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -584,7 +539,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.kopakash"
   },
   {
     "title": "Okolea",
@@ -592,9 +548,9 @@
     "descriptionHTML": "Okolea is an app that provides instant loans to Kenyans through their mobile phones. Clients&#39; loan limits are reviewed and increased every time they repay their loans on time.<br><br>Registration<br>Download the Okolea app, fill in the form, and submit. The app will redirect you to an easy to use home screen. You are then required to go to your profile and fill in other required details to enable us to serve you better.<br><br>Loan Limits<br>When you register with Okolea you get assigned a loan limit after your account is appraised which allows you to borrow instantly any amount equal or less than their assigned limits. Every time you repay your loan on time, you get a loan limit increase.<br><br>Interest Rates<br>Our interest rate is low at 0.5% per day to ensure that you enjoy our facility and repay without experiencing financial strain.<br><br>Okolea app is awesome and here is why;<br>Instant access to loans sent straight to your mobile phone.<br>You can borrow more than 1 loan at a time. *As long as you are within your loan limit.*<br>Ability to sort out emergencies when they arise no matter where you are.<br>Your information is secure and is not shared with third parties.<br>Lowest interest rate in the market.<br>It is easy to use.<br><br>Loan Amounts: 500 KES - 500,000 KES. Minimum and maximum period for repayment: 60 days - 1 year. Service Fee: One time, 0.6% - 2.5% of the principal. Interest Rate (P.A): 30% - 180%. Late Fees: Does not exceed the loan principal.",
     "summary": "Okolea is an app that provides instant loans to Kenyans.",
     "installs": "500,000+",
-    "score": 3.5504808,
+    "score": 3.5570228,
     "scoreText": "3.6",
-    "ratings": 8409,
+    "ratings": 8410,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -639,7 +595,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.okoleainternational.okoleamobile"
   },
   {
     "title": "OPesa - Safe Credit Loans To M-Pesa",
@@ -647,9 +604,9 @@
     "descriptionHTML": "Tenure: From 91 days to 365 days.<br>Loan Amount: from Ksh.1,500 to Ksh. 50,000.<br>The maximum APR is 36%.<br>Service\u00a0Fee: Range from Ksh.100 - Ksh. 600 for one-time charge.<br>For example, 91 - day loan payment terms have a service\u00a0fee of 8.9%. For the loan processed with principal amount of 1,000, the service\u00a0fee would be Ksh.89, the total amount due would be Ksh.1,089.<br>\u00a0<br>Looking for good credit loan app in Kenya? OPesa offers safe loans to you. Anyone among 18-55 could get the loan.<br>\u00a0<br>CONTACT US<br>We can be reached at: help@o-pesa.com\u00a0and +254-207650999.<br>Facebook: @OPesaOfficial<br>Office Address: Ring Road Parklands, Building: Apollo Center, Sarit Centre Nairobi",
     "summary": "Looking for good credit loans in Kenya? OPesa offers safe money to your M-Pesa.",
     "installs": "1,000,000+",
-    "score": 4.15231,
-    "scoreText": "4.2",
-    "ratings": 33800,
+    "score": 4.140393,
+    "scoreText": "4.1",
+    "ratings": 33822,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -692,7 +649,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.opesa.microloan.kenya"
   },
   {
     "title": "Senti",
@@ -700,9 +658,9 @@
     "descriptionHTML": "Senti is a micro-credit mobile app that makes it easy for people in Kenya to access a loan, anytime, anywhere. <br><br>How to Register on Senti<br><br>\u2022 Download the Senti app<br>\u2022 Register your correct details on the Senti mobile app <br>\u2022 Verify your details with the One time password sent to you<br>\u2022 Apply for a loan and get fast cash sent directly to your M-Pesa<br><br>Do you know of our Friendly Loan terms?<br><br>\u2022Up to 90-day loan product. We have options that let you choose what\u2019s right for you as a customer<br>\u2022 Up to 90 day loan product with repayment terms of a one-time between 15% and 20%<br>\u2022 Grow with Senti and build your limit up to KSh 70,000 by making your repayments in good time<br><br>How do I repay my loan?<br><br>\u2022 Repay your loan through the App by Clicking Pay loan and enter your M-pesa Pin on the M-pesa tool kit that will appear on your screen or through our Paybill 517910 enter your phone number as the account number and the amount that is due on the amount section.<br>\u2022 You can pay in full or make partial payments, anytime on or before your due date<br><br>Gain more with Senti in-app features:<br><br>\u2022 You can Buy Airtime straight from your Senti App<br>\u2022 You can now Lipa Stima or your water Bill with your Senti Loan<br>\u2022 Track your income vs your spending with our wealth management feature<br>\u2022 Share Senti with your friends and family to help them sort their Financial Emergencies<br><br><br>Have questions? Visit www.Senti.co.ke to check out our FAQs or call 0712517910<br>Ready to get started? Download the Senti app and apply for a loan today.<br><br>Terms and Conditions:<br> Senti charges a one-time service fee of 10-15%* of principal with a minimum repayment period of 60 days and maximum period of 90 days. There is no minimum payment period for repayment; customers may make payments towards their principal at any time following disbursement. The maximum repayment period for a Senti loan is up to 90 days from disbursement. A one-time extension fee of 7.5% of principal and interest may be applied to loans past due. No other fees will be charged after this time. Additional terms and conditions apply. <br><br>*Effective APR: 90.17-192.5%. Senti does not charge you more than the amount of your due amount which is inclusive of (a one-time extension fee if one pays past our due date that includes a 7-day grace period). We do not compound  <br><br>**A Demonstrative example: KES 40,000.00 loan taken for 90 days may incur a service fee of 15%, for a total cost of KES 46,000.00 if repaid before or on the due date.",
     "summary": "Get hassle-free loans straight to your M-pesa account",
     "installs": "100,000+",
-    "score": 4.207196,
+    "score": 4.214374,
     "scoreText": "4.2",
-    "ratings": 8104,
+    "ratings": 8107,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -746,7 +704,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.roamtech.dm.azima"
   },
   {
     "title": "Berry - Simple Swift Loans",
@@ -754,9 +713,9 @@
     "descriptionHTML": "Berry, Kenya\u2019s unique mobile money lending App, credits you with low-cost loans with flexible repayment schedules. Get the cash simply and swiftly straight to your mobile wallet.<br><br>How do I get a loan?<br><br>\u2022\tDownload the app from Google Play store<br>\u2022\tRegister with the Berry application<br>\u2022\tGet your loan approval on fly<br>\u2022\tOur secure system verifies your identity in a few<br>\u2022\tYour loan amount will be deposited in your Mpesa account<br><br>Minimum and Maximum loan amounts in Berry?<br>Any qualified user can avail a minimum of KES 500 as a first loan and can build up to KES 15000 <br><br>How do I repay my loan?<br>To make Berry loan repayments: Open the Berry App and click on Pay Now. Berry Payment procedure is self-explanatory and will guide you thru. Else...,<br><br>\u2022\tGo to your Safaricom menu and select M-Pesa<br>\u2022\tFrom your M-Pesa menu select Lipa na M-Pesa<br>\u2022\tSelect the Pay Bill option<br>\u2022\tEnter the business number 977888<br>\u2022\tEnter your registered phone number as the account number<br>\u2022\tEnter your payment amount<br>\u2022\tEnter your M-Pesa PIN<br>\u2022\tConfirm that all details are correct and press OK.<br><br>Privacy and Permissions:<br><br>Once you download Berry, we will ask you to provide permissions to scan your SMS in order to validate your identity and creditworthiness. Instant loans amount will be credited directly into your M-Pesa account. We\u2019ve taken thorough steps to secure your private data you share with us using advanced encryption mechanisms. We take your privacy very seriously and promise to never share your information to anyone. <br><br>Terms and Conditions: <br><br>Berry is very flexible and charges affordable and low service fee ranging from 9% to 16%. <br><br>\u2022\tThe minimum loan amount is KES 500 and Maximum loan amount may range till KES 50000.<br>\u2022\tBerry charges a service fee of 9-19% of principal amount. <br>\u2022\tThe customer determines their own repayment schedule meaning customers may make payments towards their principal at any time after disbursement. <br>\u2022\tIf a customer has not paid the Processing fee+ the principle amount on the due date, Berry extends a further 7 days to allow the customer to make the payment. <br>\u2022\tOnly after the grace period (7 days) has elapsed, a onetime late payment fee of 15% (processing fee+ the principle amount) be charged. No other fees will be charged after this time. <br><br><br>Important to note: All the above information will be displayed in a broken-down form for the customer on the App upon qualifying for a specific amount before a customer accepts to take up the facility. <br><br>Sample Loan: <br>\u2022\tBorrowed amount: 1000 KES <br>\u2022\tService/Processing Fee: 150 KES <br>\u2022\tExpected Payback amount 1150 KES<br>\u2022\tEffective APR: 180%. You will not be charged more than the amount of your interest (plus a one-time extension fee if you do not pay on time).",
     "summary": "Berry, Kenya&#39;s newest mobile money lending App",
     "installs": "100,000+",
-    "score": 3.3619404,
+    "score": 3.3717473,
     "scoreText": "3.4",
-    "ratings": 5465,
+    "ratings": 5473,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -800,7 +759,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.berry.berryapp"
   },
   {
     "title": "Hikash",
@@ -808,9 +768,9 @@
     "descriptionHTML": "The App Hikash offer<br>\u2022 Higher loan limits from Kshs 2000 to Kshs 50,000.<br>\u2022 Loan terms: Shortest 91 days to longest 365 days<br>\u2022 Interest Rate: Up to 36% per annum.<br>\u2022 Service fee: 0<br>\u2022 Loan request: Need to be at least 20 years old<br><br>Example: If you choose a loan limit of KES 2,000 with a period of 1 year, after deducting origination fees, the total interest must be paid: 2,000 * 16% = KES 320<br><br>Our advantage:<br>\u2022 Send the loan amount directly to your M-pesa account<br>\u2022 Three minutes and high loan amount<br>\u2022 Safe and reliable<br><br>Physical Address:<br>9th floor, 623 Wood Avenue Plaza, Argwings Kodhek RD, Kilimali, Nairobi.",
     "summary": "Android application for mobile loans in kenya.",
     "installs": "100,000+",
-    "score": 4.4281526,
-    "scoreText": "4.4",
-    "ratings": 3493,
+    "score": 4.4651165,
+    "scoreText": "4.5",
+    "ratings": 3506,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -854,7 +814,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.fullstack.hikash"
   },
   {
     "title": "PesaFlash - Access Instant Mobile Loans in Kenya",
@@ -862,9 +823,9 @@
     "descriptionHTML": "<b>Why PesaFlash </b><br>PesaFlash gives you the convenience of accessing easy loans anywhere and at anytime, to fit your lifestyle. Sign up through a quick and seamless process and start receiving loans straight to your M-Pesa. It&#39;s a fast, convenient, and reliable way to access credit when you need it.<br><br><b>Loan Application Requirements</b><br>\u25feBe aged between 21 and 60 years<br>\u25feBe a Kenyan citizen with a valid national ID<br><br><b>It&#39;s Easy to Get Started</b><br>\u25feDownload the PesaFlash App from GooglePlay Store<br>\u25feRegister for an account using your registered M-Pesa number <br>\u25feSecure your identity in 3 simple steps<br>\u25feVerify your identity through our secure system<br>\u25feReceive your loan within minutes straight to your M-Pesa account<br>\u25feRepay your loan on time to increase your loan limit<br><br><b>How to Repay Your Loan</b><br>\u25feRepay your loan using the M-Pesa Paybill number 623333 using the phone number you signed up with, as your account number<br>\u25feRepay your loan using M-Pesa Xpress<br>\u25feYou can repay your loan in full or make regular payments before your due date, from the date of your loan disbursal <br><br><b>Loan Offer</b><br>\u25feLoan amounts of between KSh 2,000 and KSh 50,000<br>\u25feLoan term: The shortest repayment period is 91 days while the longest is 180 days<br>\u25feInterest rate: 15.4%~21%\u00a0<br>\u25feAPR: 15.4%-21%<br>\u25feService charge: 0<br><br>Example: If the loan amount is KSh 2,000 and the loan term is 180 days. Therefore, the total Interest would be KSh 2000 x 0.00067 x 180 = KSh 240.<br><br><b>Our Promise of Safety and Security</b><br>We take your privacy very seriously and we will never share your personal information with anyone except with strict permission from you. When you download the App, we will ask you for permissions to use your phone&#39;s data such as SMS history and other information. This information will strictly be used to verify your identity and create a credit score.<br><br><b>Talk to Us (We love stories!)</b><br>We are always delighted to hear from you. For any questions, concerns, or feedback, please contact us on Mondays to Saturdays from 8:30am to 12:30pm and 1:30pm to 5:30pm, via the following channels;<br><br>Phone number: 0207651561<br>Email: pesaflash0@gmail.com<br>WhatsApp: +254 768 028 057<br>Facebook: facebook.com/pesaflash.ksh<br>Instagram: instagram.com/pesaflash.ksh<br>Visit our website: pesaflash.co.ke",
     "summary": "PesaFlash makes it easy for you to access loans for the way you live anytime",
     "installs": "500,000+",
-    "score": 4.098886,
+    "score": 4.092541,
     "scoreText": "4.1",
-    "ratings": 7334,
+    "ratings": 7352,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -907,7 +868,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "ke.pesachap.pl.jk"
   },
   {
     "title": "Eazzy Banking",
@@ -915,9 +877,9 @@
     "descriptionHTML": "The Eazzy Banking app is your &#39;bank anywhere, anytime&#39;.<br><br>With Eazzy Banking, you can access all banking services; from sending money and paying for goods and services to paying bills and managing your loan and bank accounts.<br><br>It is all in your hands.<br><br>The app is available for both Equity Bank customers and non-customers in Kenya, Rwanda, Uganda, Tanzania and South Sudan.<br> <br>With the Eazzy Banking app you can:<br> <br>**MANAGE YOUR EQUITY BANK ACCOUNT**<br>- Securely view your accounts and transfer funds to other networks and banks<br>- Check your account transactions in a graphical and intuitive way<br>- Send money, buy airtime, pay bills and pay for goods and services<br> <br>** LOANS &amp; CARDS **<br>- Check your loan balance and pay off your loans <br>- View your credit cards and pay to your cards with ease<br> <br>** TRANSFER FUNDS **<br>- Send money to Airtel Money (Kenya), MPESA (Kenya), Tigo Cash (Rwanda), MTN Money (Uganda and Rwanda) and to any phone<br>- Send money to any bank<br>- Send money to your WhatsApp, Twitter and Facebook contacts<br> <br>** BUY AIRTIME, PAY BILLS AND BUY GOODS **<br>- Buy airtime for Equitel (Kenya), Airtel (Kenya, Uganda and Rwanda), Safaricom (Kenya), Telkom (Kenya), Tigo (Rwanda), Africell (Uganda) and MTN (Uganda)<br>- Buy Equitel data bundles<br>- Pay your bills<br>- Buy goods using Eazzy Pay<br> <br>** STOCKS &amp; FOREX **<br>- Track the Nairobi Stock Exchange<br>- View your stock portfolio<br>- View currency exchange rates in real time and request for a preferential exchange rate<br> <br>** MAKE THE APP YOUR OWN **<br>- Take a selfie! Upload your profile photo<br>- Personalize each account: add an icon, name and custom background<br><br>** EQUITEL **<br>- Transfer airtime using Gawa Credo<br>- View call history and airtime usage on your Equitel line<br>- Buy Equitel data bundles<br><br>** SHARE THE APP **<br>- Recommend the app to your contacts using an invite code<br><br>** QUICK ACTIONS **<br>- Quickly do transactions and get services the eazzy way!",
     "summary": "Experience convenience in life with Eazzy Banking",
     "installs": "1,000,000+",
-    "score": 3.3776796,
+    "score": 3.3853905,
     "scoreText": "3.4",
-    "ratings": 16020,
+    "ratings": 16023,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -962,7 +924,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "ke.co.equitybank.equitel"
   },
   {
     "title": "Easypaisa - Mobile Load, Send Money & Pay Bills",
@@ -970,9 +933,9 @@
     "descriptionHTML": "An App That Has It All! <br><br>Unlock revolutionary features such as Face Login &amp; Fingerprint Login with the All New Easypaisa App with an enhanced user interface! Now add cash to your Easypaisa Wallet with any 3S secure debit card at any-time, top up your mobile balance through Easyload, subscribe to offers and pay your bills with just a tap of a button! <br><br>Try out our new features such as Split Bill &amp; Top Up\u2019s to experience the Easy Life.  <br><br>Add Cards:<br>Now Add cash to your Easypaisa Wallet with any 3S secure debit card at any-time \u2013 securely and conveniently.  <br><br>Daily Cashback:<br>Now monitor your daily cashback cycle and keep a tap on how much you\u2019ve earned. <br><br>My Cashback:<br>Get visibility on all the cashback\u2019s you\u2019ve received on a monthly basis.  <br><br>Easyload:<br>Customers can make easyload transactions from the comfort of their homes on all networks i.e. Telenor, Jazz, Zong and Ufone.<br><br>Money Transfer:<br>Send money to your friends and family anywhere in Pakistan. Sending money to any CNIC, Mobile Account or a Bank Account has never been this easy.<br><br>Offer Activation:<br>Subscribe to your favorite Call, SMS &amp; Data Offers for Telenor and Zong from within the Easypaisa App. Not just that but also receive exclusive discounted offers!<br><br>Tohfa:<br>Send money to friends and family during special occasions and add a personal touch to every money transfer!<br><br>Split bill with Friends:<br>Split your QR payments and Bus ticketing bill with up to 10 of your friends!<br>Top Up\u2019s:<br>Enjoy amazing discounts on Daraz Wallet top-up of Careem Voucher purchases. <br><br>Invite and Earn:<br>Invite your friends to register on the app and earn cash-back rewards<br><br>QR Payments<br>Make swift payments using the mobile app to scan QR Codes at selected outlets and avail amazing discounts!<br><br>Utility Bill Payment:<br>Pay all your utility bills with just a tap of the button!<br>1. Electricity:<br>IESCO, PEPCO, MEPCO, KESC, K-Electric, FESCO, GEPCO, HESCO, Bahria Town Electricity Supply, LESCO, QESCO<br>2. Gas:<br>SNGPL, SSGC<br>3. Broadband:<br>PTCL, SCO, SCO Prepaid Load, PTCL EVO, Naya Tel, Qubee, Wateen, World Call, Wi-Tribe<br><br>Bus and Movie Tickets:<br>Avail amazing promotions &amp; discount offers on Bus, Movie &amp; Event tickets!<br><br>1.Movie Tickets:<br>Purchase movie tickets from Cinemas all over Pakistan e.g. Centaurus Cineplex, The Arena Bahria Town, Atrium, Universal Cinema Multan, Cinestar Township, Super Cinema Vogue Tower, Universal Cinema Lahore and many more!<br><br>2.Bus Tickets:<br>Purchase bus tickets from Daewoo, Bilal Travels, Q-Connect, Skyways and many more with just a few taps!<br><br>Insurance<br>Ensure a secure future for yourself and your family with easy-to-access insurance products for all your needs.<br><br>Donations<br>Find your preferred charity organizations in one window and make donations through the App.<br>a. Diamer Basha Dam Fund<br>b. Edhi<br>c. Saylani<br>d. Shaukat Khanum (SKMCH)<br>e. SOS, TCF",
     "summary": "Mobile Load, Offer Activation, Bill Payment and much more All within your reach!",
     "installs": "10,000,000+",
-    "score": 4.171424,
+    "score": 4.1720767,
     "scoreText": "4.2",
-    "ratings": 234974,
+    "ratings": 235118,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1022,7 +985,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "pk.com.telenor.phoenix"
   },
   {
     "title": "JazzCash - Money Transfer, Mobile Load & Payments",
@@ -1030,9 +994,9 @@
     "descriptionHTML": "Now access Pakistan\u2019s largest mobile wallet through an app. Join millions of customers who use this wallet for simple and secure everyday banking. When it\u2019s hard to find a moment for those small but important day to day transactions, JazzCash App is here to help. It is fast, convenient and includes built-in security technology to ensure all your data is safe and secure. Since you always have your phone on you (because who doesn\u2019t anymore?), JazzCash App is the simplest way to do your everyday banking transactions.<br><br>With JazzCash App, we have built a different kind of bank for our customers, a bank with digital branches that are open when it suits you - 24 hours a day, 7 days a week. It is a bank where you can walk in without an appointment and walk out with a working account; debit card and all. A bank that tells you exactly what you are getting; a bank that actually puts you first. <br><br>The all-new JazzCash App is designed keeping in mind you and your ease. It enhances the Mobile Account experience with simplified access, bringing features such as contact syncing, authenticating transactions with Touch ID or Face ID and allowing users to repeat their past transactions with one tap.<br><br>JazzCash App not only brings you convenience with a seamless user experience, it does everything you\u2019d expect and maybe a little extra. You can use it whenever and wherever you want. You can crack on if you\u2019re on the bus, at work, or simply can\u2019t tear yourself away from your daily Netflix &amp; Chill. Simply take control of your finances on the go with JazzCash App.<br><br>This revamped version of JazzCash App comes with new, innovative and cutting edge features:<br><br>\u2022\tInstant Account Registration: Regardless of which mobile network\u2019s sim you use, you can now register for Mobile Account through this app<br>\u2022\tDeposit via Debit Card: Not in the mood to go to a retailer to credit your account? Now you can add money in your JazzCash App account through any debit card<br>\u2022\tFood Delivery: Hungry and want food at your doorstep? Order food from 300+ restaurants.<br>\u2022\tBus Tickets: Book bus tickets and get amazing discounts. #SafarKaroSufferNahi <br>\u2022\tQR Payments: Pay via QR at your favourite outlets to get amazing deals &amp; discounts<br>\u2022\tEducation Payments: Worry no more &amp; conveniently pay education fees via JazzCash<br>\u2022\tHealthcare: Pay for your Medicines, Lab Tests &amp; Consultation Fee through JazzCash at discounted rates<br>\u2022\tImproved Experience: Make all your Mobile Account transactions such as Send Money, Pay Bills, Mobile Load, QuickPay and Other Payments with new and improved experience!<br>\u2022\tRequest Money: Out of cash in your Mobile Account or someone owes you some money? Request money from your JazzCash App<br>\u2022\tTouch ID &amp; Face ID: Making your Mobile Account more secure without the hassle of entering an MPIN all the time by enabling Touch &amp; Face ID on a compatible device!<br>\u2022\tRepeat Activity: If you are tired of punching in lengthy digits each time for your frequent transaction, JazzCash solves this problem for you with Repeat function for all your past transactions<br>\u2022\tInvite&amp; Earn: Invite your friends to JazzCash app and earn cash rewards each time your friend successfully registers on the app<br>\u2022\tLocate Nearby Agent: Locate your nearby JazzCash Agent for Cash Deposit<br><br>Follow our social media accounts to be in the loop about our current and upcoming amazing offers and updates.<br>Facebook: facebook.com/JazzCash<br>Twitter: twitter.com/JazzCash<br>For feedback and suggestions, feel free to write to us at: jazzcashappfeedback@gmail.com<br><br>Use JazzCash App for all your payment needs and never carry a physical wallet or juggle with hard cash again!",
     "summary": "JazzCash App offers the best mobile banking experience to its customers.",
     "installs": "5,000,000+",
-    "score": 4.1311955,
+    "score": 4.1383615,
     "scoreText": "4.1",
-    "ratings": 58817,
+    "ratings": 58870,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1078,7 +1042,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.techlogix.mobilinkcustomer"
   },
   {
     "title": "Tez Financial Services | Fori Loan Haasil Karein",
@@ -1086,9 +1051,9 @@
     "descriptionHTML": "Pakistan\u2019s Fastest Digital Financial Service Offering Instant Loans Up to Rs.10,000!<br><br>Tez is changing the lives of its customers by giving hassle free access to cash advance and loans. <br><br>Charges:<br>* Annual percentage rate (APR) is the annual rate charged for borrowing is 13% - 25%. APR is expressed as a percentage that represents the actual yearly cost of funds over the term of a loan.<br>* Loan amount ranges from Rs.1,000 to Rs.10,000<br>* Processing Fee of Rs. 20 for Loan amount of Rs. 1,000 \u2013 2,000, Rs. 50 for Rs. 2,500 \u2013 Rs. 5,000 and Rs. 100 for Rs. 5,500 \u2013 Rs. 10,000<br>* 2.5% late repayment charges on the outstanding principal amount.<br>*Customer can choose the tenure of their loan as per their needs between 10 - 30 weeks.<br><br>Tez Financial Services is Pakistan\u2019s #1 Non-Bank Microfinance Company (NBMFC) licensed by the Securities &amp; Exchange Commission of Pakistan (SECP) offering a portfolio of financial services from instant loans to digital savings and insurance. We are partnered with some of the leading financial institutions including UBL, Telenor Bank (Easypaisa), FINCA Bank, EFU Life, and Jubilee General.<br><br>With its cash advance product, Tez makes it easy for Pakistanis to access instant loans anytime anywhere within Pakistan. Instant loans are now just a click away. All you need to do is to quickly sign up, apply for a loan and receive your money straight to your Easypaisa, SimSim or UBL Omni mobile wallet account. It\u2019s a completely secure &amp; fast way to access credit when you need it in times of emergencies or whenever you run out of money. <br><br><br>Features:<br>\u2714 Fill in a few details to get your unique credit limit<br>\u2714 Swift loan application processing and approval<br>\u2714 Secure and reliable way to get cash in times of need<br>\u2714 Choose your own tenure and conveniently pay in installments<br>\u2714 Every Tez Advance comes with a free health and life insurance policy. Take care of your present and secure your future!<br>\u2714 We use world-class data security and encryption techniques to protect the data you share with us.<br>\u2714 Zero collateral &amp; minimum documentation<br><br>How to get a loan:<br>1. Download the Tez Financial Services app on Google Playstore<br>2. Sign Up within the app by providing details<br>3. Link your mobile wallet account with Tez (Easypaisa, SimSim, UBL Omni)<br>4. Based on your information a limit will be assigned.<br>5. Apply for Tez Advance immediately and cash will be instantly deposited into your mobile wallet account!<br>6. You can cash out by going to your nearest mobile wallet retailer or transfer to your bank account.<br><br>Get instant cash loans with Tez Financial Services. Download the App Now - It\u2019s completely free!<br><br>Frequently Asked Questions about Tez Advance in Urdu Language:<br><br>Q: Meri profile reject kyun hogayi hay?<br>A: Profile jaldi manzoor karaney ke liye yeh steps follow karein: (i) Tez Profile mein darj apna Naam, Shinakhti Card Number, Tarikh e Paidaish, Shinakhti ki Issue aur Expiry Date bilkul aapkey shinakhti card per darj maloomat sey match karnee chahyien. (ii) Dhundlee tasaweer, Photocopy Shinakhti card aur khud sey nahi lee gayee selfie qabool Nahin!<br><br>Q: Mobile wallet kya hota hai?<br>A: Tez apnay sarifeen ko Advance ki raqm Mobile Wallets ke zariye faraham kerta hai. Mobile wallet ek digital service hay jiss mein phone kay zariye apne paisay secure kiye jasaktey hain bajaye iskay ke aap cash ya debit cards rakhain. Tez mein filhal SimSim aur EasyPaisa wallets hee istemal hosaktay hain. Apna mobile wallet Tez ke saath link kar ke Tez Advance hasil kar sakte hain. <br><br>Q: Advance ki raqm wapis kaisay karni hogi?<br>A: Advance ki raqm wapis adaa karne ke liye aap qareebi mobile wallet retailer ke paas jaaker apney account mein amount load karwaein, phir Tez App mein login karein aur easily cash advance repay kijiye.<br><br>We&#39;re always ready to help you! For any queries please connect with us at:<br>Phone: 042-111-839-839<br>WhatsApp: 0346-822-9571<br>Email: info@tezfinancialservices.pk",
     "summary": "Instant Advance, Savings, Insurance and Investment Services for all",
     "installs": "500,000+",
-    "score": 4.219196,
+    "score": 4.220207,
     "scoreText": "4.2",
-    "ratings": 7760,
+    "ratings": 7762,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1137,7 +1102,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.tez.androidapp"
   },
   {
     "title": "CashNetUSA",
@@ -1145,7 +1111,7 @@
     "descriptionHTML": "We pride ourselves on providing quick, convenient credit to our customers, so we designed our app to make it just as quick and convenient to manage your line of credit. Get fast access to your account to:<br><br>\u2022 Request a draw<br>\u2022 View your available credit<br>\u2022 Make a payment <br>\u2022 Review your payment details, including future and past payments<br>\u2022 Access CashNetUSA benefits like discount offers, coupons and free financial courses <br><br>Take control of your line of credit and download the CashNetUSA app today! When you&#39;re finished downloading, be sure to turn on auto updates to always have the newest version of the app.<br><br>Note: This app only supports our line of credit.",
     "summary": "The CashNetUSA app makes managing your account fast and intuitive.",
     "installs": "100,000+",
-    "score": 4.580842,
+    "score": 4.5832825,
     "scoreText": "4.6",
     "ratings": 16432,
     "free": true,
@@ -1188,7 +1154,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.enova.cashnet"
   },
   {
     "title": "MoneyLion: Mobile Banking",
@@ -1196,9 +1163,9 @@
     "descriptionHTML": "Discover 2019\u2019s Best Digital Bank with 0% APR Instacash advances, zero bank fees, low-interest credit builder loans, managed investing, cash rewards, trivia, and more. Finally, finance is easy!<br> <br>MoneyLion is an all-in-one mobile banking membership, where everyone can dream big, even if they start small. Get the premium financial tools you deserve without the fees and BS you\u2019re used to from other banks. <br> <br>Signup takes minutes, and you\u2019ll get benefits right away. Here\u2019s some of what our 5 million members love about banking with us:<br> <br>\u2022 0% APR Instacash advances <br>\u2022 Checking account with zero fees<br>\u2022 Credit builder loans (70% of members raise their credit 30+ points in 60 days)<br>\u2022 Managed investing with no minimums or management fees <br>\u2022 Credit score tracking<br>\u2022 Personal loans <br>\u2022 Financial Heartbeat: financial health monitor and advice <br>\u2022 Cashback and rewards like $25 gift cards to Amazon &amp; Target<br> <br>\u201c2019 Best Digital Bank\u201d \u2014 Finovate Awards<br>\u201cMoneyLion provides an all-in-one platform for anything finance related.\u201d  \u2014 TechCrunch<br>\u201cHere&#39;s the idea: bring the same methods that the big sharks use to build wealth, to everyone.\u201d \u2014 CNNMoney<br>\u201cMoneyLion brings better lending to Americans who might be struggling financially.\u201d\u2014 Cheddar<br>\u201cMoneyLion is making it easier to invest.\u201d \u2014 Huffington Post<br> <br>START ENJOYING AN EASIER FINANCIAL LIFE TODAY:<br><br>Sign up! Download the MoneyLion app and choose your membership to unlock features like:<br> <br>MoneyLion Visa Debit Card &amp; Checking Account: Enjoy absolutely zero fees, including no hidden fees, and fast transfers and tracking in the palm of your hand. So easy. <br> <br>0% APR Instacash with Banking: Get up to $250 in cash advances day or night, whether you want to ward off a late fee or have a fun night out. Afford to be spontaneous!<br><br>Credit builder loans: Get a Credit Builder Plus membership to unlock a low-APR loan with reporting to all three credit bureaus and exclusive perks like Lion\u2019s Share payouts.<br> <br>Managed investing: Invest the easy way! No minimums. No management fees. Just add funds to your Investment account, and we\u2019ll put it to work in your personalized portfolio. <br> <br>Credit tracking: Check your score any time and get stats important to improving your credit like credit age and credit inquiries.<br><br><br><br>MoneyLion Core or MoneyLion Credit Builder Plus (paid) membership required to participate in certain programs, services, cash advances, checking account and/or loans. See website or app for terms, conditions and details. MoneyLion investment account is managed by affiliated, SEC-registered investment adviser ML Wealth, LLC. It is not FDIC insured or bank-guaranteed, and is subject to risk of loss, including loss of principal. For important information and disclaimers relating to the investment account, please go to http://www.moneylion.com/adv. MoneyLion Checking Account provided by, and MoneyLion Visa\u00ae Debit Card issued by, Lincoln Savings Bank, Member FDIC. Identity and account verification required. Loans are offered through MoneyLion affiliates or through First Electronic Bank, Member FDIC. View full terms and conditions at www.moneylion.com/terms-and-conditions.<br><br>All loans in the USA with an APR of 5.99% are made by state-licensed subsidiaries. Loan terms range from 6 - 18 months with 0% origination fees. An example of total amount paid on a personal loan of $500 for a term of 12 months at an APR of 5.99% with 0% origination fees, would be equivalent to $515.07 over the 12 month life of the loan.",
     "summary": "Bank. Borrow. Invest. Grow!",
     "installs": "1,000,000+",
-    "score": 3.8003876,
+    "score": 3.7947063,
     "scoreText": "3.8",
-    "ratings": 31107,
+    "ratings": 31110,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1247,7 +1214,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.moneylion"
   },
   {
     "title": "Loan Day USA - Cash loans today",
@@ -1255,7 +1223,7 @@
     "descriptionHTML": "* loan repayment terms 120 days and up! <br><br>-Personal loans up to $30,000<br>-Cash on auto title loans <br><br>Are you experiencing money problems?<br><br>Do you just need a small advance against your pay to tide you over?<br><br>Do you need cash for an unexpected expense?<br><br>Then a payday loan can be the solution you are looking for.<br><br>What Are You Waiting For?<br><br>We pride ourselves on our speed to connect you with a lender. In most cases, submitting your information through our site may only take a few minutes of your time. After your information is submitted, you will be redirected to the lender\u2019s website to review the terms of the loan, and if accepted, the funds will be deposited directly into your bank account!<br><br>Our service is completely FREE to you! Our company does not provide cash loans \u2013 we are here to connect you with 1 of our 100+ partnered lenders.<br><br>A personal loan is a type of unsecured loan and helps you meet your current financial needs. You don&#39;t usually need to pledge any security or collateral while availing a personal loan and your lender provides you with the flexibility to use the funds as per your need. Our lenders do not offer loans with repayment 60 days or less and also are licensed and follow all state regulations.<br><br>Be sure to follow us on Instagram: <br><br>https://www.instagram.com/loandayusa/",
     "summary": "Get cash today with Loan Day USA.  USA residents only",
     "installs": "10,000+",
-    "score": 4.53,
+    "score": 4.49,
     "scoreText": "4.5",
     "ratings": 275,
     "free": true,
@@ -1301,7 +1269,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "tsc.loandayusa.com"
   },
   {
     "title": "Speedy Cash",
@@ -1311,7 +1280,7 @@
     "installs": "100,000+",
     "score": 4.1297297,
     "scoreText": "4.1",
-    "ratings": 1856,
+    "ratings": 1857,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1352,7 +1321,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.tigerfinancial.mobile.speedycash"
   },
   {
     "title": "Dave - Banking For Humans",
@@ -1360,9 +1330,9 @@
     "descriptionHTML": "Advance up to $100 from your paycheck interest free. No credit check. With Dave, you can budget your upcoming expenses and be protected from bank fees for only $1/month. <br><br>***Dave Banking is here!*** Sign up for Dave Banking and you\u2019ll get up to a $100 advance from your next paycheck. <br><br>***Winner of the prestigious JP Morgan 2017 Financial Solutions Lab***<br><br>Dave provides paycheck advances and budgeting assistance to anyone in need. Dave will help you avoid overdraft fees, plan for upcoming expenses and spot you up to $100 when you need cash fast.<br><br>Worried about spending too much? Dave can help you budget your personal expenses and avoid overdrafts with friendly announcements. Automatic payments for things like Netflix and insurance can make budgeting tricky, but he can help there too!<br><br>Dave can even help you find a \u201cSide Hustle\u201d to bring in extra money between paychecks.<br><br>Want to be philanthropic but don\u2019t have the budget for it? Dave even helps the environment. If you tip Dave, we plant a tree for every % that you tip. <br><br>Whether you\u2019re hit by sudden expenses or need a little extra to make it to the next paycheck, Dave is here to help. Download Dave now and to stay ahead of overdrafts and get a payday advance when you need it.<br><br>DAVE FEATURES:<br><br>\u25baNEVER OVERDRAFT AGAIN\u25c4<br>\u2022 Instantly advance up to $100 from your next paycheck.<br>\u2022 No interest. No credit checks. Just pay your advance back on payday. <br>\u2022 Connect directly to your bank account to borrow money fast.<br>\u2022 Dave saves the average American an average of $500 a year.<br><br>\u25baBALANCE YOUR BUDGET\u25c4<br>\u2022 Supercharge your checking account with budgeting tools and predictive alerts.<br>\u2022:  Plan for upcoming expenses like your rent, phone bill or even places you go to often like McDonald\u2019s. <br><br>\u25baALERT\u25c4<br>If you spend more than you planned for, Dave can send you alerts.<br>Budget and account for automatic recurring payments.<br><br>\u25baSIDE HUSTLE\u25c4<br>\u2022 Find ways to earn extra money on the side.<br>\u2022 Apply for side gigs like Uber or Doordash right from the app.<br><br>\u25baGIVING BACK\u25c4<br>\u2022 For every % tip you leave, Dave plants a tree in partnership with Trees for the Future.<br>\u2022 Thanks to Dave users, millions of trees have been planted so far.<br>\u2022 Planting trees provides families with food, income, empowerment, unity, leadership, education and even saves lives.<br>\u2022 Now you can give back by borrowing, no matter what your budget is.<br><br>\u25baWHAT PEOPLE ARE SAYING\u25c4<br>\u201cThis $1/mo subscription appears radically reasonable beside the cost of overdraft fees ($34).\u201d Dave advances are 0% interest. The average overdraft has an interest rate of 17,000% and payday loans are crazy expensive at 600% interest or more.\u201d<br><br>FORBES<br>\u201cFor Workers In A Pinch, Dave.com Experiments With No-Interest Paycheck Advances\u201d<br><br>LIFEHACKER<br>\u201cThis App Will Loan You $75 Interest Free to Avoid Overdraft Fees. Overdraft fees are the worst. A solid solution: Dave. Not your buddy from college, the app.\u201d<br><br>BLOOMBERG<br>\u201cBank overdraft fees are here to stay. Thankfully, there&#39;s Dave.com.\u201d",
     "summary": "Get a payday advance of up to $100, budget, and avoid overdraft fees forever.",
     "installs": "1,000,000+",
-    "score": 4.671332,
+    "score": 4.672676,
     "scoreText": "4.7",
-    "ratings": 249647,
+    "ratings": 249736,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1408,7 +1378,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.dave"
   },
   {
     "title": "FairMoney: Instant loan app, bill payment and more",
@@ -1416,9 +1387,9 @@
     "descriptionHTML": "FairMoney is much more than a loan app: not only can you get fast loans but also renew your cable TV subscriptions &amp; recharge airtime and data with a -10% discount and no transaction fees!<br><br>Now loans up to \u20a6500,000!<br><br>LOANS:<br>Instant loans up \u20a6500,000 without collateral or paperwork.<br>If you need money for your business or a personal loan, download the FairMoney app, sign up and follow a simple application process to get an instant loan in only 5 minutes.<br><br>FairMoney is a fast, secure, reliable and free Android mobile banking app, available in Nigeria. We make getting loans and paying bills fast and easy. You can also earn bonus cash when you invite your friends.<br><br>LOAN INSTALMENTS AND INTEREST RATE:<br>On FairMoney anyone can access between \u20a61,500 to \u20a6500,000 in loan amount with repayment periods from 60 days and above.<br><br>Monthly interest rates range from 10% to 30% and respective APRs from 120% to 360%.<br><br>We are giving up to 1% daily discounts to reward our clients for early re-payments and charge up to 1.5% daily late fees for late payments.<br><br>There are no additional fees for processing your loan or any hidden costs associated.<br><br>You can repay your loan via bank transfer with your unique Providus Bank account number, USSD or debit card.<br><br>AN EXAMPLE OF A FAIRMONEY LOAN:<br>Borrow NGN100,000 over 3 months<br>Interest rate: 30%<br>Three repayments of NGN 43,333<br>Total amount payable: NGN130,000<br>Representative: 120% APR<br><br>BILL PAYMENTS:<br>FairMoney offers discounts on online payments!<br>Now you can renew your subscription on DStv, GOtv and Startimes with NO TRANSACTION FEES! <br>You can also get a -10% discount instantly when you buy airtime and mobile data on all networks in Nigeria (MTN, Airtel, 9Mobile and Glo).<br><br>Anyone in Nigeria can renew cable TV subscriptions and recharge airtime and data to increase your credit score and get higher loans and discounts.<br><br>For more information keep reading below or read our Frequently Asked Questions (FAQs) on www.fairmoney.ng. You can also send us an email to help@fairmoney.ng or call our Customer Service Hotline on 01 631 6097 from 9am-5pm every Mon-Fri.<br><br>WHY CHOOSE FAIRMONEY?<br>We are more than a loan app.<br><br>Need a business or personal loan, or a quick and easy way to pay bills? FairMoney is the answer!<br>We are working hard to provide you with the best services to make your life better. Very soon you will look to FairMoney for your electricity bill payments, current account, savings and much more!<br><br>- All you need is your phone number and BVN to apply for a loan of up to \u20a6500,000 from your phone.<br><br>- You will receive your loan in only 5 minutes!<br><br>- Spread repayments in multiple instalments for more flexibility and ease.<br><br>- We encrypt the data you choose to share with us to protect your privacy.<br><br>- Get an instant loan or make payments with no hidden charges or transaction fees.<br><br>- Build your credit score and get access to higher loans, discounts or flexible interest rates when repayments are made on time.<br><br>- Track your loan history and transactions to stay on top of your finances.<br><br>- We reward you with a N500 discount off your loan when you invite your friends to get a loan with FairMoney.<br><br>- Get a 10% discount when you buy airtime or mobile data and pay no transaction fees when you renew your cable TV. The cheapest rate in Nigeria!<br><br>HOW TO SIGN UP:<br>- Download the FairMoney app<br>- Sign up with your phone number<br>- Create your secure PIN<br><br>HOW TO APPLY FOR A LOAN:<br>- Click \u2018Apply\u2019 on the home page<br>- Answer a few simple questions<br>- Receive a loan offer<br>- Select amount and period<br>- Accept loan offer<br>- Enter bank details to receive your money<br><br>HOW TO PAY BILLS:<br>- Select &#39;Airtime, bills&#39; from the main menu<br>- Select a category (&#39;Airtime&#39;, &#39;Data&#39; or &#39;Cable TV&#39;)<br>- Follow the on-screen instructions<br>- Choose a card<br>- Confirm payment<br><br>FOR MORE INFORMATION, COMMENTS OR SUGGESTIONS:<br>Send us an email at help@fairmoney.ng or call our Customer Service Hotline on 01 631 6097 from 9am-5pm every Mon-Fri.",
     "summary": "Instant loan app where you can also pay bills for Airtime, Data &amp; Cable TV",
     "installs": "1,000,000+",
-    "score": 4.5057817,
+    "score": 4.496824,
     "scoreText": "4.5",
-    "ratings": 59988,
+    "ratings": 60018,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1468,7 +1439,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "ng.com.fairmoney.fairmoney"
   },
   {
     "title": "sokoloan - Fast Loan,Quick Online Cash in Nigeria",
@@ -1476,9 +1448,9 @@
     "descriptionHTML": "Sokoloan <br>Get your loan right to your bank account and you can chooese to repay within 2 to 6 months.Interest ranges from 4.5% \u2013 34%<br>For online loans in Nigeria without collateral, fast loans and quick loans in Nigeria, download and apply for Sokoloan.<br><br># Several simple steps to get a loan:<br>step1. <br>\uf06cCreate your account<br>step2.<br>\uf06cApply in seconds<br>step3. <br>\uf06cReceive your loan straight into your  bank account<br>step4. <br>\uf06cIncrease your loan limit each time you repay your loan<br><br>RATES AND FEES<br># Nigeria: Loans range loans from \u20a65,000 to \u20a6100,000 with terms from 91 \u2013 180 days. <br>Interest and service fee ranges from 4.5% \u2013 34% with an equivalent monthly interest of 3% \u2013 29% and APR of 29% - 365%.<br>- Example:<br>If you choose a 6-month loan and borrow N 1,000, sokoloan charges an interest rate of 4.4% per month. And the interest rate is 26.4%,we would charge you  N263 as interest of 6-month repayment period. Total amount of repayment is N1,263. <br><br><br>You can apply for a Sokoloan 24 hours a day, 7 days a week with our quick application process that lets us know your status within minutes.<br><br># Sokoloan , makes your dreams come true.<br>1. No paperwork, mortgage or office access required<br>2. Use your money the way you want - for a home or business.<br>3. For 25-50 years old, you need to have a fixed job.<br><br># Our Core Values:<br> Speed , Integrity , Enthusiasm and Professionalism.<br> <br>Soko makes getting a personal loan simple by using the data on your phone including your SMS history to verify your identity and create a credit score. We encrypt the data you choose to share with us to protect your privacy. We take your privacy very seriously and promise to never share your information with third parties.<br><br># Contact Us<br>We\u2019re always excited to hear from you! If you have any feedback, questions, or concerns, please e-mail us at admin@sokoloan.com or find us on Facebook!<br><br>- Facebook: www.facebook.com/SokoLendingCompanyLimited<br>- website: www.sokoloan.com<br>- Address\uff1aPlot 9, Acme Rd, Agidingbi, Ikeja, Nigeria",
     "summary": "Get instant loan from soko to fulfill your extra ugent cash need any time.",
     "installs": "1,000,000+",
-    "score": 4.5771465,
+    "score": 4.5700245,
     "scoreText": "4.6",
-    "ratings": 44780,
+    "ratings": 44795,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1526,7 +1498,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.nigeria.soko"
   },
   {
     "title": "MoneyPal",
@@ -1534,9 +1507,9 @@
     "descriptionHTML": "Get quick loans at amazing interest rates in a few clicks.<br><br>With the MoneyPal app, you can access collateral-free Zedvance loans of up to N5million anywhere, anytime with zero hidden charges.<br><br>Customers can enjoy loan tenors up to 24months at Annual Percentage Rate (APR) of 34.8% - 365%.<br><br>For example: If a customer borrows NGN100,000 for 6-months, we will charge an interest rate of 2.9% per month at an APR of 34.8%. A processing fee of NGN1,900 (that is 1.9% of the amount requested) will apply as well as six monthly repayments of NGN 19,566.67. This gives a total repayment of NGN 119,300.02.<br><br><br>To get started, simply:<br>1. Download the app.<br>\u20282. Click on \u201cCreate Account\u201d.\u2028<br>3. Provide relevant details (please register with the phone number linked to your BVN).\u2028<br>4. Apply for your preferred loan amount.",
     "summary": "Get quick loans at amazing interest rates in a few clicks.",
     "installs": "100,000+",
-    "score": 4.5417724,
-    "scoreText": "4.5",
-    "ratings": 4036,
+    "score": 4.5513783,
+    "scoreText": "4.6",
+    "ratings": 4038,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1578,7 +1551,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.zedcrest.android.moneypal.v2"
   },
   {
     "title": "Aella App",
@@ -1586,9 +1560,9 @@
     "descriptionHTML": "Aella takes the hassle out of Finance - whether you are a business or an individual, we put control back in your hands with simple, straightforward products. Our &quot;true north&quot; is designed to help customers build financial independence by building simple products; loans, investments, bill payments, micro-insurance plans, and peer-to-peer money transfers.<br><br>Why Aella?<br>We exist to simplify and open up financial access for all in emerging markets - by leveraging technology and widespread mobile adoption, we build products to make an impact at the frontier of Financial Inclusion.",
     "summary": "Quick and easy money solutions no buts, no ifs.",
     "installs": "500,000+",
-    "score": 4.013869,
+    "score": 4.0047803,
     "scoreText": "4.0",
-    "ratings": 20958,
+    "ratings": 20963,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1630,7 +1604,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.aella.comportal"
   },
   {
     "title": "Palmcredit",
@@ -1638,9 +1613,9 @@
     "descriptionHTML": "Palmcredit is only for people 18 years or above.<br>- Loans Limit Range From NGN 2,000 to NGN 100,000<br>- Loans Duration Ranging Between 91days to 180days<br>- Loans Interest Rate: 14% to 24%, Equivalent Monthly interest 4%~4.7%, the Annual Percentage Rate (APR) on a Palmcredit loan is 48%~56%<br>- Example:If you choose a 6-month loan and borrow NGN100,000, Plamcredit charges an interest rate of 4.7% per month.  Borrow NGN Interest Rate:  24% and The APR is 56%. 180 days Repayments of NGN 24,000. Total amount payment is NGN124,000<br><br>Palmcredit Loans Are No Origination Fees No Rollover Charge No Transaction Fees<br><br>\u25c9How we are different<br><br>\u2022 Palmcredit offers flexible loan products<br><br>\u2022 Only three steps to Your loan:<br> - Register<br> - Get Approval<br> - Disbursement to your bank account<br><br>\u2022 Repay your loans in time or complete Increase Limit tasks to build your credit limit and reduce on interest rate.<br><br>\u2022 Refer friends to join in Palmcredit &amp; Earn up to  \u20a680,000 Cash Bonus!<br><br>\u25c9CONTACT US<br><br>\u2022 We are available 24/7 to assist you with your request<br><br>\u2022 Service Hotline: 017001000 (8am \u2013 5pm,  Mon-Fri)<br><br>\u2022 Service Email: palmcredit-market@transsnet.com<br><br>\u2022 Our Official Facebook Page: https://www.facebook.com/palmcredit/<br><br>\u2022 Follow us on Twitter: https://twitter.com/PalmcreditNG<br><br>\u2022 Follow us on Linkedin: https://www.linkedin.com/company/palmcredit/<br><br>\u2022 Follow us on Instagram: https://www.instagram.com/palmcreditofficial/<br><br>\u2022 Our Office Address: Ogunnusi road besides county hospital, Ogba, Lagos, Nigeria <br><br>If you need any further information and help please don&#39;t hesitate to contact us on Facebook, Customer Hotline and Live chat in APP.",
     "summary": "Up to \u20a6100,000 Limit,Instant Approval",
     "installs": "1,000,000+",
-    "score": 4.2453456,
+    "score": 4.2457876,
     "scoreText": "4.2",
-    "ratings": 57718,
+    "ratings": 57747,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1688,7 +1663,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.transsnetfinancial.palmcredit"
   },
   {
     "title": "AnyTimeLoan \u2013 Instant Personal Loans",
@@ -1696,9 +1672,9 @@
     "descriptionHTML": "Achieve Complete Financial Freedom with AnyTimeLoan.in<br><br>AnyTimeLoan.in (ATL) is a market leader in facilitating on-demand, instant, 24x7 loans to salaried individuals &amp; self-employed individuals (MSME\u2019s); in a 100% paperless and contactless environment by using its proprietary algorithm powered by SMART (Science, Machine Intelligence, Art, Robotics &amp; Advanced Technologies). <br><br><b>\ud83d\udd11 Key Benefits</b><br>     1. On demand Peer to Peer Instant loans up to \u20b9 50 lakh <br>     2. Cash transfer to your bank account in minutes<br>     3. Flexible repayment tenure from 90 to 3 years<br>     4. No prepayment charges, pay interest only on the amount used<br>     5. Loans as low as 18% p.a. translating to 1.5% a month <br>     6. By people, For people and of people in India <br>     7. No registration fee. Processing fee is collected only once loan is disbursed, that too along with loan repayment. <br><br>     <b>\ud83d\udcf1 Why ATL is different from any other Loan App?</b> <br>    \ud83d\udc49 Avg. loan disbursement time is less than 5 minutes <br>    \ud83d\udc49 Flexibility to avail loan that meets your needs (Personal loan, Education loan, Loan for upskilling, Business loan, etc).<br>    \ud83d\udc49 PAN India operations <br>    \ud83d\udc49 Approved loan amount can be used to shop on Flipkart &amp; more.<br>    \ud83d\udc49 100% digital process <br>    \ud83d\udc49 100% Unsecured loans, no collateral needed <br>    \ud83d\udc49 No bureau score is needed. You just need to meet our proprietary algorithms<br>    \ud83d\udc49 Apply for a personal loan through the app and pay back in a ziffy.<br><br>    <b>\u2b50\ufe0f Unique Benefits of the ATL App</b><br>    1. Instant Loan - Get advance up to \u20b9 50 lacs starting at just 0.05% /day. Pay only for the no. of days you use the money.<br>    2.Shop- Use your ATL credit limit to shop at Flipkart, etc and pay in 2-3 EMIs at ZERO extra cost <br>    3. Education Fees on EMI <br><br>     <b>\ud83d\udc4d Eligibility Criteria (Min)</b> <br>    \u2713 Indian citizen<br>    \u2713 Above the age of 18<br>    \u2713 Minimum take home salary per month \u20b9 18k - Bangalore, Chennai, Delhi NCR, Hyderabad &amp; Secunderabad, Kolkata, Mumbai, Pune - \u20b9 15k - Other cities<br><br>    <b>\ud83d\udcc1 Documents Required</b><br>    AnyTimeLoan.in (ATL) aims to be one of the most user-friendly instant loan apps in India. So, submit just 5 documents to avail an instant loan online:<br>    1. Selfie / Video KYC<br>    2. PAN card<br>    3. Address ID proof<br>    4. Bank statement<br>    5. Profession / occupation proof<br><br>    <b>\ud83d\udc68\u200d\ud83d\udcbb  How ATL Works?</b><br>    Our 4-step application process reflects our goal to be the most secure instant loan apps in India. All you have to do is:<br>    1. Log in to the ATL mobile app and verify your mobile number.<br>    2. Upload a few basic details and documents on this quick loan app. Within 2-3 minutes of your personal loan application, you&#39;ll be notified of your approval status.<br>    3. Once your loan is approved, simply select the loan amount and get the money transferred to your bank account in as quick as 5 minutes, subject to meeting our criteria.<br><br>    <b>\ud83c\udfb0 Interest Calculation (Example)</b><br>    Loan amount of Rs 20,000 at interest rate of 18% p.a. on reducing balance with processing fees of Rs 800/- (inclusive of GST) and repayable in 3 EMI will have a total interest of Rs 600/- (APR of 12% pa).<br><br>    <b>\ud83c\udfd9\ufe0f Operational Cities</b> <br>    Our loan app provides instant cash loans across India via our lenders / investors.<br><br>    <b>\ud83d\udd12 Security &amp; Protection of Privacy</b><br>    Data security &amp; privacy is a top priority at AnyTimeLoan.in. Our backend APIs comply with mandated security standards, CISA and robust protocols. <br>    Please write to us with your valuable feedback and suggestions on <b>ccare@anytimeloan.in .</b><br>    AnyTimeLoan.in (ATL) is the trade name of Luharia Technologies Private Limited, which has a valid CoR from RBI as NBFC P2P.",
     "summary": "Instant unsecured loans for any needs",
     "installs": "1,000,000+",
-    "score": 2.5714285,
+    "score": 2.5809934,
     "scoreText": "2.6",
-    "ratings": 4720,
+    "ratings": 4724,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1738,9 +1714,10 @@
     "download": {
       "apk": {
         "size": 22048180,
-        "url": "https://play.googleapis.com/download/by-token/download?token=AOTCm0Tj7sgkA1UcYG1oI6iHv6QbWAsBlbJ1OOglvNGu1zrlEPVTXVfiSmsrDcfiPgSBSsjKn3YFPhpRiS241igN_1wZax13tWXZlu1R_cebLsOa1BU6S7u7OxxyCg3ZzfADhXgkdeF1csBZZUMZG3GTgOSqGQ4cdgJSvsTD-9wvmz-hbKNQlR3gSz3mQ7Zav3LcDSUppOwa9Mq8L690LlZ1fiRDdTLPH5iLIcTp7l8PFa2-G-97Q52Pu7PPCltfO2hNPtp7RQhJcXHEbv3vRwpfob600qWojDkv4d47P7yWenlIvNGhn99sPauFmnbb3vNPkJzLo2En0IXw9oNlxqk0arxirU9l1Fk4K-W0tbFOOm_oCiETzbHBuxIonzrhdenQfsI-AjhwIccFIbk-UA4hQ1G5-LZiOA&cpn=zvuBQD5YN1MfyTg3"
+        "url": "https://play.googleapis.com/download/by-token/download?token=AOTCm0Q_V6WD3LFhkhGo4aEu-gJHZDtrZT0NVLzsYr7BGe_Saakzm4yOLRZ4GvPln98oyK_bx6Svyb2FPU3UUDvFL1yt3owqh7grNTuFLggHbm0OcFxneeTwrlhrCUbiqmoSnic3TC63HR1T5IzPmyihdt_JEzI7YSlgBiVfcZJQM7STvbwJ0QIOZikO-SIXmGLe_4RxC_qp1IXRdVM92xvRsuVpmaqoeGwxlh01Zj-Ppwal5qwFXU1-YqiRkAlwvRDflUtilVaNyxsG1sM_Zm8_lK6aqZZzQ4F2PbwbGUmFofheGXF_cgpAEBZK52R6c38CzqpZ1B5_34RALwxUoMf9UNc5X20z7rl4avGLWrOMrjqyGUMA6-ym4cg8DmwcDnu4Q4S1BOgoVwK-babgGX1pul58FUPv0g&cpn=8q7sljjEeIfcKsTI"
       }
-    }
+    },
+    "id": "com.atl.anytimeloan"
   },
   {
     "title": "Atome Credit-easy, fast, online personal loan",
@@ -1748,9 +1725,9 @@
     "descriptionHTML": "Fees &amp; Charges<br>All the fees are listed in the app clearly. No other hidden costs.<br>Annual Percentage Rate (APR): 36%<br>Monthly interest rate: 3%<br>Processing fee: 10%-13%<br>Loan term: 91-180 days<br><br>Example<br>A 3 months loan of \u20b9 10,000 <br>Interest: \u20b9 605.91<br>Processing fee: 10% x \u20b9 10,000 = \u20b9 1000<br>GST (18% on processing fee): \u20b9 180<br>Amount Received: \u20b98,820<br>EMI payable per month: \u20b9 3535.30<br>Total Repayment: \u20b9 10,000 + \u20b9 605.91= \u20b9 10,605.91<br>Tired of the complicated procedures of applying bank loans? Install Atome Credit now! Apply on the app. All we need is your basic details and banking details to process your loan further.<br><br>Atome Credit is an easy, fast and trustworthy Instant Personal Loan App. No collateral required!<br><br>Loan Types<br>Easy Credit: This is a Credit line that allows you to avail credit up to \u20b930,000 whenever you want. No bank visit is required. With Easy Credit you are offered a credit limit. You can then withdraw any amount of cash whenever you require from your credit limit and transfer to your personal bank account. You will get a monthly bill at the end of month reflecting the credit amount you had withdrawn alongside interest charges. You will be charged interest only on the amount that you have withdrawn from your credit limit. <br><br>EMI Loans: This allows you to borrow up to \u20b9 30,000 for a tenure ranging from 3 to 6 months and pay back in easy installments.<br><br>Features<br>Online and paperless application process <br>Fast approval<br>Immediate funds transfer to your account<br>Consolidated Bills in a monthly statement<br>Available across India<br>Multiple Repayment options<br>The sanctioned credit limit gradually increases as you repay on time<br><br>Benefits<br>Legitimate app complying with all the laws, rules and regulations<br>Apply for a loan from your phone<br>Low interest rates<br>Convenient EMIs<br>Flexible Repayment - Minimum payment option <br><br>Eligibility<br>Indian citizen<br>Above the age of 21 years<br>Currently employed or with a steady income<br><br>Documents Required<br>PAN card<br>Aadhaar card<br>Selfie<br><br>How Atome Credit works?<br>Download and Install the APP.<br>Register with mobile phone number.<br>Fill out your basic information.<br>Upload PAN card, Address Proof and complete KYC verification.<br>Submit your application.<br>Just need to wait 24 hours for application approval.<br>Once approved, the loan amount is credited to your bank account within minutes.<br><br>Contact Us<br>Facebook:@AtomeCreditIN<br>Twitter:@atomecreditindia<br>Mail: cs-india@atomefin.com<br>Call: 1800 572 6266<br>Customer Service Support: 9am-6pm (Monday to Friday) and CLOSED on public holidays<br><br>Address<br>L-19, LGF, Kalkaji, NEW DELHI, New Delhi, Delhi, India, 110019<br><br>Security &amp; Protection of Privacy<br>Your personal information is completely secure. We have stringent processes in place to protect customer data.",
     "summary": "Easy, Fast and Trustworthy Instant Personal Loan",
     "installs": "1,000,000+",
-    "score": 3.96063,
+    "score": 3.9592566,
     "scoreText": "4.0",
-    "ratings": 14182,
+    "ratings": 14194,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1794,11 +1771,12 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "in.atome"
   },
   {
-    "id": "com.flexsalary",
-    "error": "App not found"
+    "error": "App not found",
+    "id": "com.flexsalary"
   },
   {
     "title": "CASHe \u2013 Instant Personal Loans",
@@ -1806,9 +1784,9 @@
     "descriptionHTML": "App store info<br><br><br>CASHe is one of India\u2019s leading app-based credit lending platform which instantly underwrites and disburses short-term personal all through a smartphone app. Loans range from Rs 9,000 to Rs 3,00,000 with credit period ranging from 2 months to 1 year. We are revolutionizing the short-term personal loan market in India by creating a one-stop shop for young professionals who can now access credit in an elegant and uncomplicated way, instantly!<br><br>* CASHe is the winner of Entrepreneur India\u2019s Best Lending Tech Start-up for the year 2018.<br>* Included in INC42\u2019s 42 most innovative start-ups for the year 2018. <br><br>Eligibility<br>\t<br>\u25cf Minimum salary: in-hand salary of \u20b915,000/month<br>\u25cf Minimum age: 18 years or above and below 55 years<br><br>How to apply for a loan on CASHe<br><br>* Log in to the app by registering through your social media pages. <br>* Fill your details and upload basic documents to complete the mandatory KYC verification. <br>* Once verified, you will be notified on your eligible loan amount instantly. <br>* Apply for a loan and once it has been approved, we transfer the loan amount into your bank account in 10 minutes. <br><br>Documents required<br><br>* Selfie <br>* PAN card<br>* Address ID proof<br>* Aadhar card<br>* Bank statement<br><br>What You&#39;ll Love<br><br>\u25cf Avail instant loans from CASHe through your smartphone<br>\u25cf Completely Digitised<br>\u25cf Get instant cash loans from as little as Rs 9,000<br>\u25cf Faster approval process<br>\u25cf Get collateral-free loans without any bank visits<br>\u25cf Loan disbursement in 10 minutes (Subject to submission of proper documents)<br><br>Wide range of loan products and tenors<br>Rs.9K \u2013 80K for 62 days <br>Rs.19K \u2013 100K for 90 days <br>Rs 25K \u2013 200K for 180 days<br>Rs 50K \u2013 250K for 270 days <br>Rs 75K\u2013 300K for 360 days<br><br>Interest charges (APR) based on loan products <br>Loans at 24.33%-36.50% p.a. translating to 2% - 3% a month<br><br>\u25cf ROI for loan tenure 62 days: 36.50% p.a. <br>\u25cf ROI for loan tenure 90 days: 33.46% p.a. <br>\u25cf ROI for loan tenure 180 days: 30.42% p.a. <br>\u25cf ROI for loan tenure 270 days: 31.42% p.a. <br>\u25cf ROI for loan tenure 360 days: 24.33% p.a. <br>  <br>Sample loan calculation-<br>Loan amount:  Rs 30,000 at interest rate of 33% p.a. <br>Loan Duration: 90 Days<br>Total Interest = Rs 2,475<br>Processing fees (PF) + GST = Rs 600 + Rs 108 = Rs 708<br>Total Deductibles (PF + GST+ Interest): Rs 3183<br>In-Hand Amount: Loan Amount - Total Deductibles = Rs 30,000 - 3183 = Rs 26,817<br>Total repayable Amount: 30000 INR<br>Monthly EMI Repayable: 10000 INR<br><br>** The deductibles (interest + PF + GST) is deducted upfront during the loan disbursal.<br><br>Your data is safe with us<br><br>We have stringent security measures in place to protect the loss, misuse and alteration of information under control. We use Secure Sockets Layers (SSL) based encryption, for the transmission of the information, which is currently the required level of encryption in India as per applicable law.<br><br>We need the following permissions for the app to function properly<br><br>SMS*: Required to read your financial SMS sent by banks. <br>Location: Required to verify your current location for the loan application<br>Social media profile -Required to fetch the verified Facebook, LinkedIn and Google accounts for registration on the app. <br>Contacts: To find accounts on the device and read your contacts<br>Camera &amp; Media Access: Required for enabling upload of loan application documents <br>Read Device Info: Required to link the unique phone ID (IMEI) to the loan application for security purposes<br><br>*Access to your SMS information <br>We do not collect, read or store your personal SMS from your inbox. We only monitor your SMS to ascertain the financial SMS sent by the 5 or 6-digit alphanumeric senders in your inbox. This helps us to identify the various bank accounts you are holding, description and amount of the transactions undertaken by you as a user.  This is required to perform a risk assessment on your profile and make faster credit decisions. <br><br><br>Contact Us<br>support@cashe.co.in: for loan related queries",
     "summary": "Instant short-term personal loans with easy eligibility process for quick cash",
     "installs": "1,000,000+",
-    "score": 4.174444,
+    "score": 4.175134,
     "scoreText": "4.2",
-    "ratings": 95581,
+    "ratings": 95634,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1855,7 +1833,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "co.tslc.cashe.android"
   },
   {
     "title": "RupeeLend",
@@ -1863,9 +1842,9 @@
     "descriptionHTML": "Rupeelend is a secure and trustworthy way to borrow money for short term emergencies. You are not required to go through long involved applications and wait indefinitely for approvals before you can lay your hands on the money.<br><br>Rupeelend is part of RupeeLend Group, a digital finance company providing short term credit to consumers and businesses. We\u2018re based in Delhi and launched our first website in 2014. Rupeelend is a secure and trustworthy way to borrow money for short term emergencies",
     "summary": "Fast Loans. Smart Loans",
     "installs": "100,000+",
-    "score": 3.33,
+    "score": 3.32,
     "scoreText": "3.3",
-    "ratings": 951,
+    "ratings": 953,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1908,7 +1887,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.rupeelend.rupeelend"
   },
   {
     "title": "Instant loan for college students \u2013 mPokket",
@@ -1916,9 +1896,9 @@
     "descriptionHTML": "<font color=\"blue\"><b>College student? Out of money? Need a personal loan fast?</b></font><br>mPokket is an\u00a0app that provides <b>Instant Loan for students</b><br><b>Student Loans</b> range from \u20b9 500 to \u20b9 10,000<br>Tenure: 3 months<br>Interest rates range from 3.5% - 5% per month depending on product availed.<br>Example: If loan amount is \u20b910,000 and interest is 3.5% per month with tenure of 90 days after deducting any other fees<br>Interest = \u20b910,000 x 3.5% x 3 = \u20b91050<br>mPokket provides <b>instant personal loans to college students</b> in India. The loan amount is sent to you via instant credit to your bank account or Paytm wallet. You can start by borrowing INR 500 and your borrowing limit will keep increasing over time with good usage. You can choose to repay in 61 to 90 days.<br><br><b>Eligibility</b><br><br><b>1.</b> For <b>instant student loan:</b> You must be a college student over 18 years of age<br><b>2.</b>  For instant salary loan: You must be a recent graduate from college and have received a job offer or started working<br><br>Unlike other <b>studen loan</b> providers we do not restrict our services to a limited set of cities or colleges. You can be studying in or have graduated from any college in India.<br><br>mPokket&#39;s purpose and the app&#39;s core functionality is to offer you an <b>instant loan</b> in your time of need, which is virtually impossible to obtain otherwise in India as a college student. We are able to accomplish this by using our proprietary algorithms to create a credit risk profile based on your financial SMS data (sent by banks and merchants) and calling patterns (based on your call logs). This allows us to make a loan offer best suited for your needs. The private information you share with us is stored using the best security protocols.<br><br><b>Documents required</b><br><br>For <b>Student Loan:</b><br><b>1.</b> ID Proof (College ID card) <br><b>2.</b> Address Proof (Voter ID Card/Driving License/Passport)<br><br>For Salary Loan (we also require):<br><b>1.</b> Offer letter or salary slip<br><b>2.</b> Bank statement<br><br>That\u2019s it! Isn\u2019t it easy? Simply upload photos from your mobile and take a quick personal loan.<br><br><b>How it works</b><br><br><b>1.</b> Download the mPokket App<br><b>2.</b> Upload KYC information, selfie video, Address Proof and Student ID card<br><b>3.</b> Wait for a few hours for your information to be verified by us. Get SMS alert when verified  <br><b>4.</b> Select the loan amount and for how long you want to borrow and where (Bank or Paytm)<br><b>5.</b> Get an <b>instant money</b> in your Bank or Paytm<br><b>6.</b> Repay anytime before due date at your convenience using Debit Card, Paytm wallet or UPI<br><b>7.</b> Provide some extra information if you wish to apply for higher credit limit<br><b>8.</b> Provide your job related information if you are working or have a job offer and want an even higher borrow limit<br><br><b>The entire process is 100% online and really quick!!</b><br><br><b>Uses</b><br><br><b>1.</b> College expense<br><b>2.</b> Tuition fee<br><b>3.</b> Exam fee<br><b>4.</b> Hostel fee<br><b>5.</b> Mobile recharge<br><b>6.</b> Buy books<br><b>7.</b> Travel \u2013 Bus, Taxi, Train, Flight<br><b>8.</b> Eat out<br><b>9.</b> Bike loan or 2 wheeler loan<br><b>10.</b> Utility bill<br><b>11.</b> Salary advance<br><br>Or literally anything else you want to use the money for :)<br><br><b>Support</b><br><br>For more answers visit http://www.mpokket.com/faq.html<br><br>For help email us at <u>support@mpokket.com</u><br><br>Permission Required by app:<br><br>Phone<br>To prevent fraud by uniquely identifying the device &amp; restricting unauthorized devices to act on user&#39;s behalf<br><br>Contacts<br>To collect contact info to detect references &amp; auto-fill forms during the loan application<br><br>SMS<br>To read SMS to understand purchasing behavior for assessing credit limit<br><br>Others<br>Location to provide serviceability of loan application.Camera &amp; Storage to allow capture images &amp; upload documents",
     "summary": "Instant Pocket Money for College Students in India. Download and Borrow Now!!",
     "installs": "5,000,000+",
-    "score": 4.419656,
+    "score": 4.42046,
     "scoreText": "4.4",
-    "ratings": 205186,
+    "ratings": 205310,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -1967,7 +1947,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.mpokket.app"
   },
   {
     "title": "Credy - Fast Online Instant Personal Loan App",
@@ -1977,7 +1958,7 @@
     "installs": "500,000+",
     "score": 3.2597404,
     "scoreText": "3.3",
-    "ratings": 3112,
+    "ratings": 3115,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2020,7 +2001,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "in.credy.borrowerapp.full"
   },
   {
     "title": "Dhani: Instant Personal Loan, Credit Line & Wallet",
@@ -2028,9 +2010,9 @@
     "descriptionHTML": "Indiabulls Dhani is a one stop shop for all your financial needs. You can get Instant Personal Loans, Credit Line and Wallet to manage all your payments. Also, earn Dhani Points for all transaction made on the Dhani App. <br><br>Personal loans are available from <b>\u20b9 10,000 to \u20b9 15 Lakhs</b> period ranging from 3 months to 36 Months. Avail loans at interest rates from 1.2% to 3% p.m*. and Processing Fees range from 1.5% to 6% only. Zero foreclosure charges on loans below \u20b9 20,000.<br><br><b>NEW OFFERING</b> Now shop anything and everything in 3 easy EMI\u2019s at 0% interest with Indiabulls Dhani \u2013 Credit Line. This option allows you to set up your credit limit and shop on Dhani App, Across Online &amp; Offline at 30 lakh plus Rupay merchants.<br><br><b> PAYMENTS </b> Indiabulls Dhani  also offers Mobile Recharge, Bill Payments (including gas, electricity etc.),Ticket Bookings (Bus, Flights &amp; Trains) &amp; option to purchase Gift Vouchers on the Dhani App itself. All Dhani Customers get exciting cashbacks on all transactions made on Dhani App.<br>With Indiabulls Dhani, you can avail: <br><br>\u2022 Personal Loan: With Indiabulls Dhani, fulfil all your dreams with unsecured personal loans, as we provide easy &amp; instant personal loan disbursals.<br>Personal Loan Features:<br>\u2714 Money in your bank account instantly<br>\u2714 Share Pan Card &amp; Address Proof to get instant personal loan disbursal<br>\u2714 No guarantee/security required for Instant Dhani loan<br><br>\u2022 Two Wheeler &amp; Car Loan: Get a loan for your Bike or New/Used Car with Indiabulls Dhani. It is a faster &amp; simpler way to get an instant two wheeler loan online.<br>\u2714 Get 100% loan value for your two wheeler or car<br>\u2714 Get your accessories covered under the 2 / 4 wheeler loan<br>\u2714 Get bike/car loan amount in your bank account instantly<br>\u2714 Choose a bike/car &amp; dealer of your choice<br>\u2714 No need to pledge your bike/car against the loan <br><br>\u2022 Travel Loan: Now get a travel loan to make all your vacation dreams come true with Indiabulls Dhani.<br>\u2714 Plan &amp; take your holiday whenever you want, don\u2019t wait to save money for your travel plans<br>\u2714 Upgrade to better destinations instantly<br><br>\u2022 Medical Loan: Look after any medical need. With Indiabulls Dhani Medical Loans, money will never be concern for medical emergencies.<br>\u2714 Look after any medical requirement, don\u2019t wait for insurance payment<br>\u2714 Use at any hospital of your choice<br><br><b>Introducing Dhani Credit Line</b><br>With Dhani Credit Line - EMI Card get more financial freedom and shop anything &amp; convert each transaction you make into 3 easy simple EMIs. Enjoy all this at <b>0% interest rate</b>. <br>\u2714 Automatic 3 month EMIs<br>\u2714 0% interest rate<br>\u2714Earn cashbacks on each buy<br>\u2714Simple &amp; hassle free option<br><br><b>Introducing Dhani Points \u2013 A Rewards Program by Indiabulls Dhani</b> Exclusive for Dhani customers. Get cashbacks on everything you do on Dhani App. 1 Dhani Point is equal to \u20b9 1. <br>\u2714 Everyone gets Welcome gift of \u20b9 15 on Dhani Loan Sanction<br>\u2714 Enjoy Spin the Wheel and Win Up to \u20b9 100 on every spin <br>\u2714 Refer a friend or family &amp; Earn \u20b9 250 on every loan taken<br>\u2714 Cashbacks of \u20b9 20 on mobile recharge, bill payment &amp; gift voucher <br>\u2714 Cashbacks of  \u20b9 75 on top up loans <br><br><b>Enjoy simple &amp; rewarding Indiabulls Dhani mobile wallet.</b><br>Dhani wallet available on Dhani gives you the power of instant online payments! From mobile recharge to bill payments, gift vouchers to transferring money, with Indiabulls Dhani you get a wallet that comes with exciting cashbacks, rewards and offers!<br><br><b> Spin the Wheel</b><br>Your Dhani App now gives you the chance to earn money daily. Login to the app every day and spin the wheel and win points worth up to \u20b9 100 Dhani daily!<br><br><b>How to Apply for a Dhani Loan:</b><br>1. Download the Dhani App &amp; enter your mobile number.<br>2. Enter Loan Amount, PAN and personal details<br>3. Instant Approval &amp; Disbursal of Loan Amount<br><br>Customer Service Details:  helpline: 1860 419 3333 &amp; Email: service_dhani@indiabulls.com",
     "summary": "Get Loans from \u20b9 1,000 to \u20b9 15 Lakhs Instantly at Rates from 1% to 3% p.m.*",
     "installs": "10,000,000+",
-    "score": 4.1181545,
+    "score": 4.1150494,
     "scoreText": "4.1",
-    "ratings": 337515,
+    "ratings": 337841,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2080,7 +2062,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.indiaBulls"
   },
   {
     "title": "Quick Loan, Instant Loan At Low Interest & Low EMI",
@@ -2088,9 +2071,9 @@
     "descriptionHTML": "\ud83d\udcb0 Upwards is India\u2019s quickest personal loan provider for salaried individuals looking for short-term loans between Rs.20,000 - Rs.2,50,000. \ud83d\udcb0 <br><br>We provide hassle-free personal loans to all job profiles like teachers, software engineers, accountants, retail store employees, nurses and more who draw a minimum monthly salary of Rs.15,000.<br><br>\ud83c\udfaf <b>Why Upwards - Quick Personal Loans?</b> <br>\u2714\ufe0f Quick approvals on personal loans<br>\u2714\ufe0f Loans amount from Rs 20,000 - Rs 2,50,000<br>\u2714\ufe0f Loan tenure ranges from 6 months - 2 years<br>\u2714\ufe0f No collateral required<br>\u2714\ufe0f Online EMI Calculator: Calculate EMI based on your loan amount, interest rate and loan tenure<br>\u2714\ufe0f Minimal Paperwork. Everything from the mobile app.<br>\u2714\ufe0f PAN, Bank Statement and Salary Slips are the only documents required.<br>\u2714\ufe0f Quick loan disbursal. Unlike banks, we disburse loans within 1 - 2 Days<br>\u2714\ufe0f Minimum foreclosure and prepayment charges<br>\u2714\ufe0f In-App Chat Support<br><br>\ud83d\udd10 <b>Security &amp; Protection of Privacy:</b> <br>- Protection of your privacy and your data security is a top priority at Upwards. Our technology complies with mandated security standards and robust protocols which have been tested and certified. <br><br>\ud83d\udc4d <b>Eligibility:</b>  <br>- Salaried employee with a minimum salary of Rs.15,000 per month<br>- Age above 21 years and below 50 years<br><br>\ud83c\udfe0 <b>Personal Loan Available In Cities:</b><br>- Mumbai, Pune<br>- Delhi, Gurgaon, Noida<br>- Bengaluru<br>- Chennai, Coimbatore, Tirupur<br>- Hyderabad, Secunderabad, Ranga Reddy<br>- Ahmedabad<br>- Jaipur, Indore<br>- 30+ more cities<br><br>\ud83d\udcb0 <b>Key Points:</b> <br>- Interest Rates (ROI, Min to Max): 18% to 32% per annum<br>- Repayment Period (Min to Max): 6 to 24 months<br>- Processing Fee: 2% of loan amount<br>- Sample calculation: For a loan of Rs. 100,000 at 20% interest rate per annum for tenure of 12 months your one time processing fee (@2% of loan amount)  will be Rs. 2000 and monthly EMI will be Rs. 9263/-. The net amount credited to you will be Rs 98,000 (post processing fee deduction) and cumulative amount paid back  by you will be Rs 1,11,161/- (=Rs 9263 x 12 EMIs), leading to an APR of 24%<br>- Note: We do not provide any pay-day loans or loans with less than 60 day repayment period.<br><br>\ud83e\udd1d<b>Upwards Quick Personal Loans are for:</b><br>- Home construction and renovation<br>- Family functions &amp; weddings <br>- Self-improvisation (Skill-training course fee financing, job-related purchases etc.)<br>- Medical emergencies<br>- Travel<br>- Two-wheeler purchase<br>- Electronic Purchases<br>- Multiple loan consolidation<br><br>\ud83d\udcf2 <b>How does Upwards work?</b><br>- Download and login<br>- Fill in your loan requirements and employment details<br>- Upload your KYC Docs, AADHAAR, PAN and photograph<br>- Approval will be communicated within 48 hours of document submission<br>- After that, we will process the loan agreement and you will get loan amount<br>- That&#39;s it! You need to pay your EMIs on the due dates once the loan is disbursed.<br><br>\u2714\ufe0f <b>Loan Approval Criteria:</b><br>- Income-to-Expense ratio<br>- Demographics (Age, Marital status, Education etc.)<br>- Professional experience (tenure with the employer, job stability, total work-ex etc.)<br>- CIBIL Score should be above 625<br>- Purpose of your loan and its authenticity <br><br>\u274c<b>Your loan will be rejected if:</b><br>- You provide false information about your income and obligations<br>- Apply for an amount which you cannot afford and comfortably repay<br>- Mismatch of information provided by you on our app and during tele-verification<br>- Past EMI payment (Credit) history is not up to the mark. <br><br> \ud83d\udcfb<b>News and featured article on Upwards loan:</b><br>- Livemint: http://bit.ly/2Ndh6Mj<br>- Inc42: http://bit.ly/2NKgtcD<br>- ET Tech: http://bit.ly/2MohrGJ<br>- ET Rise: http://bit.ly/2CUyfpi<br>- VC Circle: http://bit.ly/2OlAof4<br>- Deal Street Asia: http://bit.ly/2Ndvy78<br><br>\ud83d\udce9 Please do reach out to us on help@go-upwards.com for any other information.<br><br>We at Upwards are committed to serving you and will always strive to maintain the trust that you have placed in us! \ud83d\ude03",
     "summary": "Instant Personal Loans upto Rs. 2 Lakhs in Just 24 Hours!",
     "installs": "1,000,000+",
-    "score": 3.985536,
+    "score": 3.9780657,
     "scoreText": "4.0",
-    "ratings": 21015,
+    "ratings": 21036,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2140,7 +2123,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.goupwards"
   },
   {
     "title": "Instant Personal Loan App Online Loan - KreditBee",
@@ -2148,9 +2132,9 @@
     "descriptionHTML": "Loans range from \u20b91,000 to \u20b9200,000<br>Tenure: 91 days to 15 months. Interest rates range from 0%-29.95% depending on risk profile of customer and product availed<br>Example: If loan amount is \u20b950,000 &amp; interest is 22% per annum with tenure of 91 days; after deducting any other fees<br>Interest = \u20b950,000 x 22%/365 x 91 = \u20b92,742<br><br>KreditBee is an <b>Instant Personal Loan App</b> &amp; Credit Platform for Young Professionals across India, where one can apply for <b>Personal Loan Online</b> &amp; avail up to <b>\u20b92 Lakh</b> as Direct Cash Transfer to Bank Account.<br><br><b>Loan Types</b><br><br><b>Flexi Personal Loan</b> - A flexible loan option where you can avail loans within 10 minutes of app install as direct bank transfer. All you need is your PAN Card, ID &amp; Address Proof, and you can avail from \u20b91,000 to \u20b950,000 for a tenure ranging from 62 days to 6 months.<br><br><b>Personal Loan for Salaried</b> - A personal loan option where you can avail amounts from \u20b910,000 to \u20b92 Lakhs as direct bank transfer for a tenure ranging from 3 to 15 months. All you need is your PAN Card, ID, Address Proof and Salary Proof.<br><br><b>Online Purchase Loan</b> - A loan option where you can <b>Buy anything Now, Pay Later in EMIs</b>. Via this option, you can avail e-vouchers on KreditBee App on loan, purchase on KreditBee&#39;s partner platforms like Flipkart, Amazon, MakeMyTrip, Myntra &amp; many more through those e-vouchers, and pay KreditBee later in EMIs.<br><br><b>Features</b><br><br>1. 100% Online process<br>2. Minimal documentation<br>3. Fast approval<br>4. Immediate bank transfer<br><br><b>Benefits &amp; Risks</b><br><br>1. Get access to higher amounts &amp; tenures as you repay on time<br>2. As compliance requirement your payment behaviour is shared with credit rating agencies; based on that your credit score may increase/decrease<br><br><b>Eligibility</b><br><br>1. Indian resident<br>2. Above the age of 21 years<br>3. Should have monthly source of income<br><br><b>How to get started</b><br><br>1. Install KreditBee App<br>2. Register through your Facebook/Google account<br>3. Fill your basic details to check first level eligibility<br>4. Upload KYC documents - ID, Address Proof &amp; PAN card<br>5. Avail Loan as bank transfer or e-voucher as per your request<br><br><b>Amount, Tenure, Fees &amp; Charges</b><br><br>Loans amount: \u20b91,000 to \u20b9200,000, Tenure: 91 days-15 months. KreditBee charges one-time service fee while onboarding or during upgrade which is \u20b930-\u20b9350 depending on the risk profile and membership band availed by customer. Interest rates range from 0%-29.95% with equivalent <b>monthly interest rate of 0%-2.49%</b> only. A small processing fee is charged for loans e.g. for low risk customers 0%-3% of the principal, for very high-risk customers 2.5%-6.5%*. The charges and repayment tenures vary based on creditworthiness and repayment ability of the customers.<br><br>Penalty is charged only when someone delays their scheduled payment.<br><br>The APR for different products is separate as per the risk profile of the customers. The APR for different personal loan products: low risk customers is 0%-36%, medium risk customers is 18%-39%, high risk customers is 24%-42%* and very high-risk customers is 24%-70%*.<br><br>In addition to it, GST will be applicable only on the fee components as per Indian laws.<br><br>*The higher charges are only for loans of lower amount and lower repayment tenure.<br><br><b>Example</b><br><br>A new low risk customer availing personal loan for salaried can avail a loan of \u20b950,000 at an interest rate of 22%, processing fee of \u20b91,250 for a period of 12 months and onboarding fees of \u20b9350. This would translate to an APR 25.2%.<br><br><b>Interest Calculation</b><br><br>If loan amount is \u20b950,000 &amp; interest is 22% per annum; and loan is to be repaid over 12 EMIs, then overall interest payable is \u20b96,157 only. The EMI per month would be \u20b94,680 only.<br><br><b>Contact Us</b><br><br>1. Twitter: Tag us @kreditbee for quick response<br>2. Mail: help@kreditbee.in<br>3. Call: 08044292200<br><br><b>Address</b><br><br>The Royal Stone Park, 3rd Floor, No. 100, Above Honda Showroom, Sakshi Nagar, Pai Layout, Bennigana Halli, Bengaluru, Karnataka 560016",
     "summary": "Instant Personal Loan upto \u20b92 lakh for 91 days to 15 months at 0-2.49% per month",
     "installs": "10,000,000+",
-    "score": 4.5473094,
+    "score": 4.544759,
     "scoreText": "4.5",
-    "ratings": 475979,
+    "ratings": 476166,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2198,7 +2182,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.kreditbee.android"
   },
   {
     "title": "MoneyTap Credit - Better Than Personal Loan Apps",
@@ -2206,9 +2191,9 @@
     "descriptionHTML": "<b>**Best loan app where you pay interest only on the withdrawn amount.**</b><br>We are India\u2019s first credit line based instant loan app in partnership with leading banks and NBFCs. Get an instant personal loan online with zero collateral and interest rates starting from as low as 13-24.3% pa for 2 to 36 months duration. We offer you the benefits of an easy personal loan and credit card combined. Borrow any amount starting from \u20b93000 to \u20b95 Lakh and transfer the amount directly to your bank account.<br><br><b>Awarded the \u2018Best Innovative Lending Product/Service\u2019 by IAMAI</b><br><b>Included in INC42&#39;s 50 most innovative startups of 2018 list</b><br><br><br><b>How is MoneyTap different from any other traditional Indian personal loan app? </b><br>\u2714 Our credit line gives you an instant loan online in a 100% paperless process, no bank visit.<br>\u2714 Once your credit line is disbursed by us, you can use any amount from your available credit line<br>\u2714 Shop on 0% EMI for 3 months on Amazon.in*<br><br><b><i>But wait, there&#39;s more! </i></b><br>\u2714 You pay interest only on borrowed amount, no interest on the unused amount. <br>\u2714 2-36 months flexible EMI tenures<br>\u2714 A collateral-free personal loan app<br>\u2714 Consider it as an early salary loan online<br>\u2714 The fastest bank loan you can get online<br>\u2714 Help friends or family with an emergency cash <br><br><b>Available Cities </b><br>Our service is currently available in 40+ cities: <br>\u25cfDelhi, NCR (Delhi, New Delhi, Noida, Greater Noida, Faridabad, Ghaziabad, Gurgaon)<br>\u25cfMumbai (Mumbai, Navi Mumbai, Thane), Pune, Kolhapur, Nagpur, Nashik<br>\u25cfHyderabad &amp; Secunderabad<br>\u25cfTirupati<br>\u25cfLucknow<br>\u25cfAhmedabad, Vadodara, Anand, Rajkot, Surat, Bharuch<br>\u25cfHaridwar, Dehradun<br>\u25cfChennai, Coimbatore, Salem, Erode<br>\u25cfBangalore, Mangalore<br>\u25cfJaipur, Jodhpur<br>\u25cfKolkata<br>\u25cfChandigarh, Mohali, Panchkula, Ambala<br>\u25cfIndore, Bhopal<br>\u25cfVisakhapatnam (Vizag), Vijayawada(Expanding soon!)<br>\u25cfKochi.<br><br><b>How does MoneyTap work? </b><br>Get an instant loan in simple steps: <br>\u25cf Apply on the app and get approved in 4 minutes, create your profile, upload docs, check your eligibility and DONE!<br>\u25cf Instantly find out your pre-approved amount<br>\u25cf Only PAN card number required<br>\u25cf Complete KYC verification after finishing your online application. <br><b>MoneyTap Personal Loan Uses </b><br>\u25cf Phone se loan - use it as an urgent personal loan, education, medical, wedding, home renovation, mobile, used car, bike or two-wheeler loan, travel expenses, pay your rental deposit or loan to friends and other monthly bills <br>\u25cf Buy home appliances, furniture, and electronics by transferring money from one of the fastest instant cash loan online<br><br><b>Eligibility</b><br>\u25cfMinimum salary: in-hand salary of \u20b920,000/month<br>\u25cfMinimum age: 23 years or above and below 55 yrs<br><br><b>Documents required:</b><br>\u25cf Aadhar number<br>\u25cf Identity proof (Driving license/Voter id/Passport/Aadhar/PAN)<br>\u25cf Address proof (Driving license/Voter id/Passport/Aadhar/Utility bills/bank statements)<br>\u25cf Original passport photo/selfie<br>\u25cf You can get an instant personal loan online on Aadhaar card. E-sign your application with registered mobile OTP for fast-track application.<br>\u25cf Upon completion, your approved credit limit will be ready to use as quick personal loan anytime.<br><br><b>Fees</b><br>For \u20b91,00,000/- borrowed, with interest rate @ 13% per annum, a user would pay:<br>-&gt; Processing fee = \u20b9499 + GST = \u20b9588/- (Line setup fee to be paid before starting the credit line)<br>-&gt;Interest = \u20b913000<br>= Total amount to be repaid after a year= \u20b91,13,588/-<br>* Interest Rate varies<br><br><b>Bonus: MoneyTap credit line credit card for RBL approved customers</b><br>\u25cf100% cash withdrawal from your credit card online<br>\u25cf50-days interest-free period <br><br><b>Security &amp; Protection of Privacy  </b><br>Data security &amp; privacy is a top priority at MoneyTap. Our backend APIs comply with mandated security standards and robust protocols which have been tested and certified by our partner bank\u2019s IT team.<br><br>Download our personal loan app now &amp; happy Money Tapping!",
     "summary": "Fastest Loan App; Shop on No Cost EMI; Salary Required= \u20b915,000/-",
     "installs": "10,000,000+",
-    "score": 4.2432365,
+    "score": 4.2425923,
     "scoreText": "4.2",
-    "ratings": 238831,
+    "ratings": 238869,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2257,11 +2242,12 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.mycash.moneytap.app"
   },
   {
-    "id": "com.portal.hcin",
-    "error": "App not found"
+    "error": "App not found",
+    "id": "com.portal.hcin"
   },
   {
     "title": "StashFin - Quick & Easy Personal Loans",
@@ -2269,9 +2255,9 @@
     "descriptionHTML": "India\u2019s Fastest, Easiest, Safest and Smartest Personal Loan App<br><br>StashFin App provides instant personal loan upto \u20b95 lac at low interest rates with minimum documentation to fulfill your financial needs. We also provide short loans upto \u20b910,000 across India. We are operational in more than 20+ cities in India. <br><br>Pick a personal loan that fits your budget, and see your progress with the same every month. In matters of loans, one size doesn\u2019t fit all. We offer the freedom to you to pick a loan that fits your budget, such that you are always in control of your finances. We understand that you have several financial obligations and so we are rooting for your success in managing your finances. Hence we offer you the choice of picking a loan most suited to you.<br><br>Our loans range from \u20b9500 to \u20b95,00,000 with repayment periods starting from 3 months to 36 months. We offer interest rates ranging from 11.99% - 59.99% APR (Annual Percentage Rate), however rates may vary case to case. All loans are paid through Equal Monthly Instalments (EMIs) via electronic payment. We do charge low processing fees in certain cases and have no other hidden costs.<br><br>Example: If a customer takes a loan of \u20b910,000 for a period of 3 months, at an annual interest rate of 11.99% APR, then the customer will pay an EMI for 3 months of  \u20b93,400 per month. Total payment over 3 months will be \u20b910,200* (including principal and Interest).<br><br><br>The Quick Technique to Get Your Loan :<br>Download the StashFin App.<br>Register Your Account.<br>Fill out the Your Personal and Professional details with required document.<br>After the submission, you may receive a call for verification. The final application result will be shown in the APP and sent a text message via SMS if approved.<br>E-sign the loan agreement after the approval.<br>After the E-sign, the approved loan amount will be disbursed into your account within 5 minutes and SMS notification will be sent.<br>                                   <br>             <br>Required Eligibility:<br>You must be a citizen of India.<br>Your age must be 18+ years.<br>You must have a source of income (either Salaried or self Employed).<br><br><br>Required Documents:<br> Address Proof (either of Aadhaar/Voter ID/Passport/Driving License)<br> Identity Proof (PAN ID)<br><br>In some cases, you may be asked for the following document:<br>Bank Statement<br>ITR/ GST Paper<br> <br> <br>Operational Cities: Delhi-NCR (Delhi, New Delhi, Noida, Greater Noida, Faridabad, Ghaziabad, Gurgaon), Mumbai, Thane, Pune, Hyderabad, Chennai, Bangalore, Indore, Chandigarh, Panchkula, Pithampur, Bhiwandi, Zirakpur, Kharar.<br> <br> <br>Security &amp; Protection of Privacy:<br>Data security and privacy is a top priority at StashFin. Our backend APIs comply with mandated security standards and robust protocols which have been tested and certified. The APP requires the following permissions to function properly:<br>Text messages<br>Location<br>Contacts<br>Camera &amp; Media<br>Device Info",
     "summary": "Making Personal Loans Easier",
     "installs": "1,000,000+",
-    "score": 3.7457855,
+    "score": 3.7080448,
     "scoreText": "3.7",
-    "ratings": 37901,
+    "ratings": 37941,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2317,7 +2303,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.stashfin.android"
   },
   {
     "title": "Instant Personal Loan Online App - LazyPay",
@@ -2325,9 +2312,9 @@
     "descriptionHTML": "LazyPay is India\u2019s leading online loan app offering its users a credit limit between Rs 10,000 to Rs 1 lakh! with instant approval and zero collateral. Personal loan interest rates range from 15% to 32% p.a. with EMI tenures of 3 to 24 months. You can use it for travel, family events, weddings, buying electronics, medical expenses, home renovations &amp; more! <br><br>**Sample EMI Calculation**<br>Loan amount = Rs 10,000 Tenure = 6 months, @ interest rate of 18%* p.a.<br>EMI = Rs 1,755/- p.m. <br>Processing fee = Rs. 200 <br>* Interest rate varies <br><br>Over 2 million+ Indians use LazyPay daily. Completely digitally driven, with an easy one-time application process and no bank visits; you get instant access to funds. So say goodbye to waiting for that salary or salary advance, LazyPay truly provides Kredit on tap! <br><br>Check your eligibility in minutes with no commitment right from the LazyPay loan app to activate your credit limit for personal loans, to pay later with interest free 15 day credit or to shop online by converting large purchases into instant EMIs at affordable interest rates. <br><br>LazyPay Cardless EMIs<br>LazyPay also offers a Cardless EMI facility, which you can use to shop online. With convenient payback period options and affordable interest rates including No cost options, you can convert all your high-value purchases into pocket-friendly EMIs on your favorite websites and apps! You can avail this facility by completing the same steps listed above for instant personal loans. <br><br>Interest-free shopping via LazyPay Pay Later<br>LazyPay also offers a pay later option with interest free 15-day credit at checkout when you shop on your favorite apps such as Swiggy, Zomato, MakeMyTrip, Goibibo, BookMyShow, TataSky, Dunzo, Flipkart, Rapido and more! <br><br>How do I apply for a LazyPay Personal Loan?<br>Availing an instant personal loan is super easy and can be completed in 3 steps:<br><br>1. Check eligibility in the App - Using mobile number &amp; PAN you can check your limit in seconds<br>2. Complete Application - Keep a few documents such as Aadhar card, proof of current address and PAN card handy to complete the process<br>3. Get Your Money \u2013 Setup your bank account to receive the funds and auto debit your EMI\u2019s <br><br>What all do I need for Personal Loan application?<br>You will need the following documents handy. You will just need to upload them to our app when promoted from the steps below. <br>1. PAN Information<br>2. Identity proof such as Aadhar Card <br>3. Current address proof such as rent agreement, electricity bill etc. <br>4. Bank Details \u2013 Bank name, account number and ifsc code<br>4. Selfie<br>5. Photo of your signature<br><br>How do I avail LazyPay\u2019s EMI facility for shopping?<br>Just complete the one-time loan application process as above and get access to all of LazyPay\u2019s credit products including shopping on EMI, No cost EMI and more in one tap! <br><br>How do I avail LazyPay\u2019s pay later 15 day interest free credit?<br>LazyPay\u2019s interest free pay late credit is available to over 40Mn Indians on checkout at their favourite apps without any documentation. You can check if your eligible for the same by downloading the LazyPay loan app and checking your active credit limit. <br><br>Can I increase my pay later credit limit? <br>Your credit limit increases as you keep using LazyPay to pay on your favorite apps and clear your outstanding with us on or before due date. You may also enhance your credit limit by providing us with basic information on the LazyPay loan app. <br><br>How do I make a repayment for my LazyPay pay later outstanding? <br>You can pay your LazyPay pay later outstanding on the 3rd and 18th of each month on the LazyPay loan app via Net banking, debit card, credit card or UPI. <br><br>Security &amp; Privacy<br>Data security &amp; privacy is given top priority at LazyPay. We comply with the highest security standards &amp; protocols.<br><br>Need Help?<br>You can reach out to us at wecare@lazypay.in or raise your query here: https://rewards.lazypay.in/contact-us/",
     "summary": "Get Instant Personal Loan Online upto Rs 1 lakh - Withdraw Directly to Account",
     "installs": "1,000,000+",
-    "score": 4.4102693,
+    "score": 4.4120283,
     "scoreText": "4.4",
-    "ratings": 80542,
+    "ratings": 80561,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2374,7 +2361,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.citrus.citruspay"
   },
   {
     "title": "Instant Personal Loan App Online - PayMe India",
@@ -2382,9 +2370,9 @@
     "descriptionHTML": "Now, a personal loan is no big deal! Just register on PayMe India Mobile App and get the desired amount directly to your bank account.<br><br>Avail amount up to \u20b9 2 Lacs with flexible tenure of 91 days to 24 months at interest ranging from 18% - 42% per annum and that too without any collateral. PayMe India offers an extensive loan range of Rs. 500 to Rs. 2 Lakhs for a convenient duration, i.e., 3 -24 months. Moreover, the borrower pays interest only on the sanctioned loan amount and not on the unused amount.<br><br><br>Exclusive features:<br><br>\u2022 Loan amount \u2013 minimum Rs. 500 to maximum Rs. 2 Lakhs.<br>\u2022 One of the lowest EMIs in the industry.<br>\u2022 Zero charges on pre-part payment.<br>\u2022 Zero charges on foreclosure.<br>\u2022 Option to convert a personal loan to EMI-free loan.<br>\u2022 Faster approval and sanctioning process.<br>\u2022 Easy and flexible repayment options.<br><br><br><br>\ud83d\udea9\ud83d\udea9What&#39;s more!<br><br>\u2022 You pay interest only on the borrowed amount, no interest on the unused amount.<br>\u2022 3-24months flexible EMI tenures.<br>\u2022 A collateral-free personal loan.<br>\u2022 Loan disbursal in the minimum possible time.<br><br><br>Install the PayMe India app from Play Store or App Store and get a personal loan in 5 simple steps:<br><br>\u2022\tSign up with your mobile number.<br>\u2022\tProvide your basic details.<br>\u2022\tProvide PAN card, identity proof and bank statement (last 3 months).<br>\u2022\tGet your credit limit assigned.<br>\u2022\tYour amount will be credited in your bank account.<br><br><br>Eligibility:\ud83d\udce2<br><br>\u2022\tThe borrower must be 18-year old or above.<br>\u2022\tThe maximum age limit is 56 year.<br>\u2022\tThe individual must be a citizen of India.<br>\u2022\tThe borrower should be a salaried employee.<br>\u2022\tThe minimum monthly net salary of the customer shouldn\u2019t be less than Rs.10,000.<br>\u2022\tThe individual must have a minimum of 3 months of the work experience.<br><br><br>Documents required:\ud83d\udcdc<br><br>\u2022 Identity proof (Driving license/Voter id/Passport/Aadhar/PAN).<br>\u2022 Address proof (Driving license/Voter id/Passport/Aadhar/Utility bills/bank statements).<br>\u2022 Photograph/Selfie.<br>\u2022 E-sign on application with registered mobile and OTP for fast-track application.<br><br><br>Fees:\ud83d\udcb8<br><br>Against a personal loan value of INR 1,00,000/ with interest rate* @ 18% per annum, a user would pay:<br><br>Processing fee = INR 3,000 (Including GST) <br>(Line setup fee to be paid before starting the credit line)<br><br>Effective monthly interest: INR 1,500<br><br>Total amount to be repaid after a year=  INR 1,00,000 + Interest (INR 18,000)<br><br>=INR 1,18,000/-<br><br>(Loan amount would be disbursed after deducting the processing fee.)<br><br><br>PayMe India Personal Loan Uses:<br><br>\u25cf Education \ud83d\udcda <br>\u25cf Medical \ud83d\udc8a<br>\u25cf Wedding \ud83d\udc8e<br>\u25cf Home renovation \ud83c\udfd8\ufe0f<br>\u25cf Buying mobile \ud83d\udcf2<br>\u25cf Travel expenses \u26f5<br>\u25cf Pay your rental deposit \ud83d\udcb4<br>\u25cf Monthly bills \ud83d\udcb5<br>\u25cf To buy home appliances, furniture, and other items of need \ud83d\udecb\ufe0f<br><br><br><br>Security &amp; Protection of Privacy \ud83d\udd12<br><br>Data security &amp; privacy is a top priority at Payme India. We use SHA-2 and 2,048-bit encryption (the strongest security system in the market) security and comply with SSL certificate.<br><br><br>Download PayMe India personal loan app now and ensure financial happiness for your family and yourself!!!<br><br>* Interest Rate varies from 18% to 42%.<br><br>Like us on Facebook and become a part of thousands on trust:https://facebook.com/PayMeIndia.in/<br>Call us at :+91 120 636 1900<br>Address: 5th Floor, Devasthali Corporate Tower, A- 42/5, Vishwakarma Rd, Block A, Industrial Area, Sector 62, Noida - 201309",
     "summary": "Instant Personal Loan, Immediate Cash Loan.",
     "installs": "1,000,000+",
-    "score": 4.0104895,
+    "score": 3.9976745,
     "scoreText": "4.0",
-    "ratings": 17462,
+    "ratings": 17475,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2434,7 +2422,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "io.attabot.app.paymeindia"
   },
   {
     "title": "Instant Personal Loan App - PaySense",
@@ -2442,9 +2431,9 @@
     "descriptionHTML": "<b>App Features</b><br><br>PaySense provides instant personal loans from \u20b95000 to \u20b9500,000, with an Annual Percentage Rate (APR) on the loans between 18% to 36% (on a reducing balance basis) + a maximum of 3.5% processing fee on the principal loan amount. These instant loans are given for a duration of 3 months to 60 months. The standard processing fee is 3.5% of the loan amount. For example, a loan of \u20b91 Lakh (\u20b91,00,000) for 24 months will typically have an APR of 24% (on a reducing balance basis) and a processing fee of 3.5% (\u20b93,500). This loan would be paid back in 24 EMIs (equated monthly installments) of \u20b95,377 each with the total interest amount being \u20b929,048.<br><br><b>Additional Information</b><br><br>Prepayment charges on loan closure (allowed after 3 EMI payments) is  4% + 18% GST on the remaining principal amount and Late Payment Charges are  \u20b9500 + 18% GST upon failure to pay the EMI on the fixed date.<br><br>\ud83d\udd1d\ud83d\udcb0<b>PaySense has been identified amongst the Top 100 Fintech innovators in the world by a KPMG and H2 Ventures report.</b>\ud83d\udd1d\ud83d\udcb0<br><br>The PaySense app allows you to apply for instant personal loans of up to \u20b95 lakhs at attractive interest rates, with zero collateral and flexible EMIs.<br><br>5 Million+ users have already installed the PaySense app to get an urgent personal loan, to pay for:<br><br>\ud83d\udc49Marriage Expenses<br>\ud83d\udc49New Two-Wheeler<br>\ud83d\udc49School and College Fees<br>\ud83d\udc49Medical Emergencies<br>\ud83d\udc49New Electronics<br>\ud83d\udc49Credit Card Bills<br>\ud83d\udc49Jewelry<br>\ud83d\udc49Home Renovation and Decor, and so on.<br><br>PaySense has disbursed over 1 lakh personal loans in the past 12 months and is one of the best Indian personal loan apps in the market which offers easy &amp; quick loans to both self-employed and salaried individuals.<br><br>\ud83c\uddee\ud83c\uddf3The company\u2019s presence now spans over 50 cities across India including Delhi, Mumbai, Bengaluru, Hyderabad, Kolkata, Chandigarh, Chennai, Coimbatore, and Delhi-NCR.<br>With quick money loans, PaySense offers the flexibility of getting an instant personal loan in just a few hours.\ud83c\uddee\ud83c\uddf3<br><br><b>Why Choose PaySense for Instant Personal Loan</b><br><br>In addition to providing one of the fastest online loan approvals to Indians for personal loans, PaySense also lets its customers enjoy the following advantages:<br><br>\ud83d\udc49Affordable interest rates<br>\ud83d\udc49Convenient and affordable EMIs<br>\ud83d\udc492-minute loan application process<br>\ud83d\udc49Paperless documentation<br>\ud83d\udc49Loans available for those with low credit scores as well<br>\ud83d\udc49Automated updates and EMI deduction<br><br><b>Process</b><br><br>PaySense is the fastest and quickest way to get an instant personal loan online. Follow these four steps to get an instant personal loan:<br><br>\ud83d\udc49Install the PaySense online loan app.<br>\ud83d\udc49Register and check your personal loan eligibility.<br>\ud83d\udc49Provide KYC documentation like identity proof (Aadhar/PAN/VoterID), address proof (Aadhar/Utility bills/Rental Agreement), income proof (bank statement) and a photograph (selfie).<br>\ud83d\udc49Sign your application and get instant approval for your personal loans.<br><br>Once approved, the loan amount will be credited to your account within a few days.<br><br>The PaySense app also offers an EMI calculator that gives you the freedom to decide your own EMI amount and the loan tenure.<br><br><b>Eligibility</b><br><br>In order to apply for easy and quick personal loans, you should fulfill the following criteria:<br><br>\ud83d\udc49You should be a resident of India<br>\ud83d\udc49Your age should be between 21 years to 60 years<br>\ud83d\udc49You must be a salaried employee or self-employed individual<br>\ud83d\udc49You must have a minimum monthly income of \u20b912,000 (salaried employees) or \u20b915, 000 (self-employed)<br>\ud83d\udc49You must be based at any one of the 50+ cities we serve across pan-India<br><br><b>Security and Privacy</b><br><br>The PaySense personal loan app has been developed using the best security and privacy standards to ensure absolute data security. Our app is safe &amp; secure to use and we do not share customer information with third parties without consent.<br><br>\u261d\ufe0fApply and get a personal loan instantly with the safe, secure and easy to use PaySense app!\u261d",
     "summary": "\ud83d\udcb0\ud83d\udcb0Get Personal Loan Up to \u20b95 Lakhs. Best Instant Loan App in India.\ud83d\udcb0\ud83d\udcb0",
     "installs": "5,000,000+",
-    "score": 3.8773508,
+    "score": 3.8823812,
     "scoreText": "3.9",
-    "ratings": 62696,
+    "ratings": 62731,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2492,7 +2481,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.gopaysense.android.boost"
   },
   {
     "title": "Instant Personal Loan App - Money View Loans",
@@ -2500,9 +2490,9 @@
     "descriptionHTML": "With Money View Loans, get an <b>Instant Personal Loan in just a few hours.</b> <br><br>We provide instant loans from <b>\u20b910,000 to \u20b95,00,000</b>, with monthly interest between 1.33% - 2.5%. Loans are given for a minimum duration of 3 months to a maximum duration of 60 months. The standard processing fee varies from 2.5% to 4% of the loan amount. Our yearly interest rates vary from 16% - 36%*.<br><br>Whether you want to furnish your home, cover wedding expenses, throw a party or take a break &amp; go on a family vacation, we&#39;ve got you covered with an easy instant loan.<br><br><b>Eligibility</b><br><br>Our proprietary credit models use financial SMS data (sent by banks and billers) to give you the best real time loan offer.  This process goes beyond the traditional credit scores and allows us to understand your profile better, and make you the best possible offer. In fact, having a credit history isn&#39;t necessary to avail a personal loan through Money View Loans.<br><br><b>Features of the loan:</b><br><br>\u25cf It&#39;s quick - Get the loan in a few hours<br>\u25cf Apply for a personal loan of up to \u20b95 Lakh<br>\u25cf Personalise your loan amount and payback period through the app<br>\u25cf Completely paperless process - Apply for a personal loan through the app and pay back through the app<br>\u25cf No document pickup required for personal loan approval - completely app based<br>\u25cf Backed by excellent customer service<br><br>This app is brought to you by the makers of the Money View money manager app. The Money View money manager app has 10 million downloads on the Play Store. Money View is trusted by the best banks and financial institutions in the country. People from 500+ cities across the country have used Money View to avail a loan.<br><br><b>Personal Loan Process</b><br><br>The Money View Loans app is the fastest and easiest way to get a personal loan. It is completely app based - from loan application to loan repayment. Four steps, that&#39;s all you need to complete to get the loan amount in your account:<br><br>\u25cf Choose loan amount and loan tenure<br>\u25cf Upload your documents &amp; complete your loan application<br>\u25cf Check eligibility &amp; verify documents<br>\u25cf Review and submit the loan agreement<br><br>Get started by downloading the app right away!<br><br>Our loan amount range from \u20b910,000 to \u20b95,00,000<br>Loan duration range from 3 months to 60 months (5 years)<br>Annual Interest rates vary from 16% - 36%*<br>Processing fee vary from 2.5% - 4%*<br><br>For eg., for a loan of \u20b950,000 with an APR of 18% and 24-month tenure total interest &amp; fees will be \u20b911,679.<br><br><i>*These numbers are indicative and final interest rate or processing fee may vary from one user to another depending on their credit assessment</i><br><br><b>About Safety &amp; Security</b><br><br>Money View Loans does not read your personal SMSs, bank OTP&#39;s, passwords or account numbers. The app recognises accounts based on the last four digits mentioned in an SMS. Money View uses bank grade security &amp; encryption - so your data and money are safe. Money View is completely safe &amp; secure.<br><br>Over 10 million people have downloaded Money View apps. Leading banks and financial institutions trust Money View\u2019s technology.<br><br>The app requires the following permissions to function properly :<br><br>SMS - READ_SMS, RECEIVE_SMS<br>Required to read your financial SMS sent by banks and biller. Your financial transactions are used to create your financial and risk profile, to provide the best loan offer based on the financial SMSs <br><br>Location - ACCESS_FINE_LOCATION<br>Required for verifying current address for the loan application<br><br>Contacts - GET_ACCOUNTS<br>Required to fetch the verified Google email for the loan application<br><br>Contacts - READ_CONTACTS<br>Required for assessing your social profile as an input for providing the best loan offer<br><br>Camera &amp; Media Access - CAMERA, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE<br>Required for enabling upload of loan application documents like PAN card, Selfie, etc.<br><br>Read Device Info - READ_PHONE_STATE<br>Required to link the unique phone ID (IMEI) to the loan application for security purposes",
     "summary": "Instant Personal Loan upto \u20b95 Lakh for 3-60 months in few hrs. Download &amp; Apply",
     "installs": "10,000,000+",
-    "score": 4.311184,
+    "score": 4.306238,
     "scoreText": "4.3",
-    "ratings": 199668,
+    "ratings": 199786,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2546,7 +2536,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.whizdm.moneyview.loans"
   },
   {
     "title": "Bajaj Finserv - Instant Loans and Credit Card app",
@@ -2554,9 +2545,9 @@
     "descriptionHTML": "Through Bajaj Finserv Experia App, new consumers can view or apply for the following products.  <br><br>\u2022\tPersonal Loan + EMI calculator<br>\u2022\tHome Loan Balance Transfer + EMI calculator<br>\u2022\tBusiness Loan + EMI calculator<br>\u2022\tDoctor Loan<br>\u2022\tFixed Deposits + FD Calculator<br>\u2022\tInsurance products <br>\u2022\tLoan Against property<br>\u2022\tChartered Accountant Loan<br>\u2022\tRBL- Bajaj Finserv Credit Card<br><br>What&#39;s new:<br><br>* EMI calculators - Personal loan, Home loan, Business loan and Fixed Deposit<br>* Avail Pre-approved Loan Offers<br>* App Available in 14 Regional Languages<br>* Manage Existing Loans and investments<br>* New and improved draw down functionality<br>* Bug Fixes<br><br><br>The Bajaj Finserv Experia App is the one-stop solution for all post-loan or investment services provided by Bajaj Finserv, India\u2019s most diversified non-banking financial company. Benchmarked against the best in the industry, the app comes with a clean, simple user interface, a design to deliver an excellent user experience and intuitive navigation.<br><br>New users can also check their preapproved limit assigned for the following products, you just need to login using your mobile number and authenticate using OTP received. <br><br>\u2022\tRBL- BFL Credit Card<br>\u2022\tEMI Card<br>\u2022\tPersonal Loan<br>\u2022\tDoctor Loan<br>\u2022\tBusiness Loan<br>\u2022\tChartered accountant loan<br>\u2022\tInsurance products<br>\u2022\tLoan against property<br>\u2022\tFixed deposits<br><br>Bajaj Finserv app may collect information with your consent from your mobile device like device location, device information (including storage, model, installed apps, Wi-Fi, mobile network) transactional and promotional SMS, communication information including contacts to provide customized offerings<br><br>Here is what existing BFL customers can do with the new and improved app. <br><br>\u2022\tActive relations: View and manage your active loans and investments, make payments, download your financial statements on the go.<br><br>\u2022\tPrevious relations: Access information on your closed loans and investments, view your statements and more.<br><br>\u2022\tPre-approved offers: View and apply for pre-approved offers customized for you in click of a button. Click here to check your preapproved offer https://c2gx.app.link/PreApprovedOffers<br><br>\u2022\tPayments: Pay your EMIs, part pre-pay or foreclose your loans and access information on future payments through the app itself.<br><br>\u2022\tDrawdown facility: Drawdown functionality is now a lot more convenient than before.<br><br>\u2022\tNotifications: View all your payments, statement downloads and offer notifications on the home page under the notifications tab.<br><br>\u2022\tRaise a request: Log a request, check status and a more detailed view of previous requests.<br><br>\u2022\tNavigation across apps: Easy navigation across Experia and BFL Wallet <br><br>\u2022\tRate us: You can review the app and rate us at just a click.<br><br>\u2022\tOther assets: You can navigate from this app to other Bajaj Finserv assets easily through the main navigation menu.<br><br>\u2022\tCalculators: EMI calculators for Personal loan, Business loan, Home loan and Fixed deposits.<br><br>Personal Loans<br><br>\u2022 Apply for a personal loan of up to Rs.25 lakh from Bajaj Finserv and get instant approval with minimal documentation. Borrow your amount without pledging any collateral and get your loan disbursed in just 24 hours. Our instant personal loan is available for salaried professionals at attractive interest rates.<br><br>Highlights<br><br>\u2022 Finance Amount : Minimum 30,000 to Maximum 25 Lakhs<br>\u2022 Tenure : 12 Months to 60 Months<br>\u2022 Interest Rate : 2 % Per Month<br>\u2022 Processing Fees : Rs. 500 to Rs 2000<br><br>UNDERSTAND YOUR LOAN<br>For \u20b91,00,000/- borrowed, at interest rate of 2% p.m. for 12 months (interest rate on reducing balance method), you would pay:<br><br>Processing fee = 1000<br><br>Other charges = 100<br><br>Interest = 13472<br><br>Total amount repaid after a year = 114572<br><br>*Interest rate and processing fees varies as per your product",
     "summary": "Apply for Credit Card, Personal Loan, Home Loan, Business Loan and other loans",
     "installs": "10,000,000+",
-    "score": 4.4190927,
+    "score": 4.416817,
     "scoreText": "4.4",
-    "ratings": 133631,
+    "ratings": 133685,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2605,7 +2596,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "org.altruist.BajajExperia"
   },
   {
     "title": "Tala - Pr\u00e9stamos de dinero",
@@ -2613,9 +2605,9 @@
     "descriptionHTML": "\u00danete a los millones de usuarios en M\u00e9xico que han usado Tala para emprender o hacer crecer sus negocios, pagar la colegiatura de sus hijos o salir de un imprevisto con tranquilidad. \u00a1Y todo desde de tu tel\u00e9fono m\u00f3vil!<br><br><b>\u00bfQu\u00e9 necesito para pedir un pr\u00e9stamo?</b><br>\u2022 Tener tu INE a la mano<br>\u2022 Tener una cuenta de d\u00e9bito de cualquier banco que est\u00e9 a TU nombre<br>\u2022 Bajar la app y llenar tu solicitud<br>\u2022 Tener un correo electr\u00f3nico v\u00e1lido<br> <br><b>\u00bfQu\u00e9 tan sencillo es el proceso?</b><br>\u2022 Descarga la app de Tala<br>\u2022 Llena la solicitud directo en la app. Sin adelantos y sin papeleo. <br>\u2022 Verificamos tu identidad a trav\u00e9s de nuestro sistema protegido. <br>\u2022 Obt\u00e9n tu pr\u00e9stamo directamente en tu cuenta bancaria. Si no tienes cuenta, te recomendamos abrir una en Banco Azteca, BanCoppel u Oxxo; es muy f\u00e1cil y r\u00e1pido. <br><br><b>\u00bfC\u00f3mo pago mi pr\u00e9stamo?</b><br>\u2022 Para acceder a las opciones de pago, ingresa a tu aplicaci\u00f3n y da click en donde dice HACER PAGO para ver las instrucciones. <br>\u2022 Puedes pagar a trav\u00e9s de Oxxo al n\u00famero de referencia que aparece en la aplicaci\u00f3n.<br>\u2022 Puedes pagar por Transferencia Interbancaria (conocida tambi\u00e9n como SPEI)<br><br><b>Algunos beneficios de usar Tala:</b><br>\u2022 NIP personal para aumentar tu seguridad<br>\u2022 Revisa tu pr\u00e9stamo con Mi Estatus en Tala<br>\u2022 Formas f\u00e1ciles de pagar para tu mayor comodidad<br>\u2022 Millones de historias de \u00e9xito de nuestros clientes que te mantendr\u00e1n motivado<br><br><b>Sobre el pr\u00e9stamo</b><br>Los clientes de Tala pueden expresar su preferencia sobre la duraci\u00f3n del plazo de su pr\u00e9stamo de hasta 90 dias.<br>\u2022 Los pr\u00e9stamos a 60 d\u00edas tienen una comisi\u00f3n \u00fanica por servicio de 41%* <br>\u2022 Los pr\u00e9stamos a 90 d\u00edas tienen una comisi\u00f3n \u00fanica por servicio de 59%* <br>\u2022 Por ejemplo,  para un pr\u00e9stamo de 60 dias de un monto de MxN 1,000, nuestra comisi\u00f3n total a pagar ser\u00e1 de $410 pesos para un pago en total de MxN $1,410. CAT informativo: 604.8%; tasa de inter\u00e9s anual 212.1%* <br><br>Dependiendo del monto del pr\u00e9stamo para el cual eres aprovado, tienes la opci\u00f3n de elegir un plazo de hasta 90 d\u00edas. Los clientes tienen la opci\u00f3n de seleccionar un plazo tan corto como 21 d\u00edas.<br><br><br>\u2022 Crece con Tala y crece tu l\u00edmite hasta $5,000 pesos usando la app y haciendo tus pagos a tiempo<br>\u2022 Puedes hacer pagos anticipados cuando t\u00fa quieras \u00a1Sin ninguna penalizaci\u00f3n! <br><br><br><br><b>\u00bfTienes alguna duda?</b> <br>Ve a www.talamobile.mx y revisa nuestras Preguntas Frecuentes<br>\u00bfListo para iniciar? Descarga la app de Tala y solicita tu pr\u00e9stamo de inmediato. \u00a1\u00danete a la #FamiliaTala hoy mismo!<br><br><b>Horario de Atenci\u00f3n y contacto</b><br>Nuestro horario de atenci\u00f3n es de lunes a viernes de 9 a 5 (excepto d\u00edas festivos). <br>\u00bfDudas? Escr\u00edbenos a hola@talamobile.mx \u00a1y con gusto te ayudamos!<br><br>*Estas comisiones incluyen IVA. Pueden aplicar algunos cargos o comisiones adicionales dependiendo de la instituci\u00f3n donde se realice el pago. El cargo por demora del pr\u00e9stamo es del 10% sobre el saldo deudor y te dar\u00e1 14 d\u00edas m\u00e1s para liquidar tu pr\u00e9stamo. Pueden aplicar otros T\u00e9rminos y Condiciones.<br>**CAT informativo: varia de 554.9% a 1304.4%; tasa de inter\u00e9s anual: varia de 203.4% a 295.6%. Tala nunca te har\u00e1 cargos adicionales al cargo por servicio (m\u00e1s el cargo por reestructuraci\u00f3n del pr\u00e9stamo en caso de que no realices tu pago a tiempo)..<br>***Usted debe cuidar su capacidad de pago, generalmente no debe exceder el 35% de sus ingresos peri\u00f3dicos, los costos por incumplimiento de pago son muy elevados.",
     "summary": "Tala is the most reliable app for your money loans in Mexico.",
     "installs": "1,000,000+",
-    "score": 4.812035,
+    "score": 4.811211,
     "scoreText": "4.8",
-    "ratings": 222369,
+    "ratings": 222391,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2660,7 +2652,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "mx.com.tala"
   },
   {
     "title": "My Home Credit Indonesia",
@@ -2668,9 +2661,9 @@
     "descriptionHTML": "My Home Credit adalah aplikasi pembiayaan multiguna online yang membantumu untuk belanja beberapa kebutuhanmu. Beli barangnya sekarang, bayarnya nanti. Daftarnya juga gak pake ribet! Kamu bisa ajukan dimanapun dan kapanpun yang kamu mau, cukup dengan akses aplikasi di hape kamu.<br><br>Mau nyicil barang tapi nggak punya kartu kredit? Bisa!<br><br>Butuh biaya mendadak buat benerin atap rumah kamu yang bocor? Bisa!<br><br>Mau bayar cicilan nggak pake drama? Bisa!<br><br>Semua pertanyaan kamu akan terjawab dengan fitur yang kami miliki, yuk kenalan dulu biar tau! <br><br>\t<br>1. Belanja langsung di lokasi penjualan kami (POS)<br><br>Kamu bisa ajukan limit pembiayaan barang yang kamu inginkan seperti Hape, Laptop, Televisi, Sofa, Kulkas, dan barang yang kamu mau lainnya, cukup tunjukkan KTP kepada Sales Agent/Retail Agent di lokasi POS.<br>\t<br><br>2. DONA<br><br>Lupain kebiasaan zaman old, waktunya #PakeDONAaja! Proses mudah, tenor singkat. Solusi pembiayaan multiguna hingga Rp6.000.000 anti PHP cuma buat kamu.<br><br><br>3. FlexiFast<br><br>Fitur ini adalah fitur khusus untuk kamu yang sudah pernah mengajukan kontrak dan aktif lebih dari 6 bulan. Dengan fitur ini, kamu bisa mendapatkan pembiayaan hingga Rp50 juta.<br><br><br>Saat ini kami telah bekerja sama dengan beberapa e-commerce terkemuka seperti Tokopedia, Blibli, Bukalapak, Lazada, dan ratusan merchant offline di seluruh Indonesia untuk memudahkan kamu berbelanja.<br><br>Menarik, kan? Cuma dalam satu aplikasi, kamu bisa melakukan banyak hal untuk memenuhi kebutuhan kamu. Kamu nggak perlu takut dengan keamanan aplikasi kami. Karena My Home Credit telah terdaftar dan diawasi oleh OJK (Otoritas Jasa Keuangan). Jadi kami jamin kerahasiaan data kamu terjaga.<br>Tunggu apa lagi, sob? Yuk, download My Home Credit sekarang juga!",
     "summary": "Dapatkan barang impianmu dengan cicilan tanpa kartu kredit",
     "installs": "5,000,000+",
-    "score": 4.348523,
+    "score": 4.345548,
     "scoreText": "4.3",
-    "ratings": 304350,
+    "ratings": 304486,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2713,7 +2706,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "id.co.myhomecredit"
   },
   {
     "title": "Tala - Fast Online Cash Loan",
@@ -2721,9 +2715,9 @@
     "descriptionHTML": "Like many of our customers, Tala has been deeply affected by the lockdown in several regions in the Philippines. To prioritize the health and safety of both our employees and the broader Tala customer community, we have made some important operational adjustments. Customers may see delays in loan approvals. We will provide an update when operations return to normal. Please stay safe!<br><br>--------<br><br>Join millions of satisfied Tala customers who have grown their businesses, paid for school fees, and managed expenses with peace of mind.<br><br>Loan approval takes less than 5 minutes. And you\u2019ll have cash sent to your bank account, Coins.ph wallet, or the nearest padala center within 24 hours.<br> <br><b>What do I need to sign up?</b><br>\u2022 Upload ONE valid ID through our secure system<br>\u2022 No other paperwork needed<br>\u2022 No security or collateral required<br>\u2022 No bank account required<br> <br><b>How simple is the process?</b><br>\u2022 Download the Tala app<br>\u2022 Fill out our quick loan application in the Tala mobile app <br>\u2022 Verify your identity through our secure system<br>\u2022 Get cash sent directly to your bank account, Coins.ph wallet, or nearest padala center<br><br><b>How quickly will I get my money?</b><br>\u2022 Same-day processing through Coins.ph and padala centers gets money in your hands quickly<br>\u2022 Or cash out at your local bank within 24 hours <br><br><b>How much can I borrow?*</b><br>\u2022 Tala will loan you anywhere from Php 1,000 - 2,000 at first<br>\u2022 You can build your limit up to Php 15,000 by making loan payments on time<br>\u2022 Cash out at thousands of padala center locations, including, Cebuana Lhuillier, Palawan Express, M Lhuillier, LBC, or cash out into your own bank account, or the Coins.ph app<br><br><b>How do I repay my loan?</b><br>\u2022 Visit any 7-Eleven, Cebuana Lhuillier, M Lhuillier, or the Coins.ph app<br>\u2022 You can pay in full or make partial payments, anytime on or before your due date<br>\u2022 Easy repayment schedule keeps you on track with your payments<br><br><b>What are my loan terms?</b><br>Customers can express a preference for loan terms up to 90 days.<br>\u2022 60-day loan payment terms have a one-time fee of 27%* <br>\u2022 90-day loan payment terms have a one-time fee of 39%* <br>\u2022 For example, for a 60-day loan with principal amount of Php 1,000, the service fee would be Php270 and the total amount due would be Php1,270.  Note that percentages above are not inclusive of applicable taxes. <br><br>Depending on the loan amount for which you are eligible, you have the option to choose repayment terms for up to 90 days. Customers have the option to select a term as short as 21 days.<br><br><br><b>Why use Tala?</b><br>\u2022 Simple application and approval process lets you borrow money instantly<br>\u2022 Personal security PIN ensures maximum protection over your identity<br>\u2022 Financial education tips to help you budget, save and invest your money  <br>\u2022 Share Tala with friends and earn a bonus applied to your next loan payment<br>\u2022 Let millions of Tala customer success stories inspire you on your journey<br><br><br><br>Have questions? Visit www.tala.ph to check out our FAQs. <br>Ready to get started? Download the Tala app and apply for a loan today. Salamat!<br><br>*Tala reminds you to always check the fees, charges and terms and conditions of your loan offer before accepting your loan. Tala charges a service fee of 11-39% of principal (EIR**: 13.0-15.7%; APR: 158.2-191.2%). Maximum late fee is 8% of the balance outstanding at the time of default. Tala will never charge you more than the amount of your service fee (plus, if you do not repay on time, a one-time late fee). Interest and fees do not compound or accrue. To qualify, a borrower must be a resident of the Philippines and satisfy Tala\u2019s know-your-customer and underwriting requirements. Tala Financing Philippines Inc. (SEC Registration No.: CS201710582; TIN: 009-614-758; Certificate of Authority No.: 1132). Additional terms and conditions apply.<br><br>**Effective Interest Rate (EIR) expressed as interest rate per month.",
     "summary": "The Tala loan app is the most trusted way to access fast online cash.",
     "installs": "5,000,000+",
-    "score": 4.736686,
+    "score": 4.7362304,
     "scoreText": "4.7",
-    "ratings": 388531,
+    "ratings": 388526,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2768,7 +2762,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "ph.com.tala"
   },
   {
     "title": "Pondo Loan-Simple loan,easy access to peso cash !",
@@ -2776,8 +2771,8 @@
     "descriptionHTML": "\ud83d\ude03Product introduction <br>Loan amount: \u20b1 3600.00 - \u20b1 80,000.00<br>Loan term: 180 days (shortest, including renewal time) - 365 days (longest, including renewal time)<br>Interest rate: Maximum interest rate is 15% per year<br>Transaction fee\uff1a0<br>Service fee: No other fees<br>As a lending service platform, Pondo Loan will charge different fees according to the product you choose, which costs are used for credit score assessment, account management and third parties.<br><br>For example: <br>If you choose a loan limit of \u20b1 8,000 for a period of 4 months, you must pay the total interest: \u20b1 8,000 * 5 % = \u20b1 400, and the total amount to be repaid is \u20b1 8,000 + \u20b1 400 = \u20b1 8400.<br><br><br>\ud83d\ude03What is Pondo Loan? <br>It is a quality financial services platform for Filipinos. Get loans anytime, anywhere - whenever and wherever you want. Pondo Loan, a platform dedicated to unsecured online loans with peso, can be ordered in stages, and can solve all your troubles because of money.<br><br><br>\ud83d\ude03Who can borrow? <br>a) A Philippine citizen who has attained age 18 years old.<br>b) A person who has at least one government issued ID.<br>c) issued ID and a valid mobile phone number. <br>d) A person who is currently employed or has a stable source of income. <br><br><br>\ud83d\ude03How to apply? <br>\u2714download the app Pondo Loan <br>\u2714fill in the needed information in 5 minutes <br>\u2714wait for the review and call<br>\u2714get your loan (bank transfer, e-wallet etc.)<br><br><br>\ud83d\ude03How to pay? <br>1. Go to M.Lhuillier/RD Pawnshop/7.11<br>2. Choose Bills payment &quot;Skypay&quot; or input company name&quot;Skypay&quot;<br>3. Provide contract number and other needed information<br>4. The contract number only begin with SKY19- or SK19-. It is invalid to pay to any personal account<br>5. Pay and get confirmation number and Receipt. <br>If pay through GCASH app, choose Pay Bills-Loans-SKYPAY, and then follow step 3, 4, 5.<br><br><br>\ud83d\ude03Privacy and permissions:<br>To make sure you are qualified for the loan, we need you to provide your personal information including complete name, email address, ID, company ID, home address, monthly income, contact number, social accounts, etc. The information you provide will only be used for loan review purposes and will not be leaked, and the information will never be used for other purposes. If you do not have a successful loan, we will not keep any information.<br>We will scan your government-issued ID and other information to verify your identity and creditworthiness.<br>To ensure that we can contact your contact persons in emergency, we need to access your contacts<br>You can refuse to provide your information, but you can&#39;t get your loan in that situation.<br><br>To verify your identity, we require the following app permissions:<br>Location Access - To auto-verify your address.<br>Contacts Access - To easily nominate your contact references.<br>Camera Access - To scan your IDs to complete ID verification using facial recognition technology<br><br><br>\ud83d\ude03We take privacy very seriously and your personal information will never be shared without your direct and explicit permission. Loan Market protects the privacy of all consumers and we do not provide any consumer information to any party without your consent. At this application, your information is safe. We provide comprehensive protection for your information security and make clear recommendations in terms and conditions.<br><br>Please read the privacy aggrement carefully. http://www.wemoneycash.com/privacy<br><br><br>\ud83d\ude03About us:<br>COMPANY NAME: KINGBAC LENDING CORPORATION.<br>COMPANY REGISTRATION NO.CS201951228<br>CERTIFICATE OF AUTHORITY NO.2919<br><br><br>Have any question? Please contact our customer service:<br><br>mobile : 09073011799 (smart ) / 09958726266 (globe)<br><br>email: cs@cashloan.cash<br><br>facebook: www.facebook.com/PondoLoan<br><br>Working time: 8:00 am- 17:30 pm (Monday- Saturday)<br><br>Company address\uff1aUNIT 2104-A EAST TOWER ,PSEC EXCHANGE ROAD , ORTIGAS CENTER , SAN ANTONIO , PASIG CITY ,METRO MANILA",
     "summary": "Fast online financial assistant to help you solve money problems.",
     "installs": "1,000,000+",
-    "score": 4.458883,
-    "scoreText": "4.5",
+    "score": 4.4438167,
+    "scoreText": "4.4",
     "ratings": 16098,
     "free": true,
     "currency": "USD",
@@ -2821,7 +2816,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "ph.fk.pondoloan"
   },
   {
     "title": "PondoPeso - Fast and Easy Mobile Online Cash Loan",
@@ -2829,9 +2825,9 @@
     "descriptionHTML": "What is PondoPeso<br>PondoPeso is one of the unique Fintech platforms in the Philippine to provide you with financial mobility whenever and whatever. Our services is based on mobile internet security technology and big-data analysis innovation.<br><br>User Requirements<br>-18 +<br><br>How does it work?<br>-Find PondoPeso on Googleplay Store<br>-Download and register with your phone number<br>-provide your identity information<br>-expect your loan decision within 30 minutes<br>-choose different ways for disbursement<br>-build your credit with PondoPeso for higher limit by paying back on time!<br><br>\u2605Special Quality of PondoPeso<br>\u2714 Paperless Online experience : no need an unconventional form, no need to go out to sign a contract, all process will be done by online in the phone. Only takes around 5 minutes to apply.<br>\u2714Increasing limits: We provide higher limit and lower interest rate to loyal customers<br>\u2714 Safe and Confidential : PondoPeso protects all users\u2019 data and won\u2019t be informed to any parties without agreement with our customers. <br>\u2714 Service with Quality : If you have any questions, please contact us via our online service provided by the app or call our customer service number. We are willing to serve you at anytime.<br><br>Loan term: 91-365 days<br>Anual Interest rate: Up to 10.05%<br>Service fee: 0.1% to 0.35%<br>Limit: maximum limit up to \u20b1150,000<br>Example:<br>Loan Amount: \u20b110,000<br>Service Fee: 15% (\u20b11,500.00)<br>Loan term: 3 months \uff0891 days\uff09<br>Monthly payment: \u20b13,833.4<br>Total payment: \u20b111,500.00<br><br>\u2605Return a Loan<br>We will notify you of the deadline by SMS, reminding you when to repay the loan. You can repay the loan by ATM Transfer. Upon successful transfer, PondoPeso will automatically receive proof of payment and treat your loan as paid. PondoPeso also allows early repayment of loan. Once you paid back your loan, you will eligible for borrowing with us again with a higher limit.<br><br>\u27a0Contact Us<br>cs@pondopeso.com<br><br>\u27a0About Us<br>We are a rapid and reliable online finance company and have extensive experience in Internet financial technology. PondoPeso will bring you safe and convenient services.<br>Fynamics Lending Inc. <br>SEC Registration Number of Fynamics: CS201821621<br>Certificate of Authority No. 2781<br><br>Fynamics Lending Inc.<br>Address: 37 K\uff0cLKG Tower\uff0c6801 Ayala Ave Makati City Manila Philippines",
     "summary": "PondoPeso helps you to get financial freedom whenever you need",
     "installs": "1,000,000+",
-    "score": 4.5703306,
+    "score": 4.5668716,
     "scoreText": "4.6",
-    "ratings": 52207,
+    "ratings": 52208,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2874,7 +2870,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "ph.pondopeso.mnl.jk"
   },
   {
     "title": "Atome-Cash Loan App Philippines & Peso Loan online",
@@ -2882,9 +2879,9 @@
     "descriptionHTML": "<b>Online Loan App Philippines</b><br>-Loan interest rate: Maximum APR 60.4%<br>-Service fee: 0.8% to 0.14%<br>-Loan term: 91-120 days<br>- Limit: \u20b115000<br>-Example:<br>Loan Amount: \u20b110,000<br>Service Fee: 15% (\u20b11,500.00)<br>Loan term: 3 months (91 days)<br>Monthly payment: \u20b13,833.33<br>Total payment: \u20b111,500.00<br><br>Ever wanted to get a credit loan? Atome is an online cash loan app in the Philippines that has worked to provide accessible, dependable, and friendly peso loan online for millions of users. This now makes it easy to get credit online! Download it now to get Access to More with Atome and be part of our growing number of users who are able to borrow money online! <br><br>Atome has simplified the steps for fast loan application. With only one valid ID, you can expect your cash within 24-48 hours after approval! <br><br>Experience lending online now!<br><br><b>Who can apply for an online cash loan? </b><br>FIlipino residents aged anywhere between 18 to 55 can apply.<br><br><b>What requirements do I need for my application? </b><br>1.\tOne valid government ID (download the app for a complete list)<br>2.\tContact details<br><br><b>How can I apply for a cash loan online? </b><br>1.\tFill out our online application form (this only takes 5 minutes) with your personal details.<br>2.\tKeep checking the app to monitor your loan process status. Make sure you don\u2019t uninstall the app!<br>3.\tYou will know that your loan has been approved once you receive a confirmation message saying that the cash has been released to the bank account you provided. This will take around 24 to 48 hours.<br>4.\tPlease remember to study our Terms &amp; Conditions, Disclosure Statement, and Loan Agreement before proceeding with your Loan.<br><br><b>How much money can I borrow? </b><br>All first-time users will be granted a loan amount between \u20b11,000 to \u20b1 4,000. This is subject to a gradual increase of up to \u20b115,000, depending on the user\u2019s credit standing*.<br>*Frequency of loan applications and ability to repay on time.<br><br><b>How do I repay my cash loan? </b><br>1.\tRemember to settle your balances on or before the due date to avoid any late fees.<br>2.\tYou can pay at any 7-Eleven or Bayad Center branch, as well as at other online and offline options (download the app for a complete list).<br>3.\tEarly and on-time payments will guarantee you lower interest rates, higher loan limits, and longer loan terms!<br><br>Whether for a salary loan or personal loan, Atome has you covered! Enjoy fast cash loans online now!<br><br>Atome is a brand of Neuroncredit Financing Company, Inc., a Financial Technology company working to advance financial inclusion for each and every Filipino by providing online cash loans. Neuroncredit Financing Company, Inc is a subsidiary of Neuroncredit Pte Ltd (Singapore), which uses technology from Advance. AI for faster and better online loan processing.<br> <br>We would be excited to hear from you! If you have any feedback, questions, or concerns, please contact us at:<br>Website: www.atome.ph<br>E-mail: cs@atome.ph<br>Facebook: @AtomePhilippines<br>Instagram: @atomeph<br>Address: Unit 1605 Centerpoint Building, Julia Vargas Ave., cor Garner Rd., Ortigas Center, Brgy. San Antonio, Pasig City<br> <br>Atome is registered as Neuroncredit Financing Company Inc.<br>Company Registration No. CS201816338<br>Certificate of Authority No. 1178",
     "summary": "A cash lending platform to borrow money easy with low interest rate.",
     "installs": "1,000,000+",
-    "score": 4.688284,
+    "score": 4.685515,
     "scoreText": "4.7",
-    "ratings": 99051,
+    "ratings": 99048,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2929,7 +2926,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "ph.kreditpintar"
   },
   {
     "title": "Pesoloan -  Quick Cash and Peso Loan Online",
@@ -2937,9 +2935,9 @@
     "descriptionHTML": "[Product introduction]\u00a0<br>Loan amount:  \u20b1 8,000.00 - \u20b1 10,000.00<br>Loan term: 91 days (shortest, including renewal time) - 120 days (longest, including renewal time)<br>Maximum APR: 20%<br>Transaction Fee: 0<br>Other fees: we will charge one time sign fee, service fee(per transaction). Minimum 10%, Maximum 20%<br><br>[Interest calculation]<br>If your loan amount is \u20b1 10,000, APR is 20%,service fee is 10% and the term is 91 days. on the due date, the amount payable is \u20b1 11,498.6 (10,000 * 20% / 365 * 91 + 10,000 + 10,000*10%).<br>If your loan amount is \u20b1 10,000, APR is 20%,service fee is 20% and the term is 91 days. on the due date, the amount payable is \u20b1 12,498.6 (10,000 * 20% / 365 * 91 + 10,000 + 10,000*20%).<br><br>[User Requirements]<br>Age : 18+<br>[What is Pesoloan]<br>Pesoloan is an application (mobile app) that is launched in the Philippines and provides easy-operation, no-collateral online cash-lending service to help users solve their problem.After filling out application in our platform and the funds will be disbursed after being approved according to the way the clients\u2019 chosen.<br><br><br>[ How to use Pesoloan]\u00a0<br>-Download the app!<br>-Complete the whole online process!<br>-No collaterals\uff01<br>-Choose the disbursement way<br>-Get your loan<br><br>[No collaterals!]\u00a0<br>Pesoloan is an online loan service application. And you can borrow money from our platform without any collateral!<br><br>[ More convenient to borrow money!]<br>Fill out the loan application, and build the credit with Pesoloan. After your loan is processed, the funds will be transferred to you directly .<br><br>[ Terms of loan]<br>If you are a Filipino citizen and your age is more than 18 years old, you can apply here.<br><br>[ Loan amount]<br>Our loan amount range is from \u20b1 2,000.00 to \u20b1 10,000.00, and the actual loan amount can be adjusted according to your demands.<br><br>[ More flexible to loan and payment]<br>You can choose loan term and loan amount in Pesoloan.<br><br>[ Private Policy]<br>Pesoloan protects the privacy of all consumers and we do not provide any consumer information to any party without your consent.<br><br>[ Easy Operation]<br>Steps:<br>1:Download Pesoloan<br>2:Fill in your information in our APP(We will protect your data).<br>3:Submit your loan application<br><br><br><br><br>[ About us]<br>Have problem to use Pesoloan\uff1f<br>Please contact our online service for help.<br>Working time\uff1a9am-18pm(Monday-Friday)<br>Website: http://www.pesoloan.ph<br>Phone: 09052461758<br>Address\uff1aThe office cowork + life Tower 1, Highstreet South Corporate Plaza, 9th Avenue, corner 26th St, Taguig 1634",
     "summary": "Pesoloan is a full-process credit platform based on the mobile Internet.",
     "installs": "1,000,000+",
-    "score": 4.6051245,
+    "score": 4.602106,
     "scoreText": "4.6",
-    "ratings": 26802,
+    "ratings": 26810,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -2986,7 +2984,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.pesoloan"
   },
   {
     "title": "Dami Credit - Cash Peso Loan Online Philippines",
@@ -2994,7 +2993,7 @@
     "descriptionHTML": "Loan Products:<br>\u25c9Loan Amount:\u00a0P1,500-P20,000<br>\u25c9Loan Term:\u00a091days-120days<br>\u25c9Maximum interest rate:\u00a024%per year<br>\u25c9Fees:\u00a0Different fees will be charged according to the products you choose, which are used for credit assessment, account management and third-party services.<br>\u25c9Example:\u00a0If you choose a loan limt of P2,000 with a period of 1 year, your total fees is P2,000*0.06%*365=P438<br><br>Dami Credit\u2014\u2014A cash loan online lending platform in the Philippines which provides instant fast, affordable and safe cash loan online service for people. Sign up in seconds, apply for a peso loan and receive your cash in minutes. Guaranteed fast approval and easy process that can help you get the quick cash loan you need anytime and anywhere. We want to help who need fast cash lending service and create a Philippines online loan with low interest care credit on peso loan which will help you to keep your financial status on track.<br><br>Low pondo? Kulang pera? Get your financial tala need and solution here. Dami Credit ready to serve your online loan cash credit!<br><br>Why Choose DamiCredit as your loan app?<br>\ud83d\udcb0<b>High Loan Amount &amp; Long Loan Term: </b>Enjoy fast cash loan amount up to P50,000 and long loan term up to 120 days. <br>\ud83c\udf89<b>Easy Loan to Apply:</b> Get a quick cash without mortgage. Sign up, fill in the application information and get a quick loan. We try to make an awesome peso loan platform for cash lending which you can apply it from home.<br>\u23f3<b>Instant Loan Disbursement and Fast Loan Approval:</b> Loan money will be disbursed as soon as possible once you get approved, the fastest will be approved in 3 mins and get your pondo! Your own pera 247.<br>\ud83d\ude0a<b>Low Interest Rate: </b>Super low interest rate as low as 0.6%, which can give you affordable personal credit cash loan. Enjoy your pautang kredit online.<br>\ud83d\udc4d<b>Safe and Secure: </b>We all-around protect your personal data and keep them confidential.<br>\u2764\ufe0f<b>Dependable Financial Support: </b>A lot of Filipinos have been registered, get a fast cash peso loan and we want to help more for people who needs cash, loan or credit with a fast quick easy cash loan online installment! <br><br>What are the qualifications to apply for a loan online?<br>\u2022\tBetween 18-55 years old.<br><br>How to apply quick loan apps?<br>\u2022\tDownload Dami Credit on Google Play and register your account.<br>\u2022\tFill in your profile in 5 mins.<br>\u2022\tWait for fast cash approval and get your peso loan money.<br><br>How to get the money if I approved?<br>\u2022\tIf you choose bank as disbursement channel, the money will be sent to your bank account directly.<br>\u2022\t<b>Optional Bank: BSP, PNB, BDO, Metrobank, BPI, Landbank, DBP, RCBC, Chinabank, Unionbank, etc.</b><br>\u2022\tIf you choose to cash out at local stores:<br>\u2022\tStep 1: The withdrawal code will be given in the app (if you get approved).<br>\u2022\tStep 2: Get the cash with the withdrawal code at the store you choose <b>(M Lhuillier or RD Pawnshop).</b><br><br>How to repay my loan or utang?<br>\u2022\t7-Eleven: Go to any 7-11 stores and repay your loan via CLiQQ machine or CLIQQ app. Please save the receipt as your repayment proof.<br>\u2022\tM Lhuillier: Go to any M Lhuillier stores and fill in the bills payment form. Repay and receive the payment confirmation receipt. Please save it as your repayment proof.<br>\u2022\tRD Pawnshop: Go to any RD Pawnshop stores and fill in the bills payment form. Repay and receive a payment confirmation receipt. Please save it as your repayment proof.<br>\u2022\tGCash: Click Pay Bills in Gcash app and select SKYPAY. Fill in the information and confirm your repayment. Please save the receipt as your repayment proof.<br><br>Want to borrow money? Pera utang? Get it on Dami Credit! As the best ph loan fast lending credit loan app, we are your financial solution.<br><br>Contact Us<br>For questions, feedbacks, or concerns, please contact us at:<br>Website: www.damicredit.com<br>Facebook: @DamiCredit<br>Address: 5th Floor Rockwell Busines.5 Center Tower 1 Meralco Avenue Ugong CITY OF PASIG, SECOND lliSTRICT, NCR, Philippines, 1604<br>Email: DamiCredit@gmail.com<br>Contact Number: +6309165859018",
     "summary": "Dami Credit - fast, low-interest and safe credit cash loan peso online lending.",
     "installs": "50,000+",
-    "score": 4.604222,
+    "score": 4.596306,
     "scoreText": "4.6",
     "ratings": 3800,
     "free": true,
@@ -3042,7 +3041,8 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "com.loan.cash.credit.easy.peso.fast.lending.tala.pera"
   },
   {
     "title": "My Home Credit Philippines",
@@ -3050,9 +3050,9 @@
     "descriptionHTML": "<b>The Official Mobile App of Home Credit Philippines. Secure, Safe and Easy to Use</b><br><br>Home Credit is a global lending platform trusted by millions worldwide. We empower Filipinos by providing financial access through responsible lending and loans and flexible installment plans.<br><br><b>Your loans in one place.</b><br><br><b> Manage payments</b><br>View loan and payment details. Never miss a payment with the smart payment scheduler.<br><br><b>Apply for loans</b><br>Phone loans, gadget loans, appliance loans, furniture loans and more. Easily start your loan application process with the My Home Credit app.<br><br><b>Receive promos</b><br>Get great promo deals tailored just for you<br><br><b>Customer support</b><br>Got questions about your loan? Chat with our friendly staff from 8am to 9pm everyday<br><br>HC Consumer Finance Philippines, Inc.<br>SEC Reg. Number: CS201301354<br>Certificate of Authority Number 1071 issued 07 April 2017<br>Please read carefully the terms and conditions before proceeding with a loan transaction.",
     "summary": "Manage Your Payments, Avail of Loans, Receive Promos &amp; More",
     "installs": "5,000,000+",
-    "score": 3.6490493,
-    "scoreText": "3.6",
-    "ratings": 76489,
+    "score": 3.6563606,
+    "scoreText": "3.7",
+    "ratings": 76503,
     "free": true,
     "currency": "USD",
     "priceText": "Free",
@@ -3102,6 +3102,7 @@
         "size": null,
         "url": null
       }
-    }
+    },
+    "id": "ph.homecredit.myhomecredit"
   }
 ]

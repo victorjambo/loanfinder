@@ -4,79 +4,18 @@ import {View, Text, FlatList, StyleSheet} from 'react-native';
 import colors from '../../utils/colors';
 import TopApps from '../Apps/TopApps';
 import FeaturedApps from '../Apps/FeaturedApps';
+import data from '../../../_data_collector/data';
 
-const data = [
-  {
-    id: '1',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '2',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '3',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '4',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '5',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '6',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '7',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '8',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '9',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-  {
-    id: '10',
-    name: 'Kenneth Erickson',
-    location: 'San Diego, CA',
-  },
-];
+const _data = data.slice(0, 10);
 
 const Landing = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.featured}>
-        <Text style={styles.header}>Featured Apps</Text>
-        <FlatList
-          horizontal
-          keyExtractor={item => item.id}
-          data={data}
-          renderItem={({item}) => (
-            <FeaturedApps item={item} navigation={navigation} />
-          )}
-        />
-      </View>
       <View style={styles.top}>
         <Text style={styles.header}>Top Apps</Text>
         <FlatList
           keyExtractor={item => item.id}
-          data={data}
+          data={_data}
           renderItem={({item}) => (
             <TopApps item={item} navigation={navigation} />
           )}

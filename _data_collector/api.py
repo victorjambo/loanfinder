@@ -6,7 +6,6 @@ app_ids = [
     'com.inventureaccess.safarirahisi', # KE
     'craftsilicon.barclays',
     'com.oplay.microloan.kenya',
-    'com.inventureaccess.safarirahisi',
     'com.branch_international.branch.branch_demo_android',
     'com.xgo.credit',
     'com.zenkafinance.microloans',
@@ -126,7 +125,9 @@ def rapidapi():
                                 params=req_params,
                                 headers=headers,
                                 stream=True)
-        responses.append(response.json())
+        res = response.json()
+        res['id'] = app_id
+        responses.append(res)
     if len(responses) == len(app_ids):
         write_to_file('data.json', json.dumps(responses))
         print('DONE!!!')

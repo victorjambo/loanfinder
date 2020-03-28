@@ -1,47 +1,58 @@
 import React from 'react';
-import {View, Text, ScrollView, Dimensions} from 'react-native';
+import {View, Text, ScrollView, Linking} from 'react-native';
 import {Image, Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import img from '../../../assets/promo.png';
-import ico from '../../../assets/tala.png';
 import colors from '../../utils/colors';
 
 import styles from './styles';
 
-const description =
-  'Once I was drawing a perfect chair for myself in my head. But I could not finish her design... And so I found her! \n\n Features: \n\t\u2022 24 hrs loan \n\t\u2022 100k loan limit \n\t\u2022 share promo code \n\t\u2022 loan interest rate';
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=';
 
-const AppView = () => {
-  const disabled = false;
-  const isInstalled = false;
-  const bgColor = {backgroundColor: isInstalled ? 'green' : colors.primary};
+const AppView = ({route}) => {
+  const {
+    id,
+    title,
+    installs,
+    scoreText,
+    developer,
+    recentChanges,
+    media: {
+      image: {headerImage, icon},
+    },
+  } = route.params.item;
+  const bgColor = {backgroundColor: colors.primary};
+
+  const handleGetApp = () => {
+    const link = PLAY_URL + id;
+    Linking.openURL(link);
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-        <Image source={img} style={styles.img} />
+        <Image source={{uri: headerImage}} style={styles.img} />
         <View style={styles.detailsContainer}>
           <View style={[styles.row, styles.iconNameContainer]}>
             <Image
-              source={ico}
+              source={{uri: icon}}
               style={styles.ico}
               containerStyle={[styles.icoContainer, styles.shadow]}
               borderRadius={10}
             />
             <View style={styles.textContainer}>
-              <Text style={styles.name}>Victor Mutai</Text>
-              <Text style={styles.subTitle}>Nairobi kenya</Text>
+              <Text style={styles.name}>{title}</Text>
+              <Text style={styles.subTitle}>{developer.name}</Text>
             </View>
           </View>
           <View style={[styles.row, styles.badgeContainer]}>
             <View style={[styles.row, styles.badge]}>
-              <Icon color={colors.grey} size={24} name="book" />
-              <Text style={styles.badgeLabel}>100K</Text>
+              <Icon color={colors.grey} size={24} name="staro" />
+              <Text style={styles.badgeLabel}>{scoreText}</Text>
             </View>
             <View style={[styles.row, styles.badge]}>
               <Icon color={colors.grey} size={24} name="clouddownloado" />
-              <Text style={styles.badgeLabel}>800</Text>
+              <Text style={styles.badgeLabel}>{installs}</Text>
             </View>
             <View style={[styles.row, styles.badge]}>
               <Icon color={colors.grey} size={24} name="like2" />
@@ -53,27 +64,21 @@ const AppView = () => {
             </View>
           </View>
           <View style={styles.verticalSpace}>
-            <Text style={styles.title}>App Description</Text>
+            <Text style={styles.title}>What's new</Text>
             <ScrollView>
-              <Text style={styles.desc}>{description}</Text>
+              <Text style={styles.desc}>{recentChanges}</Text>
             </ScrollView>
           </View>
         </View>
       </View>
       <View style={styles.bottomContainer}>
         <Button
-          title={isInstalled ? 'Installed' : 'Get App'}
-          disabled={disabled}
+          title="Get App"
           buttonStyle={[styles.btn, bgColor]}
           titleStyle={styles.btnLabel}
           containerStyle={styles.btnContainer}
-          icon={
-            <Icon
-              name={isInstalled ? 'checkcircle' : 'clouddownloado'}
-              size={25}
-              color="white"
-            />
-          }
+          onPress={handleGetApp}
+          icon={<Icon name="clouddownloado" size={25} color="white" />}
         />
       </View>
     </View>
