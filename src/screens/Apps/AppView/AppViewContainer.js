@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import {Image} from 'react-native-elements';
 
-import styles from '../Apps/styles';
+import styles from '../styles';
 import GetAppButton from './GetAppButton';
 import HeaderContainer from './HeaderContainer';
 import StatusIcons from './StatusIcons';

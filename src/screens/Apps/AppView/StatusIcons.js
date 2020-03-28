@@ -2,8 +2,8 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import styles from '../Apps/styles';
-import colors from '../../utils/colors';
+import styles from '../styles';
+import colors from '../../../utils/colors';
 
 const StatusIcons = ({rating, installs}) => {
   return (

@@ -3,7 +3,6 @@ import {View, Text, FlatList, StyleSheet} from 'react-native';
 
 import colors from '../../utils/colors';
 import TopApps from '../Apps/TopApps';
-import FeaturedApps from '../Apps/FeaturedApps';
 import data from '../../../_data_collector/data';
 
 const _data = data.slice(0, 10);

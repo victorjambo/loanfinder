@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Image, Text} from 'react-native';
-import styles from '../Apps/styles';
+import {View, Text} from 'react-native';
+import styles from '../styles';
+import {Image} from 'react-native-elements';
 
 const HeaderContainer = ({appIcon, appTitle, developerName}) => {
   return (

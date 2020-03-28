@@ -1,4 +1,4 @@
-import AppViewContainer from '../screens/AppView/AppViewContainer';
+import AppViewContainer from '../screens/Apps/AppView/AppViewContainer';
 import Tabs from './BottomTabNavigator';
 import Auth from '../screens/Auth';
 import Landing from '../screens/Landing';
