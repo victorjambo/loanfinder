@@ -3,6 +3,7 @@ import Tabs from './BottomTabNavigator';
 import Auth from '../screens/Auth';
 import Landing from '../screens/Landing';
 import AboutAppFullDesc from '../screens/Apps/AppView/AboutAppFullDesc';
+import Search from '../screens/Search';
 
 export const HOME_TABS = {
   name: 'Home',
@@ -32,4 +33,9 @@ export const LANDING = {
 export const ABOUT_APP_FULL_DESC = {
   name: 'About this app',
   component: AboutAppFullDesc,
+};
+
+export const SEARCH = {
+  name: 'Search',
+  component: Search,
 };

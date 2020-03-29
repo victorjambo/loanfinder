@@ -4,7 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import colors from '../utils/colors';
 
-import {LANDING, PROFILE} from './routes';
+import {LANDING, PROFILE, SEARCH} from './routes';
 
 import styles from './styles';
 
@@ -22,6 +22,9 @@ const Tabs = () => {
               break;
             case PROFILE.name:
               iconName = 'user';
+              break;
+            case SEARCH.name:
+              iconName = 'search1';
               break;
             default:
               break;
@@ -50,6 +53,7 @@ const Tabs = () => {
         },
       }}>
       <Tab.Screen name={LANDING.name} component={LANDING.component} />
+      <Tab.Screen name={SEARCH.name} component={SEARCH.component} />
       <Tab.Screen name={PROFILE.name} component={PROFILE.component} />
     </Tab.Navigator>
   );
