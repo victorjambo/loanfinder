@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import styles from '../styles';
 import AboutApp from './AboutApp';
 import Screenshots from './Screenshots';
-import DeveloperContact from './DeveloperContact';
 
 const AppBodyContainer = ({navigation, currentAppData}) => {
   return (
@@ -18,7 +17,6 @@ const AppBodyContainer = ({navigation, currentAppData}) => {
       )}
       <AboutApp navigation={navigation} />
       <Screenshots />
-      <DeveloperContact />
     </View>
   );
 };

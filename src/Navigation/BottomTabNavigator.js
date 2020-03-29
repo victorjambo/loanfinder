@@ -9,7 +9,7 @@ import {LANDING, PROFILE} from './routes';
 import styles from './styles';
 
 const Tab = createBottomTabNavigator();
-
+// TODO: overlayColor from tabs
 const Tabs = () => {
   return (
     <Tab.Navigator
