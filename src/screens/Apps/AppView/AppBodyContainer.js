@@ -1,28 +1,17 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {connect} from 'react-redux';
+import {View} from 'react-native';
 
 import styles from '../styles';
 import AboutApp from './AboutApp';
 import Screenshots from './Screenshots';
 
-const AppBodyContainer = ({navigation, currentAppData}) => {
+const AppBodyContainer = ({navigation}) => {
   return (
     <View style={[styles.verticalSpace, styles.appBodyContainer]}>
-      {currentAppData.recentChanges && (
-        <View>
-          <Text style={styles.appBodySectionTitle}>What's new</Text>
-          <Text style={styles.desc}>{currentAppData.recentChanges}</Text>
-        </View>
-      )}
       <AboutApp navigation={navigation} />
       <Screenshots />
     </View>
   );
 };
 
-const mapStateToProps = state => ({
-  currentAppData: state.appState.currentAppData,
-});
-
-export default connect(mapStateToProps)(AppBodyContainer);
+export default AppBodyContainer;

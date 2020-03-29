@@ -16,10 +16,15 @@ import {APPVIEW} from '../../Navigation/routes';
 import {setCurrentAppData} from '../../redux/actions';
 
 const TopApps = ({navigation, item, setAppDataProps}) => {
+  const maxlimit = 35;
   const handleNavigate = () => {
     setAppDataProps(item);
     navigation.navigate(APPVIEW.name, {item});
   };
+
+  if (!item.media.image.icon) {
+    console.log(item.id)
+  }
 
   return (
     <TouchableOpacity
@@ -38,8 +43,26 @@ const TopApps = ({navigation, item, setAppDataProps}) => {
           PlaceholderContent={<ActivityIndicator />}
         />
         <View style={styles.textContainer}>
-          <Text style={styles.name}>{item.title}</Text>
-          <Text>{item.version}</Text>
+          <Text>
+            {item.title.length > maxlimit
+              ? item.title.substring(0, maxlimit - 3) + '...'
+              : item.title}
+          </Text>
+          <View style={styles.row}>
+            <View style={[styles.row, styles.icoContainer]}>
+              <Text>{item.scoreText}</Text>
+              <Icon style={styles.ico} color={colors.grey} name="star" />
+            </View>
+            <View style={[styles.row, styles.icoContainer]}>
+              <Text>{item.size}</Text>
+              <Icon
+                size={15}
+                style={styles.ico}
+                color={colors.grey}
+                name="clouddownload"
+              />
+            </View>
+          </View>
         </View>
         <Icon name="ellipsis1" color="#C3C6D1" size={30} style={styles.icon} />
       </View>
@@ -76,6 +99,13 @@ const styles = StyleSheet.create({
   },
   white: {
     color: colors.white,
+  },
+  ico: {
+    alignSelf: 'center',
+    marginHorizontal: 2,
+  },
+  icoContainer: {
+    marginHorizontal: 5,
   },
   icon: {
     alignSelf: 'center',

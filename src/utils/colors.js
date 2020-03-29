@@ -8,6 +8,7 @@ const colors = {
   primaryOffset: 'rgba(0, 167, 155, 0.03)',
   transparent: 'transparent',
   aliceblue: '#f0f8ff',
+  lightgrey: '#d3d3d3',
 };
 
 export default colors;

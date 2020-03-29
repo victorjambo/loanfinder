@@ -10,16 +10,12 @@ const _data = data.slice(0, 10);
 const Landing = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.top}>
-        <Text style={styles.header}>Top Apps</Text>
-        <FlatList
-          keyExtractor={item => item.id}
-          data={_data}
-          renderItem={({item}) => (
-            <TopApps item={item} navigation={navigation} />
-          )}
-        />
-      </View>
+      <FlatList
+        keyExtractor={item => item.id}
+        data={data}
+        renderItem={({item}) => <TopApps item={item} navigation={navigation} />}
+        ListHeaderComponent={() => <Text style={styles.header}>Top Apps</Text>}
+      />
     </View>
   );
 };

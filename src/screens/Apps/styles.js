@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     marginTop: -30,
     paddingTop: 42,
-    paddingHorizontal: 42,
+    paddingHorizontal: 22,
   },
   row: {
     flexDirection: 'row',
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   name: {
-    marginBottom: 5,
     fontWeight: 'bold',
   },
   subTitle: {
@@ -103,7 +102,18 @@ const styles = StyleSheet.create({
   aboutAppIcon: {
     alignSelf: 'center',
     position: 'absolute',
-    right: 5,
+    right: 0,
+    fontWeight: 'bold',
+  },
+  divider: {
+    backgroundColor: colors.lightgrey,
+    height: 1.5,
+    marginVertical: 20,
+  },
+  aboutAppFullDescSummary: {
+    marginVertical: 4,
+  },
+  aboutAppFullDescTitle: {
     fontWeight: 'bold',
   },
 });

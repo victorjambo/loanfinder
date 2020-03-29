@@ -12,6 +12,7 @@ import AppBodyContainer from './AppBodyContainer';
 const AppViewContainer = ({navigation, route, currentAppData}) => {
   const {
     id,
+    size,
     title,
     installs,
     scoreText,
@@ -31,7 +32,7 @@ const AppViewContainer = ({navigation, route, currentAppData}) => {
             appTitle={title}
             developerName={developer.name}
           />
-          <StatusIcons rating={scoreText} installs={installs} />
+          <StatusIcons rating={scoreText} installs={installs} size={size} />
           <AppBodyContainer item={route.params.item} navigation={navigation} />
         </View>
       </View>
