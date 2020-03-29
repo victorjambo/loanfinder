@@ -1,24 +1,41 @@
-import React from 'react';
-import {View, Text, FlatList, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
 import {connect} from 'react-redux';
 import {ActivityIndicator} from 'react-native';
-import {Image} from 'react-native-elements';
+import {Image, Overlay} from 'react-native-elements';
 
 import styles from '../styles';
+import colors from '../../../utils/colors';
 
 const Screenshot = ({image}) => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
-    <Image
-      source={{uri: image}}
-      style={st.img}
-      containerStyle={st.imgContainer}
-      resizeMode="cover"
-      borderRadius={100 / 6}
-      borderWidth={3}
-      borderColor="#f0f8ff"
-      overflow="visible"
-      PlaceholderContent={<ActivityIndicator />}
-    />
+    <>
+      <TouchableOpacity onPress={() => setIsVisible(true)}>
+        <Image
+          source={{uri: image}}
+          style={st.img}
+          containerStyle={st.imgContainer}
+          resizeMode="cover"
+          borderRadius={100 / 6}
+          borderWidth={3}
+          borderColor={colors.aliceblue}
+          PlaceholderContent={<ActivityIndicator />}
+        />
+      </TouchableOpacity>
+      <Overlay
+        isVisible={isVisible}
+        overlayBackgroundColor={colors.aliceblue}
+        onBackdropPress={() => setIsVisible(false)}>
+        <Image
+          source={{uri: image}}
+          style={st.overlayImage}
+          resizeMode="cover"
+          PlaceholderContent={<ActivityIndicator />}
+        />
+      </Overlay>
+    </>
   );
 };
 
@@ -46,6 +63,10 @@ const st = StyleSheet.create({
   img: {
     height: 200,
     width: 100,
+  },
+  overlayImage: {
+    height: '100%',
+    width: '100%',
   },
 });
 

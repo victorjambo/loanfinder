@@ -7,6 +7,7 @@ const colors = {
   backDrop: 'rgba(48,60,70,0.9)',
   primaryOffset: 'rgba(0, 167, 155, 0.03)',
   transparent: 'transparent',
+  aliceblue: '#f0f8ff',
 };
 
 export default colors;
