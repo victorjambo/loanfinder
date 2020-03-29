@@ -1,4 +1,10 @@
-import {SHOW_SPINNER, HIDE_SPINNER, SHOW_TOAST, HIDE_TOAST} from '../consts';
+import {
+  SHOW_SPINNER,
+  HIDE_SPINNER,
+  SHOW_TOAST,
+  HIDE_TOAST,
+  SET_CURRENT_APP_DATA,
+} from '../consts';
 import initialState from '../initialState';
 
 const appStateReducer = (state = initialState.appState, action) => {
@@ -22,6 +28,11 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         showToast: false,
+      };
+    case SET_CURRENT_APP_DATA:
+      return {
+        ...state,
+        currentAppData: action.payload,
       };
     default:
       return state;

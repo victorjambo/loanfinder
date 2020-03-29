@@ -13,6 +13,7 @@ import {
   ERRORS,
   LOGOUT_SUCCESS,
   SKIP_AUTH,
+  SET_CURRENT_APP_DATA,
 } from './consts';
 import {logError} from '../utils/analytics';
 
@@ -135,4 +136,9 @@ export const logoutSuccess = () => ({
  */
 export const skipAuth = () => ({
   type: SKIP_AUTH,
+});
+
+export const setCurrentAppData = item => ({
+  type: SET_CURRENT_APP_DATA,
+  payload: item,
 });

@@ -1,10 +1,12 @@
 import React from 'react';
 import {ScrollView, Text, View} from 'react-native';
 import {Divider} from 'react-native-elements';
+import {connect} from 'react-redux';
+
 import styles from '../styles';
 
-const AboutAppFullDesc = ({route}) => {
-  const {description, summary, recentChanges} = route.params.item;
+const AboutAppFullDesc = ({currentAppData}) => {
+  const {description, summary, recentChanges} = currentAppData;
   return (
     <ScrollView style={[styles.horizonatalSpace]}>
       <View>
@@ -27,4 +29,8 @@ const AboutAppFullDesc = ({route}) => {
   );
 };
 
-export default AboutAppFullDesc;
+const mapStateToProps = state => ({
+  currentAppData: state.appState.currentAppData,
+});
+
+export default connect(mapStateToProps)(AboutAppFullDesc);

@@ -1,4 +1,6 @@
 import React from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import {
   View,
   Text,
@@ -11,12 +13,18 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 import colors from '../../utils/colors';
 import {APPVIEW} from '../../Navigation/routes';
+import {setCurrentAppData} from '../../redux/actions';
 
-const TopApps = ({navigation, item}) => {
+const TopApps = ({navigation, item, setAppDataProps}) => {
+  const handleNavigate = () => {
+    setAppDataProps(item);
+    navigation.navigate(APPVIEW.name, {item});
+  };
+
   return (
     <TouchableOpacity
       style={[styles.container, styles.shadow, styles.radius]}
-      onPress={() => navigation.navigate(APPVIEW.name, {item})}>
+      onPress={handleNavigate}>
       <View style={styles.row}>
         <Image
           source={{uri: item.media.image.icon}}
@@ -88,4 +96,11 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TopApps;
+const mapDispatchToProps = dispatch => ({
+  setAppDataProps: bindActionCreators(setCurrentAppData, dispatch),
+});
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(TopApps);

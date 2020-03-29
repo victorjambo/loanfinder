@@ -1,6 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {Image} from 'react-native-elements';
+import {connect} from 'react-redux';
 
 import styles from '../styles';
 import GetAppButton from './GetAppButton';
@@ -8,7 +9,7 @@ import HeaderContainer from './HeaderContainer';
 import StatusIcons from './StatusIcons';
 import AppBodyContainer from './AppBodyContainer';
 
-const AppViewContainer = ({navigation, route}) => {
+const AppViewContainer = ({navigation, route, currentAppData}) => {
   const {
     id,
     title,
@@ -18,7 +19,7 @@ const AppViewContainer = ({navigation, route}) => {
     media: {
       image: {headerImage, icon},
     },
-  } = route.params.item;
+  } = currentAppData;
 
   return (
     <View style={styles.container}>
@@ -39,4 +40,8 @@ const AppViewContainer = ({navigation, route}) => {
   );
 };
 
-export default AppViewContainer;
+const mapStateToProps = state => ({
+  currentAppData: state.appState.currentAppData,
+});
+
+export default connect(mapStateToProps)(AppViewContainer);
