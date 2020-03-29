@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
   name: {
     marginBottom: 5,
     fontWeight: 'bold',
-    fontSize: 18,
   },
   subTitle: {
     color: colors.grey,
@@ -67,13 +66,16 @@ const styles = StyleSheet.create({
     color: colors.grey,
     marginLeft: 5,
   },
-  title: {
+  appBodySectionTitle: {
     fontWeight: 'bold',
-    fontSize: 18,
     letterSpacing: 0,
+    marginTop: 10,
   },
   verticalSpace: {
     paddingVertical: 22,
+  },
+  horizonatalSpace: {
+    paddingHorizontal: 20,
   },
   desc: {
     paddingTop: 5,
@@ -90,6 +92,19 @@ const styles = StyleSheet.create({
   },
   btnLabel: {
     paddingHorizontal: 10,
+  },
+  appBodyContainer: {},
+  aboutAppContainer: {
+    flexDirection: 'row',
+  },
+  aboutAppTitle: {
+    fontWeight: 'bold',
+  },
+  aboutAppIcon: {
+    alignSelf: 'center',
+    position: 'absolute',
+    right: 5,
+    fontWeight: 'bold',
   },
 });
 

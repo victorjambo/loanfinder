@@ -2,6 +2,7 @@ import AppViewContainer from '../screens/Apps/AppView/AppViewContainer';
 import Tabs from './BottomTabNavigator';
 import Auth from '../screens/Auth';
 import Landing from '../screens/Landing';
+import AboutAppFullDesc from '../screens/Apps/AppView/AboutAppFullDesc';
 
 export const HOME_TABS = {
   name: 'Home',
@@ -26,4 +27,9 @@ export const AUTH = {
 export const LANDING = {
   name: 'Landing',
   component: Landing,
+};
+
+export const ABOUT_APP_FULL_DESC = {
+  name: 'About this app',
+  component: AboutAppFullDesc,
 };

@@ -8,14 +8,13 @@ import HeaderContainer from './HeaderContainer';
 import StatusIcons from './StatusIcons';
 import AppBodyContainer from './AppBodyContainer';
 
-const AppViewContainer = ({route}) => {
+const AppViewContainer = ({navigation, route}) => {
   const {
     id,
     title,
     installs,
     scoreText,
     developer,
-    recentChanges,
     media: {
       image: {headerImage, icon},
     },
@@ -32,7 +31,7 @@ const AppViewContainer = ({route}) => {
             developerName={developer.name}
           />
           <StatusIcons rating={scoreText} installs={installs} />
-          <AppBodyContainer whatsNew={recentChanges} />
+          <AppBodyContainer item={route.params.item} navigation={navigation} />
         </View>
       </View>
       <GetAppButton appId={id} />

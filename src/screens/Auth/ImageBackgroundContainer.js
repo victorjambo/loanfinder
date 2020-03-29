@@ -34,7 +34,7 @@ const ImageBackgroundContainer = ({isRegister, setForm}) => {
         )}
 
         <View style={styles.line} />
-        <Text style={[styles.title, styles.white]}>
+        <Text style={[styles.appBodySectionTitle, styles.white]}>
           {isRegister ? 'Create Account' : 'Welcome back'}
         </Text>
         {!isRegister && (
