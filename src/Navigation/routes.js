@@ -4,6 +4,7 @@ import Auth from '../screens/Auth';
 import Landing from '../screens/Landing';
 import AboutAppFullDesc from '../screens/Apps/AppView/AboutAppFullDesc';
 import Search from '../screens/Search';
+import SearchResults from '../screens/SearchResults';
 
 export const HOME_TABS = {
   name: 'Home',
@@ -38,4 +39,9 @@ export const ABOUT_APP_FULL_DESC = {
 export const SEARCH = {
   name: 'Search',
   component: Search,
+};
+
+export const SEARCH_RESULTS = {
+  name: 'Search Results',
+  component: SearchResults,
 };

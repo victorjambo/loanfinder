@@ -14,6 +14,7 @@ import {
   LOGOUT_SUCCESS,
   SKIP_AUTH,
   SET_CURRENT_APP_DATA,
+  SET_SEARCH_RESULTS,
 } from './consts';
 import {logError} from '../utils/analytics';
 
@@ -141,4 +142,12 @@ export const skipAuth = () => ({
 export const setCurrentAppData = item => ({
   type: SET_CURRENT_APP_DATA,
   payload: item,
+});
+
+/**
+ * Search
+ */
+export const setSearchResults = payload => ({
+  type: SET_SEARCH_RESULTS,
+  payload,
 });

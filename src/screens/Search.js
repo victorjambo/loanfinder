@@ -2,18 +2,56 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {SearchBar} from 'react-native-elements';
 import Flag from 'react-native-flags';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
-import {idxSearch} from '../utils/searchQuery';
+import {idxSearch, countrySearch} from '../utils/searchQuery';
 import colors from '../utils/colors';
+import {SEARCH_RESULTS} from '../Navigation/routes';
+import {setSearchResults, showSpinner, hideSpinner} from '../redux/actions';
 
-const Search = () => {
-  const [search, setSearch] = useState('');
+const INITIAL = '';
+
+const Rows = ({row, handleClick}) => {
+  return (
+    <View style={styles.row}>
+      {row.map(item => {
+        if (item.visible) {
+          return (
+            <TouchableOpacity
+              key={item.id}
+              style={styles.item}
+              onPress={() => handleClick(item.code)}>
+              <Flag code={item.code} />
+              <Text>{item.name}</Text>
+            </TouchableOpacity>
+          );
+        }
+      })}
+    </View>
+  );
+};
+
+const Search = ({navigation, searchResults, showSpin, hideSpin, countries}) => {
+  const [search, setSearch] = useState(INITIAL);
 
   const handleSearch = () => {
     if (search) {
+      showSpin();
       const res = idxSearch(search);
-      console.log(res.length);
+      searchResults(res);
+      navigation.navigate(SEARCH_RESULTS.name, {search});
+      hideSpin();
+      setSearch(INITIAL);
     }
+  };
+
+  const handleCountryClick = country => {
+    showSpin();
+    const res = countrySearch(country);
+    searchResults(res);
+    navigation.navigate(SEARCH_RESULTS.name, {search: country});
+    hideSpin();
   };
 
   return (
@@ -28,39 +66,9 @@ const Search = () => {
       />
       <View style={styles.container}>
         <Text style={styles.sectionHeader}>FILTER BY COUNTRY</Text>
-        <View style={styles.row}>
-          <TouchableOpacity style={styles.item}>
-            <Flag code="KE" />
-            <Text>Kenya</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.item}>
-            <Flag code="NG" />
-            <Text>Nigeria</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.item}>
-            <Flag code="US" />
-            <Text>USA</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.row}>
-          <TouchableOpacity style={styles.item}>
-            <Flag code="IN" />
-            <Text>India</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.item}>
-            <Flag code="MX" />
-            <Text>Mexico</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.item}>
-            <Flag code="PH" />
-            <Text>Philippines</Text>
-          </TouchableOpacity>
-        </View>
+        {countries.map((row, i) => (
+          <Rows key={i} row={row} handleClick={handleCountryClick} />
+        ))}
       </View>
     </View>
   );
@@ -93,13 +101,17 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Search;
+const mapStateToProps = state => ({
+  countries: state.appState.countries,
+});
 
-{/* <Flag code="KE" />
-<Flag code="PK" />
-<Flag code="US" />
-<Flag code="NG" />
-<Flag code="IN" />
-<Flag code="MX" />
-<Flag code="ID" />
-<Flag code="PH" /> */}
+const mapDispatchToProps = dispatch => ({
+  searchResults: bindActionCreators(setSearchResults, dispatch),
+  showSpin: bindActionCreators(showSpinner, dispatch),
+  hideSpin: bindActionCreators(hideSpinner, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Search);

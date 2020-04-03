@@ -22,4 +22,8 @@ export const idxSearch = query => {
   return _data;
 };
 
+export const countrySearch = country => {
+  return data.filter(i => i.country.includes(country));
+};
+
 export default idx;

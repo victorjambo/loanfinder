@@ -22,10 +22,6 @@ const TopApps = ({navigation, item, setAppDataProps}) => {
     navigation.navigate(APPVIEW.name, {item});
   };
 
-  if (!item.media.image.icon) {
-    console.log(item.id)
-  }
-
   return (
     <TouchableOpacity
       style={[styles.container, styles.shadow, styles.radius]}

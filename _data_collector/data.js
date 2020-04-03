@@ -53,13 +53,8 @@ const data = [
       website: 'https://tala.co.ke',
       address: '1633 26th St.\n3rd Floor\nSanta Monica, CA\n90404',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.inventureaccess.safarirahisi',
+    country: ['KE'],
   },
   {
     title: 'Timiza',
@@ -111,13 +106,8 @@ const data = [
       website: 'https://www.absabank.co.ke/personal/ways-to-bank/timiza/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'craftsilicon.barclays',
+    country: ['KE'],
   },
   {
     title: 'OKash - Safe\u00a0Loan App in Kenya',
@@ -168,13 +158,8 @@ const data = [
       website: 'https://ke.o-kash.com/',
       address: 'The Wilde, 53 Merrion Square, Dublin 2, D02 PR63, Ireland',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.oplay.microloan.kenya',
+    country: ['KE'],
   },
   {
     title: 'Branch - Personal Finance Loans',
@@ -229,13 +214,8 @@ const data = [
       website: 'https://Branch.co',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.branch_international.branch.branch_demo_android',
+    country: ['KE'],
   },
   {
     title: 'iPesa - Easy and Fast Credit Loans to M-PESA',
@@ -289,13 +269,8 @@ const data = [
       website: 'http://www.ipesa.cc',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.xgo.credit',
+    country: ['KE'],
   },
   {
     title: 'Zenka Loan App - Kenya',
@@ -347,13 +322,8 @@ const data = [
       website: 'https://zenka.co.ke',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.zenkafinance.microloans',
+    country: ['KE'],
   },
   {
     title: 'Berry - Simple Swift Loans',
@@ -408,13 +378,8 @@ const data = [
       address:
         'Finberry Centre, Chaka Road, P.O. Box 74937-00200, Nairobi, KENYA.',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.berry.berryapp',
+    country: ['KE'],
   },
   {
     title: 'Saida - Pay, Bills, Save, Loans & More',
@@ -469,13 +434,8 @@ const data = [
       website: 'http://getsaida.com',
       address: '1720 Camden Avenue, Los Angeles, 90025 CA, USA',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'greenshoe.com.fulani',
+    country: ['KE'],
   },
   {
     title: 'Saida - Loans To Your M-Pesa',
@@ -527,13 +487,8 @@ const data = [
       website: 'http://www.saida.co.ke',
       address: '1720 Camden Avenue, Los Angeles, 90025 CA, USA',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.saida.lite',
+    country: ['KE'],
   },
   {
     title: 'Zash Loan',
@@ -585,13 +540,8 @@ const data = [
       website: 'https://www.zashloan.com/pc/index',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.kopakash',
+    country: ['KE'],
   },
   {
     title: 'Okolea',
@@ -646,13 +596,8 @@ const data = [
       website: 'http://www.okolea-international.com/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.okoleainternational.okoleamobile',
+    country: ['KE'],
   },
   {
     title: 'OPesa - Safe Credit Loans To M-Pesa',
@@ -706,13 +651,8 @@ const data = [
       address:
         'Ring Road Parklands, Building: Apollo Center, Sarit Centre Nairobi',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.opesa.microloan.kenya',
+    country: ['KE'],
   },
   {
     title: 'Senti',
@@ -765,13 +705,8 @@ const data = [
       website: 'https://senti.co.ke/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.roamtech.dm.azima',
+    country: ['KE'],
   },
   {
     title: 'Hikash',
@@ -824,13 +759,8 @@ const data = [
       website: 'https://www.hikash.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.fullstack.hikash',
+    country: ['KE'],
   },
   {
     title: 'PesaFlash - Access Instant Mobile Loans in Kenya',
@@ -883,13 +813,8 @@ const data = [
       website: 'http://www.pesaflash.co.ke',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'ke.pesachap.pl.jk',
+    country: ['KE'],
   },
   {
     title: 'Eazzy Banking',
@@ -944,13 +869,8 @@ const data = [
       website: 'https://ke.equitybankgroup.com/eazzybankingapp/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'ke.co.equitybank.equitel',
+    country: ['KE'],
   },
   {
     title: 'Easypaisa - Mobile Load, Send Money & Pay Bills',
@@ -1012,13 +932,8 @@ const data = [
       website: 'https://easypaisa.com.pk/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'pk.com.telenor.phoenix',
+    country: ['PK'],
   },
   {
     title: 'JazzCash - Money Transfer, Mobile Load & Payments',
@@ -1076,13 +991,8 @@ const data = [
       address:
         'Jazz Digital Headquarters\nKohistan Road,\nF8 Markaz,\nIslamabad\nPakistan\n',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.techlogix.mobilinkcustomer',
+    country: ['PK'],
   },
   {
     title: 'Tez Financial Services | Fori Loan Haasil Karein',
@@ -1142,13 +1052,8 @@ const data = [
       website: 'http://www.tezfinancialservices.pk',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.tez.androidapp',
+    country: ['PK'],
   },
   {
     title: 'CashNetUSA',
@@ -1200,13 +1105,8 @@ const data = [
       website: 'http://www.cashnetusa.com',
       address: '175 W. Jackson Blvd.\nSuite 1000\nChicago, IL 60604',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.enova.cashnet',
+    country: ['US'],
   },
   {
     title: 'MoneyLion: Mobile Banking',
@@ -1266,13 +1166,8 @@ const data = [
       website: 'https://www.moneylion.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.moneylion',
+    country: ['US'],
   },
   {
     title: 'Loan Day USA - Cash loans today',
@@ -1326,13 +1221,8 @@ const data = [
       website: 'http://www.loandayusa.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'tsc.loandayusa.com',
+    country: ['US'],
   },
   {
     title: 'Speedy Cash',
@@ -1383,13 +1273,8 @@ const data = [
       website: 'https://www.speedycash.com/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.tigerfinancial.mobile.speedycash',
+    country: ['US'],
   },
   {
     title: 'Dave - Banking For Humans',
@@ -1446,13 +1331,8 @@ const data = [
       website: 'http://www.dave.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.dave',
+    country: ['US'],
   },
   {
     title: 'FairMoney: Instant loan app, bill payment and more',
@@ -1514,13 +1394,8 @@ const data = [
       website: 'https://www.fairmoney.ng/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'ng.com.fairmoney.fairmoney',
+    country: ['NG'],
   },
   {
     title: 'sokoloan - Fast Loan,Quick Online Cash in Nigeria',
@@ -1579,13 +1454,8 @@ const data = [
       website: 'http://www.sokoloan.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.nigeria.soko',
+    country: ['NG'],
   },
   {
     title: 'MoneyPal',
@@ -1636,13 +1506,8 @@ const data = [
       website: 'https://www.moneypal.ng',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.zedcrest.android.moneypal.v2',
+    country: ['NG'],
   },
   {
     title: 'Aella App',
@@ -1694,13 +1559,8 @@ const data = [
       website: 'http://www.aellacredit.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.aella.comportal',
+    country: ['NG'],
   },
   {
     title: 'Palmcredit',
@@ -1758,13 +1618,8 @@ const data = [
       website: null,
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.transsnetfinancial.palmcredit',
+    country: ['NG'],
   },
   {
     title: 'AnyTimeLoan \u2013 Instant Personal Loans',
@@ -1815,14 +1670,8 @@ const data = [
       website: 'http://www.anytimeloan.in',
       address: null,
     },
-    download: {
-      apk: {
-        size: 22048180,
-        url:
-          'https://play.googleapis.com/download/by-token/download?token=AOTCm0Q_V6WD3LFhkhGo4aEu-gJHZDtrZT0NVLzsYr7BGe_Saakzm4yOLRZ4GvPln98oyK_bx6Svyb2FPU3UUDvFL1yt3owqh7grNTuFLggHbm0OcFxneeTwrlhrCUbiqmoSnic3TC63HR1T5IzPmyihdt_JEzI7YSlgBiVfcZJQM7STvbwJ0QIOZikO-SIXmGLe_4RxC_qp1IXRdVM92xvRsuVpmaqoeGwxlh01Zj-Ppwal5qwFXU1-YqiRkAlwvRDflUtilVaNyxsG1sM_Zm8_lK6aqZZzQ4F2PbwbGUmFofheGXF_cgpAEBZK52R6c38CzqpZ1B5_34RALwxUoMf9UNc5X20z7rl4avGLWrOMrjqyGUMA6-ym4cg8DmwcDnu4Q4S1BOgoVwK-babgGX1pul58FUPv0g&cpn=8q7sljjEeIfcKsTI',
-      },
-    },
     id: 'com.atl.anytimeloan',
+    country: ['IN'],
   },
   {
     title: 'Atome Credit-easy, fast, online personal loan',
@@ -1876,13 +1725,8 @@ const data = [
       website: 'http://www.atome.in',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'in.atome',
+    country: ['IN'],
   },
   {
     title: 'CASHe \u2013 Instant Personal Loans',
@@ -1941,13 +1785,8 @@ const data = [
       website: 'https://www.cashe.co.in',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'co.tslc.cashe.android',
+    country: ['IN'],
   },
   {
     title: 'RupeeLend',
@@ -1999,13 +1838,8 @@ const data = [
       website: 'http://www.rupeelend.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.rupeelend.rupeelend',
+    country: ['IN'],
   },
   {
     title: 'Instant loan for college students \u2013 mPokket',
@@ -2065,13 +1899,8 @@ const data = [
       website: 'http://mpokket.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.mpokket.app',
+    country: ['IN'],
   },
   {
     title: 'Credy - Fast Online Instant Personal Loan App',
@@ -2125,13 +1954,8 @@ const data = [
       address:
         '2nd Floor, Sailagiri, Behind Looking Good Furniture, Koramangala, Bangalore',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'in.credy.borrowerapp.full',
+    country: ['IN'],
   },
   {
     title: 'Dhani: Instant Personal Loan, Credit Line & Wallet',
@@ -2193,13 +2017,8 @@ const data = [
       website: 'https://www.indiabullsdhani.com/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.indiaBulls',
+    country: ['IN'],
   },
   {
     title: 'Quick Loan, Instant Loan At Low Interest & Low EMI',
@@ -2260,13 +2079,8 @@ const data = [
       address:
         'Upwards Office\n201, Times Square Building, Behind Sai Service Bus Stop, Western Express Hwy,\nAndheri East Mumbai, Maharashtra - 400047',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.goupwards',
+    country: ['IN'],
   },
   {
     title: 'Instant Personal Loan App Online Loan - KreditBee',
@@ -2325,13 +2139,8 @@ const data = [
       website: 'https://www.kreditbee.in',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.kreditbee.android',
+    country: ['IN'],
   },
   {
     title: 'MoneyTap Credit - Better Than Personal Loan Apps',
@@ -2392,13 +2201,8 @@ const data = [
       website: 'https://www.moneytap.com',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.mycash.moneytap.app',
+    country: ['IN'],
   },
   {
     title: 'StashFin - Quick & Easy Personal Loans',
@@ -2453,13 +2257,8 @@ const data = [
       website: 'https://www.stashfin.com/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.stashfin.android',
+    country: ['IN'],
   },
   {
     title: 'Instant Personal Loan Online App - LazyPay',
@@ -2517,13 +2316,8 @@ const data = [
       website: 'https://lazypay.in',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.citrus.citruspay',
+    country: ['IN'],
   },
   {
     title: 'Instant Personal Loan App Online - PayMe India',
@@ -2583,13 +2377,8 @@ const data = [
       website: 'http://www.paymeindia.in',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'io.attabot.app.paymeindia',
+    country: ['IN'],
   },
   {
     title: 'Instant Personal Loan App - PaySense',
@@ -2649,13 +2438,8 @@ const data = [
       address:
         'Jai Villa, Devshakti\n49 Tilak Road\nSanta Cruz West\nMumbai 400054',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.gopaysense.android.boost',
+    country: ['IN'],
   },
   {
     title: 'Instant Personal Loan App - Money View Loans',
@@ -2710,13 +2494,8 @@ const data = [
       address:
         'M/s Whizdm Innovations Private Limited\nThe Address, No 17/1, Kadubeesanahalli, Outer Ring Road\nBangalore - 560087',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.whizdm.moneyview.loans',
+    country: ['IN'],
   },
   {
     title: 'Bajaj Finserv - Instant Loans and Credit Card app',
@@ -2776,13 +2555,8 @@ const data = [
       website: 'https://www.bajajfinserv.in/finance/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'org.altruist.BajajExperia',
+    country: ['IN'],
   },
   {
     title: 'Tala - Pr\u00e9stamos de dinero',
@@ -2836,13 +2610,8 @@ const data = [
       website: 'https://www.talamobile.mx',
       address: '1633 26th St.\n3rd Floor\nSanta Monica, CA\n90404',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'mx.com.tala',
+    country: ['MX'],
   },
   {
     title: 'My Home Credit Indonesia',
@@ -2895,13 +2664,8 @@ const data = [
       website: 'https://www.homecredit.co.id',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'id.co.myhomecredit',
+    country: ['ID'],
   },
   {
     title: 'Tala - Fast Online Cash Loan',
@@ -2957,13 +2721,8 @@ const data = [
       website: 'http://tala.co',
       address: '1633 26th St.\n3rd Floor\nSanta Monica, CA\n90404',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'ph.com.tala',
+    country: ['PH'],
   },
   {
     title: 'Pondo Loan-Simple loan,easy access to peso cash !',
@@ -3016,13 +2775,8 @@ const data = [
       website: 'http://cashloan.cash',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'ph.fk.pondoloan',
+    country: ['PH'],
   },
   {
     title: 'PondoPeso - Fast and Easy Mobile Online Cash Loan',
@@ -3075,13 +2829,8 @@ const data = [
       website: 'https://www.pondopeso.com/#/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'ph.pondopeso.mnl.jk',
+    country: ['PH'],
   },
   {
     title: 'Atome-Cash Loan App Philippines & Peso Loan online',
@@ -3137,13 +2886,8 @@ const data = [
       website: null,
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'ph.kreditpintar',
+    country: ['PH'],
   },
   {
     title: 'Pesoloan -  Quick Cash and Peso Loan Online',
@@ -3202,13 +2946,8 @@ const data = [
       website: 'http://www.pesoloan.ph/',
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.pesoloan',
+    country: ['PH'],
   },
   {
     title: 'Dami Credit - Cash Peso Loan Online Philippines',
@@ -3266,13 +3005,8 @@ const data = [
       website: null,
       address: null,
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'com.loan.cash.credit.easy.peso.fast.lending.tala.pera',
+    country: ['PH'],
   },
   {
     title: 'My Home Credit Philippines',
@@ -3333,13 +3067,8 @@ const data = [
       website: 'https://www.homecredit.ph/',
       address: '9th Ave, Taguig, Metro Manila\nOre Central Building',
     },
-    download: {
-      apk: {
-        size: null,
-        url: null,
-      },
-    },
     id: 'ph.homecredit.myhomecredit',
+    country: ['PH'],
   },
 ];
 export default data;

@@ -1,19 +1,19 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {View, Text, FlatList, StyleSheet} from 'react-native';
 
 import colors from '../../utils/colors';
-import TopApps from '../Apps/TopApps';
-import data from '../../../_data_collector/data';
+import SingleAppItem from '../Apps/SingleAppItem';
 
-const _data = data.slice(0, 10);
-
-const Landing = ({navigation}) => {
+const Landing = ({navigation, apps}) => {
   return (
     <View style={styles.container}>
       <FlatList
         keyExtractor={item => item.id}
-        data={data}
-        renderItem={({item}) => <TopApps item={item} navigation={navigation} />}
+        data={apps}
+        renderItem={({item}) => (
+          <SingleAppItem item={item} navigation={navigation} />
+        )}
         ListHeaderComponent={() => <Text style={styles.header}>Top Apps</Text>}
       />
     </View>
@@ -40,4 +40,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Landing;
+const mapStateToProps = state => ({
+  apps: state.appState.apps,
+});
+
+export default connect(mapStateToProps)(Landing);

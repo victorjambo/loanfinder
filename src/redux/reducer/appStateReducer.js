@@ -4,6 +4,7 @@ import {
   SHOW_TOAST,
   HIDE_TOAST,
   SET_CURRENT_APP_DATA,
+  SET_SEARCH_RESULTS,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -33,6 +34,11 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         currentAppData: action.payload,
+      };
+    case SET_SEARCH_RESULTS:
+      return {
+        ...state,
+        searchResults: action.payload,
       };
     default:
       return state;
