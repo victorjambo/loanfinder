@@ -40,6 +40,7 @@ const Tabs = () => {
         },
       })}
       tabBarOptions={{
+        keyboardHidesTabBar: true,
         activeTintColor: colors.primary,
         inactiveTintColor: colors.grey,
         labelStyle: {

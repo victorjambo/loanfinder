@@ -23,7 +23,7 @@ import GoogleButton from './GoogleButton';
 import validateInput from '../../utils/validator';
 
 const REGISTER_HEIGHT = 290;
-const LOGIN_HEIGHT = 437;
+const LOGIN_HEIGHT = 290;
 const INITIAL_VALUE = '';
 const REGISTER = 'REGISTER';
 const LOGIN = 'LOGIN';
@@ -73,7 +73,6 @@ const Auth = ({login}) => {
 
         <View style={styles.body}>
           <Animated.View style={[styles.section, styles.middle]}>
-            <GoogleButton />
             {isRegister && (
               <Input
                 containerStyle={styles.inputContainer}
@@ -118,6 +117,7 @@ const Auth = ({login}) => {
                 title={form === LOGIN ? LOGIN : REGISTER}
                 onPress={handleSubmit}
               />
+              <GoogleButton />
 
               <TouchableOpacity
                 onPress={() => {

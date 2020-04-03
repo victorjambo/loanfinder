@@ -11,17 +11,15 @@ import styles from './styles';
 const GoogleButton = ({login}) => {
   return (
     <View style={styles.googleContainer}>
+      <View style={styles.googleLinesContainter}>
+        <Text>OR</Text>
+      </View>
       <GoogleSigninButton
         style={styles.googleButton}
         size={GoogleSigninButton.Size.Wide}
         color={GoogleSigninButton.Color.Light}
         onPress={login}
       />
-      <View style={styles.googleLinesContainter}>
-        <View style={styles.googleLine} />
-        <Text>OR</Text>
-        <View style={styles.googleLine} />
-      </View>
     </View>
   );
 };

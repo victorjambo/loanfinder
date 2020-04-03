@@ -4,6 +4,10 @@ import colors from '../../utils/colors';
 
 const {width} = Dimensions.get('window');
 
+// TODO remove fontSize, googleLine
+// TODO redo back button
+// TODO skip button should not change position
+
 const styles = StyleSheet.create({
   skip: {
     flexDirection: 'row',
