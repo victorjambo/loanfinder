@@ -30,6 +30,7 @@ export default {
     searchResults: [],
     apps: data,
     location: '',
+    isTermsAccepted: true,
     countries: [
       [
         {

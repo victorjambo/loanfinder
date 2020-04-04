@@ -8,7 +8,7 @@ import CountriesContainer from '../Search/CountriesContainer';
 const Location = ({changeLocation}) => {
   const handleClick = country => {
     changeLocation(country);
-    // TODO handle navigate to Home page
+    // TODO use this info for apps in storage
     // TODO check if local storage has location
   };
 

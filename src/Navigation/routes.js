@@ -7,6 +7,7 @@ import Search from '../screens/Search/SearchPage';
 import SearchResults from '../screens/Search/SearchResults';
 import Profile from '../screens/Profile/Profile';
 import Location from '../screens/PostAuth/Location';
+import Terms from '../screens/PostAuth/Terms';
 
 export const TABS = {
   name: 'Tabs',
@@ -51,4 +52,9 @@ export const SEARCH_RESULTS = {
 export const LOCATION = {
   name: 'Set Location',
   component: Location,
+};
+
+export const TERMS = {
+  name: 'Terms',
+  component: Terms,
 };
