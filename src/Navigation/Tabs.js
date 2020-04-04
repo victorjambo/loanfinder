@@ -4,7 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import colors from '../utils/colors';
 
-import {LANDING, PROFILE, SEARCH} from './routes';
+import {HOME, PROFILE, SEARCH} from './routes';
 
 import styles from './styles';
 
@@ -14,10 +14,10 @@ const Tabs = () => {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) => {
+        tabBarIcon: ({color, size}) => {
           let iconName;
           switch (route.name) {
-            case LANDING.name:
+            case HOME.name:
               iconName = 'home';
               break;
             case PROFILE.name:
@@ -53,7 +53,7 @@ const Tabs = () => {
           borderTopStartRadius: 30,
         },
       }}>
-      <Tab.Screen name={LANDING.name} component={LANDING.component} />
+      <Tab.Screen name={HOME.name} component={HOME.component} />
       <Tab.Screen name={SEARCH.name} component={SEARCH.component} />
       <Tab.Screen name={PROFILE.name} component={PROFILE.component} />
     </Tab.Navigator>

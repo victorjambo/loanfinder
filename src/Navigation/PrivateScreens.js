@@ -1,21 +1,15 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {
-  HOME_TABS,
-  APPVIEW,
-  ABOUT_APP_FULL_DESC,
-  SEARCH_RESULTS,
-  PROFILE,
-} from './routes';
+import {TABS, APPVIEW, ABOUT_APP_FULL_DESC, SEARCH_RESULTS} from './routes';
 
 const Stack = createStackNavigator();
 
 const PrivateScreens = () => (
   <Stack.Navigator screenOptions={{headerTintColor: 'white'}}>
     <Stack.Screen
-      name={HOME_TABS.name}
-      component={HOME_TABS.component}
+      name={TABS.name}
+      component={TABS.component}
       options={{headerShown: false}}
     />
     <Stack.Screen
@@ -35,11 +29,6 @@ const PrivateScreens = () => (
         title: `Results for "${route.params.search}"`,
         headerTintColor: 'black',
       })}
-    />
-    <Stack.Screen
-      name={PROFILE.name}
-      component={PROFILE.component}
-      options={{title: PROFILE.name, headerTransparent: false}}
     />
   </Stack.Navigator>
 );

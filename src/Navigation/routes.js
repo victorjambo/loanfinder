@@ -1,14 +1,14 @@
 import AppViewContainer from '../screens/Apps/AppView/AppViewContainer';
-import Tabs from './BottomTabNavigator';
+import Tabs from './Tabs';
 import Auth from '../screens/Auth';
-import Landing from '../screens/Landing';
+import Home from '../screens/Home';
 import AboutAppFullDesc from '../screens/Apps/AppView/AboutAppFullDesc';
-import Search from '../screens/Search';
-import SearchResults from '../screens/SearchResults';
+import Search from '../screens/Search/SearchPage';
+import SearchResults from '../screens/Search/SearchResults';
 import Profile from '../screens/Profile/Profile';
 
-export const HOME_TABS = {
-  name: 'Home',
+export const TABS = {
+  name: 'Tabs',
   component: Tabs,
 };
 
@@ -27,9 +27,9 @@ export const AUTH = {
   component: Auth,
 };
 
-export const LANDING = {
-  name: 'Landing',
-  component: Landing,
+export const HOME = {
+  name: 'Home',
+  component: Home,
 };
 
 export const ABOUT_APP_FULL_DESC = {

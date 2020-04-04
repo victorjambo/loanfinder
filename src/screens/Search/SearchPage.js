@@ -5,10 +5,10 @@ import Flag from 'react-native-flags';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import {idxSearch, countrySearch} from '../utils/searchQuery';
-import colors from '../utils/colors';
-import {SEARCH_RESULTS} from '../Navigation/routes';
-import {setSearchResults, showSpinner, hideSpinner} from '../redux/actions';
+import {idxSearch, countrySearch} from '../../utils/searchQuery';
+import colors from '../../utils/colors';
+import {SEARCH_RESULTS} from '../../Navigation/routes';
+import {setSearchResults, showSpinner, hideSpinner} from '../../redux/actions';
 
 const INITIAL = '';
 
