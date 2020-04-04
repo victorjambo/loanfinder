@@ -6,6 +6,7 @@ import {
   SET_CURRENT_APP_DATA,
   SET_SEARCH_RESULTS,
   SET_LOCATION,
+  FETCH_APP_DATA,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -45,6 +46,11 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         location: action.payload,
+      };
+    case FETCH_APP_DATA:
+      return {
+        ...state,
+        apps: action.payload,
       };
     default:
       return state;

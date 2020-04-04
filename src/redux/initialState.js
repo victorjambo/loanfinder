@@ -29,7 +29,7 @@ export default {
     currentAppData: {},
     searchResults: [],
     apps: data,
-    location: '',
+    location: 'KE',
     isTermsAccepted: true,
     countries: [
       [

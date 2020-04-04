@@ -1,5 +1,6 @@
 import NetInfo from '@react-native-community/netinfo';
 import auth from '../utils/Auth';
+import data from '../../_data_collector/data';
 
 import {
   HIDE_BANNER,
@@ -16,6 +17,8 @@ import {
   SET_CURRENT_APP_DATA,
   SET_SEARCH_RESULTS,
   SET_LOCATION,
+  SET_APPS_WITH_LOCATION,
+  FETCH_APP_DATA,
 } from './consts';
 import {logError} from '../utils/analytics';
 
@@ -140,10 +143,28 @@ export const skipAuth = () => ({
   type: SKIP_AUTH,
 });
 
+/**
+ * Set App Data
+ */
 export const setCurrentAppData = item => ({
   type: SET_CURRENT_APP_DATA,
   payload: item,
 });
+
+export const setAppsWithLocation = () => ({
+  type: SET_APPS_WITH_LOCATION,
+});
+
+export const fetchAppsData = payload => ({
+  type: FETCH_APP_DATA,
+  payload,
+});
+
+export const fetchApps = () => {
+  return dispatch => {
+    dispatch(fetchAppsData(data));
+  };
+};
 
 /**
  * Search
