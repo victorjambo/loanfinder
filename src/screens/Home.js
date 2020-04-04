@@ -6,11 +6,12 @@ import colors from '../utils/colors';
 import SingleAppItem from './Apps/SingleAppItem';
 
 const Home = ({navigation, apps}) => {
+  const data = apps.slice(0, 10);
   return (
     <View style={styles.container}>
       <FlatList
         keyExtractor={item => item.id}
-        data={apps}
+        data={data}
         renderItem={({item}) => (
           <SingleAppItem item={item} navigation={navigation} />
         )}

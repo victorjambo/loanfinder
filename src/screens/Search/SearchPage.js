@@ -1,36 +1,15 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View} from 'react-native';
 import {SearchBar} from 'react-native-elements';
-import Flag from 'react-native-flags';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import {idxSearch, countrySearch} from '../../utils/searchQuery';
-import colors from '../../utils/colors';
 import {SEARCH_RESULTS} from '../../Navigation/routes';
+import {idxSearch, countrySearch} from '../../utils/searchQuery';
 import {setSearchResults, showSpinner, hideSpinner} from '../../redux/actions';
+import CountriesContainer from './CountriesContainer';
 
 const INITIAL = '';
-
-const Rows = ({row, handleClick}) => {
-  return (
-    <View style={styles.row}>
-      {row.map(item => {
-        if (item.visible) {
-          return (
-            <TouchableOpacity
-              key={item.id}
-              style={styles.item}
-              onPress={() => handleClick(item.code)}>
-              <Flag code={item.code} />
-              <Text>{item.name}</Text>
-            </TouchableOpacity>
-          );
-        }
-      })}
-    </View>
-  );
-};
 
 const Search = ({navigation, searchResults, showSpin, hideSpin, countries}) => {
   const [search, setSearch] = useState(INITIAL);
@@ -64,42 +43,13 @@ const Search = ({navigation, searchResults, showSpin, hideSpin, countries}) => {
         round
         onBlur={handleSearch}
       />
-      <View style={styles.container}>
-        <Text style={styles.sectionHeader}>FILTER BY COUNTRY</Text>
-        {countries.map((row, i) => (
-          <Rows key={i} row={row} handleClick={handleCountryClick} />
-        ))}
-      </View>
+      <CountriesContainer
+        header="FILTER BY COUNTRY"
+        handleCountryClick={handleCountryClick}
+      />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    marginHorizontal: 20,
-    marginTop: 10,
-  },
-  sectionHeader: {
-    fontWeight: 'bold',
-    paddingVertical: 10,
-  },
-  row: {
-    flexDirection: 'row',
-  },
-  item: {
-    flex: 1,
-    width: 120,
-    height: 120,
-    margin: 5,
-    marginTop: 10,
-    borderWidth: 1,
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    borderColor: colors.primaryText,
-    backgroundColor: colors.primaryOffset,
-  },
-});
 
 const mapStateToProps = state => ({
   countries: state.appState.countries,

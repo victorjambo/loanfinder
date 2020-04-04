@@ -1,10 +1,15 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
+import {LOCATION} from '../../Navigation/routes';
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Profile Tab</Text>
+      <Button
+        title="Click me"
+        onPress={() => navigation.navigate(LOCATION.name)}
+      />
     </View>
   );
 };

@@ -1,7 +1,13 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {TABS, APPVIEW, ABOUT_APP_FULL_DESC, SEARCH_RESULTS} from './routes';
+import {
+  TABS,
+  APPVIEW,
+  ABOUT_APP_FULL_DESC,
+  SEARCH_RESULTS,
+  LOCATION,
+} from './routes';
 
 const Stack = createStackNavigator();
 
@@ -29,6 +35,11 @@ const PrivateScreens = () => (
         title: `Results for "${route.params.search}"`,
         headerTintColor: 'black',
       })}
+    />
+    <Stack.Screen
+      name={LOCATION.name}
+      component={LOCATION.component}
+      options={{headerShown: false}}
     />
   </Stack.Navigator>
 );

@@ -6,6 +6,7 @@ import AboutAppFullDesc from '../screens/Apps/AppView/AboutAppFullDesc';
 import Search from '../screens/Search/SearchPage';
 import SearchResults from '../screens/Search/SearchResults';
 import Profile from '../screens/Profile/Profile';
+import Location from '../screens/PostAuth/Location';
 
 export const TABS = {
   name: 'Tabs',
@@ -45,4 +46,9 @@ export const SEARCH = {
 export const SEARCH_RESULTS = {
   name: 'Search Results',
   component: SearchResults,
+};
+
+export const LOCATION = {
+  name: 'Set Location',
+  component: Location,
 };

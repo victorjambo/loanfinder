@@ -29,6 +29,7 @@ export default {
     currentAppData: {},
     searchResults: [],
     apps: data,
+    location: '',
     countries: [
       [
         {

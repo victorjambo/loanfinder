@@ -15,6 +15,7 @@ import {
   SKIP_AUTH,
   SET_CURRENT_APP_DATA,
   SET_SEARCH_RESULTS,
+  SET_LOCATION,
 } from './consts';
 import {logError} from '../utils/analytics';
 
@@ -149,5 +150,13 @@ export const setCurrentAppData = item => ({
  */
 export const setSearchResults = payload => ({
   type: SET_SEARCH_RESULTS,
+  payload,
+});
+
+/**
+ * LOCATION
+ */
+export const setLocation = payload => ({
+  type: SET_LOCATION,
   payload,
 });
