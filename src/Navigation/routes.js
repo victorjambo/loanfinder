@@ -5,6 +5,7 @@ import Landing from '../screens/Landing';
 import AboutAppFullDesc from '../screens/Apps/AppView/AboutAppFullDesc';
 import Search from '../screens/Search';
 import SearchResults from '../screens/SearchResults';
+import Profile from '../screens/Profile/Profile';
 
 export const HOME_TABS = {
   name: 'Home',
@@ -13,7 +14,7 @@ export const HOME_TABS = {
 
 export const PROFILE = {
   name: 'Profile',
-  component: Auth,
+  component: Profile,
 };
 
 export const APPVIEW = {

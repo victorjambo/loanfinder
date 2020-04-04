@@ -6,6 +6,7 @@ import {
   APPVIEW,
   ABOUT_APP_FULL_DESC,
   SEARCH_RESULTS,
+  PROFILE,
 } from './routes';
 
 const Stack = createStackNavigator();
@@ -34,6 +35,11 @@ const PrivateScreens = () => (
         title: `Results for "${route.params.search}"`,
         headerTintColor: 'black',
       })}
+    />
+    <Stack.Screen
+      name={PROFILE.name}
+      component={PROFILE.component}
+      options={{title: PROFILE.name, headerTransparent: false}}
     />
   </Stack.Navigator>
 );
