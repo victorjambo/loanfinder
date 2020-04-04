@@ -1,5 +1,3 @@
-import data from '../../_data_collector/data';
-
 export default {
   ads: {
     showRewarded: false,
@@ -10,7 +8,7 @@ export default {
     isConnected: true,
   },
   auth: {
-    isLoggedIn: false,
+    isLoggedIn: true, // TODO
     skipAuth: false,
     user: {
       displayName: null,
@@ -26,10 +24,11 @@ export default {
   appState: {
     showSpinner: false,
     showToast: false,
+    splashState: false,
     currentAppData: {},
     searchResults: [],
-    apps: data,
-    location: 'KE',
+    apps: [],
+    location: '',
     isTermsAccepted: true,
     countries: [
       [

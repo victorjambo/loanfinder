@@ -2,6 +2,11 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 const dbName = 'loanfinder';
 
+export const IDS = {
+  APPS: 'APPS',
+  LOCATION: 'LOCATION',
+};
+
 class LocalStorage {
   getItem = async itemID => {
     const value = await AsyncStorage.getItem(`@${dbName}:${itemID}`);

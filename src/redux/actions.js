@@ -19,8 +19,10 @@ import {
   SET_LOCATION,
   SET_APPS_WITH_LOCATION,
   FETCH_APP_DATA,
+  HIDE_SPLASH,
 } from './consts';
 import {logError} from '../utils/analytics';
+import localStorage, {IDS} from '../utils/localStorage';
 
 /**
  * Network & Connection Checks
@@ -155,14 +157,15 @@ export const setAppsWithLocation = () => ({
   type: SET_APPS_WITH_LOCATION,
 });
 
-export const fetchAppsData = payload => ({
+export const setAppsData = payload => ({
   type: FETCH_APP_DATA,
   payload,
 });
 
 export const fetchApps = () => {
   return dispatch => {
-    dispatch(fetchAppsData(data));
+    localStorage.setItem(IDS.APPS, data);
+    dispatch(setAppsData(data));
   };
 };
 
@@ -180,4 +183,11 @@ export const setSearchResults = payload => ({
 export const setLocation = payload => ({
   type: SET_LOCATION,
   payload,
+});
+
+/**
+ * Splash
+ */
+export const hideSplash = () => ({
+  type: HIDE_SPLASH,
 });

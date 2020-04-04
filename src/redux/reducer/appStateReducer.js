@@ -7,6 +7,7 @@ import {
   SET_SEARCH_RESULTS,
   SET_LOCATION,
   FETCH_APP_DATA,
+  HIDE_SPLASH,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -51,6 +52,11 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         apps: action.payload,
+      };
+    case HIDE_SPLASH:
+      return {
+        ...state,
+        splashState: true,
       };
     default:
       return state;
