@@ -1,15 +1,20 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {TABS, APPVIEW, ABOUT_APP_FULL_DESC, SEARCH_RESULTS} from './routes';
+import {
+  BOTTOM_TAB,
+  APPVIEW,
+  ABOUT_APP_FULL_DESC,
+  SEARCH_RESULTS,
+} from './routes';
 
 const Stack = createStackNavigator();
 
 const PrivateScreens = () => (
   <Stack.Navigator screenOptions={{headerTintColor: 'white'}}>
     <Stack.Screen
-      name={TABS.name}
-      component={TABS.component}
+      name={BOTTOM_TAB.name}
+      component={BOTTOM_TAB.component}
       options={{headerShown: false}}
     />
     <Stack.Screen

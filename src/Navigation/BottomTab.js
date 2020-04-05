@@ -10,7 +10,7 @@ import styles from './styles';
 
 const Tab = createBottomTabNavigator();
 // TODO: overlayColor from tabs
-const Tabs = () => {
+const BottomTab = () => {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
@@ -60,4 +60,4 @@ const Tabs = () => {
   );
 };
 
-export default Tabs;
+export default BottomTab;

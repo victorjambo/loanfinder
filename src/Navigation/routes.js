@@ -1,5 +1,5 @@
 import AppViewContainer from '../screens/Apps/AppView/AppViewContainer';
-import Tabs from './Tabs';
+import BottomTab from './BottomTab';
 import Auth from '../screens/Auth';
 import Home from '../screens/Home';
 import AboutAppFullDesc from '../screens/Apps/AppView/AboutAppFullDesc';
@@ -9,9 +9,9 @@ import Profile from '../screens/Profile/Profile';
 import Location from '../screens/PostAuth/Location';
 import Terms from '../screens/PostAuth/Terms';
 
-export const TABS = {
-  name: 'Tabs',
-  component: Tabs,
+export const BOTTOM_TAB = {
+  name: 'Bottom Tab',
+  component: BottomTab,
 };
 
 export const PROFILE = {
