@@ -19,7 +19,7 @@ const TopApps = ({navigation, item, setAppDataProps}) => {
   const maxlimit = 35;
   const handleNavigate = () => {
     setAppDataProps(item);
-    navigation.navigate(APPVIEW.name, {item});
+    navigation.navigate(APPVIEW.name);
   };
 
   return (
