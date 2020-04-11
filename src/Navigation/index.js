@@ -13,7 +13,7 @@ import {
   setLocation,
   hideSplash,
 } from '../redux/actions';
-import localStorage, {IDS} from '../utils/localStorage';
+import localStorage, {TABLES} from '../utils/localStorage';
 
 const Screens = ({appState}) => {
   const {location, isTermsAccepted} = appState;
@@ -36,7 +36,7 @@ const Navigator = ({
   useEffect(() => {
     getApps();
     localStorage
-      .multiGetItem([IDS.APPS, IDS.LOCATION])
+      .multiGetItem([TABLES.APPS, TABLES.LOCATION])
       .then(db => {
         const [localApps, localLocation] = db;
 
@@ -51,7 +51,7 @@ const Navigator = ({
         if (localLocation && !location) {
           changeLocation(localLocation);
         } else if (!localLocation && location) {
-          localStorage.setItem(IDS.LOCATION, location);
+          localStorage.setItem(TABLES.LOCATION, location);
         }
 
         hideSplashScreen();

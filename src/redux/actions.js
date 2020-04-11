@@ -24,7 +24,7 @@ import {
   SET_IS_CURRENT_APP_SAVED,
 } from './consts';
 import {logError} from '../utils/analytics';
-import localStorage, {IDS} from '../utils/localStorage';
+import localStorage, {TABLES} from '../utils/localStorage';
 
 /**
  * Network & Connection Checks
@@ -182,7 +182,7 @@ export const setAppsData = payload => ({
 
 export const fetchApps = () => {
   return dispatch => {
-    localStorage.setItem(IDS.APPS, data);
+    localStorage.setItem(TABLES.APPS, data);
     dispatch(setAppsData(data));
   };
 };
@@ -211,7 +211,7 @@ export const hideSplash = () => ({
 });
 
 /**
- * Splash
+ * saved apps
  */
 export const saveApp = () => {
   return (dispatch, getState) => {
@@ -236,5 +236,25 @@ export const saveApp = () => {
     }
 
     dispatch({type: SAVE_APP, payload});
+    syncReduxLocalstorage(payload.newSavedApps);
   };
+};
+
+/**
+ * Sync Store
+ */
+export const syncReduxLocalstorage = async (store, payload) => {
+  switch (store) {
+    case TABLES.APPS:
+      await localStorage.setItem(TABLES.APPS, payload);
+      break;
+    case TABLES.LOCATION:
+      await localStorage.setItem(TABLES.LOCATION, payload);
+      break;
+    case TABLES.SAVED_APPS:
+      await localStorage.setItem(TABLES.SAVED_APPS, payload);
+      break;
+    default:
+      break;
+  }
 };

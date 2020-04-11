@@ -2,9 +2,10 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 const dbName = 'loanfinder';
 
-export const IDS = {
+export const TABLES = {
   APPS: 'APPS',
   LOCATION: 'LOCATION',
+  SAVED_APPS: 'SAVED_APPS',
 };
 
 class LocalStorage {
