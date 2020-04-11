@@ -16,17 +16,21 @@ import {saveApp} from '../redux/actions';
 
 const Stack = createStackNavigator();
 
-const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp}) => {
+const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
   const saveIcon = {
-    headerRight: () => (
-      <Icon
-        onPress={saveCurrentApp}
-        name={isCurrentAppSaved ? 'heart' : 'hearto'}
-        size={24}
-        color={colors.magenta}
-        style={styles.icon}
-      />
-    ),
+    headerRight: () => {
+      if (isLoggedIn) {
+        return (
+          <Icon
+            onPress={saveCurrentApp}
+            name={isCurrentAppSaved ? 'heart' : 'hearto'}
+            size={24}
+            color={colors.magenta}
+            style={styles.icon}
+          />
+        );
+      }
+    },
   };
 
   return (
@@ -70,6 +74,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => ({
   isCurrentAppSaved: state.appState.isCurrentAppSaved,
+  isLoggedIn: state.auth.isLoggedIn,
 });
 
 const mapDispatchToProps = dispatch => ({
