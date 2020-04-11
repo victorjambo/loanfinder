@@ -20,6 +20,8 @@ import {
   SET_APPS_WITH_LOCATION,
   FETCH_APP_DATA,
   HIDE_SPLASH,
+  SAVE_APP,
+  SET_IS_CURRENT_APP_SAVED,
 } from './consts';
 import {logError} from '../utils/analytics';
 import localStorage, {IDS} from '../utils/localStorage';
@@ -148,10 +150,26 @@ export const skipAuth = () => ({
 /**
  * Set App Data
  */
-export const setCurrentAppData = item => ({
-  type: SET_CURRENT_APP_DATA,
-  payload: item,
-});
+export const setCurrentAppData = item => {
+  return (dispatch, getState) => {
+    const {
+      appState: {savedApps},
+    } = getState();
+
+    const isSaved = savedApps.find(app => app.id === item.id);
+
+    if (isSaved) {
+      dispatch({type: SET_IS_CURRENT_APP_SAVED, payload: true});
+    } else {
+      dispatch({type: SET_IS_CURRENT_APP_SAVED, payload: false});
+    }
+
+    dispatch({
+      type: SET_CURRENT_APP_DATA,
+      payload: item,
+    });
+  };
+};
 
 export const setAppsWithLocation = () => ({
   type: SET_APPS_WITH_LOCATION,
@@ -191,3 +209,32 @@ export const setLocation = payload => ({
 export const hideSplash = () => ({
   type: HIDE_SPLASH,
 });
+
+/**
+ * Splash
+ */
+export const saveApp = () => {
+  return (dispatch, getState) => {
+    const {
+      appState: {currentAppData, savedApps},
+    } = getState();
+
+    const id = currentAppData.id;
+
+    const isSaved = savedApps.find(item => item.id === id);
+
+    let payload = {
+      saved: false,
+      newSavedApps: [],
+    };
+
+    if (isSaved) {
+      payload.newSavedApps = savedApps.filter(item => item.id !== id);
+    } else {
+      payload.newSavedApps = [...savedApps, currentAppData];
+      payload.saved = true;
+    }
+
+    dispatch({type: SAVE_APP, payload});
+  };
+};

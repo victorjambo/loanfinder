@@ -16,9 +16,7 @@ import colors from '../../utils/colors';
 import {APPVIEW} from '../../Navigation/routes';
 import {setCurrentAppData} from '../../redux/actions';
 
-const Profile = ({navigation, apps, setAppDataProps}) => {
-  const _data = apps.slice(0, 20);
-
+const Profile = ({navigation, savedApps, setAppDataProps}) => {
   const handleNavigate = item => {
     setAppDataProps(item);
     navigation.navigate(APPVIEW.name);
@@ -41,24 +39,25 @@ const Profile = ({navigation, apps, setAppDataProps}) => {
 
       <View style={styles.body}>
         <View style={styles.bodyContent}>
-          {_data.map(item => (
-            <TouchableOpacity
-              style={styles.menuBox}
-              key={item.id}
-              onPress={() => handleNavigate(item)}>
-              <IconImage
-                source={{uri: item.media.image.icon}}
-                style={styles.icon}
-                containerStyle={[
-                  styles.imgContainer,
-                  styles.shadow,
-                  styles.radiusRound,
-                ]}
-                borderRadius={20}
-                PlaceholderContent={<ActivityIndicator />}
-              />
-            </TouchableOpacity>
-          ))}
+          {savedApps &&
+            savedApps.map(item => (
+              <TouchableOpacity
+                style={styles.menuBox}
+                key={item.id}
+                onPress={() => handleNavigate(item)}>
+                <IconImage
+                  source={{uri: item.media.image.icon}}
+                  style={styles.icon}
+                  containerStyle={[
+                    styles.imgContainer,
+                    styles.shadow,
+                    styles.radiusRound,
+                  ]}
+                  borderRadius={20}
+                  PlaceholderContent={<ActivityIndicator />}
+                />
+              </TouchableOpacity>
+            ))}
         </View>
       </View>
     </ScrollView>
@@ -122,7 +121,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-  apps: state.appState.apps,
+  savedApps: state.appState.savedApps,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -9,6 +9,8 @@ const colors = {
   transparent: 'transparent',
   aliceblue: '#f0f8ff',
   lightgrey: '#d3d3d3',
+  magenta: '#EC2E53',
+  red: '#DF4840',
 };
 
 export default colors;

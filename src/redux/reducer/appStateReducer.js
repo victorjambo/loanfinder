@@ -8,6 +8,8 @@ import {
   SET_LOCATION,
   FETCH_APP_DATA,
   HIDE_SPLASH,
+  SAVE_APP,
+  SET_IS_CURRENT_APP_SAVED,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -57,6 +59,17 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         splashState: true,
+      };
+    case SET_IS_CURRENT_APP_SAVED:
+      return {
+        ...state,
+        isCurrentAppSaved: action.payload,
+      };
+    case SAVE_APP:
+      return {
+        ...state,
+        savedApps: action.payload.newSavedApps,
+        isCurrentAppSaved: action.payload.saved,
       };
     default:
       return state;

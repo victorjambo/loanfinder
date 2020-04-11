@@ -28,6 +28,8 @@ export default {
     currentAppData: {},
     searchResults: [],
     apps: [],
+    savedApps: [],
+    isCurrentAppSaved: false,
     location: '',
     isTermsAccepted: true,
     countries: [
