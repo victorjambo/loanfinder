@@ -12,6 +12,7 @@ import {
   setAppsData,
   setLocation,
   hideSplash,
+  setSavedApps,
 } from '../redux/actions';
 import localStorage, {TABLES} from '../utils/localStorage';
 
@@ -30,15 +31,16 @@ const Navigator = ({
   appState,
   changeAppsData,
   changeLocation,
+  changeSavedApps,
   hideSplashScreen,
 }) => {
   const {apps, location, splashState} = appState;
   useEffect(() => {
-    getApps();
+    getApps(); // TODO Why is this here
     localStorage
-      .multiGetItem([TABLES.APPS, TABLES.LOCATION])
+      .multiGetItem([TABLES.APPS, TABLES.LOCATION, TABLES.SAVED_APPS])
       .then(db => {
-        const [localApps, localLocation] = db;
+        const [localApps, localLocation, localSavedApps] = db;
 
         // Apps Handler
         if (localApps.length && !apps.length) {
@@ -54,6 +56,12 @@ const Navigator = ({
           localStorage.setItem(TABLES.LOCATION, location);
         }
 
+        // Saved Apps handler
+        changeSavedApps({
+          saved: false,
+          newSavedApps: localSavedApps,
+        });
+
         hideSplashScreen();
       })
       .catch(() => {
@@ -67,12 +75,13 @@ const Navigator = ({
       RNBootSplash.hide({duration: 250});
     }
   }, [
-    changeAppsData,
-    changeLocation,
-    getApps,
     apps,
+    getApps,
     location,
     splashState,
+    changeAppsData,
+    changeLocation,
+    changeSavedApps,
     hideSplashScreen,
   ]);
 
@@ -97,6 +106,7 @@ const mapDispatchToProps = dispatch => ({
   changeAppsData: bindActionCreators(setAppsData, dispatch),
   changeLocation: bindActionCreators(setLocation, dispatch),
   hideSplashScreen: bindActionCreators(hideSplash, dispatch),
+  changeSavedApps: bindActionCreators(setSavedApps, dispatch),
 });
 
 export default connect(

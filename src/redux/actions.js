@@ -213,6 +213,11 @@ export const hideSplash = () => ({
 /**
  * saved apps
  */
+export const setSavedApps = payload => ({
+  type: SAVE_APP,
+  payload,
+});
+
 export const saveApp = () => {
   return (dispatch, getState) => {
     const {
@@ -235,7 +240,7 @@ export const saveApp = () => {
       payload.saved = true;
     }
 
-    dispatch({type: SAVE_APP, payload});
+    dispatch(setSavedApps(payload));
     localStorage.setItem(TABLES.SAVED_APPS, payload);
   };
 };
