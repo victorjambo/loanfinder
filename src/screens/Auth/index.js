@@ -1,3 +1,8 @@
+/**
+ * 1. Handle login with wrong info. no user in db
+ * 2. Google login/signup
+ * 3. Handle screen redirect. Change state to logged in
+ */
 import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -22,7 +27,7 @@ import SkipContainer from './SkipContainer';
 import GoogleButton from './GoogleButton';
 import validateInput from '../../utils/validator';
 
-const REGISTER_HEIGHT = 290;
+const REGISTER_HEIGHT = 250;
 const LOGIN_HEIGHT = 290;
 const INITIAL_VALUE = '';
 const REGISTER = 'REGISTER';
@@ -54,7 +59,12 @@ const Auth = ({login}) => {
   });
 
   const handleSubmit = () => {
-    const {errors, isValid} = validateInput({email, password});
+    const dataToValidate = isRegister
+      ? {email, password, username}
+      : {email, password};
+
+    const {errors, isValid} = validateInput(dataToValidate);
+
     if (isValid) {
       isRegister ? null : login(email, password);
     } else {
@@ -123,6 +133,7 @@ const Auth = ({login}) => {
                 onPress={() => {
                   LayoutAnimation.spring();
                   setForm(isRegister ? LOGIN : REGISTER);
+                  setErrMsg(INITIAL_ERROR);
                 }}
                 style={styles.switcherContainer}>
                 <Text

@@ -25,6 +25,10 @@ const validateInput = data => {
       errors[field] = response;
     }
 
+    if (field === 'username' && Validator.isEmpty(data[field].toString())) {
+      errors[field] = response;
+    }
+
     if (
       field === 'email' &&
       !Validator.isEmail(data[field].toString().trim())

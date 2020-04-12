@@ -19,6 +19,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: colors.black,
   },
+  fixedPosition: {
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
+  },
   img: {
     position: 'relative',
     height: '100%',
