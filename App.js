@@ -9,7 +9,6 @@ import Navigator from './src/Navigation';
 import OverlaySpinner from './src/Components/OverlaySpinner';
 
 import colors from './src/utils/colors';
-import Toast from './src/Components/Toast';
 
 const App = () => {
   return (
@@ -17,7 +16,6 @@ const App = () => {
       <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
       <Navigator />
       <OverlaySpinner />
-      <Toast />
     </Provider>
   );
 };

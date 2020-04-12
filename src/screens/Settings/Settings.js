@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {ListItem} from 'react-native-elements';
 import {View, Share, Linking} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {logoutRequest, skipAuth} from '../../redux/actions';
+
 import localStorage from '../../utils/localStorage';
+import {logoutRequest, skipAuth} from '../../redux/actions';
+import Toast from '../../Components/Toast';
 
 const containerStyle = {paddingVertical: 20};
 
-const Settings = ({undoSkipAuth, logout, settings, isLoggedIn}) => {
+const Settings = ({logout, settings, isLoggedIn, undoSkipAuth}) => {
   const {appStoreUrl, devStoreUel, privacyPolicy, email} = settings;
+
+  const [visibleToast, setvisibleToast] = useState(false);
+
+  useEffect(() => setvisibleToast(false), [visibleToast]);
 
   const settingsItems = [
     {
@@ -20,7 +26,10 @@ const Settings = ({undoSkipAuth, logout, settings, isLoggedIn}) => {
     },
     {
       title: 'Clear app data',
-      onPress: () => localStorage.clearAll(), // TODO why is it not returning to Auth page?
+      onPress: () => {
+        localStorage.clearAll();
+        setvisibleToast(true);
+      },
       icon: 'delete',
     },
     {
@@ -66,6 +75,7 @@ const Settings = ({undoSkipAuth, logout, settings, isLoggedIn}) => {
           leftAvatar={<Icon name={item.icon} size={24} />}
         />
       ))}
+      <Toast visible={visibleToast} message="DONE!!!" />
     </View>
   );
 };

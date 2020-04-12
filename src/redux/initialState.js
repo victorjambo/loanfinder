@@ -30,7 +30,6 @@ export default {
   },
   appState: {
     showSpinner: false,
-    showToast: false,
     splashState: false,
     currentAppData: {},
     searchResults: [],

@@ -8,8 +8,6 @@ import {
   LOGIN_SUCCESS,
   SHOW_SPINNER,
   HIDE_SPINNER,
-  SHOW_TOAST,
-  HIDE_TOAST,
   SET_USER_INFO,
   ERRORS,
   LOGOUT_SUCCESS,
@@ -51,17 +49,6 @@ export const showSpinner = () => ({
 
 export const hideSpinner = () => ({
   type: HIDE_SPINNER,
-});
-
-/**
- * Toast
- */
-export const showToast = () => ({
-  type: SHOW_TOAST,
-});
-
-export const hideToast = () => ({
-  type: HIDE_TOAST,
 });
 
 /**

@@ -1,8 +1,6 @@
 import {
   SHOW_SPINNER,
   HIDE_SPINNER,
-  SHOW_TOAST,
-  HIDE_TOAST,
   SET_CURRENT_APP_DATA,
   SET_SEARCH_RESULTS,
   SET_LOCATION,
@@ -24,16 +22,6 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         showSpinner: false,
-      };
-    case SHOW_TOAST:
-      return {
-        ...state,
-        showToast: true,
-      };
-    case HIDE_TOAST:
-      return {
-        ...state,
-        showToast: false,
       };
     case SET_CURRENT_APP_DATA:
       return {

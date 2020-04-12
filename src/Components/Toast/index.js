@@ -1,4 +1,3 @@
-import {connect} from 'react-redux';
 import {ToastAndroid} from 'react-native';
 
 const mapper = {
@@ -6,8 +5,8 @@ const mapper = {
   LONG: ToastAndroid.LONG,
 };
 
-const Toast = ({showToast, message, duration = 'SHORT'}) => {
-  if (showToast) {
+const Toast = ({visible, message, duration = 'SHORT'}) => {
+  if (visible) {
     ToastAndroid.showWithGravity(
       message,
       mapper[duration],
@@ -18,8 +17,4 @@ const Toast = ({showToast, message, duration = 'SHORT'}) => {
   return null;
 };
 
-const mapStateToProps = state => ({
-  showToast: state.appState.showToast,
-});
-
-export default connect(mapStateToProps)(Toast);
+export default Toast;
