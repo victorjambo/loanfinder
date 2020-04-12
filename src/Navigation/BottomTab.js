@@ -10,7 +10,7 @@ import {HOME, PROFILE, SEARCH, PROFILE_AUTH} from './routes';
 import styles from './styles';
 
 const Tab = createBottomTabNavigator();
-// TODO: overlayColor from tabs
+
 const BottomTab = ({isLoggedIn}) => {
   return (
     <Tab.Navigator

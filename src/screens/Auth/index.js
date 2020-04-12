@@ -1,14 +1,3 @@
-/**
- * 1. Logout
- * 2. clear app data
- * 3. change to dark mode: Display
- * 4. privacy policy
- * 5. Login buttons in Profile screen
- * 6. About us
- * 7. Rate the app
- * 8. Feedback
- */
-// TODO
 import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import AntDesign from 'react-native-vector-icons/AntDesign';
