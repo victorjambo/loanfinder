@@ -8,6 +8,8 @@ import SearchResults from '../screens/Search/SearchResults';
 import Profile from '../screens/Profile/Profile';
 import Location from '../screens/PostAuth/Location';
 import Terms from '../screens/PostAuth/Terms';
+import ProfileAuth from '../screens/Profile/ProfileAuth';
+import Settings from '../screens/Settings/Settings';
 
 export const BOTTOM_TAB = {
   name: 'Bottom Tab',
@@ -57,4 +59,14 @@ export const LOCATION = {
 export const TERMS = {
   name: 'Terms',
   component: Terms,
+};
+
+export const PROFILE_AUTH = {
+  name: 'Profile',
+  component: ProfileAuth,
+};
+
+export const SETTINGS = {
+  name: 'Settings',
+  component: Settings,
 };

@@ -10,11 +10,12 @@ import {
   ActivityIndicator,
   TouchableOpacity,
 } from 'react-native';
-import {Image as IconImage} from 'react-native-elements';
+import {Image as IconImage, Header} from 'react-native-elements';
 
 import colors from '../../utils/colors';
-import {APPVIEW} from '../../Navigation/routes';
+import {APPVIEW, SETTINGS} from '../../Navigation/routes';
 import {setCurrentAppData} from '../../redux/actions';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 const Profile = ({navigation, savedApps, setAppDataProps}) => {
   const handleNavigate = item => {
@@ -24,6 +25,17 @@ const Profile = ({navigation, savedApps, setAppDataProps}) => {
 
   return (
     <ScrollView style={styles.container}>
+      <Header
+        rightComponent={
+          <Icon
+            name="setting"
+            color={colors.white}
+            size={30}
+            onPress={() => navigation.navigate(SETTINGS.name)}
+          />
+        }
+        containerStyle={styles.settingsIcon}
+      />
       <View style={styles.header}>
         <View style={styles.headerContent}>
           <Image
@@ -69,6 +81,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
   },
   headerContent: {
+    paddingTop: 0,
     padding: 30,
     alignItems: 'center',
   },
@@ -117,6 +130,12 @@ const styles = StyleSheet.create({
   info: {
     fontSize: 22,
     color: '#696969',
+  },
+  settingsIcon: {
+    height: 40,
+    paddingTop: 0,
+    backgroundColor: colors.primary,
+    borderBottomColor: colors.primary,
   },
 });
 

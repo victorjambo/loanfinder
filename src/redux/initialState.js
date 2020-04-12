@@ -8,7 +8,7 @@ export default {
     isConnected: true,
   },
   auth: {
-    isLoggedIn: true, // TODO
+    isLoggedIn: false, // TODO
     skipAuth: false,
     user: {
       displayName: null,
@@ -20,6 +20,12 @@ export default {
       providerId: 'firebase',
       uid: '',
     },
+  },
+  settings: {
+    privacyPolicy: '',
+    rateApp: '',
+    display: '',
+    feedbackEmail: 'mutaidev@gmail.com',
   },
   appState: {
     showSpinner: false,

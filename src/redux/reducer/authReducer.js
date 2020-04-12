@@ -32,7 +32,7 @@ const authReducer = (state = initialState.auth, action) => {
     case SKIP_AUTH:
       return {
         ...state,
-        skipAuth: true,
+        skipAuth: action.payload,
       };
     default:
       return state;

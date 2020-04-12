@@ -1,16 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import colors from '../utils/colors';
 
-import {HOME, PROFILE, SEARCH} from './routes';
+import {HOME, PROFILE, SEARCH, PROFILE_AUTH} from './routes';
 
 import styles from './styles';
 
 const Tab = createBottomTabNavigator();
 // TODO: overlayColor from tabs
-const BottomTab = () => {
+const BottomTab = ({isLoggedIn}) => {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
@@ -55,9 +56,16 @@ const BottomTab = () => {
       }}>
       <Tab.Screen name={HOME.name} component={HOME.component} />
       <Tab.Screen name={SEARCH.name} component={SEARCH.component} />
-      <Tab.Screen name={PROFILE.name} component={PROFILE.component} />
+      <Tab.Screen
+        name={PROFILE.name}
+        component={isLoggedIn ? PROFILE.component : PROFILE_AUTH.component}
+      />
     </Tab.Navigator>
   );
 };
 
-export default BottomTab;
+const mapStateToProps = state => ({
+  isLoggedIn: state.auth.isLoggedIn,
+});
+
+export default connect(mapStateToProps)(BottomTab);

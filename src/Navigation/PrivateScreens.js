@@ -10,6 +10,7 @@ import {
   APPVIEW,
   ABOUT_APP_FULL_DESC,
   SEARCH_RESULTS,
+  SETTINGS,
 } from './routes';
 import colors from '../utils/colors';
 import {saveApp} from '../redux/actions';
@@ -61,6 +62,14 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
           title: `Results for "${route.params.search}"`,
           headerTintColor: 'black',
         })}
+      />
+      <Stack.Screen
+        name={SETTINGS.name}
+        component={SETTINGS.component}
+        options={{
+          title: SETTINGS.name,
+          headerTintColor: 'black',
+        }}
       />
     </Stack.Navigator>
   );

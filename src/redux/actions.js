@@ -143,8 +143,9 @@ export const logoutSuccess = () => ({
 /**
  * skip Auth
  */
-export const skipAuth = () => ({
+export const skipAuth = (payload = true) => ({
   type: SKIP_AUTH,
+  payload,
 });
 
 /**
@@ -241,6 +242,6 @@ export const saveApp = () => {
     }
 
     dispatch(setSavedApps(payload));
-    localStorage.setItem(TABLES.SAVED_APPS, payload);
+    localStorage.setItem(TABLES.SAVED_APPS, payload.newSavedApps);
   };
 };
