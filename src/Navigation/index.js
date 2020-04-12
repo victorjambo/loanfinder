@@ -59,7 +59,7 @@ const Navigator = ({
         // Saved Apps handler
         changeSavedApps({
           saved: false,
-          newSavedApps: localSavedApps,
+          newSavedApps: localSavedApps ? localSavedApps : [],
         });
 
         hideSplashScreen();
