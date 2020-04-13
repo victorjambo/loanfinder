@@ -13,6 +13,7 @@ import {
   Animated,
   TouchableOpacity,
   LayoutAnimation,
+  Dimensions,
 } from 'react-native';
 import {Input, Button} from 'react-native-elements';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
@@ -27,12 +28,16 @@ import SkipContainer from './SkipContainer';
 import GoogleButton from './GoogleButton';
 import validateInput from '../../utils/validator';
 
-const REGISTER_HEIGHT = 250;
-const LOGIN_HEIGHT = 290;
+const screenHeight = Dimensions.get('window').height;
+
+const REGISTER_HEIGHT = screenHeight / 4;
+const LOGIN_HEIGHT = screenHeight / 3;
+const ERROR_HEIGHT = screenHeight / 6;
 const INITIAL_VALUE = '';
-const REGISTER = 'REGISTER';
-const LOGIN = 'LOGIN';
-const INITIAL_ERROR = {
+
+export const REGISTER = 'REGISTER';
+export const LOGIN = 'LOGIN';
+export const INITIAL_ERROR = {
   email: '',
   username: '',
   password: '',
@@ -53,10 +58,21 @@ const Auth = ({login}) => {
   useEffect(() => {
     Animated.timing(anim, {toValue: 3000, duration: 2000}).start();
     Animated.timing(height, {
-      toValue: isRegister ? REGISTER_HEIGHT : LOGIN_HEIGHT,
+      toValue: setHeight(),
       duration: 500,
     }).start();
   });
+
+  const setHeight = () => {
+    if (errMsg.email) {
+      return ERROR_HEIGHT;
+    }
+    if (isRegister) {
+      return REGISTER_HEIGHT;
+    } else {
+      return LOGIN_HEIGHT;
+    }
+  };
 
   const handleSubmit = () => {
     const dataToValidate = isRegister
@@ -78,7 +94,11 @@ const Auth = ({login}) => {
         contentInsetAdjustmentBehavior="automatic"
         style={styles.scrollView}>
         <Animated.View style={{height}}>
-          <ImageBackgroundContainer isRegister={isRegister} setForm={setForm} />
+          <ImageBackgroundContainer
+            isRegister={isRegister}
+            setForm={setForm}
+            setErrMsg={setErrMsg}
+          />
         </Animated.View>
 
         <View style={styles.body}>

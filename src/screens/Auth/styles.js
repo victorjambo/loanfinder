@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   imgBgBack: {
     flexDirection: 'row',
-    paddingBottom: 80,
+    paddingBottom: 8,
     alignItems: 'center',
   },
   imgBgBackText: {

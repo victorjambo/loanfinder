@@ -10,11 +10,9 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import styles from './styles';
 import img from '../../../assets/09.png';
+import {INITIAL_ERROR, REGISTER, LOGIN} from './index';
 
-const ImageBackgroundContainer = ({isRegister, setForm}) => {
-  const REGISTER = 'REGISTER';
-  const LOGIN = 'LOGIN';
-
+const ImageBackgroundContainer = ({isRegister, setForm, setErrMsg}) => {
   return (
     <ImageBackground
       resizeMode="cover"
@@ -27,6 +25,7 @@ const ImageBackgroundContainer = ({isRegister, setForm}) => {
             onPress={() => {
               LayoutAnimation.spring();
               setForm(isRegister ? LOGIN : REGISTER);
+              setErrMsg(INITIAL_ERROR);
             }}>
             <FontAwesome name="chevron-left" size={20} color="white" />
             <Text style={styles.imgBgBackText}> Back</Text>
