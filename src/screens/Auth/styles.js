@@ -4,25 +4,14 @@ import colors from '../../utils/colors';
 
 const {width} = Dimensions.get('window');
 
-// TODO remove fontSize, googleLine
-// TODO redo back button
-// TODO skip button should not change position
-
 const styles = StyleSheet.create({
   skip: {
     flexDirection: 'row',
-    paddingRight: 25,
+    paddingTop: 10,
     alignItems: 'center',
-    alignSelf: 'flex-end',
   },
   skipText: {
-    fontSize: 16,
-    color: colors.black,
-  },
-  fixedPosition: {
-    position: 'absolute',
-    right: 0,
-    bottom: 0,
+    color: colors.primaryText,
   },
   img: {
     position: 'relative',
@@ -30,10 +19,6 @@ const styles = StyleSheet.create({
   },
   header: {
     padding: 34,
-  },
-  title: {
-    fontSize: 34,
-    fontWeight: '800',
   },
   subTitle: {
     marginTop: 8,
@@ -54,7 +39,6 @@ const styles = StyleSheet.create({
   },
   imgBgBackText: {
     color: colors.white,
-    fontSize: 20,
   },
   line: {
     borderBottomColor: colors.white,

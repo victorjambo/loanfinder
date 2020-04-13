@@ -2,10 +2,10 @@ import React from 'react';
 import {
   ImageBackground,
   View,
-  Text,
   TouchableOpacity,
   LayoutAnimation,
 } from 'react-native';
+import {Text} from 'react-native-elements';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import styles from './styles';
@@ -28,7 +28,9 @@ const ImageBackgroundContainer = ({isRegister, setForm, setErrMsg}) => {
               setErrMsg(INITIAL_ERROR);
             }}>
             <FontAwesome name="chevron-left" size={20} color="white" />
-            <Text style={styles.imgBgBackText}> Back</Text>
+            <Text h4 style={styles.imgBgBackText}>
+              &nbsp;Back
+            </Text>
           </TouchableOpacity>
         )}
 

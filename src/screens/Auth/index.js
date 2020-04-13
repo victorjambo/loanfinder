@@ -168,10 +168,10 @@ const Auth = ({login}) => {
                   {isRegister ? 'Login' : 'Register'}
                 </Text>
               </TouchableOpacity>
+              <SkipContainer />
             </Animated.View>
           </Animated.View>
         </View>
-        <SkipContainer />
       </ScrollView>
     </>
   );

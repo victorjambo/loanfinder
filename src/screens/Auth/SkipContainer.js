@@ -10,10 +10,10 @@ import {skipAuth} from '../../redux/actions';
 
 const SkipContainer = ({skip}) => {
   return (
-    <TouchableOpacity
-      style={[styles.skip, styles.fixedPosition]}
-      onPress={skip}>
-      <Text style={styles.skipText}>Skip </Text>
+    <TouchableOpacity style={styles.skip} onPress={skip}>
+      <Text style={styles.skipText}>SKIP </Text>
+      <FontAwesome name="chevron-right" size={14} color={colors.primaryText} />
+      <FontAwesome name="chevron-right" size={14} color={colors.primaryText} />
       <FontAwesome name="chevron-right" size={14} color={colors.primaryText} />
     </TouchableOpacity>
   );
