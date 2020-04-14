@@ -6,17 +6,21 @@ import {View} from 'react-native-animatable';
 import styles from './styles';
 import colors from '../../utils/colors';
 
+export const OverlaySpinnerContainer = ({animation, duration}) => (
+  <View style={styles.container}>
+    <View
+      style={styles.wrapperContainer}
+      animation={animation}
+      duration={duration}>
+      <ActivityIndicator color={colors.primary} size="large" />
+    </View>
+  </View>
+);
+
 const OverlaySpinner = ({showSpinner}) => {
   return (
     showSpinner && (
-      <View style={styles.container}>
-        <View
-          style={styles.wrapperContainer}
-          animation="zoomIn"
-          duration={1000}>
-          <ActivityIndicator color={colors.primary} size="large" />
-        </View>
-      </View>
+      <OverlaySpinnerContainer animation="zoomIn" duration={1000} />
     )
   );
 };

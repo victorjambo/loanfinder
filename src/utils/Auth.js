@@ -25,8 +25,9 @@ class Auth {
   firebaseSettings = async () => await auth().settings;
 
   // returns null if signout success
-  firebaseSignOut = async () =>
-    await auth().settings._auth._nativeModule.signOut();
+  firebaseSignOut = async () => {
+    return await auth().signOut();
+  };
 
   firebaseLogin = async (email, password) => {
     return await auth().signInWithEmailAndPassword(email, password);

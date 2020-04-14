@@ -1,3 +1,8 @@
+/**
+ * 1. Location: how will I handle this
+ * 2. get apps: check how many times we fetch apps
+ * 3. persist saved apps
+ */
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
@@ -13,8 +18,8 @@ import {
   setLocation,
   hideSplash,
   setSavedApps,
+  loginSuccess,
 } from '../redux/actions';
-import localStorage, {TABLES} from '../utils/localStorage';
 
 const Screens = ({appState}) => {
   const {location, isTermsAccepted} = appState;
@@ -28,67 +33,21 @@ const Screens = ({appState}) => {
 const Navigator = ({
   auth,
   getApps,
-  appState,
-  changeAppsData,
-  changeLocation,
-  changeSavedApps,
+  appState: {splashState, location, isTermsAccepted},
   hideSplashScreen,
 }) => {
-  const {apps, location, splashState} = appState;
   useEffect(() => {
-    getApps(); // TODO Why is this here
-    localStorage
-      .multiGetItem([TABLES.APPS, TABLES.LOCATION, TABLES.SAVED_APPS])
-      .then(db => {
-        const [localApps, localLocation, localSavedApps] = db;
+    // TODO fetching data here will be called evertime we navigate screens and state changes. eg from settings clicking on login changes auth
+    getApps();
 
-        // Apps Handler
-        if (localApps.length && !apps.length) {
-          changeAppsData(localApps);
-        } else if (!localApps.length && !apps.length) {
-          getApps();
-        }
-
-        // Location Handler
-        if (localLocation && !location) {
-          changeLocation(localLocation);
-        } else if (!localLocation && location) {
-          localStorage.setItem(TABLES.LOCATION, location);
-        }
-
-        // Saved Apps handler
-        changeSavedApps({
-          saved: false,
-          newSavedApps: localSavedApps ? localSavedApps : [],
-        });
-
-        hideSplashScreen();
-      })
-      .catch(() => {
-        getApps();
-        hideSplashScreen();
-      });
-    // localStorage.clearAll();
-
-    // Hide Splash
-    if (splashState) {
-      RNBootSplash.hide({duration: 250});
-    }
-  }, [
-    apps,
-    getApps,
-    location,
-    splashState,
-    changeAppsData,
-    changeLocation,
-    changeSavedApps,
-    hideSplashScreen,
-  ]);
+    // Hide Splash  hideSplashScreen();
+    RNBootSplash.hide({duration: 250});
+  }, [getApps]);
 
   return (
     <NavigationContainer>
       {auth.isLoggedIn || auth.skipAuth ? (
-        <Screens appState={appState} />
+        <Screens appState={{location, isTermsAccepted}} />
       ) : (
         <AuthScreen />
       )}

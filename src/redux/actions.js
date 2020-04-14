@@ -116,10 +116,20 @@ export const setUserInfo = user => ({
  */
 export const logoutRequest = () => {
   return dispatch => {
-    auth
-      .firebaseSignOut()
-      .then(_ => dispatch(logoutSuccess()))
-      .catch(err => logError(ERRORS.ERROR_FIREBASE_LOGOUT, err));
+    // auth.firebaseCurrentUser().then(res => console.log('wwwwwwwwwwwww', res));
+    try {
+      auth
+        .firebaseSignOut()
+        .then(res => {
+          dispatch(logoutSuccess());
+          dispatch(skipAuth(false));
+        })
+        .catch(err => logError(ERRORS.ERROR_FIREBASE_LOGOUT, err));
+    } catch (error) {
+      dispatch(logoutSuccess());
+      dispatch(skipAuth(false));
+      logError(ERRORS.ERROR_FIREBASE_LOGOUT_CATCH, error);
+    }
   };
 };
 
@@ -170,7 +180,6 @@ export const setAppsData = payload => ({
 
 export const fetchApps = () => {
   return dispatch => {
-    localStorage.setItem(TABLES.APPS, data);
     dispatch(setAppsData(data));
   };
 };

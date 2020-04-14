@@ -5,30 +5,34 @@ import {ListItem} from 'react-native-elements';
 import {View, Share, Linking} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import localStorage from '../../utils/localStorage';
-import {logoutRequest, skipAuth} from '../../redux/actions';
+import {logoutRequest, skipAuth, loginSuccess} from '../../redux/actions';
 import Toast from '../../Components/Toast';
+import {configureStore} from '../../redux/store';
 
 const containerStyle = {paddingVertical: 20};
 
-const Settings = ({logout, settings, isLoggedIn, undoSkipAuth}) => {
+const Settings = ({logout, settings, isLoggedIn, undoSkipAuth, login}) => {
   const {appStoreUrl, devStoreUel, privacyPolicy, email} = settings;
 
   const [visibleToast, setvisibleToast] = useState(false);
 
   useEffect(() => setvisibleToast(false), [visibleToast]);
 
+  const {persistor} = configureStore();
+
   const settingsItems = [
     {
       title: isLoggedIn ? 'logout' : 'login',
-      onPress: () => (isLoggedIn ? logout() : undoSkipAuth(false)),
-      icon: isLoggedIn ? 'logout' : 'login',
+      onPress: () => (isLoggedIn ? logout() : login()), // TODO undoSkipAuth(false) REMOVE login
+      icon: isLoggedIn ? 'logout' : 'login', // TODO handle disable while waiting to logut
     },
     {
       title: 'Clear app data',
       onPress: () => {
-        localStorage.clearAll();
-        setvisibleToast(true);
+        persistor
+          .purge()
+          .then(() => setvisibleToast(true))
+          .catch(error => console.log(error));
       },
       icon: 'delete',
     },
@@ -88,6 +92,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   logout: bindActionCreators(logoutRequest, dispatch),
   undoSkipAuth: bindActionCreators(skipAuth, dispatch),
+  login: bindActionCreators(loginSuccess, dispatch), // TODO should call undoSkipAuth. REMOVE this Line
 });
 
 export default connect(

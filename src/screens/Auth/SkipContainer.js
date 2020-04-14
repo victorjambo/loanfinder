@@ -9,8 +9,13 @@ import colors from '../../utils/colors';
 import {skipAuth} from '../../redux/actions';
 
 const SkipContainer = ({skip}) => {
+  const handleClick = e => {
+    e.persist();
+    skip();
+  };
+
   return (
-    <TouchableOpacity style={styles.skip} onPress={skip}>
+    <TouchableOpacity style={styles.skip} onPress={handleClick}>
       <Text style={styles.skipText}>SKIP </Text>
       <FontAwesome name="chevron-right" size={14} color={colors.primaryText} />
       <FontAwesome name="chevron-right" size={14} color={colors.primaryText} />
