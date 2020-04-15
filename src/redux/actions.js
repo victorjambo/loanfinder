@@ -10,7 +10,6 @@ import {
   SHOW_SPINNER,
   HIDE_SPINNER,
   SET_USER_INFO,
-  ERRORS,
   LOGOUT_SUCCESS,
   SKIP_AUTH,
   SET_CURRENT_APP_DATA,
@@ -23,8 +22,13 @@ import {
   SET_IS_CURRENT_APP_SAVED,
   AD_STATE,
 } from './consts';
-import {logError} from '../utils/analytics';
+import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 import localStorage, {TABLES} from '../utils/localStorage';
+
+const ENDPOINTS = {
+  APPSTATE: 'appstate',
+  LOANFINDER: 'loanfinder',
+};
 
 /**
  * Network & Connection Checks
@@ -49,22 +53,26 @@ const setAdState = payload => ({
 
 export const adNetwork = () => {
   return (dispatch, getState) => {
-    if (__DEV__) {
-      console.log('FETCH AD NETWORK');
-    }
+    logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.APPSTATE]);
     const {connection} = getState();
     if (connection.isConnected) {
       try {
-        const request = functions().httpsCallable('appstate');
+        const request = functions().httpsCallable(ENDPOINTS.APPSTATE);
         request()
           .then(res => {
             dispatch(setAdState(res.data.loanfinder));
           })
           .catch(error => {
-            logError(ERRORS.ERROR_FETCH_FIREBASE_API, error);
+            logError(
+              ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.APPSTATE],
+              error,
+            );
           });
       } catch (error) {
-        logError(ERRORS.ERROR_FETCH_FIREBASE_API_CATCH, error);
+        logError(
+          ERROR.ACTION.FIREBASE_FETCH_API_CATCH[ENDPOINTS.APPSTATE],
+          error,
+        );
       }
     }
   };
@@ -98,6 +106,7 @@ export const loginSuccess = () => ({
 
 export const loginRequest = (email, password) => {
   return dispatch => {
+    logInfo(INFO.ACTION.FIREBASE_LOGIN);
     dispatch(showSpinner());
 
     auth
@@ -111,14 +120,14 @@ export const loginRequest = (email, password) => {
       })
       .catch(error => {
         dispatch(hideSpinner());
-        logError(ERRORS.ERROR_FIREBASE_LOGIN, error);
-        console.log(ERRORS.ERROR_FIREBASE_LOGIN, error);
+        logError(ERROR.ACTION.FIREBASE_LOGIN, error);
       });
   };
 };
 
 export const loginAndSignupWithGoogleAuth = () => {
   return dispatch => {
+    logInfo(INFO.ACTION.FIREBASE_GOOGLE_AUTH);
     auth
       .fbGoogleAuth()
       .then(res => {
@@ -130,8 +139,7 @@ export const loginAndSignupWithGoogleAuth = () => {
       })
       .catch(error => {
         dispatch(hideSpinner());
-        logError(ERRORS.ERROR_GOOGLE_AUTH, error);
-        console.log(ERRORS.ERROR_GOOGLE_AUTH, error);
+        logError(ERROR.ACTION.FIREBASE_GOOGLE_AUTH, error);
       });
   };
 };
@@ -146,6 +154,7 @@ export const setUserInfo = user => ({
  */
 export const logoutRequest = () => {
   return dispatch => {
+    logInfo(INFO.ACTION.FIREBASE_LOGOUT);
     try {
       auth
         .firebaseSignOut()
@@ -153,11 +162,11 @@ export const logoutRequest = () => {
           dispatch(logoutSuccess());
           dispatch(skipAuth(false));
         })
-        .catch(err => logError(ERRORS.ERROR_FIREBASE_LOGOUT, err));
+        .catch(err => logError(ERROR.ACTION.FIREBASE_LOGOUT, err));
     } catch (error) {
       dispatch(logoutSuccess());
       dispatch(skipAuth(false));
-      logError(ERRORS.ERROR_FIREBASE_LOGOUT_CATCH, error);
+      logError(ERROR.ACTION.FIREBASE_LOGOUT_CATCH, error);
     }
   };
 };
@@ -209,20 +218,21 @@ export const setAppsData = payload => ({
 
 export const fetchApps = () => {
   return dispatch => {
-    if (__DEV__) {
-      console.log('FETCH APPS');
-    }
+    logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER]);
     try {
-      const request = functions().httpsCallable('loanfinder');
+      const request = functions().httpsCallable(ENDPOINTS.LOANFINDER);
       request()
         .then(res => {
           dispatch(setAppsData(res.data.apps));
         })
         .catch(error => {
-          logError(ERRORS.ERROR_FETCH_FIREBASE_API, error);
+          logError(
+            ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER],
+            error,
+          );
         });
     } catch (error) {
-      logError(ERRORS.ERROR_FETCH_FIREBASE_API_CATCH, error);
+      logError(ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER], error);
     }
   };
 };
@@ -260,6 +270,7 @@ export const setSavedApps = payload => ({
 
 export const saveApp = () => {
   return (dispatch, getState) => {
+    logInfo(INFO.ACTION.SAVE_APP);
     const {
       appState: {currentAppData, savedApps},
     } = getState();

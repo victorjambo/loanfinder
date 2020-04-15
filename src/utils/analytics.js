@@ -11,17 +11,6 @@ export const logEvent = async (event, attr) => {
   });
 };
 
-export const logError = (event, error) => {
-  if (__DEV__) {
-    console.log(event, error);
-  } else {
-    logEvent(event, {
-      error: error.toString(),
-      errorObj: JSON.stringify(error),
-    });
-  }
-};
-
 export const withAnalytics = Component => props => {
   const trackScreenView = async screen =>
     await analytics().setCurrentScreen(screen, screen);
