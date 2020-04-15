@@ -32,6 +32,7 @@ export default {
       providerId: 'firebase',
       uid: '',
     },
+    errors: {},
   },
   settings: {
     email: 'mutaidev@gmail.com',

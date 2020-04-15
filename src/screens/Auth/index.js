@@ -22,7 +22,7 @@ import {bindActionCreators} from 'redux';
 import styles from './styles';
 import colors from '../../utils/colors';
 
-import {loginRequest} from '../../redux/actions';
+import {loginRequest, registerRequest} from '../../redux/actions';
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
 import GoogleButton from './GoogleButton';
@@ -43,7 +43,7 @@ export const INITIAL_ERROR = {
   password: '',
 };
 
-const Auth = ({login}) => {
+const Auth = ({login, register}) => {
   const anim = new Animated.Value(0);
 
   const [form, setForm] = useState(LOGIN);
@@ -82,7 +82,7 @@ const Auth = ({login}) => {
     const {errors, isValid} = validateInput(dataToValidate);
 
     if (isValid) {
-      isRegister ? null : login(email, password);
+      isRegister ? register(email, password, username) : login(email, password);
     } else {
       setErrMsg(errors);
     }
@@ -183,6 +183,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   login: bindActionCreators(loginRequest, dispatch),
+  register: bindActionCreators(registerRequest, dispatch),
 });
 
 export default connect(

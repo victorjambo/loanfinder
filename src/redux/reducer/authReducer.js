@@ -1,8 +1,8 @@
 import {REHYDRATE} from 'redux-persist';
 
 import {
-  LOGIN_REQUEST,
-  LOGIN_SUCCESS,
+  AUTH_SUCCESS,
+  AUTH_FAILURE,
   SET_USER_INFO,
   LOGOUT_SUCCESS,
   SKIP_AUTH,
@@ -11,12 +11,7 @@ import initialState from '../initialState';
 
 const authReducer = (state = initialState.auth, action) => {
   switch (action.type) {
-    case LOGIN_REQUEST: // TODO remove one of isLoggedIn
-      return {
-        ...state,
-        isLoggedIn: action.payload,
-      };
-    case LOGIN_SUCCESS:
+    case AUTH_SUCCESS:
       return {
         ...state,
         isLoggedIn: true,
@@ -30,11 +25,17 @@ const authReducer = (state = initialState.auth, action) => {
       return {
         ...state,
         isLoggedIn: false,
+        user: {},
       };
     case SKIP_AUTH:
       return {
         ...state,
         skipAuth: action.payload,
+      };
+    case AUTH_FAILURE:
+      return {
+        ...state,
+        errors: action.payload,
       };
     case REHYDRATE:
       // TODO REMOVE DEBUG REDUX PERSITE console.log('>>>', Object.keys(action.payload), '<<<');

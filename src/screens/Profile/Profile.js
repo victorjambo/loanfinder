@@ -17,7 +17,7 @@ import {APPVIEW, SETTINGS} from '../../Navigation/routes';
 import {setCurrentAppData} from '../../redux/actions';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-const Profile = ({navigation, savedApps, setAppDataProps}) => {
+const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
   const handleNavigate = item => {
     setAppDataProps(item);
     navigation.navigate(APPVIEW.name);
@@ -45,7 +45,7 @@ const Profile = ({navigation, savedApps, setAppDataProps}) => {
             }}
           />
 
-          <Text style={styles.name}>John Doe</Text>
+          <Text style={styles.name}>{user ? user.email : 'Hello 👋'}</Text>
         </View>
       </View>
 
@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => ({
   savedApps: state.appState.savedApps,
+  user: state.auth.user,
 });
 
 const mapDispatchToProps = dispatch => ({

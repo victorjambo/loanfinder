@@ -6,7 +6,6 @@ import auth from '../utils/Auth';
 import {
   HIDE_BANNER,
   NETWORK,
-  LOGIN_SUCCESS,
   SHOW_SPINNER,
   HIDE_SPINNER,
   SET_USER_INFO,
@@ -21,6 +20,8 @@ import {
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
   AD_STATE,
+  AUTH_SUCCESS,
+  AUTH_FAILURE,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 
@@ -97,69 +98,118 @@ export const hideBanner = () => ({
 });
 
 /**
- * login
+ * Auth
  */
-export const loginSuccess = () => ({
-  type: LOGIN_SUCCESS,
+export const authSuccess = () => ({
+  type: AUTH_SUCCESS,
 });
 
-export const loginRequest = (email, password) => {
-  return dispatch => {
-    logInfo(INFO.ACTION.FIREBASE_LOGIN);
-    dispatch(showSpinner());
-
-    auth
-      .firebaseLogin(email, password)
-      .then(res => {
-        if (res.user) {
-          dispatch(loginSuccess());
-          dispatch(setUserInfo(res.user));
-        }
-        dispatch(hideSpinner());
-      })
-      .catch(error => {
-        dispatch(hideSpinner());
-        logError(ERROR.ACTION.FIREBASE_LOGIN, error);
-      });
-  };
-};
-
-export const loginAndSignupWithGoogleAuth = () => {
-  return dispatch => {
-    logInfo(INFO.ACTION.FIREBASE_GOOGLE_AUTH);
-    auth
-      .fbGoogleAuth()
-      .then(res => {
-        if (res.user) {
-          dispatch(loginSuccess());
-          dispatch(setUserInfo(res.user));
-        }
-        dispatch(hideSpinner());
-      })
-      .catch(error => {
-        dispatch(hideSpinner());
-        logError(ERROR.ACTION.FIREBASE_GOOGLE_AUTH, error);
-      });
-  };
-};
+export const authFailure = payload => ({
+  type: AUTH_FAILURE,
+  payload,
+});
 
 export const setUserInfo = user => ({
   type: SET_USER_INFO,
   payload: user,
 });
 
+const getUserData = raw => {
+  let user = raw;
+  delete user.metadata;
+  delete user.providerData;
+  return user;
+};
+
+/**
+ * login
+ */
+export const loginRequest = (email, password) => {
+  return dispatch => {
+    dispatch(showSpinner());
+
+    auth
+      .firebaseLogin(email, password)
+      .then(res => {
+        if (res.user) {
+          const user = getUserData(res.user);
+          dispatch(authSuccess());
+          dispatch(setUserInfo(user));
+          logInfo(INFO.ACTION.FIREBASE_LOGIN);
+        }
+        dispatch(hideSpinner());
+      })
+      .catch(error => {
+        dispatch(hideSpinner());
+        dispatch(authFailure({message: error.message}));
+        logError(ERROR.ACTION.FIREBASE_LOGIN, error.message);
+      });
+  };
+};
+
+export const loginAndSignupWithGoogleAuth = () => {
+  return dispatch => {
+    auth
+      .fbGoogleAuth()
+      .then(res => {
+        if (res.user) {
+          const user = getUserData(res.user);
+          dispatch(authSuccess());
+          dispatch(setUserInfo(user));
+          logInfo(INFO.ACTION.FIREBASE_GOOGLE_AUTH);
+        }
+        dispatch(hideSpinner());
+      })
+      .catch(error => {
+        dispatch(hideSpinner());
+        dispatch(authFailure({message: error.message}));
+        logError(ERROR.ACTION.FIREBASE_GOOGLE_AUTH, error.message);
+      });
+  };
+};
+
+/**
+ * Register
+ */
+export const registerRequest = (email, password, displayName) => {
+  return dispatch => {
+    dispatch(showSpinner());
+
+    auth
+      .firebaseRegister(email, password, displayName)
+      .then(res => {
+        if (res.user) {
+          const user = getUserData(res.user);
+          dispatch(authSuccess());
+          dispatch(setUserInfo(user));
+          logInfo(INFO.ACTION.FIREBASE_REGISTER);
+        }
+        dispatch(hideSpinner());
+      })
+      .catch(error => {
+        dispatch(hideSpinner());
+        dispatch(authFailure({message: error.message}));
+        logError(ERROR.ACTION.FIREBASE_REGISTER, error.message);
+      });
+  };
+};
+
 /**
  * logout
  */
+export const logoutSuccess = () => ({
+  type: LOGOUT_SUCCESS,
+});
+
 export const logoutRequest = () => {
   return dispatch => {
-    logInfo(INFO.ACTION.FIREBASE_LOGOUT);
     try {
       auth
         .firebaseSignOut()
         .then(res => {
           dispatch(logoutSuccess());
           dispatch(skipAuth(false));
+          logInfo(INFO.ACTION.FIREBASE_LOGOUT);
         })
         .catch(err => logError(ERROR.ACTION.FIREBASE_LOGOUT, err));
     } catch (error) {
@@ -169,10 +219,6 @@ export const logoutRequest = () => {
     }
   };
 };
-
-export const logoutSuccess = () => ({
-  type: LOGOUT_SUCCESS,
-});
 
 /**
  * skip Auth
@@ -217,12 +263,12 @@ export const setAppsData = payload => ({
 
 export const fetchApps = () => {
   return dispatch => {
-    logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER]);
     try {
       const request = functions().httpsCallable(ENDPOINTS.LOANFINDER);
       request()
         .then(res => {
           dispatch(setAppsData(res.data.apps));
+          logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER]);
         })
         .catch(error => {
           logError(
