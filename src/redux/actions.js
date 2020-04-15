@@ -23,7 +23,6 @@ import {
   AD_STATE,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
-import localStorage, {TABLES} from '../utils/localStorage';
 
 const ENDPOINTS = {
   APPSTATE: 'appstate',
@@ -292,6 +291,5 @@ export const saveApp = () => {
     }
 
     dispatch(setSavedApps(payload));
-    localStorage.setItem(TABLES.SAVED_APPS, payload.newSavedApps);
   };
 };

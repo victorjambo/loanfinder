@@ -1,3 +1,4 @@
+// TODO Delete this file
 import AsyncStorage from '@react-native-community/async-storage';
 
 const dbName = 'loanfinder';
