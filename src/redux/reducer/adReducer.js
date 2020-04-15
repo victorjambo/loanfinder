@@ -1,4 +1,4 @@
-import {HIDE_BANNER} from '../consts';
+import {HIDE_BANNER, AD_STATE} from '../consts';
 import initialState from '../initialState';
 
 const adReducer = (state = initialState.ads, action) => {
@@ -7,6 +7,11 @@ const adReducer = (state = initialState.ads, action) => {
       return {
         ...state,
         showBanner: action.payload,
+      };
+    case AD_STATE:
+      return {
+        ...state,
+        ...action.payload,
       };
     default:
       return state;

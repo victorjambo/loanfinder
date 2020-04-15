@@ -1,8 +1,20 @@
+import {ADMOB} from './consts';
+
 export default {
   ads: {
-    showRewarded: false,
-    showInterstitial: false,
+    showRewarded: true,
+    rewardedFequency: 8,
+    showInterstitial: true,
     showBanner: true,
+    appId: ADMOB.ADMOB_AD_ID,
+    banner: ADMOB.ADMOB_BANNER_ID,
+    interstetial: ADMOB.ADMOB_INTERSTITIAL_ID,
+    reward: ADMOB.ADMOB_REWARDED,
+    fequency: 2,
+    adCount: 0,
+    isRewardedReady: false,
+    isInterstitialReady: false,
+    featureswitch: true,
   },
   connection: {
     isConnected: true,

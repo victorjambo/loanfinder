@@ -49,6 +49,9 @@ const setAdState = payload => ({
 
 export const adNetwork = () => {
   return (dispatch, getState) => {
+    if (__DEV__) {
+      console.log('FETCH AD NETWORK');
+    }
     const {connection} = getState();
     if (connection.isConnected) {
       try {
@@ -206,6 +209,9 @@ export const setAppsData = payload => ({
 
 export const fetchApps = () => {
   return dispatch => {
+    if (__DEV__) {
+      console.log('FETCH APPS');
+    }
     try {
       const request = functions().httpsCallable('loanfinder');
       request()

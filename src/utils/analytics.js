@@ -12,10 +12,14 @@ export const logEvent = async (event, attr) => {
 };
 
 export const logError = (event, error) => {
-  logEvent(event, {
-    error: error.toString(),
-    errorObj: JSON.stringify(error),
-  });
+  if (__DEV__) {
+    console.log(event, error);
+  } else {
+    logEvent(event, {
+      error: error.toString(),
+      errorObj: JSON.stringify(error),
+    });
+  }
 };
 
 export const withAnalytics = Component => props => {
