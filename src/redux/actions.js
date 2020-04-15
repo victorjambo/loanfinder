@@ -1,6 +1,7 @@
 import NetInfo from '@react-native-community/netinfo';
+import functions from '@react-native-firebase/functions';
+
 import auth from '../utils/Auth';
-import data from '../../_data_collector/data';
 
 import {
   HIDE_BANNER,
@@ -20,6 +21,7 @@ import {
   HIDE_SPLASH,
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
+  AD_STATE,
 } from './consts';
 import {logError} from '../utils/analytics';
 import localStorage, {TABLES} from '../utils/localStorage';
@@ -37,6 +39,31 @@ export const checkConnection = () => {
     NetInfo.addEventListener(state =>
       dispatch(setConnection(state.isConnected)),
     );
+  };
+};
+
+const setAdState = payload => ({
+  type: AD_STATE,
+  payload,
+});
+
+export const adNetwork = () => {
+  return (dispatch, getState) => {
+    const {connection} = getState();
+    if (connection.isConnected) {
+      try {
+        const request = functions().httpsCallable('appstate');
+        request()
+          .then(res => {
+            dispatch(setAdState(res.data.loanfinder));
+          })
+          .catch(error => {
+            logError(ERRORS.ERROR_FETCH_FIREBASE_API, error);
+          });
+      } catch (error) {
+        logError(ERRORS.ERROR_FETCH_FIREBASE_API_CATCH, error);
+      }
+    }
   };
 };
 
@@ -116,7 +143,6 @@ export const setUserInfo = user => ({
  */
 export const logoutRequest = () => {
   return dispatch => {
-    // auth.firebaseCurrentUser().then(res => console.log('wwwwwwwwwwwww', res));
     try {
       auth
         .firebaseSignOut()
@@ -180,7 +206,18 @@ export const setAppsData = payload => ({
 
 export const fetchApps = () => {
   return dispatch => {
-    dispatch(setAppsData(data));
+    try {
+      const request = functions().httpsCallable('loanfinder');
+      request()
+        .then(res => {
+          dispatch(setAppsData(res.data.apps));
+        })
+        .catch(error => {
+          logError(ERRORS.ERROR_FETCH_FIREBASE_API, error);
+        });
+    } catch (error) {
+      logError(ERRORS.ERROR_FETCH_FIREBASE_API_CATCH, error);
+    }
   };
 };
 
