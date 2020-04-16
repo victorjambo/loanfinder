@@ -14,7 +14,6 @@ import {
   SET_CURRENT_APP_DATA,
   SET_SEARCH_RESULTS,
   SET_LOCATION,
-  SET_APPS_WITH_LOCATION,
   FETCH_APP_DATA,
   HIDE_SPLASH,
   SAVE_APP,
@@ -251,10 +250,6 @@ export const setCurrentAppData = item => {
     });
   };
 };
-
-export const setAppsWithLocation = () => ({
-  type: SET_APPS_WITH_LOCATION,
-});
 
 export const setAppsData = payload => ({
   type: FETCH_APP_DATA,
