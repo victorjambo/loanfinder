@@ -4,8 +4,13 @@ import {View, FlatList, StyleSheet} from 'react-native';
 
 import colors from '../../utils/colors';
 import SingleAppItem from '../Apps/SingleAppItem';
+import NoSearchResults from './NoSearchResults';
 
 const SearchResults = ({navigation, searchResults}) => {
+  if (!searchResults.length) {
+    return <NoSearchResults />;
+  }
+
   return (
     <View style={styles.container}>
       <FlatList
