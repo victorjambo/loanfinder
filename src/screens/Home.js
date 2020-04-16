@@ -5,8 +5,9 @@ import {View, Text, FlatList, StyleSheet} from 'react-native';
 import colors from '../utils/colors';
 import SingleAppItem from './Apps/SingleAppItem';
 
-const Home = ({navigation, apps}) => {
-  const data = apps.slice(0, 10);
+const Home = ({navigation, apps, location}) => {
+  const data = apps.filter(app => app.country.includes(location));
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -43,6 +44,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => ({
   apps: state.appState.apps,
+  location: state.appState.location,
 });
 
 export default connect(mapStateToProps)(Home);
