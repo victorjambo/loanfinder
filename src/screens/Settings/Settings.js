@@ -5,13 +5,19 @@ import {ListItem} from 'react-native-elements';
 import {View, Share, Linking} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import {logoutRequest, skipAuth} from '../../redux/actions';
+import {logoutRequest, skipAuth, setLocation} from '../../redux/actions';
 import Toast from '../../Components/Toast';
 import {configureStore} from '../../redux/store';
 
 const containerStyle = {paddingVertical: 20};
 
-const Settings = ({logout, settings, isLoggedIn, undoSkipAuth}) => {
+const Settings = ({
+  logout,
+  settings,
+  isLoggedIn,
+  undoSkipAuth,
+  changeLocation,
+}) => {
   const {appStoreUrl, devStoreUel, privacyPolicy, email} = settings;
 
   const [visibleToast, setvisibleToast] = useState(false);
@@ -24,7 +30,12 @@ const Settings = ({logout, settings, isLoggedIn, undoSkipAuth}) => {
     {
       title: isLoggedIn ? 'logout' : 'login',
       onPress: () => (isLoggedIn ? logout() : undoSkipAuth(false)),
-      icon: isLoggedIn ? 'logout' : 'login', // TODO handle disable while waiting to logut
+      icon: isLoggedIn ? 'logout' : 'login',
+    },
+    {
+      title: 'Change location',
+      onPress: () => changeLocation(''),
+      icon: 'enviromento',
     },
     {
       title: 'Clear app data',
@@ -92,6 +103,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   logout: bindActionCreators(logoutRequest, dispatch),
   undoSkipAuth: bindActionCreators(skipAuth, dispatch),
+  changeLocation: bindActionCreators(setLocation, dispatch),
 });
 
 export default connect(
