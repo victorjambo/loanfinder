@@ -4,9 +4,14 @@ import {View, Text, FlatList, StyleSheet} from 'react-native';
 
 import colors from '../utils/colors';
 import SingleAppItem from './Apps/SingleAppItem';
+import ChangeLocation from './PostAuth/ChangeLocation';
 
 const Home = ({navigation, apps, location}) => {
   const data = apps.filter(app => app.country.includes(location));
+
+  if (!data.length) {
+    return <ChangeLocation />;
+  }
 
   return (
     <View style={styles.container}>
