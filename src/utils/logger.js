@@ -33,7 +33,7 @@ export const ERROR = {
 
 export const logInfo = event => {
   if (__DEV__) {
-    console.info(event);
+    console.log(event);
   } else {
     logEvent(event, {
       info: event,
@@ -43,7 +43,7 @@ export const logInfo = event => {
 
 export const logError = (event, error) => {
   if (__DEV__) {
-    console.warn(event, error);
+    console.info(event, error);
   } else {
     logEvent(event, {
       error: error.toString(),
