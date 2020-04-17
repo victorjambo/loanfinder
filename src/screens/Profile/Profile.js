@@ -3,14 +3,13 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {
   StyleSheet,
-  Text,
   View,
   Image,
   ScrollView,
   ActivityIndicator,
   TouchableOpacity,
 } from 'react-native';
-import {Image as IconImage, Header} from 'react-native-elements';
+import {Image as IconImage, Header, Text} from 'react-native-elements';
 
 import colors from '../../utils/colors';
 import {APPVIEW, SETTINGS} from '../../Navigation/routes';
@@ -52,9 +51,20 @@ const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
       </View>
 
       <View style={styles.body}>
-        <View style={styles.bodyContent}>
-          {savedApps &&
-            savedApps.map(item => (
+        <Text h4 style={styles.savedAppsTitle}>
+          Saved Apps
+        </Text>
+        {!savedApps.length ? (
+          <View style={styles.noSavedAppsContainer}>
+            <Text style={styles.noSavedAppsText}>
+              Tap on the&nbsp;
+              <Icon name="heart" size={20} color={colors.magenta} />
+              &nbsp;to save an App
+            </Text>
+          </View>
+        ) : (
+          <View style={styles.bodyContent}>
+            {savedApps.map(item => (
               <TouchableOpacity
                 style={styles.menuBox}
                 key={item.id}
@@ -72,7 +82,8 @@ const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
                 />
               </TouchableOpacity>
             ))}
-        </View>
+          </View>
+        )}
       </View>
     </ScrollView>
   );
@@ -104,8 +115,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 30,
-
-    paddingTop: 40,
+    paddingTop: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
@@ -138,6 +148,18 @@ const styles = StyleSheet.create({
     paddingTop: 0,
     backgroundColor: colors.primary,
     borderBottomColor: colors.primary,
+  },
+  savedAppsTitle: {
+    color: colors.grey,
+    paddingHorizontal: 40,
+    paddingTop: 20,
+  },
+  noSavedAppsContainer: {
+    marginTop: 100,
+    alignItems: 'center',
+  },
+  noSavedAppsText: {
+    fontSize: 20,
   },
 });
 
