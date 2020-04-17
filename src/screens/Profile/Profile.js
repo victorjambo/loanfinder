@@ -15,6 +15,7 @@ import colors from '../../utils/colors';
 import {APPVIEW, SETTINGS} from '../../Navigation/routes';
 import {setCurrentAppData} from '../../redux/actions';
 import Icon from 'react-native-vector-icons/AntDesign';
+import img from '../../../assets/profileicon.png';
 
 const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
   const handleNavigate = item => {
@@ -37,12 +38,7 @@ const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
       />
       <View style={styles.header}>
         <View style={styles.headerContent}>
-          <Image
-            style={styles.avatar}
-            source={{
-              uri: 'https://bootdey.com/img/Content/avatar/avatar1.png', // TODO A nicer Icon
-            }}
-          />
+          <Image style={styles.avatar} source={img} />
 
           <Text style={styles.name}>
             {user ? user.displayName || user.email : 'Hello 👋'}
