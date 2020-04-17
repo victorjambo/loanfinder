@@ -22,6 +22,7 @@ import {
   AUTH_SUCCESS,
   AUTH_FAILURE,
   SET_USER_DISPLAY_NAME,
+  SET_COUNTRIES,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 
@@ -50,33 +51,6 @@ const setAdState = payload => ({
   type: AD_STATE,
   payload,
 });
-
-export const adNetwork = () => {
-  return (dispatch, getState) => {
-    logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.APPSTATE]);
-    const {connection} = getState();
-    if (connection.isConnected) {
-      try {
-        const request = functions().httpsCallable(ENDPOINTS.APPSTATE);
-        request()
-          .then(res => {
-            dispatch(setAdState(res.data.loanfinder));
-          })
-          .catch(error => {
-            logError(
-              ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.APPSTATE],
-              error,
-            );
-          });
-      } catch (error) {
-        logError(
-          ERROR.ACTION.FIREBASE_FETCH_API_CATCH[ENDPOINTS.APPSTATE],
-          error,
-        );
-      }
-    }
-  };
-};
 
 /**
  * Spinners
@@ -253,12 +227,26 @@ export const setAppsData = payload => ({
   payload,
 });
 
-export const fetchApps = () => {
+export const setCountries = payload => ({
+  type: SET_COUNTRIES,
+  payload,
+});
+
+export const fetchAppData = () => {
   return dispatch => {
     try {
       const request = functions().httpsCallable(ENDPOINTS.LOANFINDER);
       request()
         .then(res => {
+          if (res.data.rehydrate.ads) {
+            dispatch(setAdState(res.data.ads));
+            logInfo(INFO.ACTION.REHYDRATE.ADS);
+          }
+          if (res.data.rehydrate.countries) {
+            dispatch(setCountries(res.data.countries));
+            logInfo(INFO.ACTION.REHYDRATE.COUNTRIES);
+          }
+
           dispatch(setAppsData(res.data.apps));
           logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER]);
         })
@@ -269,7 +257,7 @@ export const fetchApps = () => {
           );
         });
     } catch (error) {
-      logError(ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER], error);
+      logError(ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER], error); // TODO handle when there is an error. Don't just log it
     }
   };
 };

@@ -10,6 +10,7 @@ import {
   HIDE_SPLASH,
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
+  SET_COUNTRIES,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -65,6 +66,11 @@ const appStateReducer = (state = initialState.appState, action) => {
         ...state,
         savedApps: action.payload.newSavedApps,
         isCurrentAppSaved: action.payload.saved,
+      };
+    case SET_COUNTRIES:
+      return {
+        ...state,
+        countries: action.payload,
       };
     default:
       return state;

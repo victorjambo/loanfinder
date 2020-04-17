@@ -51,7 +51,6 @@ export default {
     isCurrentAppSaved: false,
     location: '',
     isTermsAccepted: true,
-    // TODO fetch countries from api
     countries: [
       [
         {

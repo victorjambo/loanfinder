@@ -1,8 +1,3 @@
-/**
- * 1. Location: how will I handle this
- * 2. get apps: check how many times we fetch apps
- * 3. persist saved apps
- */
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
@@ -12,7 +7,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import AuthScreen from './AuthScreen';
 import PrivateScreens from './PrivateScreens';
 import PostAuth from './PostAuth';
-import {fetchApps, setSavedApps, adNetwork} from '../redux/actions';
+import {fetchAppData, setSavedApps, adNetwork} from '../redux/actions';
 
 const Screens = ({appState}) => {
   const {location, isTermsAccepted} = appState;
@@ -25,18 +20,17 @@ const Screens = ({appState}) => {
 
 const Navigator = ({
   auth,
-  fetchAppsFromFB,
+  fetch,
   appState: {location, isTermsAccepted},
   fetchAdNetworkFromFB,
 }) => {
   useEffect(() => {
-    // TODO fetching data here will be called evertime we navigate screens and state changes. eg from settings clicking on login changes auth
-    fetchAppsFromFB();
-    fetchAdNetworkFromFB();
+    // Fetch Apps, Countries, Ads
+    fetch();
 
     // Hide Splash
     RNBootSplash.hide({duration: 250});
-  }, [fetchAppsFromFB, fetchAdNetworkFromFB]);
+  }, [fetch, fetchAdNetworkFromFB]);
 
   return (
     <NavigationContainer>
@@ -55,9 +49,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchAppsFromFB: bindActionCreators(fetchApps, dispatch),
-  fetchAdNetworkFromFB: bindActionCreators(adNetwork, dispatch),
-  changeSavedApps: bindActionCreators(setSavedApps, dispatch),
+  fetch: bindActionCreators(fetchAppData, dispatch),
 });
 
 export default connect(
