@@ -14,6 +14,7 @@ import {
   SET_CURRENT_APP_DATA,
   SET_SEARCH_RESULTS,
   SET_LOCATION,
+  SET_TERMS,
   FETCH_APP_DATA,
   HIDE_SPLASH,
   SAVE_APP,
@@ -238,6 +239,8 @@ export const fetchAppData = () => {
       const request = functions().httpsCallable(ENDPOINTS.LOANFINDER);
       request()
         .then(res => {
+          // TODO rehydrate terms & location
+          // TODO featureSwitch
           if (res.data.rehydrate.ads) {
             dispatch(setAdState(res.data.ads));
             logInfo(INFO.ACTION.REHYDRATE.ADS);
@@ -271,10 +274,15 @@ export const setSearchResults = payload => ({
 });
 
 /**
- * LOCATION
+ * LOCATION & Terms and condition
  */
 export const setLocation = payload => ({
   type: SET_LOCATION,
+  payload,
+});
+
+export const setTerms = (payload = true) => ({
+  type: SET_TERMS,
   payload,
 });
 

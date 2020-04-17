@@ -11,6 +11,7 @@ import {
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
   SET_COUNTRIES,
+  SET_TERMS,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -71,6 +72,11 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         countries: action.payload,
+      };
+    case SET_TERMS:
+      return {
+        ...state,
+        isTermsAccepted: action.payload,
       };
     default:
       return state;

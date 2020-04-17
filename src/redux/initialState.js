@@ -50,7 +50,7 @@ export default {
     savedApps: [],
     isCurrentAppSaved: false,
     location: '',
-    isTermsAccepted: true,
+    isTermsAccepted: false,
     countries: [
       [
         {
