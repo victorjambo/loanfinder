@@ -6,6 +6,7 @@ import {
   SET_USER_INFO,
   LOGOUT_SUCCESS,
   SKIP_AUTH,
+  SET_USER_DISPLAY_NAME,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -36,6 +37,14 @@ const authReducer = (state = initialState.auth, action) => {
       return {
         ...state,
         errors: action.payload,
+      };
+    case SET_USER_DISPLAY_NAME:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          displayName: action.payload,
+        },
       };
     case REHYDRATE:
       // TODO REMOVE DEBUG REDUX PERSITE console.log('>>>', Object.keys(action.payload), '<<<');

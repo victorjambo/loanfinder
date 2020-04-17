@@ -42,12 +42,8 @@ class Auth {
     return await auth().signInWithEmailAndPassword(email, password);
   };
 
-  firebaseRegister = async (email, password, displayName) => {
-    return await auth().createUserWithEmailAndPassword(
-      email,
-      password,
-      displayName,
-    );
+  firebaseRegister = async (email, password) => {
+    return await auth().createUserWithEmailAndPassword(email, password);
   };
 }
 

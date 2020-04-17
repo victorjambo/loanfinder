@@ -45,7 +45,9 @@ const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
             }}
           />
 
-          <Text style={styles.name}>{user ? user.email : 'Hello 👋'}</Text>
+          <Text style={styles.name}>
+            {user ? user.displayName || user.email : 'Hello 👋'}
+          </Text>
         </View>
       </View>
 

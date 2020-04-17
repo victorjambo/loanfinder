@@ -21,6 +21,7 @@ import {
   AD_STATE,
   AUTH_SUCCESS,
   AUTH_FAILURE,
+  SET_USER_DISPLAY_NAME,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 
@@ -113,12 +114,10 @@ export const setUserInfo = user => ({
   payload: user,
 });
 
-const getUserData = raw => {
-  let user = raw;
-  delete user.metadata;
-  delete user.providerData;
-  return user;
-};
+export const setDisplayName = payload => ({
+  type: SET_USER_DISPLAY_NAME,
+  payload,
+});
 
 /**
  * login
@@ -131,9 +130,8 @@ export const loginRequest = (email, password) => {
       .firebaseLogin(email, password)
       .then(res => {
         if (res.user) {
-          const user = getUserData(res.user);
           dispatch(authSuccess());
-          dispatch(setUserInfo(user));
+          dispatch(setUserInfo(res.user));
           logInfo(INFO.ACTION.FIREBASE_LOGIN);
         }
         dispatch(hideSpinner());
@@ -152,9 +150,8 @@ export const loginAndSignupWithGoogleAuth = () => {
       .fbGoogleAuth()
       .then(res => {
         if (res.user) {
-          const user = getUserData(res.user);
           dispatch(authSuccess());
-          dispatch(setUserInfo(user));
+          dispatch(setUserInfo(res.user));
           logInfo(INFO.ACTION.FIREBASE_GOOGLE_AUTH);
         }
         dispatch(hideSpinner());
@@ -175,12 +172,12 @@ export const registerRequest = (email, password, displayName) => {
     dispatch(showSpinner());
 
     auth
-      .firebaseRegister(email, password, displayName)
+      .firebaseRegister(email, password)
       .then(res => {
         if (res.user) {
-          const user = getUserData(res.user);
           dispatch(authSuccess());
-          dispatch(setUserInfo(user));
+          dispatch(setUserInfo(res.user));
+          dispatch(setDisplayName(displayName));
           logInfo(INFO.ACTION.FIREBASE_REGISTER);
         }
         dispatch(hideSpinner());
