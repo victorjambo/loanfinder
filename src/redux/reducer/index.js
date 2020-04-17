@@ -7,6 +7,7 @@ import authReducer from './authReducer';
 import networkReducer from './networkReducer';
 import appStateReducer from './appStateReducer';
 import settingsReducer from './settingsReducer';
+import featureSwitchReducer from './featureSwitchReducer';
 
 const authPersistConfig = {
   key: 'auth',
@@ -26,4 +27,5 @@ export default combineReducers({
   auth: persistReducer(authPersistConfig, authReducer),
   appState: persistReducer(appStatePersistConfig, appStateReducer),
   settings: settingsReducer,
+  featureSwitch: featureSwitchReducer,
 });

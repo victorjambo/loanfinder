@@ -8,8 +8,11 @@ import {loginAndSignupWithGoogleAuth} from '../../redux/actions';
 
 import styles from './styles';
 
-// TODO: Disable Google Auth
-const GoogleButton = ({login}) => {
+const GoogleButton = ({login, googleAuth}) => {
+  if (!googleAuth) {
+    return null;
+  }
+
   return (
     <View style={styles.googleContainer}>
       <View style={styles.googleLinesContainter}>
@@ -26,7 +29,7 @@ const GoogleButton = ({login}) => {
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth,
+  googleAuth: state.featureSwitch.googleAuth,
 });
 
 const mapDispatchToProps = dispatch => ({

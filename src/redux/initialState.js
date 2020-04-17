@@ -102,4 +102,7 @@ export default {
       ],
     ],
   },
+  featureSwitch: {
+    googleAuth: false,
+  },
 };

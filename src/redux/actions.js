@@ -24,6 +24,7 @@ import {
   AUTH_FAILURE,
   SET_USER_DISPLAY_NAME,
   SET_COUNTRIES,
+  FS,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 
@@ -249,6 +250,10 @@ export const fetchAppData = () => {
             dispatch(setCountries(res.data.countries));
             logInfo(INFO.ACTION.REHYDRATE.COUNTRIES);
           }
+          if (res.data.featureSwitch) {
+            dispatch(setFeatureSwitch(res.data.featureSwitch.googleAuth));
+            logInfo(INFO.ACTION.FS);
+          }
 
           dispatch(setAppsData(res.data.apps));
           logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER]);
@@ -327,3 +332,11 @@ export const saveApp = () => {
     dispatch(setSavedApps(payload));
   };
 };
+
+/**
+ * Feature Switch
+ */
+export const setFeatureSwitch = payload => ({
+  type: FS,
+  payload,
+});
