@@ -14,6 +14,7 @@ const authPersistConfig = {
   blacklist: ['isLoggedIn'],
 };
 
+// It does nothing
 const appStatePersistConfig = {
   key: 'appState',
   storage: AsyncStorage,
