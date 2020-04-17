@@ -41,7 +41,7 @@ const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
           <Image
             style={styles.avatar}
             source={{
-              uri: 'https://bootdey.com/img/Content/avatar/avatar1.png',
+              uri: 'https://bootdey.com/img/Content/avatar/avatar1.png', // TODO A nicer Icon
             }}
           />
 
