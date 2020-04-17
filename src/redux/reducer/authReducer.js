@@ -1,5 +1,3 @@
-import {REHYDRATE} from 'redux-persist';
-
 import {
   AUTH_SUCCESS,
   AUTH_FAILURE,
@@ -45,11 +43,6 @@ const authReducer = (state = initialState.auth, action) => {
           ...state.user,
           displayName: action.payload,
         },
-      };
-    case REHYDRATE:
-      // TODO REMOVE DEBUG REDUX PERSITE console.log('>>>', Object.keys(action.payload), '<<<');
-      return {
-        ...state,
       };
     default:
       return state;
