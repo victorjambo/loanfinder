@@ -240,8 +240,6 @@ export const fetchAppData = () => {
       const request = functions().httpsCallable(ENDPOINTS.LOANFINDER);
       request()
         .then(res => {
-          // TODO rehydrate terms & location
-          // TODO featureSwitch
           if (res.data.rehydrate.ads) {
             dispatch(setAdState(res.data.ads));
             logInfo(INFO.ACTION.REHYDRATE.ADS);
@@ -250,7 +248,15 @@ export const fetchAppData = () => {
             dispatch(setCountries(res.data.countries));
             logInfo(INFO.ACTION.REHYDRATE.COUNTRIES);
           }
-          if (res.data.featureSwitch) {
+          if (res.data.rehydrate.terms) {
+            dispatch(setTerms(false));
+            logInfo(INFO.ACTION.REHYDRATE.TERMS);
+          }
+          if (res.data.rehydrate.location) {
+            dispatch(setLocation(''));
+            logInfo(INFO.ACTION.REHYDRATE.LOCATION);
+          }
+          if (res.data.rehydrate.featureSwitch) {
             dispatch(setFeatureSwitch(res.data.featureSwitch.googleAuth));
             logInfo(INFO.ACTION.FS);
           }
