@@ -20,7 +20,7 @@ export default {
     isConnected: true,
   },
   auth: {
-    isLoggedIn: false, // TODO
+    isLoggedIn: false,
     skipAuth: false,
     user: {
       displayName: null,
