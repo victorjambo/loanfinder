@@ -40,7 +40,9 @@ const ImageBackgroundContainer = ({isRegister, setForm, setErrMsg}) => {
         </Text>
         {!isRegister && (
           <View>
-            <Text style={[styles.subTitle, styles.white]}>to Loan Finder</Text>
+            <Text style={[styles.subTitle, styles.white]}>
+              to Loaner - Personal loan finder
+            </Text>
           </View>
         )}
       </View>
