@@ -1,4 +1,4 @@
-/* eslint-disable react-native/no-inline-styles */
+// TODO DELETE file
 import React from 'react';
 import {View, Text} from 'react-native';
 

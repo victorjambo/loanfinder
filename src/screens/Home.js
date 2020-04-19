@@ -6,6 +6,8 @@ import colors from '../utils/colors';
 import SingleAppItem from './Apps/SingleAppItem';
 import ChangeLocation from './PostAuth/ChangeLocation';
 
+import AdBanner from '../utils/Ads/AdBanner';
+
 const Home = ({navigation, apps, location}) => {
   const data = apps.filter(app => app.country.includes(location));
 
@@ -15,6 +17,7 @@ const Home = ({navigation, apps, location}) => {
 
   return (
     <View style={styles.container}>
+      <AdBanner screen="Home" />
       <FlatList
         keyExtractor={item => item.id}
         data={data}

@@ -4,14 +4,17 @@ import {bindActionCreators} from 'redux';
 import {CheckBox, Text, Button} from 'react-native-elements';
 import {View, Linking, StyleSheet, TouchableOpacity} from 'react-native';
 
-import {setTerms} from '../../redux/actions';
+import {setTerms, incrementAdCounter} from '../../redux/actions';
 import colors from '../../utils/colors';
+import AdBanner from '../../utils/Ads/AdBanner';
+import ads from '../../utils/Ads/triggerAds';
 
-const Terms = ({changeTerms, privacyPolicy}) => {
+const Terms = ({changeTerms, privacyPolicy, incrementAd}) => {
   const [check, setCheck] = useState(false);
 
   const handleClick = e => {
     e.persist();
+    ads.showAds(incrementAd);
     changeTerms();
   };
 
@@ -20,41 +23,44 @@ const Terms = ({changeTerms, privacyPolicy}) => {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.top}>
-        <Text h4 style={styles.title}>
-          Terms & Conditions
-        </Text>
-        <View>
+    <>
+      <View style={styles.container}>
+        <View style={styles.top}>
+          <Text h4 style={styles.title}>
+            Terms & Conditions
+          </Text>
           <View>
-            <Text style={styles.proceedText}>
-              By proceeding you agree to the Terms of Use and Privacy Policy.
-            </Text>
-          </View>
-          <View>
-            <TouchableOpacity onPress={() => Linking.openURL(privacyPolicy)}>
-              <Text style={styles.privacyPolicy}>Privacy Policy</Text>
-            </TouchableOpacity>
-            <CheckBox
-              center
-              title="Accept Terms"
-              checked={check}
-              onPress={handleCheck}
-              checkedColor={colors.primary}
-              uncheckedColor={colors.primary}
-              containerStyle={styles.checkBox}
-            />
+            <View>
+              <Text style={styles.proceedText}>
+                By proceeding you agree to the Terms of Use and Privacy Policy.
+              </Text>
+            </View>
+            <View>
+              <TouchableOpacity onPress={() => Linking.openURL(privacyPolicy)}>
+                <Text style={styles.privacyPolicy}>Privacy Policy</Text>
+              </TouchableOpacity>
+              <CheckBox
+                center
+                title="Accept Terms"
+                checked={check}
+                onPress={handleCheck}
+                checkedColor={colors.primary}
+                uncheckedColor={colors.primary}
+                containerStyle={styles.checkBox}
+              />
+            </View>
           </View>
         </View>
+        <Button
+          title="PROCEED"
+          disabled={!check}
+          onPress={handleClick}
+          buttonStyle={styles.btn}
+          containerStyle={styles.btnContainer}
+        />
       </View>
-      <Button
-        title="PROCEED"
-        disabled={!check}
-        onPress={handleClick}
-        buttonStyle={styles.btn}
-        containerStyle={styles.btnContainer}
-      />
-    </View>
+      <AdBanner screen="Terms" />
+    </>
   );
 };
 
@@ -99,6 +105,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   changeTerms: bindActionCreators(setTerms, dispatch),
+  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
 export default connect(

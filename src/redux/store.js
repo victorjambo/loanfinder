@@ -10,6 +10,7 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   stateReconciler: autoMergeLevel2,
+  blacklist: ['ads'],
 };
 
 const composeEnhancers = global.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__

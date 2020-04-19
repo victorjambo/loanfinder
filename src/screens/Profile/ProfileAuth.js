@@ -6,15 +6,21 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import {View, Text, StyleSheet, Dimensions} from 'react-native';
 
 import colors from '../../utils/colors';
-import {skipAuth} from '../../redux/actions';
+import {skipAuth, incrementAdCounter} from '../../redux/actions';
 import GoogleButton from '../Auth/GoogleButton';
 import {SETTINGS} from '../../Navigation/routes';
+import ads from '../../utils/Ads/triggerAds';
 
 const featuresText = 'To discover all our features, please Sign up.';
 
 const {width} = Dimensions.get('window');
 
-const ProfileAuth = ({navigation, undoSkipAuth}) => {
+const ProfileAuth = ({navigation, undoSkipAuth, incrementAd}) => {
+  const handleClick = () => {
+    undoSkipAuth(false);
+    ads.showAds(incrementAd);
+  };
+
   return (
     <View style={styles.container}>
       <Header
@@ -33,7 +39,7 @@ const ProfileAuth = ({navigation, undoSkipAuth}) => {
         <Button
           buttonStyle={styles.btn}
           title="   Sign up with email"
-          onPress={() => undoSkipAuth(false)}
+          onPress={handleClick}
           icon={<Icon name="mail" size={24} color="white" />}
         />
         <GoogleButton />
@@ -70,6 +76,7 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => ({
   undoSkipAuth: bindActionCreators(skipAuth, dispatch),
+  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
 export default connect(

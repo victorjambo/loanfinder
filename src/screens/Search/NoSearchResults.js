@@ -1,11 +1,16 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
+import AdBanner from '../../utils/Ads/AdBanner';
+
 const NoSearchResults = () => {
   return (
-    <View style={[styles.container, styles.body]}>
-      <Text style={styles.features}>No Search Results</Text>
-    </View>
+    <>
+      <View style={[styles.container, styles.body]}>
+        <Text style={styles.features}>No Search Results</Text>
+      </View>
+      <AdBanner screen="NoSearchResults" />
+    </>
   );
 };
 

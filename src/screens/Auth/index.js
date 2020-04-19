@@ -22,11 +22,17 @@ import {bindActionCreators} from 'redux';
 import styles from './styles';
 import colors from '../../utils/colors';
 
-import {loginRequest, registerRequest} from '../../redux/actions';
+import {
+  loginRequest,
+  registerRequest,
+  incrementAdCounter,
+} from '../../redux/actions';
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
 import GoogleButton from './GoogleButton';
 import validateInput from '../../utils/validator';
+import AdBanner from '../../utils/Ads/AdBanner';
+import ads from '../../utils/Ads/triggerAds';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -43,7 +49,7 @@ export const INITIAL_ERROR = {
   password: '',
 };
 
-const Auth = ({login, register}) => {
+const Auth = ({login, register, adCount, incrementAd}) => {
   const anim = new Animated.Value(0);
 
   const [form, setForm] = useState(LOGIN);
@@ -85,6 +91,10 @@ const Auth = ({login, register}) => {
       isRegister ? register(email, password, username) : login(email, password);
     } else {
       setErrMsg(errors);
+    }
+
+    if (adCount === 0) {
+      ads.showAds(incrementAd);
     }
   };
 
@@ -173,6 +183,7 @@ const Auth = ({login, register}) => {
           </Animated.View>
         </View>
       </ScrollView>
+      <AdBanner screen="Auth" />
     </>
   );
 };
@@ -184,6 +195,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   login: bindActionCreators(loginRequest, dispatch),
   register: bindActionCreators(registerRequest, dispatch),
+  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
 export default connect(

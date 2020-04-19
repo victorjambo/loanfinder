@@ -6,12 +6,24 @@ import {connect} from 'react-redux';
 
 import {SEARCH_RESULTS} from '../../Navigation/routes';
 import {idxSearch, countrySearch} from '../../utils/searchQuery';
-import {setSearchResults, showSpinner, hideSpinner} from '../../redux/actions';
 import CountriesContainer from './CountriesContainer';
+import ads from '../../utils/Ads/triggerAds';
+import {
+  setSearchResults,
+  showSpinner,
+  hideSpinner,
+  incrementAdCounter,
+} from '../../redux/actions';
 
 const INITIAL = '';
 
-const Search = ({navigation, searchResults, showSpin, hideSpin, countries}) => {
+const Search = ({
+  navigation,
+  searchResults,
+  showSpin,
+  hideSpin,
+  incrementAd,
+}) => {
   const [search, setSearch] = useState(INITIAL);
 
   const handleSearch = () => {
@@ -22,6 +34,7 @@ const Search = ({navigation, searchResults, showSpin, hideSpin, countries}) => {
       navigation.navigate(SEARCH_RESULTS.name, {search});
       hideSpin();
       setSearch(INITIAL);
+      ads.showAds(incrementAd);
     }
   };
 
@@ -31,6 +44,7 @@ const Search = ({navigation, searchResults, showSpin, hideSpin, countries}) => {
     searchResults(res);
     navigation.navigate(SEARCH_RESULTS.name, {search: country});
     hideSpin();
+    ads.showAds(incrementAd);
   };
 
   return (
@@ -51,17 +65,14 @@ const Search = ({navigation, searchResults, showSpin, hideSpin, countries}) => {
   );
 };
 
-const mapStateToProps = state => ({
-  countries: state.appState.countries,
-});
-
 const mapDispatchToProps = dispatch => ({
   searchResults: bindActionCreators(setSearchResults, dispatch),
   showSpin: bindActionCreators(showSpinner, dispatch),
   hideSpin: bindActionCreators(hideSpinner, dispatch),
+  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(Search);

@@ -7,7 +7,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import AuthScreen from './AuthScreen';
 import PrivateScreens from './PrivateScreens';
 import PostAuth from './PostAuth';
-import {fetchAppData, setSavedApps, adNetwork} from '../redux/actions';
+import {fetchAppData} from '../redux/actions';
 
 const Screens = ({appState}) => {
   const {location, isTermsAccepted} = appState;

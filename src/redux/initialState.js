@@ -1,4 +1,10 @@
-import {ADMOB} from './consts';
+import {ADMOB_PROD_IDS, ADMOB_TEST_IDS} from './consts';
+
+let admob = Object.assign({}, ADMOB_PROD_IDS);
+
+if (__DEV__) {
+  admob = Object.assign({}, ADMOB_TEST_IDS);
+}
 
 export default {
   ads: {
@@ -6,15 +12,14 @@ export default {
     rewardedFequency: 8,
     showInterstitial: true,
     showBanner: true,
-    appId: ADMOB.ADMOB_AD_ID,
-    banner: ADMOB.ADMOB_BANNER_ID,
-    interstetial: ADMOB.ADMOB_INTERSTITIAL_ID,
-    reward: ADMOB.ADMOB_REWARDED,
-    fequency: 2,
+    appId: admob.ADMOB_AD_ID,
+    banner: admob.ADMOB_BANNER_ID,
+    interstetial: admob.ADMOB_INTERSTITIAL_ID,
+    reward: admob.ADMOB_REWARDED,
+    fequency: 1,
     adCount: 0,
     isRewardedReady: false,
     isInterstitialReady: false,
-    featureswitch: true,
   },
   connection: {
     isConnected: true,
@@ -104,5 +109,7 @@ export default {
   },
   featureSwitch: {
     googleAuth: false,
+    ads: true,
+    rewarded: true,
   },
 };

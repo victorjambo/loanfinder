@@ -25,6 +25,11 @@ import {
   SET_USER_DISPLAY_NAME,
   SET_COUNTRIES,
   FS,
+  INCREMENT_AD_COUNTER,
+  REWARDED_IS_READY,
+  REWARDED_IS_NOT_READY,
+  INTERSTITIAL_IS_READY,
+  INTERSTITIAL_IS_NOT_READY,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 
@@ -48,11 +53,6 @@ export const checkConnection = () => {
     );
   };
 };
-
-const setAdState = payload => ({
-  type: AD_STATE,
-  payload,
-});
 
 /**
  * Spinners
@@ -345,4 +345,16 @@ export const saveApp = () => {
 export const setFeatureSwitch = payload => ({
   type: FS,
   payload,
+});
+
+/**
+ * ADMOB
+ */
+export const incrementAdCounter = () => ({type: INCREMENT_AD_COUNTER});
+export const setAdState = payload => ({type: AD_STATE, payload});
+export const adLoadedRewarded = () => ({type: REWARDED_IS_READY});
+export const resetAdLoadedRewarded = () => ({type: REWARDED_IS_NOT_READY});
+export const adLoadedInterstitial = () => ({type: INTERSTITIAL_IS_READY});
+export const resetAdLoadedInterstitial = () => ({
+  type: INTERSTITIAL_IS_NOT_READY,
 });

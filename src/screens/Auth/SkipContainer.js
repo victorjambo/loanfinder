@@ -6,12 +6,17 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import styles from './styles';
 import colors from '../../utils/colors';
-import {skipAuth} from '../../redux/actions';
+import ads from '../../utils/Ads/triggerAds';
+import {skipAuth, incrementAdCounter} from '../../redux/actions';
 
-const SkipContainer = ({skip}) => {
+const SkipContainer = ({skip, incrementAd, adCount}) => {
   const handleClick = e => {
     e.persist();
+    ads.rewarded();
     skip();
+    if (adCount === 0) {
+      ads.showAds(incrementAd);
+    }
   };
 
   return (
@@ -24,11 +29,16 @@ const SkipContainer = ({skip}) => {
   );
 };
 
+const mapStateToProps = state => ({
+  adCount: state.ads.adCount,
+});
+
 const mapDispatchToProps = dispatch => ({
   skip: bindActionCreators(skipAuth, dispatch),
+  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(SkipContainer);

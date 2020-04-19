@@ -13,14 +13,31 @@ import {Image as IconImage, Header, Text} from 'react-native-elements';
 
 import colors from '../../utils/colors';
 import {APPVIEW, SETTINGS} from '../../Navigation/routes';
-import {setCurrentAppData} from '../../redux/actions';
+import {setCurrentAppData, incrementAdCounter} from '../../redux/actions';
 import Icon from 'react-native-vector-icons/AntDesign';
 import img from '../../../assets/profileicon.png';
+import ads from '../../utils/Ads/triggerAds';
 
-const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
+const Profile = props => {
+  const {
+    navigation,
+    savedApps,
+    setAppDataProps,
+    user,
+    incrementAd,
+    isLoggedIn,
+  } = props;
+
   const handleNavigate = item => {
     setAppDataProps(item);
     navigation.navigate(APPVIEW.name);
+  };
+
+  const handleClick = () => {
+    navigation.navigate(SETTINGS.name);
+    if (!isLoggedIn) {
+      ads.showAds(incrementAd);
+    }
   };
 
   return (
@@ -31,7 +48,7 @@ const Profile = ({navigation, savedApps, setAppDataProps, user}) => {
             name="setting"
             color={colors.white}
             size={30}
-            onPress={() => navigation.navigate(SETTINGS.name)}
+            onPress={handleClick}
           />
         }
         containerStyle={styles.settingsIcon}
@@ -162,10 +179,12 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => ({
   savedApps: state.appState.savedApps,
   user: state.auth.user,
+  isLoggedIn: state.auth.isLoggedIn,
 });
 
 const mapDispatchToProps = dispatch => ({
   setAppDataProps: bindActionCreators(setCurrentAppData, dispatch),
+  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
 export default connect(

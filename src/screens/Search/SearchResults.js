@@ -5,6 +5,7 @@ import {View, FlatList, StyleSheet} from 'react-native';
 import colors from '../../utils/colors';
 import SingleAppItem from '../Apps/SingleAppItem';
 import NoSearchResults from './NoSearchResults';
+import AdBanner, {AD_SIZE} from '../../utils/Ads/AdBanner';
 
 const SearchResults = ({navigation, searchResults}) => {
   if (!searchResults.length) {
@@ -20,6 +21,7 @@ const SearchResults = ({navigation, searchResults}) => {
           <SingleAppItem item={item} navigation={navigation} />
         )}
       />
+      <AdBanner screen="SearchResults" adSize={AD_SIZE.BANNER} />
     </View>
   );
 };
