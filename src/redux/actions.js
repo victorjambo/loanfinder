@@ -6,7 +6,6 @@ import auth from '../utils/Auth';
 import {
   HIDE_BANNER,
   NETWORK,
-  NETWORK_PENDING,
   SHOW_SPINNER,
   HIDE_SPINNER,
   SET_USER_INFO,
@@ -31,10 +30,9 @@ import {
   REWARDED_IS_NOT_READY,
   INTERSTITIAL_IS_READY,
   INTERSTITIAL_IS_NOT_READY,
-  PENDING_STATE,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
-import localStorage, {TABLES, DB_NAME} from '../utils/localStorage';
+import localStorage, {TABLES} from '../utils/localStorage';
 
 const ENDPOINTS = {
   APPSTATE: 'appstate',
@@ -98,6 +96,27 @@ export const setDisplayName = payload => ({
   payload,
 });
 
+export const getUserInfo = () => {
+  return (dispatch, getState) => {
+    if (getState().auth.user.uid === '') {
+      localStorage
+        .getItem(TABLES.USER)
+        .then(payload => {
+          if (payload) {
+            dispatch(authSuccess());
+            dispatch(setUserInfo(payload));
+            logInfo(INFO.LOCALSTORAGE.GET_ITEM.AUTH);
+          } else {
+            logError(ERROR.LOCALSTORAGE.GET_ITEM.AUTH + 'NO_DATA', {
+              error: 'NO_AUTH_DATA_IN_LOCALSTORAGE',
+            });
+          }
+        })
+        .catch(error => logError(ERROR.LOCALSTORAGE.GET_ITEM.AUTH, error));
+    }
+  };
+};
+
 /**
  * login
  */
@@ -111,6 +130,10 @@ export const loginRequest = (email, password) => {
         if (res.user) {
           dispatch(authSuccess());
           dispatch(setUserInfo(res.user));
+          localStorage.multiSetItem(
+            [TABLES.USER, res.user],
+            [TABLES.ISLOGGEDIN, true],
+          );
           logInfo(INFO.ACTION.FIREBASE_LOGIN);
         }
         dispatch(hideSpinner());
@@ -131,6 +154,10 @@ export const loginAndSignupWithGoogleAuth = () => {
         if (res.user) {
           dispatch(authSuccess());
           dispatch(setUserInfo(res.user));
+          localStorage.multiSetItem(
+            [TABLES.USER, res.user],
+            [TABLES.ISLOGGEDIN, true],
+          );
           logInfo(INFO.ACTION.FIREBASE_GOOGLE_AUTH);
         }
         dispatch(hideSpinner());
@@ -157,6 +184,10 @@ export const registerRequest = (email, password, displayName) => {
           dispatch(authSuccess());
           dispatch(setUserInfo(res.user));
           dispatch(setDisplayName(displayName));
+          localStorage.multiSetItem(
+            [TABLES.USER, res.user],
+            [TABLES.ISLOGGEDIN, true],
+          );
           logInfo(INFO.ACTION.FIREBASE_REGISTER);
         }
         dispatch(hideSpinner());

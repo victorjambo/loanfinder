@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 export const DB_NAME = 'loanfinder';
 
 export const TABLES = {
+  USER: 'USER',
   API_DATA: 'API_DATA',
   ISLOGGEDIN: 'ISLOGGEDIN',
   SAVED_APPS: 'SAVED_APPS',

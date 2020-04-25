@@ -16,7 +16,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import AuthScreen from './AuthScreen';
 import PrivateScreens from './PrivateScreens';
 import PostAuth from './PostAuth';
-import {fetchAppData} from '../redux/actions';
+import {fetchAppData, getUserInfo} from '../redux/actions';
 
 const Screens = ({appState}) => {
   const {location, isTermsAccepted} = appState;
@@ -31,7 +31,7 @@ const Navigator = props => {
   const {
     auth,
     fetch,
-    fetchAdNetworkFromFB,
+    getAuth,
     appState: {location, isTermsAccepted},
   } = props;
 
@@ -39,9 +39,12 @@ const Navigator = props => {
     // Fetch Apps, Countries, Ads
     fetch();
 
+    // Auth
+    getAuth();
+
     // Hide Splash
     RNBootSplash.hide({duration: 250});
-  }, [fetch, fetchAdNetworkFromFB]);
+  }, [fetch, getAuth]);
 
   return (
     <NavigationContainer>
@@ -61,6 +64,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetch: bindActionCreators(fetchAppData, dispatch),
+  getAuth: bindActionCreators(getUserInfo, dispatch),
 });
 
 export default connect(

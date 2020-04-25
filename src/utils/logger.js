@@ -52,6 +52,7 @@ export const INFO = {
   LOCALSTORAGE: {
     GET_ITEM: {
       SAVE_APP: 'INFO_LOCALSTORAGE_GET_ITEM_SAVE_APP',
+      AUTH: 'INFO_LOCALSTORAGE_GET_ITEM_AUTH',
     },
   },
 };
@@ -96,6 +97,7 @@ export const ERROR = {
   LOCALSTORAGE: {
     GET_ITEM: {
       SAVE_APP: 'ERROR_LOCALSTORAGE_GET_ITEM_SAVE_APP',
+      AUTH: 'ERROR_LOCALSTORAGE_GET_ITEM_AUTH',
     },
   },
 };
