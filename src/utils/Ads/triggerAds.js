@@ -1,11 +1,24 @@
+// TODO remove rewards
 import {AdMobInterstitial, AdMobRewarded} from 'react-native-admob';
 
 import store from '../../redux/store';
 import {logError, logInfo, ERROR, INFO} from '../logger';
+import {ADMOB_PROD_IDS, ADMOB_TEST_IDS} from '../../redux/consts';
+
+let admob = Object.assign({}, ADMOB_PROD_IDS);
+
+if (__DEV__) {
+  admob = Object.assign({}, ADMOB_TEST_IDS);
+}
 
 export class Ads {
   constructor() {
-    this.ads = {};
+    this.ads = {
+      appId: admob.ADMOB_AD_ID,
+      banner: admob.ADMOB_BANNER_ID,
+      interstetial: admob.ADMOB_INTERSTITIAL_ID,
+      reward: admob.ADMOB_REWARDED,
+    };
     this.featureSwitch = {};
     this.incrementAd = () => {};
   }
@@ -62,7 +75,10 @@ export class Ads {
 
   showAds = incrementAd => {
     const state = store.getState();
-    this.ads = state.ads;
+    this.ads = {
+      ...this.ads,
+      ...state.ads,
+    };
     this.featureSwitch = state.featureSwitch;
     this.incrementAd = incrementAd;
     this.withAds();
