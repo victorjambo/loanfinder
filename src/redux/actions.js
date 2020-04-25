@@ -361,6 +361,28 @@ export const saveApp = () => {
     }
 
     dispatch(setSavedApps(payload));
+    localStorage.setItem(TABLES.SAVED_APPS, payload);
+  };
+};
+
+export const getSavedApps = () => {
+  return (dispatch, getState) => {
+    const {appState} = getState();
+    if (!appState.savedApps.length) {
+      localStorage
+        .getItem(TABLES.SAVED_APPS)
+        .then(payload => {
+          if (payload) {
+            dispatch(setSavedApps(payload));
+            logInfo(INFO.LOCALSTORAGE.GET_ITEM.SAVE_APP);
+          } else {
+            logError(ERROR.LOCALSTORAGE.GET_ITEM.SAVE_APP + 'NO_DATA', {
+              error: 'NO_SAVED_APPS_IN_LOCALSTORAGE',
+            });
+          }
+        })
+        .catch(error => logError(ERROR.LOCALSTORAGE.GET_ITEM.SAVE_APP, error));
+    }
   };
 };
 

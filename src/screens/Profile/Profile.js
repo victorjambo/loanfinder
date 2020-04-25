@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {
@@ -13,7 +13,11 @@ import {Image as IconImage, Header, Text} from 'react-native-elements';
 
 import colors from '../../utils/colors';
 import {APPVIEW, SETTINGS} from '../../Navigation/routes';
-import {setCurrentAppData, incrementAdCounter} from '../../redux/actions';
+import {
+  setCurrentAppData,
+  incrementAdCounter,
+  getSavedApps,
+} from '../../redux/actions';
 import Icon from 'react-native-vector-icons/AntDesign';
 import img from '../../../assets/profileicon.png';
 import ads from '../../utils/Ads/triggerAds';
@@ -26,7 +30,10 @@ const Profile = props => {
     user,
     incrementAd,
     isLoggedIn,
+    getApps,
   } = props;
+
+  useEffect(() => getApps(), [getApps]);
 
   const handleNavigate = item => {
     setAppDataProps(item);
@@ -185,6 +192,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   setAppDataProps: bindActionCreators(setCurrentAppData, dispatch),
   incrementAd: bindActionCreators(incrementAdCounter, dispatch),
+  getApps: bindActionCreators(getSavedApps, dispatch),
 });
 
 export default connect(
