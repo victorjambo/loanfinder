@@ -11,7 +11,7 @@ import {skipAuth, incrementAdCounter} from '../../redux/actions';
 
 const SkipContainer = ({skip, incrementAd, adCount}) => {
   const handleClick = e => {
-    e.persist();
+    e.persist(); // TODO should we remove you?
     ads.rewarded();
     skip();
     if (adCount === 0) {

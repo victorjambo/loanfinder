@@ -7,7 +7,6 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 import {logoutRequest, skipAuth, setLocation} from '../../redux/actions';
 import Toast from '../../Components/Toast';
-import {configureStore} from '../../redux/store';
 import AdBanner from '../../utils/Ads/AdBanner';
 
 const containerStyle = {paddingVertical: 20};
@@ -25,8 +24,6 @@ const Settings = ({
 
   useEffect(() => setvisibleToast(false), [visibleToast]);
 
-  const {persistor} = configureStore();
-
   const settingsItems = [
     {
       title: isLoggedIn ? 'logout' : 'login',
@@ -37,16 +34,6 @@ const Settings = ({
       title: 'Change location',
       onPress: () => changeLocation(''),
       icon: 'enviromento',
-    },
-    {
-      title: 'Clear app data',
-      onPress: () => {
-        persistor
-          .purge()
-          .then(() => setvisibleToast(true))
-          .catch(error => console.log(error));
-      },
-      icon: 'delete',
     },
     {
       title: 'Rate the App',

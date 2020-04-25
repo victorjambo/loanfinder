@@ -11,7 +11,7 @@ export default {
     showRewarded: true,
     rewardedFequency: 8,
     showInterstitial: true,
-    showBanner: true,
+    showBanner: false,
     appId: admob.ADMOB_AD_ID,
     banner: admob.ADMOB_BANNER_ID,
     interstetial: admob.ADMOB_INTERSTITIAL_ID,
@@ -22,7 +22,7 @@ export default {
     isInterstitialReady: false,
   },
   connection: {
-    isConnected: true,
+    isConnected: false,
   },
   auth: {
     isLoggedIn: false,
@@ -109,7 +109,7 @@ export default {
   },
   featureSwitch: {
     googleAuth: false,
-    ads: true,
+    ads: false,
     rewarded: true,
   },
 };

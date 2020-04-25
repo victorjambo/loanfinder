@@ -13,7 +13,7 @@ const Terms = ({changeTerms, privacyPolicy, incrementAd}) => {
   const [check, setCheck] = useState(false);
 
   const handleClick = e => {
-    e.persist();
+    e.persist(); // TODO should we remove you?
     ads.showAds(incrementAd);
     changeTerms();
   };

@@ -1,5 +1,3 @@
-import {PURGE} from 'redux-persist';
-
 import {
   SHOW_SPINNER,
   HIDE_SPINNER,
@@ -38,11 +36,6 @@ const appStateReducer = (state = initialState.appState, action) => {
         searchResults: action.payload,
       };
     case SET_LOCATION:
-      return {
-        ...state,
-        location: action.payload,
-      };
-    case PURGE:
       return {
         ...state,
         location: action.payload,

@@ -30,7 +30,7 @@ class AdBanner extends React.Component {
   render() {
     const {ads, screen = '', adSize = AD_SIZE.SMART_BANNER} = this.props;
 
-    if (!ads.showBanner) {
+    if (!ads.showBanner) { // TODO should be behind FS
       return null;
     }
 

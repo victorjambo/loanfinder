@@ -1,3 +1,12 @@
+/**
+ * 1. check connnection
+ * 2. if connnected then fetch()
+ * 3. else collect data from localstorage
+ * 4. localstorage collect Saved apps, Auth, apps
+ * 5. inside profile page fetch from localstorage if state has no apps
+ * 6. [clean up] remove clear data in settings
+ * 7. [clean up] remove redux persist
+ */
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
@@ -18,12 +27,14 @@ const Screens = ({appState}) => {
   }
 };
 
-const Navigator = ({
-  auth,
-  fetch,
-  appState: {location, isTermsAccepted},
-  fetchAdNetworkFromFB,
-}) => {
+const Navigator = props => {
+  const {
+    auth,
+    fetch,
+    fetchAdNetworkFromFB,
+    appState: {location, isTermsAccepted},
+  } = props;
+
   useEffect(() => {
     // Fetch Apps, Countries, Ads
     fetch();

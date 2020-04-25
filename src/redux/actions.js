@@ -6,6 +6,7 @@ import auth from '../utils/Auth';
 import {
   HIDE_BANNER,
   NETWORK,
+  NETWORK_PENDING,
   SHOW_SPINNER,
   HIDE_SPINNER,
   SET_USER_INFO,
@@ -30,8 +31,10 @@ import {
   REWARDED_IS_NOT_READY,
   INTERSTITIAL_IS_READY,
   INTERSTITIAL_IS_NOT_READY,
+  PENDING_STATE,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
+import localStorage, {TABLES, DB_NAME} from '../utils/localStorage';
 
 const ENDPOINTS = {
   APPSTATE: 'appstate',
@@ -235,45 +238,67 @@ export const setCountries = payload => ({
 });
 
 export const fetchAppData = () => {
-  return dispatch => {
+  return (dispatch, getState) => {
+    dispatch(checkConnection());
+
     try {
       const request = functions().httpsCallable(ENDPOINTS.LOANFINDER);
       request()
         .then(res => {
-          if (res.data.rehydrate.ads) {
-            dispatch(setAdState(res.data.ads));
-            logInfo(INFO.ACTION.REHYDRATE.ADS);
-          }
-          if (res.data.rehydrate.countries) {
-            dispatch(setCountries(res.data.countries));
-            logInfo(INFO.ACTION.REHYDRATE.COUNTRIES);
-          }
-          if (res.data.rehydrate.terms) {
-            dispatch(setTerms(false));
-            logInfo(INFO.ACTION.REHYDRATE.TERMS);
-          }
-          if (res.data.rehydrate.location) {
-            dispatch(setLocation(''));
-            logInfo(INFO.ACTION.REHYDRATE.LOCATION);
-          }
-          if (res.data.rehydrate.featureSwitch) {
-            dispatch(setFeatureSwitch(res.data.featureSwitch.googleAuth));
-            logInfo(INFO.ACTION.FS);
-          }
-
-          dispatch(setAppsData(res.data.apps));
+          sendDataToStoreState(res.data, dispatch);
+          localStorage.setItem(TABLES.API_DATA, res.data);
           logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER]);
         })
         .catch(error => {
+          dispatch(fetchFromLocalstorage());
           logError(
             ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER],
             error,
           );
         });
     } catch (error) {
-      logError(ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER], error); // TODO handle when there is an error. Don't just log it
+      dispatch(fetchFromLocalstorage());
+      logError(ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER], error);
     }
   };
+};
+
+const fetchFromLocalstorage = () => {
+  return dispatch => {
+    localStorage
+      .getItem(TABLES.API_DATA)
+      .then(data => {
+        if (data) {
+          sendDataToStoreState(data, dispatch);
+        }
+      })
+      .catch(err => err);
+  };
+};
+
+const sendDataToStoreState = (data, dispatch) => {
+  if (data.rehydrate.ads) {
+    dispatch(setAdState(data.ads));
+    logInfo(INFO.ACTION.REHYDRATE.ADS);
+  }
+  if (data.rehydrate.countries) {
+    dispatch(setCountries(data.countries));
+    logInfo(INFO.ACTION.REHYDRATE.COUNTRIES);
+  }
+  if (data.rehydrate.terms) {
+    dispatch(setTerms(false));
+    logInfo(INFO.ACTION.REHYDRATE.TERMS);
+  }
+  if (data.rehydrate.location) {
+    dispatch(setLocation(''));
+    logInfo(INFO.ACTION.REHYDRATE.LOCATION);
+  }
+  if (data.rehydrate.featureSwitch) {
+    dispatch(setFeatureSwitch(data.featureSwitch.googleAuth));
+    logInfo(INFO.ACTION.FS);
+  }
+
+  dispatch(setAppsData(data.apps));
 };
 
 /**

@@ -1,6 +1,4 @@
 import {combineReducers} from 'redux';
-import {persistReducer} from 'redux-persist';
-import AsyncStorage from '@react-native-community/async-storage';
 
 import adReducer from './adReducer';
 import authReducer from './authReducer';
@@ -9,23 +7,11 @@ import appStateReducer from './appStateReducer';
 import settingsReducer from './settingsReducer';
 import featureSwitchReducer from './featureSwitchReducer';
 
-const authPersistConfig = {
-  key: 'auth',
-  storage: AsyncStorage,
-  blacklist: ['isLoggedIn'],
-};
-
-// It does nothing
-const appStatePersistConfig = {
-  key: 'appState',
-  storage: AsyncStorage,
-};
-
 export default combineReducers({
   ads: adReducer,
-  connection: networkReducer,
-  auth: persistReducer(authPersistConfig, authReducer),
-  appState: persistReducer(appStatePersistConfig, appStateReducer),
+  network: networkReducer,
+  auth: authReducer,
+  appState: appStateReducer,
   settings: settingsReducer,
   featureSwitch: featureSwitchReducer,
 });

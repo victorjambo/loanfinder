@@ -26,7 +26,7 @@ class AdManager extends React.Component {
   }
 
   componentDidMount() {
-    const {ads} = this.props;
+    const {ads} = this.props; // TODO not used
 
     this.admobInterstitial();
 
