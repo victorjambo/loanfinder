@@ -4,7 +4,6 @@ import functions from '@react-native-firebase/functions';
 import auth from '../utils/Auth';
 
 import {
-  HIDE_BANNER,
   NETWORK,
   SHOW_SPINNER,
   HIDE_SPINNER,
@@ -64,14 +63,6 @@ export const showSpinner = () => ({
 
 export const hideSpinner = () => ({
   type: HIDE_SPINNER,
-});
-
-/**
- * Ad Banner
- */
-export const hideBanner = () => ({
-  type: HIDE_BANNER,
-  payload: false,
 });
 
 /**

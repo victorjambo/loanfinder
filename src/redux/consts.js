@@ -1,4 +1,3 @@
-export const HIDE_BANNER = 'HIDE_BANNER';
 export const NETWORK = 'NETWORK';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';

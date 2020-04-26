@@ -11,7 +11,6 @@ export default {
     showRewarded: true,
     rewardedFequency: 8,
     showInterstitial: true,
-    showBanner: false,
     appId: admob.ADMOB_AD_ID,
     banner: admob.ADMOB_BANNER_ID,
     interstetial: admob.ADMOB_INTERSTITIAL_ID,

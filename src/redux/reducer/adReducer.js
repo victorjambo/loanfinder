@@ -1,5 +1,4 @@
 import {
-  HIDE_BANNER,
   AD_STATE,
   INCREMENT_AD_COUNTER,
   REWARDED_IS_READY,
@@ -11,16 +10,10 @@ import initialState from '../initialState';
 
 const adReducer = (state = initialState.ads, action) => {
   switch (action.type) {
-    case HIDE_BANNER:
-      return {
-        ...state,
-        showBanner: action.payload,
-      };
     case AD_STATE:
       return {
         ...state,
         rewardedFequency: 8,
-        showBanner: true,
         banner: action.payload.banner,
         interstetial: action.payload.interstetial,
         reward: action.payload.reward,
