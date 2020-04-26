@@ -26,7 +26,7 @@ class AdManager extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.showInterstetial) {
+    if (this.props.FS_INTERSTETIAL) {
       this.admobInterstitial();
 
       this.admobRewarded();
@@ -42,7 +42,7 @@ class AdManager extends React.Component {
   }
 
   componentWillUnmount() {
-    if (this.props.showInterstetial) {
+    if (this.props.FS_INTERSTETIAL) {
       AdMobRewarded.removeAllListeners();
       AdMobInterstitial.removeAllListeners();
     }
@@ -114,7 +114,7 @@ class AdManager extends React.Component {
 
 const mapStateToProps = state => ({
   ads: state.ads,
-  showInterstetial: state.featureSwitch.showInterstetial,
+  FS_INTERSTETIAL: state.featureSwitch.FS_INTERSTETIAL,
 });
 
 const mapDispatchToProps = dispatch => ({

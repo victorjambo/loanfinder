@@ -108,9 +108,9 @@ export default {
     ],
   },
   featureSwitch: {
-    googleAuth: false,
-    ads: false,
-    rewarded: true,
-    showInterstetial: false,
+    FS_GOOGLEAUTH: false,
+    FS_ADS: false,
+    FS_REWARDED: true,
+    FS_INTERSTETIAL: false,
   },
 };

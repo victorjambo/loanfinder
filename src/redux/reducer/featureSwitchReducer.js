@@ -6,7 +6,7 @@ const featureSwitchReducer = (state = initialState.featureSwitch, action) => {
     case FS:
       return {
         ...state,
-        googleAuth: action.payload,
+        ...action.payload,
       };
     default:
       return state;

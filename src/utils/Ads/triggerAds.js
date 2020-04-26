@@ -45,7 +45,7 @@ export class Ads {
   };
 
   showRewarded = () => {
-    if (this.featureSwitch.rewarded) {
+    if (this.featureSwitch.FS_REWARDED) {
       this.rewarded();
     }
   };
@@ -67,7 +67,7 @@ export class Ads {
   };
 
   withAds = () => {
-    if (this.featureSwitch.ads) {
+    if (this.featureSwitch.FS_ADS) {
       this.showFullScreenAd();
       store.dispatch(this.incrementAd);
     }

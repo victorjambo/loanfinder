@@ -8,8 +8,8 @@ import {loginAndSignupWithGoogleAuth} from '../../redux/actions';
 
 import styles from './styles';
 
-const GoogleButton = ({login, googleAuth}) => {
-  if (!googleAuth) {
+const GoogleButton = ({login, FS_GOOGLEAUTH}) => {
+  if (!FS_GOOGLEAUTH) {
     return null;
   }
 
@@ -29,7 +29,7 @@ const GoogleButton = ({login, googleAuth}) => {
 };
 
 const mapStateToProps = state => ({
-  googleAuth: state.featureSwitch.googleAuth,
+  FS_GOOGLEAUTH: state.featureSwitch.FS_GOOGLEAUTH,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -325,7 +325,7 @@ const sendDataToStoreState = (data, dispatch) => {
     logInfo(INFO.ACTION.REHYDRATE.LOCATION);
   }
   if (data.rehydrate.featureSwitch) {
-    dispatch(setFeatureSwitch(data.featureSwitch.googleAuth));
+    dispatch(setFeatureSwitch(data.featureSwitch));
     logInfo(INFO.ACTION.FS);
   }
 
