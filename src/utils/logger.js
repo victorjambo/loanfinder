@@ -101,6 +101,14 @@ export const ERROR = {
     },
   },
 };
+export const WARN = {
+  LOCALSTORAGE: {
+    GET_ITEM: {
+      SAVE_APP: 'WARN_LOCALSTORAGE_GET_ITEM_SAVE_APP_NO_DATA',
+      AUTH: 'ERROR_LOCALSTORAGE_GET_ITEM_AUTH_NO_DATA',
+    },
+  },
+};
 
 export const logInfo = event => {
   if (__DEV__) {

@@ -1,4 +1,3 @@
-// TODO remove rewards
 import {AdMobInterstitial, AdMobRewarded} from 'react-native-admob';
 
 import store from '../../redux/store';

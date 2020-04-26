@@ -30,7 +30,7 @@ import {
   INTERSTITIAL_IS_READY,
   INTERSTITIAL_IS_NOT_READY,
 } from './consts';
-import {INFO, ERROR, logError, logInfo} from '../utils/logger';
+import {INFO, ERROR, WARN, logError, logInfo} from '../utils/logger';
 import localStorage, {TABLES} from '../utils/localStorage';
 
 const ENDPOINTS = {
@@ -98,7 +98,7 @@ export const getUserInfo = () => {
             dispatch(setUserInfo(payload));
             logInfo(INFO.LOCALSTORAGE.GET_ITEM.AUTH);
           } else {
-            logError(ERROR.LOCALSTORAGE.GET_ITEM.AUTH + 'NO_DATA', {
+            logError(WARN.LOCALSTORAGE.GET_ITEM.AUTH, {
               error: 'NO_AUTH_DATA_IN_LOCALSTORAGE',
             });
           }
@@ -376,6 +376,7 @@ export const saveApp = () => {
   return (dispatch, getState) => {
     logInfo(INFO.ACTION.SAVE_APP);
     const {
+      featureSwitch,
       appState: {currentAppData, savedApps},
     } = getState();
 
@@ -396,7 +397,9 @@ export const saveApp = () => {
     }
 
     dispatch(setSavedApps(payload));
-    localStorage.setItem(TABLES.SAVED_APPS, payload);
+    if (featureSwitch.FS_LOCALSTORAGE) {
+      localStorage.setItem(TABLES.SAVED_APPS, payload);
+    }
   };
 };
 
@@ -411,7 +414,7 @@ export const getSavedApps = () => {
             dispatch(setSavedApps(payload));
             logInfo(INFO.LOCALSTORAGE.GET_ITEM.SAVE_APP);
           } else {
-            logError(ERROR.LOCALSTORAGE.GET_ITEM.SAVE_APP + 'NO_DATA', {
+            logError(WARN.LOCALSTORAGE.GET_ITEM.SAVE_APP, {
               error: 'NO_SAVED_APPS_IN_LOCALSTORAGE',
             });
           }
