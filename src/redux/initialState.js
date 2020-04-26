@@ -8,9 +8,7 @@ if (__DEV__) {
 
 export default {
   ads: {
-    showRewarded: true,
     rewardedFequency: 8,
-    showInterstitial: true,
     appId: admob.ADMOB_AD_ID,
     banner: admob.ADMOB_BANNER_ID,
     interstetial: admob.ADMOB_INTERSTITIAL_ID,
@@ -109,7 +107,7 @@ export default {
   featureSwitch: {
     FS_GOOGLEAUTH: false,
     FS_BANNER: false,
-    FS_REWARDED: true,
+    FS_REWARDED: false,
     FS_INTERSTETIAL: false,
     FS_LOCALSTORAGE: false,
   },
