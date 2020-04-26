@@ -1,3 +1,4 @@
+import Analytics from 'appcenter-analytics';
 import {logEvent} from './analytics';
 
 export const INFO = {
@@ -114,6 +115,7 @@ export const logInfo = event => {
   if (__DEV__) {
     console.log(event);
   } else {
+    appcenterAnalytics(event);
     logEvent(event, {
       info: event,
     });
@@ -124,9 +126,14 @@ export const logError = (event, error) => {
   if (__DEV__) {
     console.info(event, error);
   } else {
+    appcenterAnalytics(event, error);
     logEvent(event, {
       error: error.toString(),
       errorObj: JSON.stringify(error),
     });
   }
+};
+
+const appcenterAnalytics = async (event, props = {}) => {
+  return await Analytics.trackEvent(event, props);
 };
