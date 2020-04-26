@@ -67,7 +67,7 @@ export class Ads {
   };
 
   withAds = () => {
-    if (this.featureSwitch.FS_ADS) {
+    if (this.featureSwitch.FS_INTERSTETIAL) {
       this.showFullScreenAd();
       store.dispatch(this.incrementAd);
     }

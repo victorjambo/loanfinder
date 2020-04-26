@@ -21,23 +21,25 @@ class AdBanner extends React.Component {
   }
 
   componentDidMount() {
-    const {ads} = this.props;
-
-    // PublisherBanner
-    PublisherBanner.simulatorId = ads.banner;
+    PublisherBanner.simulatorId = this.props.banner;
   }
 
   render() {
-    const {ads, screen = '', adSize = AD_SIZE.SMART_BANNER} = this.props;
+    const {
+      banner,
+      FS_BANNER,
+      screen = '',
+      adSize = AD_SIZE.SMART_BANNER,
+    } = this.props;
 
-    if (!ads.showBanner) { // TODO should be behind FS
+    if (!FS_BANNER) {
       return null;
     }
 
     return (
       <PublisherBanner
         adSize={adSize}
-        adUnitID={ads.banner}
+        adUnitID={banner}
         testDevices={[PublisherBanner.simulatorId]}
         onAdLoaded={() => logInfo(INFO.AD.LOADED.BANNER + '_' + screen)}
         onAdFailedToLoad={error =>
@@ -49,7 +51,8 @@ class AdBanner extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  ads: state.ads,
+  banner: state.ads.banner,
+  FS_BANNER: state.featureSwitch.FS_BANNER,
 });
 
 export default connect(mapStateToProps)(AdBanner);
