@@ -31,7 +31,6 @@ import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
 import GoogleButton from './GoogleButton';
 import validateInput from '../../utils/validator';
-import AdBanner from '../../utils/Ads/AdBanner';
 import ads from '../../utils/Ads/triggerAds';
 
 const screenHeight = Dimensions.get('window').height;
@@ -183,7 +182,6 @@ const Auth = ({login, register, adCount, incrementAd}) => {
           </Animated.View>
         </View>
       </ScrollView>
-      <AdBanner screen="Auth" />
     </>
   );
 };

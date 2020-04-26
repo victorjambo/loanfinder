@@ -25,12 +25,7 @@ class AdBanner extends React.Component {
   }
 
   render() {
-    const {
-      banner,
-      FS_BANNER,
-      screen = '',
-      adSize = AD_SIZE.SMART_BANNER,
-    } = this.props;
+    const {banner, FS_BANNER, adSize = AD_SIZE.BANNER} = this.props;
 
     if (!FS_BANNER) {
       return null;
@@ -41,7 +36,7 @@ class AdBanner extends React.Component {
         adSize={adSize}
         adUnitID={banner}
         testDevices={[PublisherBanner.simulatorId]}
-        onAdLoaded={() => logInfo(INFO.AD.LOADED.BANNER + '_' + screen)}
+        onAdLoaded={() => logInfo(INFO.AD.LOADED.BANNER)}
         onAdFailedToLoad={error =>
           logError(ERROR.AD.FAILED_TO_LOAD.BANNER, error)
         }

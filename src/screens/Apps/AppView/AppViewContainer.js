@@ -8,7 +8,6 @@ import GetAppButton from './GetAppButton';
 import HeaderContainer from './HeaderContainer';
 import StatusIcons from './StatusIcons';
 import AppBodyContainer from './AppBodyContainer';
-import AdBanner, {AD_SIZE} from '../../../utils/Ads/AdBanner';
 
 const AppViewContainer = ({navigation, currentAppData}) => {
   const {
@@ -38,7 +37,6 @@ const AppViewContainer = ({navigation, currentAppData}) => {
         </View>
       </View>
       <GetAppButton appId={id} />
-      <AdBanner screen="AppViewContainer" adSize={AD_SIZE.BANNER} />
     </View>
   );
 };

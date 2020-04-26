@@ -7,7 +7,6 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 import {logoutRequest, skipAuth, setLocation} from '../../redux/actions';
 import Toast from '../../Components/Toast';
-import AdBanner from '../../utils/Ads/AdBanner';
 
 const containerStyle = {paddingVertical: 20};
 
@@ -79,7 +78,6 @@ const Settings = ({
         />
       ))}
       <Toast visible={visibleToast} message="DONE!!!" />
-      <AdBanner screen="Settings" />
     </View>
   );
 };

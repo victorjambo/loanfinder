@@ -10,11 +10,13 @@ import OverlaySpinner from './src/Components/OverlaySpinner';
 import AdManager from './src/utils/Ads/AdManager';
 
 import colors from './src/utils/colors';
+import AdBanner from './src/utils/Ads/AdBanner';
 
 const App = () => {
   return (
     <Provider store={store}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
+      <AdBanner />
       <Navigator />
       <OverlaySpinner />
       <AdManager />

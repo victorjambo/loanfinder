@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 
 import styles from '../styles';
 import DeveloperContact from './DeveloperContact';
-import AdBanner from '../../../utils/Ads/AdBanner';
 
 const AboutAppFullDesc = ({currentAppData}) => {
   const {description, summary, recentChanges} = currentAppData;
@@ -29,7 +28,6 @@ const AboutAppFullDesc = ({currentAppData}) => {
           <DeveloperContact />
         </View>
       </ScrollView>
-      <AdBanner screen="AboutAppFullDesc" />
     </>
   );
 };

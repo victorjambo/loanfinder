@@ -6,7 +6,6 @@ import {View, Linking, StyleSheet, TouchableOpacity} from 'react-native';
 
 import {setTerms, incrementAdCounter} from '../../redux/actions';
 import colors from '../../utils/colors';
-import AdBanner from '../../utils/Ads/AdBanner';
 import ads from '../../utils/Ads/triggerAds';
 
 const Terms = ({changeTerms, privacyPolicy, incrementAd}) => {
@@ -58,7 +57,6 @@ const Terms = ({changeTerms, privacyPolicy, incrementAd}) => {
           containerStyle={styles.btnContainer}
         />
       </View>
-      <AdBanner screen="Terms" />
     </>
   );
 };
