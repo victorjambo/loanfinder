@@ -112,5 +112,6 @@ export default {
     FS_ADS: false,
     FS_REWARDED: true,
     FS_INTERSTETIAL: false,
+    FS_LOCALSTORAGE: false,
   },
 };

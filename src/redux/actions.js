@@ -121,7 +121,9 @@ export const getUserInfo = () => {
  * login
  */
 export const loginRequest = (email, password) => {
-  return dispatch => {
+  return (dispatch, getState) => {
+    const {featureSwitch} = getState();
+
     dispatch(showSpinner());
 
     auth
@@ -130,10 +132,12 @@ export const loginRequest = (email, password) => {
         if (res.user) {
           dispatch(authSuccess());
           dispatch(setUserInfo(res.user));
-          localStorage.multiSetItem(
-            [TABLES.USER, res.user],
-            [TABLES.ISLOGGEDIN, true],
-          );
+          if (featureSwitch.FS_LOCALSTORAGE) {
+            localStorage.multiSetItem(
+              [TABLES.USER, res.user],
+              [TABLES.ISLOGGEDIN, true],
+            );
+          }
           logInfo(INFO.ACTION.FIREBASE_LOGIN);
         }
         dispatch(hideSpinner());
@@ -147,17 +151,21 @@ export const loginRequest = (email, password) => {
 };
 
 export const loginAndSignupWithGoogleAuth = () => {
-  return dispatch => {
+  return (dispatch, getState) => {
+    const {featureSwitch} = getState();
+
     auth
       .fbGoogleAuth()
       .then(res => {
         if (res.user) {
           dispatch(authSuccess());
           dispatch(setUserInfo(res.user));
-          localStorage.multiSetItem(
-            [TABLES.USER, res.user],
-            [TABLES.ISLOGGEDIN, true],
-          );
+          if (featureSwitch.FS_LOCALSTORAGE) {
+            localStorage.multiSetItem(
+              [TABLES.USER, res.user],
+              [TABLES.ISLOGGEDIN, true],
+            );
+          }
           logInfo(INFO.ACTION.FIREBASE_GOOGLE_AUTH);
         }
         dispatch(hideSpinner());
@@ -215,6 +223,7 @@ export const logoutRequest = () => {
         .then(res => {
           dispatch(logoutSuccess());
           dispatch(skipAuth(false));
+          localStorage.clearAll();
           logInfo(INFO.ACTION.FIREBASE_LOGOUT);
         })
         .catch(err => logError(ERROR.ACTION.FIREBASE_LOGOUT, err));
@@ -270,6 +279,8 @@ export const setCountries = payload => ({
 
 export const fetchAppData = () => {
   return (dispatch, getState) => {
+    const {featureSwitch} = getState();
+
     dispatch(checkConnection());
 
     try {
@@ -277,7 +288,9 @@ export const fetchAppData = () => {
       request()
         .then(res => {
           sendDataToStoreState(res.data, dispatch);
-          localStorage.setItem(TABLES.API_DATA, res.data);
+          if (featureSwitch.FS_LOCALSTORAGE) {
+            localStorage.setItem(TABLES.API_DATA, res.data);
+          }
           logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER]);
         })
         .catch(error => {
