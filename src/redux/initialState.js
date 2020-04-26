@@ -105,10 +105,10 @@ export default {
     ],
   },
   featureSwitch: {
-    FS_GOOGLEAUTH: false,
-    FS_BANNER: false,
-    FS_REWARDED: false,
-    FS_INTERSTETIAL: false,
-    FS_LOCALSTORAGE: false,
+    FS_GOOGLEAUTH: true,
+    FS_BANNER: true,
+    FS_REWARDED: true,
+    FS_INTERSTETIAL: true,
+    FS_LOCALSTORAGE: true,
   },
 };
