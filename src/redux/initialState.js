@@ -111,5 +111,6 @@ export default {
     googleAuth: false,
     ads: false,
     rewarded: true,
+    showInterstetial: false,
   },
 };

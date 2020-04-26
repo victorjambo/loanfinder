@@ -26,24 +26,26 @@ class AdManager extends React.Component {
   }
 
   componentDidMount() {
-    const {ads} = this.props; // TODO not used
+    if (this.props.showInterstetial) {
+      this.admobInterstitial();
 
-    this.admobInterstitial();
+      this.admobRewarded();
 
-    this.admobRewarded();
-
-    // Request either Rewarded or Interstitial
-    AdMobInterstitial.requestAd()
-      .then(() => logInfo(INFO.AD.REQUEST.INTERSTITIAL))
-      .catch(error => logError(ERROR.AD.REQUEST.INTERSTITIAL, error));
-    AdMobRewarded.requestAd()
-      .then(() => logInfo(INFO.AD.REQUEST.REWARDED))
-      .catch(error => logError(ERROR.AD.REQUEST.REWARDED, error));
+      // Request either Rewarded or Interstitial
+      AdMobInterstitial.requestAd()
+        .then(() => logInfo(INFO.AD.REQUEST.INTERSTITIAL))
+        .catch(error => logError(ERROR.AD.REQUEST.INTERSTITIAL, error));
+      AdMobRewarded.requestAd()
+        .then(() => logInfo(INFO.AD.REQUEST.REWARDED))
+        .catch(error => logError(ERROR.AD.REQUEST.REWARDED, error));
+    }
   }
 
   componentWillUnmount() {
-    AdMobRewarded.removeAllListeners();
-    AdMobInterstitial.removeAllListeners();
+    if (this.props.showInterstetial) {
+      AdMobRewarded.removeAllListeners();
+      AdMobInterstitial.removeAllListeners();
+    }
   }
 
   admobInterstitial = () => {
@@ -112,6 +114,7 @@ class AdManager extends React.Component {
 
 const mapStateToProps = state => ({
   ads: state.ads,
+  showInterstetial: state.featureSwitch.showInterstetial,
 });
 
 const mapDispatchToProps = dispatch => ({

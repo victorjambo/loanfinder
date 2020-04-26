@@ -1,11 +1,5 @@
 /**
- * 1. check connnection
- * 2. if connnected then fetch()
- * 3. else collect data from localstorage
- * 4. localstorage collect Saved apps, Auth, apps
- * 5. inside profile page fetch from localstorage if state has no apps
- * 6. [clean up] remove clear data in settings
- * 7. [clean up] remove redux persist
+ * 1. check connnection and set the notification thing
  */
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';

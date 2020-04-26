@@ -11,14 +11,13 @@ import AdManager from './src/utils/Ads/AdManager'; // TODO behind FS
 
 import colors from './src/utils/colors';
 
-
 const App = () => {
   return (
     <Provider store={store}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
       <Navigator />
       <OverlaySpinner />
-      {/* <AdManager /> */}
+      <AdManager />
     </Provider>
   );
 };
