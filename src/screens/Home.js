@@ -10,7 +10,7 @@ const Home = ({navigation, apps, location}) => {
   const data = apps.filter(app => app.country.includes(location));
 
   if (!data.length) {
-    return <ChangeLocation />;
+    return <ChangeLocation location={location} />;
   }
 
   return (

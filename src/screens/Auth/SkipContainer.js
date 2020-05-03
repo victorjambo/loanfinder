@@ -7,6 +7,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
 import colors from '../../utils/colors';
 import ads from '../../utils/Ads/triggerAds';
+import {logInfo, INFO} from '../../utils/logger';
 import {skipAuth, incrementAdCounter} from '../../redux/actions';
 
 const SkipContainer = ({skip, incrementAd, adCount}) => {
@@ -16,6 +17,7 @@ const SkipContainer = ({skip, incrementAd, adCount}) => {
     if (adCount === 0) {
       ads.showAds(incrementAd);
     }
+    logInfo(INFO.SKIP_AUTH);
   };
 
   return (

@@ -7,10 +7,13 @@ import {Button} from 'react-native-elements';
 
 import colors from '../../utils/colors';
 import {setLocation} from '../../redux/actions';
+import {logInfo, WARN} from '../../utils/logger';
 
 const {width} = Dimensions.get('window');
 
-const ChangeLocation = ({changeLocation}) => {
+const ChangeLocation = ({changeLocation, location}) => {
+  logInfo(WARN.NODATA.HOME + '_' + location);
+
   return (
     <View style={styles.container}>
       <View style={styles.body}>

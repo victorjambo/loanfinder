@@ -56,6 +56,7 @@ export const INFO = {
       AUTH: 'INFO_LOCALSTORAGE_GET_ITEM_AUTH',
     },
   },
+  SKIP_AUTH: 'INFO_SKIP_AUTH',
 };
 export const ERROR = {
   ACTION: {
@@ -108,6 +109,9 @@ export const WARN = {
       SAVE_APP: 'WARN_LOCALSTORAGE_GET_ITEM_SAVE_APP_NO_DATA',
       AUTH: 'WARN_LOCALSTORAGE_GET_ITEM_AUTH_NO_DATA',
     },
+  },
+  NODATA: {
+    HOME: 'WARN_HOME_NO_APPS_IN_CURRENT_LOCATION',
   },
 };
 
