@@ -1,5 +1,3 @@
-import Validator from 'validator'; // TODO write your own
-
 export const isEmpty = obj => {
   for (var key in obj) {
     if (obj.hasOwnProperty(key)) {
@@ -9,37 +7,39 @@ export const isEmpty = obj => {
   return true;
 };
 
+const isStrEmpty = str => {
+  const reg = /^$/;
+  return reg.test(str.trim());
+};
+
+const validateEmail = email => {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+
 const validateInput = data => {
   const errors = {};
   const response = 'This field is required';
 
   Object.keys(data).forEach(field => {
-    if (
-      field === 'password' &&
-      !Validator.matches(data[field].toString(), /^.{6,}/)
-    ) {
+    const passwordRegex = /^.{6,}/;
+    if (field === 'password' && !passwordRegex.test(data[field].toString())) {
       errors[field] = 'Password must be 6 characters long';
     }
 
-    if (field === 'password' && Validator.isEmpty(data[field].toString())) {
+    if (field === 'password' && isStrEmpty(data[field].toString())) {
       errors[field] = response;
     }
 
-    if (field === 'username' && Validator.isEmpty(data[field].toString())) {
+    if (field === 'username' && isStrEmpty(data[field].toString())) {
       errors[field] = response;
     }
 
-    if (
-      field === 'email' &&
-      !Validator.isEmail(data[field].toString().trim())
-    ) {
+    if (field === 'email' && !validateEmail(data[field].toString().trim())) {
       errors[field] = 'Invalid Email';
     }
 
-    if (
-      field !== 'password' &&
-      Validator.isEmpty(data[field].toString().trim())
-    ) {
+    if (field !== 'password' && isStrEmpty(data[field].toString().trim())) {
       errors[field] = response;
     }
   });
