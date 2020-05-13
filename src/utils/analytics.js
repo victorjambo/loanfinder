@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import analytics from '@react-native-firebase/analytics';
-import pushid from 'pushid';
+import pushid from 'pushid'; // use random numbers
 
 export const logEvent = async (event, attr) => {
   await analytics().logEvent(event, {
