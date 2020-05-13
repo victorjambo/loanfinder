@@ -36,13 +36,6 @@ export default {
     },
     errors: {},
   },
-  settings: {
-    email: 'mutaidev@gmail.com',
-    privacyPolicy: 'https://sites.google.com/view/mutaidev-policy/home',
-    devStoreUel: 'http://play.google.com/store/apps/dev?id=4753238511708918696',
-    appStoreUrl:
-      'http://play.google.com/store/apps/details?id=com.mutaidev.loanfinder',
-  },
   appState: {
     showSpinner: false,
     splashState: false,

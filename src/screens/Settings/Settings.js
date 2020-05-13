@@ -10,13 +10,15 @@ import Toast from '../../Components/Toast';
 
 const containerStyle = {paddingVertical: 20};
 
-const Settings = ({
-  logout,
-  settings,
-  isLoggedIn,
-  undoSkipAuth,
-  changeLocation,
-}) => {
+const settings = {
+  email: 'mutaidev@gmail.com',
+  privacyPolicy: 'https://sites.google.com/view/mutaidev-policy/home',
+  devStoreUel: 'http://play.google.com/store/apps/dev?id=4753238511708918696',
+  appStoreUrl:
+    'http://play.google.com/store/apps/details?id=com.mutaidev.loanfinder',
+};
+
+const Settings = ({logout, isLoggedIn, undoSkipAuth, changeLocation}) => {
   const {appStoreUrl, devStoreUel, privacyPolicy, email} = settings;
 
   const [visibleToast, setvisibleToast] = useState(false);
@@ -83,7 +85,6 @@ const Settings = ({
 };
 
 const mapStateToProps = state => ({
-  settings: state.settings,
   isLoggedIn: state.auth.isLoggedIn,
 });
 
