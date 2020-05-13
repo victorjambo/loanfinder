@@ -74,7 +74,7 @@ const Profile = props => {
         <Text h4 style={styles.savedAppsTitle}>
           Saved Apps
         </Text>
-        {!savedApps.length ? (
+        {savedApps === undefined || !savedApps.length ? (
           <View style={styles.noSavedAppsContainer}>
             <Text style={styles.noSavedAppsText}>
               Tap on the&nbsp;
