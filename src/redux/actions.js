@@ -254,8 +254,6 @@ export const fetchAppData = () => {
   return (dispatch, getState) => {
     const {featureSwitch} = getState();
 
-    dispatch(checkConnection());
-
     try {
       const request = functions().httpsCallable(ENDPOINTS.LOANFINDER);
       request()

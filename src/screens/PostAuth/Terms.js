@@ -8,7 +8,9 @@ import {setTerms, incrementAdCounter} from '../../redux/actions';
 import colors from '../../utils/colors';
 import ads from '../../utils/Ads/triggerAds';
 
-const Terms = ({changeTerms, privacyPolicy, incrementAd}) => {
+const privacyPolicy = 'https://sites.google.com/view/mutaidev-policy/home';
+
+const Terms = ({changeTerms, incrementAd}) => {
   const [check, setCheck] = useState(false);
 
   const handleClick = e => {
@@ -96,16 +98,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const mapStateToProps = state => ({
-  privacyPolicy: state.settings.privacyPolicy,
-});
-
 const mapDispatchToProps = dispatch => ({
   changeTerms: bindActionCreators(setTerms, dispatch),
   incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(Terms);
