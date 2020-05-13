@@ -1,12 +1,10 @@
 import React, {useEffect} from 'react';
 import analytics from '@react-native-firebase/analytics';
 import pushid from 'pushid';
-import {deviceInfo} from './deviceInfo';
 
 export const logEvent = async (event, attr) => {
   await analytics().logEvent(event, {
     id: pushid(),
-    ...deviceInfo,
     ...attr,
   });
 };
