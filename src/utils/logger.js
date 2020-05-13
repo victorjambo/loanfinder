@@ -119,10 +119,14 @@ export const logInfo = event => {
   if (__DEV__) {
     console.log(event);
   } else {
-    appcenterAnalytics(event);
-    logEvent(event, {
-      info: event,
-    });
+    try {
+      appcenterAnalytics(event);
+      logEvent(event, {
+        info: event,
+      });
+    } catch (error) {
+      console.error('cannot send logInfo', error);
+    }
   }
 };
 
@@ -130,11 +134,15 @@ export const logError = (event, error) => {
   if (__DEV__) {
     console.info(event, error);
   } else {
-    appcenterAnalytics(event, error); // TODO wrap in try catch
-    logEvent(event, {
-      error: error.toString(),
-      errorObj: JSON.stringify(error),
-    });
+    try {
+      appcenterAnalytics(event, error);
+      logEvent(event, {
+        error: error.toString(),
+        errorObj: JSON.stringify(error),
+      });
+    } catch (e) {
+      console.error('cannot send logError', e);
+    }
   }
 };
 
