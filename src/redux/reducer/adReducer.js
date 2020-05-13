@@ -1,8 +1,7 @@
 import {
   AD_STATE,
   INCREMENT_AD_COUNTER,
-  REWARDED_IS_READY,
-  REWARDED_IS_NOT_READY,
+  INTERSTITIAL_IS_REQUESTED,
   INTERSTITIAL_IS_READY,
   INTERSTITIAL_IS_NOT_READY,
 } from '../consts';
@@ -13,7 +12,6 @@ const adReducer = (state = initialState.ads, action) => {
     case AD_STATE:
       return {
         ...state,
-        rewardedFequency: 8,
         banner: action.payload.banner,
         interstetial: action.payload.interstetial,
         reward: action.payload.reward,
@@ -24,15 +22,10 @@ const adReducer = (state = initialState.ads, action) => {
         ...state,
         adCount: state.adCount + 1,
       };
-    case REWARDED_IS_READY:
+    case INTERSTITIAL_IS_REQUESTED:
       return {
         ...state,
-        isRewardedReady: true,
-      };
-    case REWARDED_IS_NOT_READY:
-      return {
-        ...state,
-        isRewardedReady: false,
+        isInterstitialRequested: true,
       };
     case INTERSTITIAL_IS_READY:
       return {

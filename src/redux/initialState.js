@@ -8,14 +8,13 @@ if (__DEV__) {
 
 export default {
   ads: {
-    rewardedFequency: 8,
     appId: admob.ADMOB_AD_ID,
     banner: admob.ADMOB_BANNER_ID,
     interstetial: admob.ADMOB_INTERSTITIAL_ID,
     reward: admob.ADMOB_REWARDED,
     fequency: 2,
     adCount: 0,
-    isRewardedReady: false,
+    isInterstitialRequested: false,
     isInterstitialReady: false,
   },
   connection: {

@@ -1,4 +1,4 @@
-import {AdMobInterstitial, AdMobRewarded} from 'react-native-admob';
+import {AdMobInterstitial} from 'react-native-admob';
 
 import store from '../../redux/store';
 import {logError, logInfo, ERROR, INFO} from '../logger';
@@ -20,6 +20,7 @@ export class Ads {
     };
     this.featureSwitch = {};
     this.incrementAd = () => {};
+    this.hasRequestBeenTriggered = false;
   }
 
   isEven = () => {
@@ -27,46 +28,33 @@ export class Ads {
     return adCount !== 0 && adCount % fequency === 0;
   };
 
-  rewarded = () =>
-    AdMobRewarded.showAd()
-      .then(() => logInfo(INFO.AD.SHOW.REWARDED))
-      .catch(error => logError(ERROR.AD.SHOW.REWARDED, error));
-
   interstitial = () =>
     AdMobInterstitial.showAd()
       .then(() => logInfo(INFO.AD.SHOW.INTERSTITIAL))
       .catch(error => logError(ERROR.AD.SHOW.INTERSTITIAL, error));
 
   showInterstitial = () => {
-    if (this.ads.isInterstitialReady) {
-      this.interstitial();
+    const {isInterstitialReady, isInterstitialRequested} = this.ads;
+    this.interstitial();
+    if (
+      !this.hasRequestBeenTriggered &&
+      (!isInterstitialReady || !isInterstitialRequested)
+    ) {
+      AdMobInterstitial.requestAd()
+        .then(() => {
+          logInfo(INFO.AD.REQUEST.INTERSTITIAL + 'SECOND_CALL');
+        })
+        .catch(error =>
+          logError(ERROR.AD.REQUEST.INTERSTITIAL + 'SECOND_CALL', error),
+        );
     }
   };
 
-  showRewarded = () => {
-    if (this.featureSwitch.FS_REWARDED) {
-      this.rewarded();
-    }
-  };
-
-  showFullScreenAd = () => {
-    const isInterstatial =
-      this.isEven() && this.ads.adCount !== this.ads.rewardedFequency;
-    const isRewarded =
-      this.ads.isRewardedReady &&
-      this.ads.adCount !== 0 &&
-      this.ads.adCount % this.ads.rewardedFequency === 0;
-
-    if (isInterstatial) {
-      this.showInterstitial();
-    } else if (isRewarded) {
-      this.showRewarded();
-    }
-  };
-
-  withAds = () => {
+  checkConditionsAndShowInterstitial = () => {
     if (this.featureSwitch.FS_INTERSTETIAL) {
-      this.showFullScreenAd();
+      if (this.isEven()) {
+        this.showInterstitial();
+      }
       store.dispatch(this.incrementAd);
     }
   };
@@ -79,7 +67,7 @@ export class Ads {
     };
     this.featureSwitch = state.featureSwitch;
     this.incrementAd = incrementAd;
-    this.withAds();
+    this.checkConditionsAndShowInterstitial();
   };
 
   incrementAdCountNoShowAd = incrementAd => store.dispatch(incrementAd);

@@ -23,8 +23,7 @@ import {
   SET_COUNTRIES,
   FS,
   INCREMENT_AD_COUNTER,
-  REWARDED_IS_READY,
-  REWARDED_IS_NOT_READY,
+  INTERSTITIAL_IS_REQUESTED,
   INTERSTITIAL_IS_READY,
   INTERSTITIAL_IS_NOT_READY,
 } from './consts';
@@ -417,9 +416,10 @@ export const setFeatureSwitch = payload => ({
  */
 export const incrementAdCounter = () => ({type: INCREMENT_AD_COUNTER});
 export const setAdState = payload => ({type: AD_STATE, payload});
-export const adLoadedRewarded = () => ({type: REWARDED_IS_READY});
-export const resetAdLoadedRewarded = () => ({type: REWARDED_IS_NOT_READY});
 export const adLoadedInterstitial = () => ({type: INTERSTITIAL_IS_READY});
+export const adRequestedInterstitial = () => ({
+  type: INTERSTITIAL_IS_REQUESTED,
+});
 export const resetAdLoadedInterstitial = () => ({
   type: INTERSTITIAL_IS_NOT_READY,
 });
