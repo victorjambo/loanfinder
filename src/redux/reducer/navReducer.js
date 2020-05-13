@@ -1,4 +1,4 @@
-import getCurrentRouteName from 'redux-ga-screen-tracker/utils/transformer.utils';
+import getCurrentRouteName from 'redux-ga-screen-tracker/utils/transformer.utils'; // TODO this reducer is not in use
 import {NavigationActions} from 'react-navigation';
 
 import Navigator from '../Navigator';

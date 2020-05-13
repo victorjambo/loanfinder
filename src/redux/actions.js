@@ -1,4 +1,4 @@
-import NetInfo from '@react-native-community/netinfo';
+import NetInfo from '@react-native-community/netinfo'; // TODO unused
 import functions from '@react-native-firebase/functions';
 
 import auth from '../utils/Auth';

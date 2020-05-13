@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {ActivityIndicator} from 'react-native';
-import {View} from 'react-native-animatable';
+import {View} from 'react-native-animatable'; // TODO remove animations
 
 import styles from './styles';
 import colors from '../../utils/colors';

@@ -1,4 +1,4 @@
-import Validator from 'validator';
+import Validator from 'validator'; // TODO write your own
 
 export const isEmpty = obj => {
   for (var key in obj) {

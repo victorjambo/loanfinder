@@ -1,7 +1,7 @@
 import DeviceInfo, {
   getUniqueId,
   getManufacturer,
-} from 'react-native-device-info';
+} from 'react-native-device-info'; // TODO Not really used in logs
 
 const deviceInfo = {
   deviceUniqueId: getUniqueId(),
