@@ -1,4 +1,3 @@
-export const NETWORK = 'NETWORK';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
 export const AUTH_FAILURE = 'AUTH_FAILURE';

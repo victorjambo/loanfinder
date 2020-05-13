@@ -1,10 +1,8 @@
-import NetInfo from '@react-native-community/netinfo'; // TODO unused
 import functions from '@react-native-firebase/functions';
 
 import auth from '../utils/Auth';
 
 import {
-  NETWORK,
   SHOW_SPINNER,
   HIDE_SPINNER,
   SET_USER_INFO,
@@ -36,22 +34,6 @@ import localStorage, {TABLES} from '../utils/localStorage';
 const ENDPOINTS = {
   APPSTATE: 'appstate',
   LOANFINDER: 'loanfinder',
-};
-
-/**
- * Network & Connection Checks
- */
-const setConnection = status => ({
-  type: NETWORK,
-  payload: status,
-});
-
-export const checkConnection = () => {
-  return dispatch => {
-    NetInfo.addEventListener(state =>
-      dispatch(setConnection(state.isConnected)),
-    );
-  };
 };
 
 /**
