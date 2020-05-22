@@ -13,7 +13,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import AuthScreen from './AuthScreen';
 import PrivateScreens from './PrivateScreens';
 import PostAuth from './PostAuth';
-import {fetchAppData, getUserInfo} from '../redux/actions';
+import {getUserInfo} from '../redux/actions';
 
 const Screens = ({appState}) => {
   const {location, isTermsAccepted} = appState;
@@ -33,9 +33,6 @@ const Navigator = props => {
   } = props;
 
   useEffect(() => {
-    // Fetch Apps, Countries, Ads
-    fetch();
-
     // Auth
     getAuth();
 
@@ -60,7 +57,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetch: bindActionCreators(fetchAppData, dispatch),
   getAuth: bindActionCreators(getUserInfo, dispatch),
 });
 

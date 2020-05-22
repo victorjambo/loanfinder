@@ -12,7 +12,6 @@ import {
   SET_SEARCH_RESULTS,
   SET_LOCATION,
   SET_TERMS,
-  FETCH_APP_DATA,
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
   AD_STATE,
@@ -181,10 +180,16 @@ export const logoutRequest = () => {
 /**
  * skip Auth
  */
-export const skipAuth = (payload = true) => ({
-  type: SKIP_AUTH,
-  payload,
-});
+export const skipAuth = (payload = true) => {
+  return dispatch => {
+    // SHORT CUT
+    dispatch(authSuccess());
+    dispatch(setLocation('KE'));
+    // dispatch(setLanguage(true));
+    dispatch(setTerms(true));
+    dispatch({type: SKIP_AUTH, payload});
+  };
+};
 
 /**
  * Set App Data
@@ -209,11 +214,6 @@ export const setCurrentAppData = item => {
     });
   };
 };
-
-export const setAppsData = payload => ({
-  type: FETCH_APP_DATA,
-  payload,
-});
 
 export const setCountries = payload => ({
   type: SET_COUNTRIES,
@@ -282,8 +282,6 @@ const sendDataToStoreState = (data, dispatch) => {
     dispatch(setFeatureSwitch(data.featureSwitch));
     logInfo(INFO.ACTION.FS);
   }
-
-  dispatch(setAppsData(data.apps));
 };
 
 /**

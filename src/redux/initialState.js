@@ -1,4 +1,5 @@
 import {ADMOB_PROD_IDS, ADMOB_TEST_IDS} from './consts';
+import data from '../utils/data';
 
 let admob = Object.assign({}, ADMOB_PROD_IDS);
 
@@ -39,7 +40,7 @@ export default {
     showSpinner: false,
     currentAppData: {},
     searchResults: [],
-    apps: [],
+    apps: data,
     savedApps: [],
     isCurrentAppSaved: false,
     location: '',

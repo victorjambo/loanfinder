@@ -6,7 +6,6 @@ export const HIDE_SPINNER = 'HIDE_SPINNER';
 export const SET_USER_INFO = 'SET_USER_INFO';
 export const SKIP_AUTH = 'SKIP_AUTH';
 export const SET_CURRENT_APP_DATA = 'SET_CURRENT_APP_DATA';
-export const FETCH_APP_DATA = 'FETCH_APP_DATA';
 export const SET_SEARCH_RESULTS = 'SET_SEARCH_RESULTS';
 export const SET_LOCATION = 'SET_LOCATION';
 export const SET_TERMS = 'SET_TERMS';
