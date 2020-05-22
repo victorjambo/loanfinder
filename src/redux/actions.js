@@ -17,7 +17,6 @@ import {
   AUTH_SUCCESS,
   AUTH_FAILURE,
   SET_USER_DISPLAY_NAME,
-  FS,
   INCREMENT_AD_COUNTER,
   INTERSTITIAL_IS_REQUESTED,
   INTERSTITIAL_IS_READY,
@@ -90,8 +89,6 @@ export const getUserInfo = () => {
  */
 export const loginRequest = (email, password) => {
   return (dispatch, getState) => {
-    const {featureSwitch} = getState();
-
     dispatch(showSpinner());
 
     auth
@@ -100,12 +97,10 @@ export const loginRequest = (email, password) => {
         if (res.user) {
           dispatch(authSuccess());
           dispatch(setUserInfo(res.user));
-          if (featureSwitch.FS_LOCALSTORAGE) {
-            localStorage.multiSetItem(
-              [TABLES.USER, res.user],
-              [TABLES.ISLOGGEDIN, true],
-            );
-          }
+          localStorage.multiSetItem(
+            [TABLES.USER, res.user],
+            [TABLES.ISLOGGEDIN, true],
+          );
           logInfo(INFO.ACTION.FIREBASE_LOGIN);
         }
         dispatch(hideSpinner());
@@ -213,62 +208,6 @@ export const setCurrentAppData = item => {
   };
 };
 
-export const fetchAppData = () => {
-  return (dispatch, getState) => {
-    const {featureSwitch} = getState();
-
-    try {
-      const request = functions().httpsCallable(ENDPOINTS.LOANFINDER);
-      request()
-        .then(res => {
-          sendDataToStoreState(res.data, dispatch);
-          if (featureSwitch.FS_LOCALSTORAGE) {
-            localStorage.setItem(TABLES.API_DATA, res.data);
-          }
-          logInfo(INFO.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER]);
-        })
-        .catch(error => {
-          dispatch(fetchFromLocalstorage());
-          logError(
-            ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER],
-            error,
-          );
-        });
-    } catch (error) {
-      dispatch(fetchFromLocalstorage());
-      logError(ERROR.ACTION.FIREBASE_FETCH_API[ENDPOINTS.LOANFINDER], error);
-    }
-  };
-};
-
-const fetchFromLocalstorage = () => {
-  return dispatch => {
-    localStorage
-      .getItem(TABLES.API_DATA)
-      .then(data => {
-        if (data) {
-          sendDataToStoreState(data, dispatch);
-        }
-      })
-      .catch(err => err);
-  };
-};
-
-const sendDataToStoreState = (data, dispatch) => {
-  if (data.rehydrate.terms) {
-    dispatch(setTerms(false));
-    logInfo(INFO.ACTION.REHYDRATE.TERMS);
-  }
-  if (data.rehydrate.location) {
-    dispatch(setLocation(''));
-    logInfo(INFO.ACTION.REHYDRATE.LOCATION);
-  }
-  if (data.rehydrate.featureSwitch) {
-    dispatch(setFeatureSwitch(data.featureSwitch));
-    logInfo(INFO.ACTION.FS);
-  }
-};
-
 /**
  * Search
  */
@@ -302,7 +241,6 @@ export const saveApp = () => {
   return (dispatch, getState) => {
     logInfo(INFO.ACTION.SAVE_APP);
     const {
-      featureSwitch,
       appState: {currentAppData, savedApps},
     } = getState();
 
@@ -323,9 +261,7 @@ export const saveApp = () => {
     }
 
     dispatch(setSavedApps(payload));
-    if (featureSwitch.FS_LOCALSTORAGE) {
-      localStorage.setItem(TABLES.SAVED_APPS, payload);
-    }
+    localStorage.setItem(TABLES.SAVED_APPS, payload);
   };
 };
 
@@ -349,14 +285,6 @@ export const getSavedApps = () => {
     }
   };
 };
-
-/**
- * Feature Switch
- */
-export const setFeatureSwitch = payload => ({
-  type: FS,
-  payload,
-});
 
 /**
  * ADMOB

@@ -5,6 +5,7 @@ import {PublisherBanner} from 'react-native-admob';
 import {logError, ERROR, logInfo, INFO} from '../logger';
 
 export const AD_SIZE = {
+  // TODO
   BANNER: 'banner',
   FULL_BANNER: 'fullBanner',
   LEADER_BOARD: 'leaderboard',
@@ -25,11 +26,7 @@ class AdBanner extends React.Component {
   }
 
   render() {
-    const {banner, FS_BANNER, adSize = AD_SIZE.BANNER} = this.props;
-
-    if (!FS_BANNER) {
-      return null;
-    }
+    const {banner, adSize = AD_SIZE.BANNER} = this.props;
 
     return (
       <PublisherBanner
@@ -47,7 +44,6 @@ class AdBanner extends React.Component {
 
 const mapStateToProps = state => ({
   banner: state.ads.banner,
-  FS_BANNER: state.featureSwitch.FS_BANNER,
 });
 
 export default connect(mapStateToProps)(AdBanner);

@@ -25,45 +25,41 @@ class AdManager extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.FS_INTERSTETIAL) {
-      const {ads} = this.props;
+    const {ads} = this.props;
 
-      AdMobInterstitial.simulatorId = ads.interstetial;
-      AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
-      AdMobInterstitial.setAdUnitID(ads.interstetial);
+    AdMobInterstitial.simulatorId = ads.interstetial;
+    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
+    AdMobInterstitial.setAdUnitID(ads.interstetial);
 
-      AdMobInterstitial.addEventListener(EVENT_LISTENER.LOADED, () => {
-        this.props.adLoadedInterstitial();
-        logInfo(INFO.AD.LOADED.INTERSTITIAL);
-      });
-      AdMobInterstitial.addEventListener(EVENT_LISTENER.FAILEDTOLOAD, error =>
-        logError(ERROR.AD.FAILED_TO_LOAD.INTERSTITIAL, error),
-      );
-      AdMobInterstitial.addEventListener(EVENT_LISTENER.OPENED, () => {
-        logInfo(INFO.AD.OPENED.INTERSTITIAL);
-      });
-      AdMobInterstitial.addEventListener(EVENT_LISTENER.CLOSED, () => {
-        this.props.resetAdLoadedInterstitial();
-        AdMobInterstitial.requestAd()
-          .then(() => logInfo(INFO.AD.REQUEST.INTERSTITIAL))
-          .catch(error => logError(ERROR.AD.REQUEST.INTERSTITIAL, error));
-        logInfo(INFO.AD.CLOSED.INTERSTITIAL);
-      });
-
-      // Request either Rewarded or Interstitial
+    AdMobInterstitial.addEventListener(EVENT_LISTENER.LOADED, () => {
+      this.props.adLoadedInterstitial();
+      logInfo(INFO.AD.LOADED.INTERSTITIAL);
+    });
+    AdMobInterstitial.addEventListener(EVENT_LISTENER.FAILEDTOLOAD, error =>
+      logError(ERROR.AD.FAILED_TO_LOAD.INTERSTITIAL, error),
+    );
+    AdMobInterstitial.addEventListener(EVENT_LISTENER.OPENED, () => {
+      logInfo(INFO.AD.OPENED.INTERSTITIAL);
+    });
+    AdMobInterstitial.addEventListener(EVENT_LISTENER.CLOSED, () => {
+      this.props.resetAdLoadedInterstitial();
       AdMobInterstitial.requestAd()
-        .then(() => {
-          this.props.adRequestedInterstitial();
-          logInfo(INFO.AD.REQUEST.INTERSTITIAL);
-        })
+        .then(() => logInfo(INFO.AD.REQUEST.INTERSTITIAL))
         .catch(error => logError(ERROR.AD.REQUEST.INTERSTITIAL, error));
-    }
+      logInfo(INFO.AD.CLOSED.INTERSTITIAL);
+    });
+
+    // Request either Rewarded or Interstitial
+    AdMobInterstitial.requestAd()
+      .then(() => {
+        this.props.adRequestedInterstitial();
+        logInfo(INFO.AD.REQUEST.INTERSTITIAL);
+      })
+      .catch(error => logError(ERROR.AD.REQUEST.INTERSTITIAL, error));
   }
 
   componentWillUnmount() {
-    if (this.props.FS_INTERSTETIAL) {
-      AdMobInterstitial.removeAllListeners();
-    }
+    AdMobInterstitial.removeAllListeners();
   }
 
   render() {
@@ -73,7 +69,6 @@ class AdManager extends React.Component {
 
 const mapStateToProps = state => ({
   ads: state.ads,
-  FS_INTERSTETIAL: state.featureSwitch.FS_INTERSTETIAL,
 });
 
 const mapDispatchToProps = dispatch => ({

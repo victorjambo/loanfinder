@@ -18,7 +18,7 @@ export default {
     isInterstitialReady: false,
   },
   connection: {
-    isConnected: false,
+    isConnected: false, // TODO
   },
   auth: {
     isLoggedIn: false,
@@ -94,11 +94,5 @@ export default {
         },
       ],
     ],
-  },
-  featureSwitch: {
-    FS_BANNER: true,
-    FS_REWARDED: true,
-    FS_INTERSTETIAL: true,
-    FS_LOCALSTORAGE: true,
   },
 };

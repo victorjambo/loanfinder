@@ -18,7 +18,6 @@ export class Ads {
       interstetial: admob.ADMOB_INTERSTITIAL_ID,
       reward: admob.ADMOB_REWARDED,
     };
-    this.featureSwitch = {};
     this.incrementAd = () => {};
     this.hasRequestBeenTriggered = false;
   }
@@ -46,12 +45,12 @@ export class Ads {
   };
 
   checkConditionsAndShowInterstitial = () => {
-    if (this.featureSwitch.FS_INTERSTETIAL) {
-      if (this.ads.adCount !== 0) {
-        this.showInterstitial();
-      }
-      store.dispatch(this.incrementAd);
+    if (this.ads.adCount !== 0) {
+      this.showInterstitial();
+    } else {
+      // TODO
     }
+    store.dispatch(this.incrementAd);
   };
 
   showAds = incrementAd => {
@@ -60,7 +59,6 @@ export class Ads {
       ...this.ads,
       ...state.ads,
     };
-    this.featureSwitch = state.featureSwitch;
     this.incrementAd = incrementAd;
     this.checkConditionsAndShowInterstitial();
   };
