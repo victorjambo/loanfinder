@@ -37,7 +37,6 @@ export default {
   },
   appState: {
     showSpinner: false,
-    splashState: false, // TODO where is this used?
     currentAppData: {},
     searchResults: [],
     apps: [],

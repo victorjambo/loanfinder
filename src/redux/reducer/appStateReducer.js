@@ -5,7 +5,6 @@ import {
   SET_SEARCH_RESULTS,
   SET_LOCATION,
   FETCH_APP_DATA,
-  HIDE_SPLASH,
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
   SET_COUNTRIES,
@@ -44,11 +43,6 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         apps: action.payload,
-      };
-    case HIDE_SPLASH:
-      return {
-        ...state,
-        splashState: true,
       };
     case SET_IS_CURRENT_APP_SAVED:
       return {

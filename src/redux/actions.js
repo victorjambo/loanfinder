@@ -13,7 +13,6 @@ import {
   SET_LOCATION,
   SET_TERMS,
   FETCH_APP_DATA,
-  HIDE_SPLASH,
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
   AD_STATE,
@@ -306,13 +305,6 @@ export const setLocation = payload => ({
 export const setTerms = (payload = true) => ({
   type: SET_TERMS,
   payload,
-});
-
-/**
- * Splash
- */
-export const hideSplash = () => ({
-  type: HIDE_SPLASH,
 });
 
 /**
