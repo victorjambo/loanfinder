@@ -94,7 +94,7 @@ const Profile = props => {
                   style={styles.icon}
                   containerStyle={[
                     styles.imgContainer,
-                    styles.shadow,
+                    styles.shadow, // TODO whare is this def
                     styles.radiusRound,
                   ]}
                   borderRadius={20}

@@ -7,8 +7,6 @@ import colors from '../utils/colors';
 
 import {HOME, PROFILE, SEARCH, PROFILE_AUTH} from './routes';
 
-import styles from './styles'; // TODO Remove
-
 const Tab = createBottomTabNavigator();
 
 const BottomTab = ({isLoggedIn}) => {
@@ -30,14 +28,7 @@ const BottomTab = ({isLoggedIn}) => {
             default:
               break;
           }
-          return (
-            <AntDesign
-              name={iconName}
-              size={size}
-              color={color}
-              style={styles.icon}
-            />
-          );
+          return <AntDesign name={iconName} size={size} color={color} />;
         },
       })}
       tabBarOptions={{
