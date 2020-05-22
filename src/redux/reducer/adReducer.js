@@ -1,5 +1,4 @@
 import {
-  AD_STATE,
   INCREMENT_AD_COUNTER,
   INTERSTITIAL_IS_REQUESTED,
   INTERSTITIAL_IS_READY,
@@ -9,14 +8,6 @@ import initialState from '../initialState';
 
 const adReducer = (state = initialState.ads, action) => {
   switch (action.type) {
-    case AD_STATE:
-      return {
-        ...state,
-        banner: action.payload.banner,
-        interstetial: action.payload.interstetial,
-        reward: action.payload.reward,
-        fequency: action.payload.fequency,
-      };
     case INCREMENT_AD_COUNTER:
       return {
         ...state,

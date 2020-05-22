@@ -23,11 +23,6 @@ export class Ads {
     this.hasRequestBeenTriggered = false;
   }
 
-  isEven = () => {
-    const {adCount, fequency} = this.ads;
-    return adCount !== 0 && adCount % fequency === 0;
-  };
-
   interstitial = () =>
     AdMobInterstitial.showAd()
       .then(() => logInfo(INFO.AD.SHOW.INTERSTITIAL))
@@ -52,7 +47,7 @@ export class Ads {
 
   checkConditionsAndShowInterstitial = () => {
     if (this.featureSwitch.FS_INTERSTETIAL) {
-      if (this.isEven()) {
+      if (this.ads.adCount !== 0) {
         this.showInterstitial();
       }
       store.dispatch(this.incrementAd);

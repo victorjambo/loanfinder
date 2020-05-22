@@ -13,7 +13,6 @@ export default {
     banner: admob.ADMOB_BANNER_ID,
     interstetial: admob.ADMOB_INTERSTITIAL_ID,
     reward: admob.ADMOB_REWARDED,
-    fequency: 2,
     adCount: 0,
     isInterstitialRequested: false,
     isInterstitialReady: false,

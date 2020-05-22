@@ -14,7 +14,6 @@ import {
   SET_TERMS,
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
-  AD_STATE,
   AUTH_SUCCESS,
   AUTH_FAILURE,
   SET_USER_DISPLAY_NAME,
@@ -262,10 +261,6 @@ const fetchFromLocalstorage = () => {
 };
 
 const sendDataToStoreState = (data, dispatch) => {
-  if (data.rehydrate.ads) {
-    dispatch(setAdState(data.ads));
-    logInfo(INFO.ACTION.REHYDRATE.ADS);
-  }
   if (data.rehydrate.countries) {
     dispatch(setCountries(data.countries));
     logInfo(INFO.ACTION.REHYDRATE.COUNTRIES);
@@ -377,7 +372,6 @@ export const setFeatureSwitch = payload => ({
  * ADMOB
  */
 export const incrementAdCounter = () => ({type: INCREMENT_AD_COUNTER});
-export const setAdState = payload => ({type: AD_STATE, payload});
 export const adLoadedInterstitial = () => ({type: INTERSTITIAL_IS_READY});
 export const adRequestedInterstitial = () => ({
   type: INTERSTITIAL_IS_REQUESTED,

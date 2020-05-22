@@ -10,7 +10,6 @@ export const SET_SEARCH_RESULTS = 'SET_SEARCH_RESULTS';
 export const SET_LOCATION = 'SET_LOCATION';
 export const SET_TERMS = 'SET_TERMS';
 export const SAVE_APP = 'SAVE_APP';
-export const AD_STATE = 'AD_STATE';
 export const SET_IS_CURRENT_APP_SAVED = 'SET_IS_CURRENT_APP_SAVED';
 export const SET_USER_DISPLAY_NAME = 'SET_USER_DISPLAY_NAME';
 export const SET_COUNTRIES = 'SET_COUNTRIES';
