@@ -7,7 +7,6 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 
 import colors from '../../utils/colors';
 import {skipAuth, incrementAdCounter} from '../../redux/actions';
-import {SETTINGS} from '../../Navigation/routes';
 import ads from '../../utils/Ads/triggerAds';
 
 const featuresText = 'To discover all our features, please Sign up.';
@@ -28,7 +27,7 @@ const ProfileAuth = ({navigation, undoSkipAuth, incrementAd}) => {
             name="setting"
             color={colors.white}
             size={30}
-            onPress={() => navigation.navigate(SETTINGS.name)}
+            onPress={() => navigation.navigate('Settings')}
           />
         }
         containerStyle={styles.settingsIcon}

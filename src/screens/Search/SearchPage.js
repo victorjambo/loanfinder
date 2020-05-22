@@ -4,7 +4,6 @@ import {SearchBar} from 'react-native-elements';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import {SEARCH_RESULTS} from '../../Navigation/routes';
 import {idxSearch, countrySearch} from '../../utils/searchQuery';
 import CountriesContainer from './CountriesContainer';
 import ads from '../../utils/Ads/triggerAds';
@@ -31,7 +30,7 @@ const Search = ({
       showSpin();
       const res = idxSearch(search);
       searchResults(res);
-      navigation.navigate(SEARCH_RESULTS.name, {search});
+      navigation.navigate('Search Results', {search});
       hideSpin();
       setSearch(INITIAL);
       ads.showAds(incrementAd);
@@ -42,7 +41,7 @@ const Search = ({
     showSpin();
     const res = countrySearch(country);
     searchResults(res);
-    navigation.navigate(SEARCH_RESULTS.name, {search: country});
+    navigation.navigate('Search Results', {search: country});
     hideSpin();
     ads.showAds(incrementAd);
   };

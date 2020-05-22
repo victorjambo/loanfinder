@@ -7,14 +7,13 @@ import {TouchableOpacity, Text, View} from 'react-native';
 import styles from '../styles';
 import ads from '../../../utils/Ads/triggerAds';
 import {incrementAdCounter} from '../../../redux/actions';
-import {ABOUT_APP_FULL_DESC} from '../../../Navigation/routes';
 
 const AboutApp = ({navigation, currentAppData, incrementAd}) => {
   return (
     <TouchableOpacity
       style={styles.row}
       onPress={() => {
-        navigation.navigate(ABOUT_APP_FULL_DESC.name);
+        navigation.navigate('About this app');
         ads.showAds(incrementAd);
       }}>
       <View>

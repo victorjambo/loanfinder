@@ -12,7 +12,6 @@ import {
 import {Image as IconImage, Header, Text} from 'react-native-elements';
 
 import colors from '../../utils/colors';
-import {APPVIEW, SETTINGS} from '../../Navigation/routes';
 import {
   setCurrentAppData,
   incrementAdCounter,
@@ -37,11 +36,11 @@ const Profile = props => {
 
   const handleNavigate = item => {
     setAppDataProps(item);
-    navigation.navigate(APPVIEW.name);
+    navigation.navigate('AppViewContainer');
   };
 
   const handleClick = () => {
-    navigation.navigate(SETTINGS.name);
+    navigation.navigate('Settings');
     if (!isLoggedIn) {
       ads.showAds(incrementAd);
     }

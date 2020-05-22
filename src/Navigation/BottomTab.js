@@ -5,7 +5,30 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import colors from '../utils/colors';
 
-import {HOME, PROFILE, SEARCH, PROFILE_AUTH} from './routes';
+import ProfileAuth from '../screens/Profile/ProfileAuth';
+import Profile from '../screens/Profile/Profile';
+import Search from '../screens/Search/SearchPage';
+import Home from '../screens/Home';
+
+const PROFILE_AUTH = {
+  name: 'ProfileAuth',
+  component: ProfileAuth,
+};
+
+const PROFILE = {
+  name: 'Profile',
+  component: Profile,
+};
+
+export const SEARCH = {
+  name: 'Search',
+  component: Search,
+};
+
+export const HOME = {
+  name: 'Home',
+  component: Home,
+};
 
 const Tab = createBottomTabNavigator();
 

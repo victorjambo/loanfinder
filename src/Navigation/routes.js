@@ -62,7 +62,7 @@ export const TERMS = {
 };
 
 export const PROFILE_AUTH = {
-  name: 'Profile',
+  name: 'ProfileAuth',
   component: ProfileAuth,
 };
 

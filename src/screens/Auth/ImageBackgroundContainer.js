@@ -1,16 +1,18 @@
 import React from 'react';
-import {
-  ImageBackground,
-  View,
-  TouchableOpacity,
-  LayoutAnimation,
-} from 'react-native';
+import {ImageBackground, View, TouchableOpacity} from 'react-native';
 import {Text} from 'react-native-elements';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import styles from './styles';
 import img from '../../../assets/09.png';
-import {INITIAL_ERROR, REGISTER, LOGIN} from './index';
+
+const REGISTER = 'REGISTER';
+const LOGIN = 'LOGIN';
+const INITIAL_ERROR = {
+  email: '',
+  username: '',
+  password: '',
+};
 
 const ImageBackgroundContainer = ({isRegister, setForm, setErrMsg}) => {
   return (
@@ -23,7 +25,6 @@ const ImageBackgroundContainer = ({isRegister, setForm, setErrMsg}) => {
           <TouchableOpacity
             style={styles.imgBgBack}
             onPress={() => {
-              LayoutAnimation.spring();
               setForm(isRegister ? LOGIN : REGISTER);
               setErrMsg(INITIAL_ERROR);
             }}>
