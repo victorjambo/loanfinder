@@ -1,9 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Flag from 'react-native-flags';
 import {View, Text, TouchableOpacity} from 'react-native';
 
 import styles from './styles';
+
+const FLAGS = {
+  KE: '🇰🇪',
+  NG: '🇳🇬',
+  US: '🇺🇸',
+  IN: '🇮🇳',
+  MX: '🇲🇽',
+  PH: '🇵🇭',
+  PK: '🇵🇰',
+};
 
 export const CountriesRowContainer = ({row, handleClick}) => {
   return (
@@ -15,7 +24,7 @@ export const CountriesRowContainer = ({row, handleClick}) => {
               key={item.id}
               style={styles.item}
               onPress={() => handleClick(item.code)}>
-              <Flag code={item.code} />
+              <Text style={styles.flag}>{FLAGS[item.code]}</Text>
               <Text>{item.name}</Text>
             </TouchableOpacity>
           );

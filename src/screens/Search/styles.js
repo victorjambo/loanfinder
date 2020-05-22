@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
     borderColor: colors.primaryText,
     backgroundColor: colors.primaryOffset,
   },
+  flag: {
+    fontSize: 50,
+  },
 });
 
 export default styles;
