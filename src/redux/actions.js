@@ -17,7 +17,6 @@ import {
   AUTH_SUCCESS,
   AUTH_FAILURE,
   SET_USER_DISPLAY_NAME,
-  SET_COUNTRIES,
   FS,
   INCREMENT_AD_COUNTER,
   INTERSTITIAL_IS_REQUESTED,
@@ -214,11 +213,6 @@ export const setCurrentAppData = item => {
   };
 };
 
-export const setCountries = payload => ({
-  type: SET_COUNTRIES,
-  payload,
-});
-
 export const fetchAppData = () => {
   return (dispatch, getState) => {
     const {featureSwitch} = getState();
@@ -261,10 +255,6 @@ const fetchFromLocalstorage = () => {
 };
 
 const sendDataToStoreState = (data, dispatch) => {
-  if (data.rehydrate.countries) {
-    dispatch(setCountries(data.countries));
-    logInfo(INFO.ACTION.REHYDRATE.COUNTRIES);
-  }
   if (data.rehydrate.terms) {
     dispatch(setTerms(false));
     logInfo(INFO.ACTION.REHYDRATE.TERMS);
