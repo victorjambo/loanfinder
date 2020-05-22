@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {ListItem} from 'react-native-elements';
@@ -6,7 +6,6 @@ import {View, Share, Linking} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import {logoutRequest, skipAuth, setLocation} from '../../redux/actions';
-import Toast from '../../Components/Toast';
 
 const containerStyle = {paddingVertical: 20};
 
@@ -20,10 +19,6 @@ const settings = {
 
 const Settings = ({logout, isLoggedIn, undoSkipAuth, changeLocation}) => {
   const {appStoreUrl, devStoreUel, privacyPolicy, email} = settings;
-
-  const [visibleToast, setvisibleToast] = useState(false);
-
-  useEffect(() => setvisibleToast(false), [visibleToast]);
 
   const settingsItems = [
     {
@@ -79,7 +74,6 @@ const Settings = ({logout, isLoggedIn, undoSkipAuth, changeLocation}) => {
           leftAvatar={<Icon name={item.icon} size={24} />}
         />
       ))}
-      <Toast visible={visibleToast} message="DONE!!!" />
     </View>
   );
 };
