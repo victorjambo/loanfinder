@@ -1,5 +1,3 @@
-import functions from '@react-native-firebase/functions';
-
 import auth from '../utils/Auth';
 
 import {
@@ -24,11 +22,6 @@ import {
 } from './consts';
 import {INFO, ERROR, WARN, logError, logInfo} from '../utils/logger';
 import localStorage, {TABLES} from '../utils/localStorage';
-
-const ENDPOINTS = {
-  APPSTATE: 'appstate',
-  LOANFINDER: 'loanfinder',
-};
 
 /**
  * Spinners
