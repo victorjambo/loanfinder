@@ -1,11 +1,20 @@
 import React, {useState} from 'react';
-import {View, Text, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import {connect} from 'react-redux';
 import {ActivityIndicator} from 'react-native';
 import {Image, Overlay} from 'react-native-elements';
 
 import styles from '../styles';
 import colors from '../../../utils/colors';
+
+const {width, height} = Dimensions.get('window');
 
 const Screenshot = ({image}) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,8 +74,8 @@ const st = StyleSheet.create({
     width: 100,
   },
   overlayImage: {
-    height: '100%',
-    width: '100%',
+    height: Math.round(height - 350),
+    width: Math.round(width - 150),
   },
 });
 
