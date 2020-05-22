@@ -2,16 +2,14 @@
  * 1. Handle login with wrong info. no user in db
  * 3. Handle screen redirect. Change state to logged in
  */
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {
   ScrollView,
   View,
   Text,
-  Animated,
   TouchableOpacity,
-  LayoutAnimation,
   Dimensions,
 } from 'react-native';
 import {Input, Button} from 'react-native-elements';
@@ -38,33 +36,22 @@ const LOGIN_HEIGHT = screenHeight / 3;
 const ERROR_HEIGHT = screenHeight / 6;
 const INITIAL_VALUE = '';
 
-export const REGISTER = 'REGISTER';
-export const LOGIN = 'LOGIN';
-export const INITIAL_ERROR = {
+const REGISTER = 'REGISTER';
+const LOGIN = 'LOGIN';
+const INITIAL_ERROR = {
   email: '',
   username: '',
   password: '',
 };
 
 const Auth = ({login, register, adCount, incrementAd}) => {
-  const anim = new Animated.Value(0);
-
   const [form, setForm] = useState(LOGIN);
   const [email, setEmail] = useState(INITIAL_VALUE);
   const [username, setUsername] = useState(INITIAL_VALUE);
   const [password, setPassword] = useState(INITIAL_VALUE);
   const [errMsg, setErrMsg] = useState(INITIAL_ERROR);
-  const [height] = useState(new Animated.Value(LOGIN_HEIGHT));
 
   const isRegister = form === REGISTER;
-
-  useEffect(() => {
-    Animated.timing(anim, {toValue: 3000, duration: 2000}).start();
-    Animated.timing(height, {
-      toValue: setHeight(),
-      duration: 500,
-    }).start();
-  });
 
   const setHeight = () => {
     if (errMsg.email) {
@@ -100,16 +87,16 @@ const Auth = ({login, register, adCount, incrementAd}) => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={styles.scrollView}>
-        <Animated.View style={{height}}>
+        <View style={{height: setHeight()}}>
           <ImageBackgroundContainer
             isRegister={isRegister}
             setForm={setForm}
             setErrMsg={setErrMsg}
           />
-        </Animated.View>
+        </View>
 
         <View style={styles.body}>
-          <Animated.View style={[styles.section, styles.middle]}>
+          <View style={[styles.section, styles.middle]}>
             {isRegister && (
               <Input
                 containerStyle={styles.inputContainer}
@@ -148,7 +135,7 @@ const Auth = ({login, register, adCount, incrementAd}) => {
               }
             />
 
-            <Animated.View style={[styles.section, styles.bottom]}>
+            <View style={[styles.section, styles.bottom]}>
               <Button
                 buttonStyle={styles.btn}
                 title={form === LOGIN ? LOGIN : REGISTER}
@@ -156,7 +143,6 @@ const Auth = ({login, register, adCount, incrementAd}) => {
               />
               <TouchableOpacity
                 onPress={() => {
-                  LayoutAnimation.spring();
                   setForm(isRegister ? LOGIN : REGISTER);
                   setErrMsg(INITIAL_ERROR);
                 }}
@@ -174,8 +160,8 @@ const Auth = ({login, register, adCount, incrementAd}) => {
                 </Text>
               </TouchableOpacity>
               <SkipContainer />
-            </Animated.View>
-          </Animated.View>
+            </View>
+          </View>
         </View>
       </ScrollView>
     </>
