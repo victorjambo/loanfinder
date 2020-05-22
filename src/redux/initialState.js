@@ -97,7 +97,6 @@ export default {
     ],
   },
   featureSwitch: {
-    FS_GOOGLEAUTH: false,
     FS_BANNER: true,
     FS_REWARDED: true,
     FS_INTERSTETIAL: true,

@@ -1,6 +1,5 @@
 /**
  * 1. Handle login with wrong info. no user in db
- * 2. Google login/signup
  * 3. Handle screen redirect. Change state to logged in
  */
 import React, {useState, useEffect} from 'react';
@@ -29,7 +28,6 @@ import {
 } from '../../redux/actions';
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
-import GoogleButton from './GoogleButton';
 import validateInput from '../../utils/validator';
 import ads from '../../utils/Ads/triggerAds';
 
@@ -156,8 +154,6 @@ const Auth = ({login, register, adCount, incrementAd}) => {
                 title={form === LOGIN ? LOGIN : REGISTER}
                 onPress={handleSubmit}
               />
-              <GoogleButton />
-
               <TouchableOpacity
                 onPress={() => {
                   LayoutAnimation.spring();

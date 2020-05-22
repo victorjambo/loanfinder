@@ -7,7 +7,6 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 
 import colors from '../../utils/colors';
 import {skipAuth, incrementAdCounter} from '../../redux/actions';
-import GoogleButton from '../Auth/GoogleButton';
 import {SETTINGS} from '../../Navigation/routes';
 import ads from '../../utils/Ads/triggerAds';
 
@@ -42,7 +41,6 @@ const ProfileAuth = ({navigation, undoSkipAuth, incrementAd}) => {
           onPress={handleClick}
           icon={<Icon name="mail" size={24} color="white" />}
         />
-        <GoogleButton />
       </View>
     </View>
   );

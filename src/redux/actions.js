@@ -122,34 +122,6 @@ export const loginRequest = (email, password) => {
   };
 };
 
-export const loginAndSignupWithGoogleAuth = () => {
-  return (dispatch, getState) => {
-    const {featureSwitch} = getState();
-
-    auth
-      .fbGoogleAuth()
-      .then(res => {
-        if (res.user) {
-          dispatch(authSuccess());
-          dispatch(setUserInfo(res.user));
-          if (featureSwitch.FS_LOCALSTORAGE) {
-            localStorage.multiSetItem(
-              [TABLES.USER, res.user],
-              [TABLES.ISLOGGEDIN, true],
-            );
-          }
-          logInfo(INFO.ACTION.FIREBASE_GOOGLE_AUTH);
-        }
-        dispatch(hideSpinner());
-      })
-      .catch(error => {
-        dispatch(hideSpinner());
-        dispatch(authFailure({message: error.message}));
-        logError(ERROR.ACTION.FIREBASE_GOOGLE_AUTH, error.message);
-      });
-  };
-};
-
 /**
  * Register
  */
