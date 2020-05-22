@@ -1,5 +1,5 @@
 import lunr from 'lunr';
-import data from '../../_data_collector/data'; // TODO
+import data from './data';
 
 const idx = lunr(function() {
   this.field('title');
