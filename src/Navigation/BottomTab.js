@@ -7,7 +7,7 @@ import colors from '../utils/colors';
 
 import {HOME, PROFILE, SEARCH, PROFILE_AUTH} from './routes';
 
-import styles from './styles';
+import styles from './styles'; // TODO Remove
 
 const Tab = createBottomTabNavigator();
 
