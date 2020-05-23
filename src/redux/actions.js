@@ -10,6 +10,7 @@ import {
   SET_SEARCH_RESULTS,
   SET_LOCATION,
   SET_TERMS,
+  SET_LANGUAGE,
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
   AUTH_SUCCESS,
@@ -169,10 +170,10 @@ export const logoutRequest = () => {
 export const skipAuth = (payload = true) => {
   return dispatch => {
     // SHORT CUT
-    dispatch(authSuccess());
-    dispatch(setLocation('KE'));
+    // dispatch(authSuccess());
+    // dispatch(setLocation('KE'));
     // dispatch(setLanguage(true));
-    dispatch(setTerms(true));
+    // dispatch(setTerms(true));
     dispatch({type: SKIP_AUTH, payload});
   };
 };
@@ -212,6 +213,8 @@ export const setSearchResults = payload => ({
 /**
  * LOCATION & Terms and condition
  */
+export const setLanguage = (payload = true) => ({type: SET_LANGUAGE, payload});
+
 export const setLocation = payload => ({
   type: SET_LOCATION,
   payload,

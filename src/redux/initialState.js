@@ -43,6 +43,7 @@ export default {
     savedApps: [],
     isCurrentAppSaved: false,
     location: '',
+    isLanguageSet: false,
     isTermsAccepted: false,
     countries: [
       [

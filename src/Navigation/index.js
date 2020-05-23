@@ -16,8 +16,8 @@ import PostAuth from './PostAuth';
 import {getUserInfo} from '../redux/actions';
 
 const Screens = ({appState}) => {
-  const {location, isTermsAccepted} = appState;
-  if (!location || !isTermsAccepted) {
+  const {location, isTermsAccepted, isLanguageSet} = appState;
+  if (!location || !isTermsAccepted || !isLanguageSet) {
     return <PostAuth />;
   } else {
     return <PrivateScreens />;
@@ -29,7 +29,7 @@ const Navigator = props => {
     auth,
     fetch,
     getAuth,
-    appState: {location, isTermsAccepted},
+    appState: {location, isTermsAccepted, isLanguageSet},
   } = props;
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Navigator = props => {
   return (
     <NavigationContainer>
       {auth.isLoggedIn || auth.skipAuth ? (
-        <Screens appState={{location, isTermsAccepted}} />
+        <Screens appState={{location, isTermsAccepted, isLanguageSet}} />
       ) : (
         <AuthScreen />
       )}

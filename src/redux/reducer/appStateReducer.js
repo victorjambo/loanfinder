@@ -4,6 +4,7 @@ import {
   SET_CURRENT_APP_DATA,
   SET_SEARCH_RESULTS,
   SET_LOCATION,
+  SET_LANGUAGE,
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
   SET_TERMS,
@@ -36,6 +37,11 @@ const appStateReducer = (state = initialState.appState, action) => {
       return {
         ...state,
         location: action.payload,
+      };
+    case SET_LANGUAGE:
+      return {
+        ...state,
+        isLanguageSet: action.payload,
       };
     case SET_IS_CURRENT_APP_SAVED:
       return {

@@ -8,6 +8,7 @@ export const SKIP_AUTH = 'SKIP_AUTH';
 export const SET_CURRENT_APP_DATA = 'SET_CURRENT_APP_DATA';
 export const SET_SEARCH_RESULTS = 'SET_SEARCH_RESULTS';
 export const SET_LOCATION = 'SET_LOCATION';
+export const SET_LANGUAGE = 'SET_LANGUAGE';
 export const SET_TERMS = 'SET_TERMS';
 export const SAVE_APP = 'SAVE_APP';
 export const SET_IS_CURRENT_APP_SAVED = 'SET_IS_CURRENT_APP_SAVED';
