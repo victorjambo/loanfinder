@@ -1,8 +1,5 @@
 /**
  * 1. check connnection and set the notification thing
- * 2. TODO remove react-native-reanimated
- * 3. react-native-safe-area-context not used with android
- * react-native-flags
  */
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
