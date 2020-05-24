@@ -33,8 +33,8 @@ import ads from '../../utils/Ads/triggerAds';
 const screenHeight = Dimensions.get('window').height;
 
 const REGISTER_HEIGHT = screenHeight / 4;
-const LOGIN_HEIGHT = screenHeight / 3;
-const ERROR_HEIGHT = screenHeight / 6;
+const LOGIN_HEIGHT = screenHeight / 4;
+const ERROR_HEIGHT = screenHeight / 5;
 const INITIAL_VALUE = '';
 
 const REGISTER = 'REGISTER';
@@ -51,6 +51,9 @@ const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
   const [username, setUsername] = useState(INITIAL_VALUE);
   const [password, setPassword] = useState(INITIAL_VALUE);
   const [errMsg, setErrMsg] = useState(INITIAL_ERROR);
+
+  const [refEmail, setRefEmail] = useState();
+  const [refPassword, setRefPassword] = useState();
 
   const isRegister = form === REGISTER;
 
@@ -85,7 +88,10 @@ const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
     }
   };
 
-  // console.log(auth);
+  const handleFocus = init => {
+    hideGenError();
+    setErrMsg({...errMsg, ...init});
+  };
 
   return (
     <>
@@ -117,6 +123,10 @@ const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
                 value={username}
                 onChangeText={setUsername}
                 errorMessage={errMsg.username}
+                onFocus={() => handleFocus({username: INITIAL_VALUE})}
+                returnKeyType="next"
+                autoCapitalize="none"
+                onSubmitEditing={() => refEmail.focus()}
                 leftIcon={
                   <AntDesign name="user" size={24} color={colors.grey} />
                 }
@@ -131,6 +141,11 @@ const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
               value={email}
               onChangeText={setEmail}
               errorMessage={errMsg.email}
+              onFocus={() => handleFocus({email: INITIAL_VALUE})}
+              returnKeyType="next"
+              autoCapitalize="none"
+              ref={input => setRefEmail(input)}
+              onSubmitEditing={() => refPassword.focus()}
               leftIcon={<AntDesign name="mail" size={24} color={colors.grey} />}
             />
 
@@ -142,6 +157,9 @@ const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
               value={password}
               onChangeText={setPassword}
               errorMessage={errMsg.password}
+              onFocus={() => handleFocus({password: INITIAL_VALUE})}
+              returnKeyType="done"
+              ref={input => setRefPassword(input)}
               leftIcon={
                 <AntDesign name="lock1" size={24} color={colors.grey} />
               }
