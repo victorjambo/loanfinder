@@ -169,7 +169,12 @@ export const logoutRequest = () => {
           localStorage.clearAll();
           logInfo(INFO.ACTION.FIREBASE_LOGOUT);
         })
-        .catch(err => logError(ERROR.ACTION.FIREBASE_LOGOUT, err));
+        .catch(err => {
+          dispatch(logoutSuccess());
+          dispatch(skipAuth(false));
+          localStorage.clearAll();
+          logError(ERROR.ACTION.FIREBASE_LOGOUT, err);
+        });
     } catch (error) {
       dispatch(logoutSuccess());
       dispatch(skipAuth(false));
