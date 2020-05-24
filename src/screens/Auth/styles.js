@@ -99,6 +99,19 @@ const styles = StyleSheet.create({
   input: {
     padding: 15,
   },
+  genericErrorContainer: {
+    alignSelf: 'center',
+    borderRadius: 100 / 2,
+    backgroundColor: 'rgba(236, 46, 83, 0.15)',
+    marginTop: 10,
+  },
+  genericErrorText: {
+    paddingVertical: 5,
+    paddingHorizontal: 15,
+    color: colors.primary,
+    alignSelf: 'center',
+    fontWeight: 'bold',
+  },
 });
 
 export default styles;

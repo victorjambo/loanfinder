@@ -14,7 +14,9 @@ const INITIAL_ERROR = {
   password: '',
 };
 
-const ImageBackgroundContainer = ({isRegister, setForm, setErrMsg}) => {
+const ImageBackgroundContainer = props => {
+  const {isRegister, setForm, hideGenError, setErrMsg} = props;
+
   return (
     <ImageBackground
       resizeMode="cover"
@@ -27,6 +29,7 @@ const ImageBackgroundContainer = ({isRegister, setForm, setErrMsg}) => {
             onPress={() => {
               setForm(isRegister ? LOGIN : REGISTER);
               setErrMsg(INITIAL_ERROR);
+              hideGenError();
             }}>
             <FontAwesome name="chevron-left" size={20} color="white" />
             <Text h4 style={styles.imgBgBackText}>

@@ -23,6 +23,7 @@ import {
   loginRequest,
   registerRequest,
   incrementAdCounter,
+  hideGenericError,
 } from '../../redux/actions';
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
@@ -44,7 +45,7 @@ const INITIAL_ERROR = {
   password: '',
 };
 
-const Auth = ({login, register, adCount, incrementAd}) => {
+const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
   const [form, setForm] = useState(LOGIN);
   const [email, setEmail] = useState(INITIAL_VALUE);
   const [username, setUsername] = useState(INITIAL_VALUE);
@@ -52,6 +53,8 @@ const Auth = ({login, register, adCount, incrementAd}) => {
   const [errMsg, setErrMsg] = useState(INITIAL_ERROR);
 
   const isRegister = form === REGISTER;
+
+  const {genericError} = auth;
 
   const setHeight = () => {
     if (errMsg.email) {
@@ -82,6 +85,8 @@ const Auth = ({login, register, adCount, incrementAd}) => {
     }
   };
 
+  // console.log(auth);
+
   return (
     <>
       <ScrollView
@@ -92,8 +97,15 @@ const Auth = ({login, register, adCount, incrementAd}) => {
             isRegister={isRegister}
             setForm={setForm}
             setErrMsg={setErrMsg}
+            hideGenError={hideGenError}
           />
         </View>
+
+        {!!genericError && (
+          <View style={styles.genericErrorContainer}>
+            <Text style={styles.genericErrorText}>{genericError}</Text>
+          </View>
+        )}
 
         <View style={styles.body}>
           <View style={[styles.section, styles.middle]}>
@@ -145,6 +157,7 @@ const Auth = ({login, register, adCount, incrementAd}) => {
                 onPress={() => {
                   setForm(isRegister ? LOGIN : REGISTER);
                   setErrMsg(INITIAL_ERROR);
+                  hideGenError();
                 }}
                 style={styles.switcherContainer}>
                 <Text
@@ -170,15 +183,14 @@ const Auth = ({login, register, adCount, incrementAd}) => {
 
 const mapStateToProps = state => ({
   auth: state.auth,
+  adCount: state.ads.adCount,
 });
 
 const mapDispatchToProps = dispatch => ({
   login: bindActionCreators(loginRequest, dispatch),
   register: bindActionCreators(registerRequest, dispatch),
   incrementAd: bindActionCreators(incrementAdCounter, dispatch),
+  hideGenError: bindActionCreators(hideGenericError, dispatch),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Auth);
+export default connect(mapStateToProps, mapDispatchToProps)(Auth);

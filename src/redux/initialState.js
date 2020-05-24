@@ -33,7 +33,7 @@ export default {
       providerId: 'firebase',
       uid: '',
     },
-    errors: {},
+    genericError: '',
   },
   appState: {
     showSpinner: false,

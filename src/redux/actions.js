@@ -14,7 +14,8 @@ import {
   SAVE_APP,
   SET_IS_CURRENT_APP_SAVED,
   AUTH_SUCCESS,
-  AUTH_FAILURE,
+  SHOW_GENERIC_ERROR,
+  HIDE_GENERIC_ERROR,
   SET_USER_DISPLAY_NAME,
   INCREMENT_AD_COUNTER,
   INTERSTITIAL_IS_REQUESTED,
@@ -42,10 +43,8 @@ export const authSuccess = () => ({
   type: AUTH_SUCCESS,
 });
 
-export const authFailure = payload => ({
-  type: AUTH_FAILURE,
-  payload,
-});
+export const setGenericError = payload => ({type: SHOW_GENERIC_ERROR, payload});
+export const hideGenericError = () => ({type: HIDE_GENERIC_ERROR});
 
 export const setUserInfo = user => ({
   type: SET_USER_INFO,
@@ -70,7 +69,7 @@ export const getUserInfo = () => {
           } else {
             logError(WARN.LOCALSTORAGE.GET_ITEM.AUTH, {
               error: 'NO_AUTH_DATA_IN_LOCALSTORAGE',
-            });
+            }); // TODO handle this
           }
         })
         .catch(error => logError(ERROR.LOCALSTORAGE.GET_ITEM.AUTH, error));
@@ -81,8 +80,11 @@ export const getUserInfo = () => {
 /**
  * login
  */
+const LOGIN_INVALID_CREDS_ERROR = "Email and Password don't match";
+const GENERIC_ERROR = 'Something went wrong';
+const SIGNUP_ERROR = 'The email address is already in use';
 export const loginRequest = (email, password) => {
-  return (dispatch, getState) => {
+  return dispatch => {
     dispatch(showSpinner());
 
     auth
@@ -100,8 +102,16 @@ export const loginRequest = (email, password) => {
         dispatch(hideSpinner());
       })
       .catch(error => {
+        let msg = GENERIC_ERROR;
+        const errMsg = error.message.toString();
+        if (
+          errMsg.includes('wrong-password') ||
+          errMsg.includes('user-not-found')
+        ) {
+          msg = LOGIN_INVALID_CREDS_ERROR;
+        }
         dispatch(hideSpinner());
-        dispatch(authFailure({message: error.message}));
+        dispatch(setGenericError(msg));
         logError(ERROR.ACTION.FIREBASE_LOGIN, error.message);
       });
   };
@@ -130,8 +140,12 @@ export const registerRequest = (email, password, displayName) => {
         dispatch(hideSpinner());
       })
       .catch(error => {
+        let msg = GENERIC_ERROR;
+        if (error.message.toString().includes('email-already-in-use')) {
+          msg = SIGNUP_ERROR;
+        }
         dispatch(hideSpinner());
-        dispatch(authFailure({message: error.message}));
+        dispatch(setGenericError(msg));
         logError(ERROR.ACTION.FIREBASE_REGISTER, error.message);
       });
   };

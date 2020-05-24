@@ -1,6 +1,7 @@
 import {
   AUTH_SUCCESS,
-  AUTH_FAILURE,
+  SHOW_GENERIC_ERROR,
+  HIDE_GENERIC_ERROR,
   SET_USER_INFO,
   LOGOUT_SUCCESS,
   SKIP_AUTH,
@@ -31,10 +32,15 @@ const authReducer = (state = initialState.auth, action) => {
         ...state,
         skipAuth: action.payload,
       };
-    case AUTH_FAILURE:
+    case SHOW_GENERIC_ERROR:
       return {
         ...state,
-        errors: action.payload,
+        genericError: action.payload,
+      };
+    case HIDE_GENERIC_ERROR:
+      return {
+        ...state,
+        genericError: '',
       };
     case SET_USER_DISPLAY_NAME:
       return {
