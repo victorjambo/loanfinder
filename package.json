@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.10.1",
     "@react-native-community/masked-view": "^0.1.7",
+    "@react-native-community/netinfo": "^5.9.1",
     "@react-native-community/picker": "^1.6.0",
     "@react-native-firebase/analytics": "^6.3.4",
     "@react-native-firebase/app": "^6.3.4",

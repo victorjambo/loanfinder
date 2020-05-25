@@ -1,5 +1,6 @@
-import auth from '../utils/Auth';
+import NetInfo from '@react-native-community/netinfo';
 
+import auth from '../utils/Auth';
 import {
   SHOW_SPINNER,
   HIDE_SPINNER,
@@ -17,6 +18,7 @@ import {
   SHOW_GENERIC_ERROR,
   HIDE_GENERIC_ERROR,
   SET_USER_DISPLAY_NAME,
+  NETWORK,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 import localStorage, {TABLES} from '../utils/localStorage';
@@ -289,3 +291,18 @@ export const getSavedApps = () => {
   };
 };
 
+/**
+ * Check network
+ */
+const setConnection = status => ({
+  type: NETWORK,
+  payload: status,
+});
+
+export const checkNetwork = () => {
+  return dispatch => {
+    NetInfo.addEventListener(state =>
+      dispatch(setConnection(state.isConnected)),
+    );
+  };
+};

@@ -11,12 +11,14 @@ import AdManager from './src/utils/AdsV2/AdManager';
 
 import colors from './src/utils/colors';
 import AdBanner from './src/utils/AdsV2/AdBanner';
+import OfflineNotice from './src/Components/OfflineNotice';
 
 const App = () => {
   return (
     <Provider store={store}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
       <AdBanner />
+      <OfflineNotice />
       <Navigator />
       <OverlaySpinner />
       <AdManager />

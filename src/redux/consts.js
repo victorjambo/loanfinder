@@ -14,6 +14,7 @@ export const SET_TERMS = 'SET_TERMS';
 export const SAVE_APP = 'SAVE_APP';
 export const SET_IS_CURRENT_APP_SAVED = 'SET_IS_CURRENT_APP_SAVED';
 export const SET_USER_DISPLAY_NAME = 'SET_USER_DISPLAY_NAME';
+export const NETWORK = 'NETWORK';
 
 export const ADMOB_PROD_IDS = {
   ADMOB_AD_ID: 'ca-app-pub-2041193979870384~9856017298',

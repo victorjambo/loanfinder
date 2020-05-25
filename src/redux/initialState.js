@@ -2,7 +2,7 @@ import data from '../utils/data';
 
 export default {
   connection: {
-    isConnected: false, // TODO
+    isConnected: false,
   },
   auth: {
     isLoggedIn: false,
