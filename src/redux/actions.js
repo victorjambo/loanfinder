@@ -65,7 +65,6 @@ export const getUserInfo = () => {
           if (payload) {
             dispatch(authSuccess());
             dispatch(setUserInfo(payload));
-            logInfo(INFO.LOCALSTORAGE.GET_ITEM.AUTH);
           }
         })
         .catch(error => logError(ERROR.LOCALSTORAGE.GET_ITEM.AUTH, error));
@@ -250,12 +249,13 @@ export const setSavedApps = payload => ({
 
 export const saveApp = () => {
   return (dispatch, getState) => {
-    logInfo(INFO.ACTION.SAVE_APP);
     const {
       appState: {currentAppData, savedApps},
     } = getState();
 
     const id = currentAppData.id;
+
+    logInfo(INFO.ACTION.SAVE_APP + '_' + id);
 
     const isSaved = savedApps.find(item => item.id === id);
 
