@@ -18,7 +18,13 @@ export class Ads {
               AdMobInterstitial.showAd();
             })
             .catch(err => {
-              logError(ERROR.AD.AD_WAS_NOT_READY + '_' + err.code, err);
+              if (err.code === 'E_AD_ALREADY_LOADED') {
+                AdMobInterstitial.showAd().catch(e =>
+                  logError(ERROR.AD.AD_WAS_NOT_READY + '_' + e.code, e),
+                );
+              } else {
+                logError(ERROR.AD.AD_WAS_NOT_READY + '_' + err.code, err);
+              }
               store.dispatch(hideSpinner());
             });
         } else {
