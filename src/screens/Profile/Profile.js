@@ -95,11 +95,6 @@ const Profile = props => {
                 <IconImage
                   source={{uri: item.media.image.icon}}
                   style={styles.icon}
-                  containerStyle={[
-                    styles.imgContainer,
-                    styles.shadow, // TODO whare is this def
-                    styles.radiusRound,
-                  ]}
                   borderRadius={20}
                   PlaceholderContent={<ActivityIndicator />}
                 />
