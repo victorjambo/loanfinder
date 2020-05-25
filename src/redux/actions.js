@@ -17,10 +17,6 @@ import {
   SHOW_GENERIC_ERROR,
   HIDE_GENERIC_ERROR,
   SET_USER_DISPLAY_NAME,
-  INCREMENT_AD_COUNTER,
-  INTERSTITIAL_IS_REQUESTED,
-  INTERSTITIAL_IS_READY,
-  INTERSTITIAL_IS_NOT_READY,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 import localStorage, {TABLES} from '../utils/localStorage';
@@ -293,14 +289,3 @@ export const getSavedApps = () => {
   };
 };
 
-/**
- * ADMOB
- */
-export const incrementAdCounter = () => ({type: INCREMENT_AD_COUNTER});
-export const adLoadedInterstitial = () => ({type: INTERSTITIAL_IS_READY});
-export const adRequestedInterstitial = () => ({
-  type: INTERSTITIAL_IS_REQUESTED,
-});
-export const resetAdLoadedInterstitial = () => ({
-  type: INTERSTITIAL_IS_NOT_READY,
-});

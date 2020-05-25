@@ -1,22 +1,6 @@
-import {ADMOB_PROD_IDS, ADMOB_TEST_IDS} from './consts';
 import data from '../utils/data';
 
-let admob = Object.assign({}, ADMOB_PROD_IDS);
-
-if (__DEV__) {
-  admob = Object.assign({}, ADMOB_TEST_IDS);
-}
-
 export default {
-  ads: {
-    appId: admob.ADMOB_AD_ID,
-    banner: admob.ADMOB_BANNER_ID,
-    interstetial: admob.ADMOB_INTERSTITIAL_ID,
-    reward: admob.ADMOB_REWARDED,
-    adCount: 0,
-    isInterstitialRequested: false,
-    isInterstitialReady: false,
-  },
   connection: {
     isConnected: false, // TODO
   },
