@@ -23,7 +23,6 @@
     "appcenter-analytics": "3.0.2",
     "appcenter-crashes": "3.0.2",
     "lunr": "^2.3.8",
-    "pushid": "^1.0.0",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-admob": "^2.0.0-beta.6",
