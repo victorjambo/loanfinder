@@ -7,10 +7,10 @@ import store from './src/redux/store';
 
 import Navigator from './src/Navigation';
 import OverlaySpinner from './src/Components/OverlaySpinner';
-import AdManager from './src/utils/Ads/AdManager';
+import AdManager from './src/utils/AdsV2/AdManager';
 
 import colors from './src/utils/colors';
-import AdBanner from './src/utils/Ads/AdBanner';
+import AdBanner from './src/utils/AdsV2/AdBanner';
 
 const App = () => {
   return (

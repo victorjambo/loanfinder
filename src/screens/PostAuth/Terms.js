@@ -3,18 +3,27 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {CheckBox, Text, Button} from 'react-native-elements';
 import {View, Linking, StyleSheet, TouchableOpacity} from 'react-native';
+import {useFocusEffect} from '@react-navigation/native';
 
-import {setTerms, incrementAdCounter} from '../../redux/actions';
+import {setTerms} from '../../redux/actions';
 import colors from '../../utils/colors';
-import ads from '../../utils/Ads/triggerAds';
+import ads from '../../utils/AdsV2/triggerAds';
 
 const privacyPolicy = 'https://sites.google.com/view/mutaidev-policy/home';
 
-const Terms = ({changeTerms, incrementAd}) => {
+const Terms = ({changeTerms}) => {
   const [check, setCheck] = useState(false);
 
+  useFocusEffect(
+    React.useCallback(() => {
+      ads.requestInterstitial();
+
+      return () => {};
+    }, []),
+  );
+
   const handleClick = e => {
-    ads.showAds(incrementAd);
+    ads.showInterstitial();
     changeTerms();
   };
 
@@ -100,10 +109,6 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => ({
   changeTerms: bindActionCreators(setTerms, dispatch),
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(Terms);
+export default connect(null, mapDispatchToProps)(Terms);

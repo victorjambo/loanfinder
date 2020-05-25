@@ -22,13 +22,11 @@ import colors from '../../utils/colors';
 import {
   loginRequest,
   registerRequest,
-  incrementAdCounter,
   hideGenericError,
 } from '../../redux/actions';
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
 import validateInput from '../../utils/validator';
-import ads from '../../utils/Ads/triggerAds';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -45,7 +43,7 @@ const INITIAL_ERROR = {
   password: '',
 };
 
-const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
+const Auth = ({login, register, auth, hideGenError}) => {
   const [form, setForm] = useState(LOGIN);
   const [email, setEmail] = useState(INITIAL_VALUE);
   const [username, setUsername] = useState(INITIAL_VALUE);
@@ -81,10 +79,6 @@ const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
       isRegister ? register(email, password, username) : login(email, password);
     } else {
       setErrMsg(errors);
-    }
-
-    if (adCount === 0) {
-      ads.showAds(incrementAd);
     }
   };
 
@@ -201,13 +195,11 @@ const Auth = ({login, register, adCount, incrementAd, auth, hideGenError}) => {
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  adCount: state.ads.adCount,
 });
 
 const mapDispatchToProps = dispatch => ({
   login: bindActionCreators(loginRequest, dispatch),
   register: bindActionCreators(registerRequest, dispatch),
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
   hideGenError: bindActionCreators(hideGenericError, dispatch),
 });
 

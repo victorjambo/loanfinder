@@ -12,15 +12,15 @@ import {Image} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import colors from '../../utils/colors';
-import ads from '../../utils/Ads/triggerAds';
-import {setCurrentAppData, incrementAdCounter} from '../../redux/actions';
+import ads from '../../utils/AdsV2/triggerAds';
+import {setCurrentAppData} from '../../redux/actions';
 
-const TopApps = ({navigation, item, setAppDataProps, incrementAd}) => {
+const TopApps = ({navigation, item, setAppDataProps}) => {
   const maxlimit = 35;
   const handleNavigate = () => {
     setAppDataProps(item);
+    ads.showInterstitial();
     navigation.navigate('AppViewContainer');
-    ads.showAds(incrementAd);
   };
 
   return (
@@ -125,10 +125,6 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => ({
   setAppDataProps: bindActionCreators(setCurrentAppData, dispatch),
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(TopApps);
+export default connect(null, mapDispatchToProps)(TopApps);

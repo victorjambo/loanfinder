@@ -6,17 +6,26 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import {View, Text, StyleSheet, Dimensions} from 'react-native';
 
 import colors from '../../utils/colors';
-import {skipAuth, incrementAdCounter} from '../../redux/actions';
-import ads from '../../utils/Ads/triggerAds';
+import {skipAuth} from '../../redux/actions';
+import ads from '../../utils/AdsV2/triggerAds';
+import {useFocusEffect} from '@react-navigation/native';
 
 const featuresText = 'To discover all our features, please Sign up.';
 
 const {width} = Dimensions.get('window');
 
-const ProfileAuth = ({navigation, undoSkipAuth, incrementAd}) => {
+const ProfileAuth = ({navigation, undoSkipAuth}) => {
+  useFocusEffect(
+    React.useCallback(() => {
+      ads.requestInterstitial();
+
+      return () => {};
+    }, []),
+  );
+
   const handleClick = () => {
     undoSkipAuth(false);
-    ads.showAds(incrementAd);
+    ads.showInterstitial();
   };
 
   return (
@@ -73,10 +82,6 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => ({
   undoSkipAuth: bindActionCreators(skipAuth, dispatch),
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(ProfileAuth);
+export default connect(null, mapDispatchToProps)(ProfileAuth);

@@ -10,16 +10,13 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Image as IconImage, Header, Text} from 'react-native-elements';
+import {useFocusEffect} from '@react-navigation/native';
 
 import colors from '../../utils/colors';
-import {
-  setCurrentAppData,
-  incrementAdCounter,
-  getSavedApps,
-} from '../../redux/actions';
+import {setCurrentAppData, getSavedApps} from '../../redux/actions';
 import Icon from 'react-native-vector-icons/AntDesign';
 import img from '../../../assets/profileicon.png';
-import ads from '../../utils/Ads/triggerAds';
+import ads from '../../utils/AdsV2/triggerAds';
 
 const Profile = props => {
   const {
@@ -27,12 +24,19 @@ const Profile = props => {
     savedApps,
     setAppDataProps,
     user,
-    incrementAd,
     isLoggedIn,
     getApps,
   } = props;
 
   useEffect(() => getApps(), [getApps]);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      ads.requestInterstitial();
+
+      return () => {};
+    }, []),
+  );
 
   const handleNavigate = item => {
     setAppDataProps(item);
@@ -42,7 +46,7 @@ const Profile = props => {
   const handleClick = () => {
     navigation.navigate('Settings');
     if (!isLoggedIn) {
-      ads.showAds(incrementAd);
+      ads.showInterstitial();
     }
   };
 
@@ -190,11 +194,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   setAppDataProps: bindActionCreators(setCurrentAppData, dispatch),
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
   getApps: bindActionCreators(getSavedApps, dispatch),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

@@ -4,9 +4,10 @@ import {bindActionCreators} from 'redux';
 import {View, Text, StyleSheet} from 'react-native';
 import {Picker} from '@react-native-community/picker';
 import {Button} from 'react-native-elements';
+import {useFocusEffect} from '@react-navigation/native';
 
-import ads from '../../utils/Ads/triggerAds';
-import {setLanguage, incrementAdCounter} from '../../redux/actions';
+import ads from '../../utils/AdsV2/triggerAds';
+import {setLanguage} from '../../redux/actions';
 import colors from '../../utils/colors';
 
 const SELECT_LANGUAGE = 'SELECT LANGUAGE';
@@ -18,11 +19,19 @@ export const LANG = {
   },
 };
 
-const Languge = ({changeLanguage, incrementAd}) => {
+const Languge = ({changeLanguage}) => {
   const [selectedValue, setSelectedValue] = useState(LANG.EN.value);
 
+  useFocusEffect(
+    React.useCallback(() => {
+      ads.requestInterstitial();
+
+      return () => {};
+    }, []),
+  );
+
   const handleClick = () => {
-    ads.showAds(incrementAd);
+    ads.showInterstitial();
     changeLanguage();
   };
 
@@ -89,10 +98,6 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => ({
   changeLanguage: bindActionCreators(setLanguage, dispatch),
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(Languge);
+export default connect(null, mapDispatchToProps)(Languge);

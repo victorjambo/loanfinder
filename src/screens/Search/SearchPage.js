@@ -3,27 +3,25 @@ import {View} from 'react-native';
 import {SearchBar} from 'react-native-elements';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import {useFocusEffect} from '@react-navigation/native';
 
 import {idxSearch, countrySearch} from '../../utils/searchQuery';
 import CountriesContainer from './CountriesContainer';
-import ads from '../../utils/Ads/triggerAds';
-import {
-  setSearchResults,
-  showSpinner,
-  hideSpinner,
-  incrementAdCounter,
-} from '../../redux/actions';
+import ads from '../../utils/AdsV2/triggerAds';
+import {setSearchResults, showSpinner, hideSpinner} from '../../redux/actions';
 
 const INITIAL = '';
 
-const Search = ({
-  navigation,
-  searchResults,
-  showSpin,
-  hideSpin,
-  incrementAd,
-}) => {
+const Search = ({navigation, searchResults, showSpin, hideSpin}) => {
   const [search, setSearch] = useState(INITIAL);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      ads.requestInterstitial();
+
+      return () => {};
+    }, []),
+  );
 
   const handleSearch = () => {
     if (search) {
@@ -33,7 +31,7 @@ const Search = ({
       navigation.navigate('Search Results', {search});
       hideSpin();
       setSearch(INITIAL);
-      ads.showAds(incrementAd);
+      ads.showInterstitial();
     }
   };
 
@@ -43,7 +41,7 @@ const Search = ({
     searchResults(res);
     navigation.navigate('Search Results', {search: country});
     hideSpin();
-    ads.showAds(incrementAd);
+    ads.showInterstitial();
   };
 
   return (
@@ -68,10 +66,6 @@ const mapDispatchToProps = dispatch => ({
   searchResults: bindActionCreators(setSearchResults, dispatch),
   showSpin: bindActionCreators(showSpinner, dispatch),
   hideSpin: bindActionCreators(hideSpinner, dispatch),
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(Search);
+export default connect(null, mapDispatchToProps)(Search);

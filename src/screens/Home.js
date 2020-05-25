@@ -1,13 +1,23 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {View, Text, FlatList, StyleSheet} from 'react-native';
+import {useFocusEffect} from '@react-navigation/native';
 
 import colors from '../utils/colors';
 import SingleAppItem from './Apps/SingleAppItem';
 import ChangeLocation from './PostAuth/ChangeLocation';
+import ads from '../utils/AdsV2/triggerAds';
 
 const Home = ({navigation, apps, location}) => {
   const data = apps.filter(app => app.country.includes(location));
+
+  useFocusEffect(
+    React.useCallback(() => {
+      ads.requestInterstitial();
+
+      return () => {};
+    }, []),
+  );
 
   if (!data.length) {
     return <ChangeLocation location={location} />;

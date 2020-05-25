@@ -1,14 +1,23 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import {useFocusEffect} from '@react-navigation/native';
 
-import {setLocation, incrementAdCounter} from '../../redux/actions';
+import {setLocation} from '../../redux/actions';
 import CountriesContainer from '../Search/CountriesContainer';
-import ads from '../../utils/Ads/triggerAds';
+import ads from '../../utils/AdsV2/triggerAds';
 
-const Location = ({changeLocation, incrementAd}) => {
+const Location = ({changeLocation}) => {
+  useFocusEffect(
+    React.useCallback(() => {
+      ads.requestInterstitial();
+
+      return () => {};
+    }, []),
+  );
+
   const handleClick = country => {
-    ads.showAds(incrementAd);
+    ads.showInterstitial();
     changeLocation(country);
   };
 
@@ -22,10 +31,6 @@ const Location = ({changeLocation, incrementAd}) => {
 
 const mapDispatchToProps = dispatch => ({
   changeLocation: bindActionCreators(setLocation, dispatch),
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(Location);
+export default connect(null, mapDispatchToProps)(Location);

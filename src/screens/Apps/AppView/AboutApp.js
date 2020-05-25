@@ -1,20 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {TouchableOpacity, Text, View} from 'react-native';
 
 import styles from '../styles';
-import ads from '../../../utils/Ads/triggerAds';
-import {incrementAdCounter} from '../../../redux/actions';
+import ads from '../../../utils/AdsV2/triggerAds';
 
-const AboutApp = ({navigation, currentAppData, incrementAd}) => {
+const AboutApp = ({navigation, currentAppData}) => {
   return (
     <TouchableOpacity
       style={styles.row}
       onPress={() => {
         navigation.navigate('About this app');
-        ads.showAds(incrementAd);
+        ads.showInterstitial();
       }}>
       <View>
         <Text style={styles.aboutAppTitle}>About this app</Text>
@@ -31,11 +29,4 @@ const mapStateToProps = state => ({
   currentAppData: state.appState.currentAppData,
 });
 
-const mapDispatchToProps = dispatch => ({
-  incrementAd: bindActionCreators(incrementAdCounter, dispatch),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(AboutApp);
+export default connect(mapStateToProps)(AboutApp);
