@@ -7,27 +7,30 @@ import {showSpinner, hideSpinner} from '../../redux/actions';
 export class Ads {
   showInterstitial = () => {
     AdMobInterstitial.showAd()
-      .then(() => logInfo('showAd'))
+      .then(() => logInfo(INFO.AD.SHOW.INTERSTITIAL))
       .catch(error => {
-        logError(ERROR.AD.SHOW.INTERSTITIAL, error);
         if (error.toString().includes('Ad is not ready')) {
-          logInfo('Ad is not ready');
           store.dispatch(showSpinner());
           AdMobInterstitial.requestAd()
             .then(() => {
+              logInfo(INFO.AD.AD_WAS_NOT_READY);
               store.dispatch(hideSpinner());
               AdMobInterstitial.showAd();
             })
             .catch(err => {
-              logError(err);
+              logError(ERROR.AD.AD_WAS_NOT_READY + '_' + err.code, err);
               store.dispatch(hideSpinner());
             });
+        } else {
+          logInfo('EXTERNAL_ERROR_' + error.code);
         }
       });
   };
 
   requestInterstitial = async () =>
-    await AdMobInterstitial.requestAd().catch(err => logInfo('requestIN', err));
+    await AdMobInterstitial.requestAd().catch(err =>
+      logError(ERROR.AD.FAIL_TO_REQUEST_INTERSTITIAL, err),
+    );
 }
 
 const ads = new Ads();
