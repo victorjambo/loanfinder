@@ -101,12 +101,6 @@ export const ERROR = {
   },
 };
 export const WARN = {
-  LOCALSTORAGE: {
-    GET_ITEM: {
-      SAVE_APP: 'WARN_LOCALSTORAGE_GET_ITEM_SAVE_APP_NO_DATA',
-      AUTH: 'WARN_LOCALSTORAGE_GET_ITEM_AUTH_NO_DATA',
-    },
-  },
   NODATA: {
     HOME: 'WARN_HOME_NO_APPS_IN_CURRENT_LOCATION',
   },
