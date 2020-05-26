@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {CheckBox, Text, Button} from 'react-native-elements';
 import {View, Linking, StyleSheet, TouchableOpacity} from 'react-native';
-import {useFocusEffect} from '@react-navigation/native';
 
 import {setTerms} from '../../redux/actions';
 import colors from '../../utils/colors';
@@ -13,14 +12,6 @@ const privacyPolicy = 'https://sites.google.com/view/mutaidev-policy/home';
 
 const Terms = ({changeTerms}) => {
   const [check, setCheck] = useState(false);
-
-  useFocusEffect(
-    React.useCallback(() => {
-      ads.requestInterstitial();
-
-      return () => {};
-    }, []),
-  );
 
   const handleClick = e => {
     ads.showInterstitial();

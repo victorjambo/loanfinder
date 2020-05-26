@@ -3,7 +3,6 @@ import {View} from 'react-native';
 import {SearchBar} from 'react-native-elements';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {useFocusEffect} from '@react-navigation/native';
 
 import {idxSearch, countrySearch} from '../../utils/searchQuery';
 import CountriesContainer from './CountriesContainer';
@@ -14,14 +13,6 @@ const INITIAL = '';
 
 const Search = ({navigation, searchResults, showSpin, hideSpin}) => {
   const [search, setSearch] = useState(INITIAL);
-
-  useFocusEffect(
-    React.useCallback(() => {
-      ads.requestInterstitial();
-
-      return () => {};
-    }, []),
-  );
 
   const handleSearch = () => {
     if (search) {

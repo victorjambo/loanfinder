@@ -10,7 +10,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Image as IconImage, Header, Text} from 'react-native-elements';
-import {useFocusEffect} from '@react-navigation/native';
 
 import colors from '../../utils/colors';
 import {setCurrentAppData, getSavedApps} from '../../redux/actions';
@@ -29,14 +28,6 @@ const Profile = props => {
   } = props;
 
   useEffect(() => getApps(), [getApps]);
-
-  useFocusEffect(
-    React.useCallback(() => {
-      ads.requestInterstitial();
-
-      return () => {};
-    }, []),
-  );
 
   const handleNavigate = item => {
     setAppDataProps(item);

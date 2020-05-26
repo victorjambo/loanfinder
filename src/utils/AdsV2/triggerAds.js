@@ -6,30 +6,40 @@ import {showSpinner, hideSpinner} from '../../redux/actions';
 
 export class Ads {
   showInterstitial = () => {
+    AdMobInterstitial.showAd().catch(showAdError => {
+      if (showAdError.code === 'E_AD_NOT_READY') {
+        store.dispatch(showSpinner());
+        AdMobInterstitial.requestAd()
+          .then(() => {
+            this.showAd();
+            store.dispatch(hideSpinner());
+            logInfo(INFO.AD.AD_WAS_NOT_READY);
+          })
+          .catch(requestAdError => {
+            if (requestAdError.code === 'E_AD_ALREADY_LOADED') {
+              this.showAd();
+            } else {
+              logError(
+                ERROR.AD.AD_WAS_NOT_READY + '_' + requestAdError.code,
+                requestAdError,
+              );
+            }
+            store.dispatch(hideSpinner());
+          });
+      } else {
+        logInfo('GENERICL_ERROR_' + showAdError.code);
+      }
+    });
+  };
+
+  showAd = () => {
     AdMobInterstitial.showAd()
-      .then(() => logInfo(INFO.AD.SHOW.INTERSTITIAL))
-      .catch(error => {
-        if (error.toString().includes('Ad is not ready')) {
-          store.dispatch(showSpinner());
-          AdMobInterstitial.requestAd()
-            .then(() => {
-              logInfo(INFO.AD.AD_WAS_NOT_READY);
-              store.dispatch(hideSpinner());
-              AdMobInterstitial.showAd();
-            })
-            .catch(err => {
-              if (err.code === 'E_AD_ALREADY_LOADED') {
-                AdMobInterstitial.showAd().catch(e =>
-                  logError(ERROR.AD.AD_WAS_NOT_READY + '_' + e.code, e),
-                );
-              } else {
-                logError(ERROR.AD.AD_WAS_NOT_READY + '_' + err.code, err);
-              }
-              store.dispatch(hideSpinner());
-            });
-        } else {
-          logInfo('EXTERNAL_ERROR_' + error.code);
-        }
+      .then(() => {
+        store.dispatch(hideSpinner());
+      })
+      .catch(showAdError2 => {
+        logError(ERROR.AD.AD_WAS_NOT_READY, showAdError2);
+        store.dispatch(hideSpinner());
       });
   };
 
@@ -42,28 +52,3 @@ export class Ads {
 const ads = new Ads();
 
 export default ads;
-
-// requestAndShowInterstitial = () => {
-//   const state = store.getState();
-
-//   store.dispatch(showSpinner());
-
-//   AdMobInterstitial.requestAd()
-//     .then(() => {
-//       store.dispatch(hideSpinner());
-//       this.showInterstitial();
-//     })
-//     .catch(error => {
-//       this.handleError(error);
-//     });
-// };
-
-// handleError = error => {
-//   if (error.toString().includes('Ad is already loaded')) {
-//     logInfo('Ad is already loaded');
-//     this.showInterstitial();
-//   } else {
-//     logError('errorRequestingAd', error);
-//   }
-//   store.dispatch(hideSpinner());
-// };

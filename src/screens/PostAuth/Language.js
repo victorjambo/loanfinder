@@ -4,7 +4,6 @@ import {bindActionCreators} from 'redux';
 import {View, Text, StyleSheet} from 'react-native';
 import {Picker} from '@react-native-community/picker';
 import {Button} from 'react-native-elements';
-import {useFocusEffect} from '@react-navigation/native';
 
 import ads from '../../utils/AdsV2/triggerAds';
 import {setLanguage} from '../../redux/actions';
@@ -21,14 +20,6 @@ export const LANG = {
 
 const Languge = ({changeLanguage}) => {
   const [selectedValue, setSelectedValue] = useState(LANG.EN.value);
-
-  useFocusEffect(
-    React.useCallback(() => {
-      ads.requestInterstitial();
-
-      return () => {};
-    }, []),
-  );
 
   const handleClick = () => {
     ads.showInterstitial();

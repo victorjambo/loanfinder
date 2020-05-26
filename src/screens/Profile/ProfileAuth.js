@@ -8,21 +8,12 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import colors from '../../utils/colors';
 import {skipAuth} from '../../redux/actions';
 import ads from '../../utils/AdsV2/triggerAds';
-import {useFocusEffect} from '@react-navigation/native';
 
 const featuresText = 'To discover all our features, please Sign up.';
 
 const {width} = Dimensions.get('window');
 
 const ProfileAuth = ({navigation, undoSkipAuth}) => {
-  useFocusEffect(
-    React.useCallback(() => {
-      ads.requestInterstitial();
-
-      return () => {};
-    }, []),
-  );
-
   const handleClick = () => {
     undoSkipAuth(false);
     ads.showInterstitial();

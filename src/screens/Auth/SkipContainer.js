@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {TouchableOpacity, Text} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import {useFocusEffect} from '@react-navigation/native';
 
 import styles from './styles';
 import colors from '../../utils/colors';
@@ -12,14 +11,6 @@ import {logInfo, INFO} from '../../utils/logger';
 import {skipAuth} from '../../redux/actions';
 
 const SkipContainer = ({skip}) => {
-  useFocusEffect(
-    React.useCallback(() => {
-      ads.requestInterstitial();
-
-      return () => {};
-    }, []),
-  );
-
   const handleClick = () => {
     ads.showInterstitial();
     skip();

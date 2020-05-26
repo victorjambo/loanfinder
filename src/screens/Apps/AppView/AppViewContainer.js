@@ -8,8 +8,6 @@ import GetAppButton from './GetAppButton';
 import HeaderContainer from './HeaderContainer';
 import StatusIcons from './StatusIcons';
 import AppBodyContainer from './AppBodyContainer';
-import {useFocusEffect} from '@react-navigation/native';
-import ads from '../../../utils/AdsV2/triggerAds';
 
 const AppViewContainer = ({navigation, currentAppData}) => {
   const {
@@ -23,14 +21,6 @@ const AppViewContainer = ({navigation, currentAppData}) => {
       image: {headerImage, icon},
     },
   } = currentAppData;
-
-  useFocusEffect(
-    React.useCallback(() => {
-      ads.requestInterstitial();
-
-      return () => {};
-    }, []),
-  );
 
   return (
     <View style={styles.container}>
