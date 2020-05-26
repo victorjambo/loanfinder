@@ -1,4 +1,5 @@
 import NetInfo from '@react-native-community/netinfo';
+import {logOut} from 'react-native-fbsdk/lib/module/FBLoginManager';
 
 import auth from '../utils/Auth';
 import {
@@ -19,6 +20,7 @@ import {
   HIDE_GENERIC_ERROR,
   SET_USER_DISPLAY_NAME,
   NETWORK,
+  AUTH_TYPE,
 } from './consts';
 import {INFO, ERROR, logError, logInfo} from '../utils/logger';
 import localStorage, {TABLES} from '../utils/localStorage';
@@ -39,6 +41,11 @@ export const hideSpinner = () => ({
  */
 export const authSuccess = () => ({
   type: AUTH_SUCCESS,
+});
+
+export const authType = payload => ({
+  type: AUTH_TYPE,
+  payload,
 });
 
 export const setGenericError = payload => ({type: SHOW_GENERIC_ERROR, payload});
@@ -63,6 +70,17 @@ export const getUserInfo = () => {
           if (payload) {
             dispatch(authSuccess());
             dispatch(setUserInfo(payload));
+          }
+        })
+        .catch(error => logError(ERROR.LOCALSTORAGE.GET_ITEM.AUTH, error));
+    }
+    if (getState().auth.authProvider === '') {
+      localStorage
+        .getItem(TABLES.AUTH_PROVIDER)
+        .then(payload => {
+          if (payload) {
+            dispatch(authSuccess());
+            dispatch(authType(payload));
           }
         })
         .catch(error => logError(ERROR.LOCALSTORAGE.GET_ITEM.AUTH, error));
@@ -110,6 +128,20 @@ export const loginRequest = (email, password) => {
   };
 };
 
+export const fbLoginSuccess = () => {
+  return dispatch => {
+    dispatch(authSuccess());
+    dispatch(authType('fb'));
+
+    localStorage.multiSetItem(
+      [TABLES.AUTH_PROVIDER, 'fb'],
+      [TABLES.ISLOGGEDIN, true],
+    );
+
+    logInfo('FB_LOGIN_SUCCESS');
+  };
+};
+
 /**
  * Register
  */
@@ -151,8 +183,25 @@ export const logoutSuccess = () => ({
   type: LOGOUT_SUCCESS,
 });
 
-export const logoutRequest = () => {
+export const fbLogout = () => {
   return dispatch => {
+    logOut();
+    dispatch(logoutSuccess());
+    dispatch(authType(''));
+    dispatch(skipAuth(false));
+    localStorage.clearAll();
+    logInfo('FB_LOGOUT');
+  };
+};
+
+export const logoutRequest = () => {
+  return (dispatch, getState) => {
+    const state = getState();
+
+    if (state.auth.authProvider === 'fb') {
+      return dispatch(fbLogout());
+    }
+
     try {
       auth
         .firebaseSignOut()

@@ -27,6 +27,7 @@ import {
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
 import validateInput from '../../utils/validator';
+import FB from './FB';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -165,6 +166,7 @@ const Auth = ({login, register, auth, hideGenError}) => {
                 title={form === LOGIN ? LOGIN : REGISTER}
                 onPress={handleSubmit}
               />
+              <FB />
               <TouchableOpacity
                 onPress={() => {
                   setForm(isRegister ? LOGIN : REGISTER);
