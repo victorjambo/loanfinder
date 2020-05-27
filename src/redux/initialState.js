@@ -7,7 +7,6 @@ export default {
   auth: {
     isLoggedIn: false,
     skipAuth: false,
-    authProvider: '',
     user: {
       displayName: null,
       email: '',

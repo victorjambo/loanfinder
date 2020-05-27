@@ -6,7 +6,6 @@ export const TABLES = {
   USER: 'USER',
   ISLOGGEDIN: 'ISLOGGEDIN',
   SAVED_APPS: 'SAVED_APPS',
-  AUTH_PROVIDER: 'AUTH_PROVIDER',
 };
 
 class LocalStorage {

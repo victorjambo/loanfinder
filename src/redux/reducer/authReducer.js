@@ -6,7 +6,6 @@ import {
   LOGOUT_SUCCESS,
   SKIP_AUTH,
   SET_USER_DISPLAY_NAME,
-  AUTH_TYPE,
 } from '../consts';
 import initialState from '../initialState';
 
@@ -16,11 +15,6 @@ const authReducer = (state = initialState.auth, action) => {
       return {
         ...state,
         isLoggedIn: true,
-      };
-    case AUTH_TYPE:
-      return {
-        ...state,
-        authProvider: action.payload,
       };
     case SET_USER_INFO:
       return {
