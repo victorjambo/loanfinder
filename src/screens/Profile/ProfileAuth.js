@@ -19,6 +19,11 @@ const ProfileAuth = ({navigation, undoSkipAuth}) => {
     ads.showInterstitial();
   };
 
+  const handleSettings = () => {
+    ads.showInterstitial();
+    navigation.navigate('Settings');
+  };
+
   return (
     <View style={styles.container}>
       <Header
@@ -27,7 +32,7 @@ const ProfileAuth = ({navigation, undoSkipAuth}) => {
             name="setting"
             color={colors.white}
             size={30}
-            onPress={() => navigation.navigate('Settings')}
+            onPress={handleSettings}
           />
         }
         containerStyle={styles.settingsIcon}
