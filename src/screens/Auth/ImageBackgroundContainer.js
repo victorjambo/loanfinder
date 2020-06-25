@@ -5,6 +5,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import styles from './styles';
 import img from '../../../assets/09.png';
+import ads from '../../utils/AdsV2/triggerAds';
 
 const REGISTER = 'REGISTER';
 const LOGIN = 'LOGIN';
@@ -27,6 +28,7 @@ const ImageBackgroundContainer = props => {
           <TouchableOpacity
             style={styles.imgBgBack}
             onPress={() => {
+              ads.showInterstitial();
               setForm(isRegister ? LOGIN : REGISTER);
               setErrMsg(INITIAL_ERROR);
               hideGenError();

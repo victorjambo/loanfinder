@@ -27,6 +27,7 @@ import {
 import ImageBackgroundContainer from './ImageBackgroundContainer';
 import SkipContainer from './SkipContainer';
 import validateInput from '../../utils/validator';
+import ads from '../../utils/AdsV2/triggerAds';
 
 const screenHeight = Dimensions.get('window').height;
 
@@ -167,6 +168,9 @@ const Auth = ({login, register, auth, hideGenError}) => {
               />
               <TouchableOpacity
                 onPress={() => {
+                  if (isRegister) {
+                    ads.showInterstitial();
+                  }
                   setForm(isRegister ? LOGIN : REGISTER);
                   setErrMsg(INITIAL_ERROR);
                   hideGenError();
