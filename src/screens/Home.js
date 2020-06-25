@@ -5,6 +5,7 @@ import {View, Text, FlatList, StyleSheet} from 'react-native';
 import colors from '../utils/colors';
 import SingleAppItem from './Apps/SingleAppItem';
 import ChangeLocation from './PostAuth/ChangeLocation';
+import {FLAGS} from './Search/CountriesContainer';
 
 const Home = ({navigation, apps, location}) => {
   const data = apps.filter(app => app.country.includes(location));
@@ -21,7 +22,9 @@ const Home = ({navigation, apps, location}) => {
         renderItem={({item}) => (
           <SingleAppItem item={item} navigation={navigation} />
         )}
-        ListHeaderComponent={() => <Text style={styles.header}>Top Apps</Text>}
+        ListHeaderComponent={() => (
+          <Text style={styles.header}>Top Apps in {FLAGS[location]}</Text>
+        )}
       />
     </View>
   );

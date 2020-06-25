@@ -4,7 +4,7 @@ import {View, Text, TouchableOpacity} from 'react-native';
 
 import styles from './styles';
 
-const FLAGS = {
+export const FLAGS = {
   KE: '🇰🇪',
   NG: '🇳🇬',
   US: '🇺🇸',
