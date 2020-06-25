@@ -2,6 +2,31 @@
 import requests
 import json
 
+new_apps_in = [
+    'com.indialends.android',
+    'com.nirafinance.customer',
+    'com.capitalfirst',
+    'com.earlysalary.android',
+    'in.rebase.app',
+    'com.afinoz',
+    'in.zestmoney.android.zestlife',
+    'in.epaylater.android.consumer',
+    'in.loantap.app',
+    'in.credy.borrowerapp.full',
+]
+
+new_apps_ng = [
+    'io.quickcheck.loans',
+    'com.loan.cash.credit.okash.nigeria',
+    'com.lenddo.mobile.paylater',
+    'com.xcredit.loan.nigeria',
+    'com.imoney.credit.nira',
+]
+new_apps_ke = [
+    'com.kopakash.mobile',
+    'com.pesazone.mobile',
+]
+
 app_ids = [
     'com.inventureaccess.safarirahisi', # KE
     'craftsilicon.barclays',
