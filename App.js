@@ -16,7 +16,7 @@ import OfflineNotice from './src/Components/OfflineNotice';
 const App = () => {
   return (
     <Provider store={store}>
-      <StatusBar barStyle="dark-content" backgroundColor={colors.primary} />
+      <StatusBar barStyle="light-content" backgroundColor={colors.primary} />
       <AdBanner />
       <OfflineNotice />
       <Navigator />
