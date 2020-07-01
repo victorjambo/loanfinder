@@ -87,46 +87,42 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
       <Stack.Screen
         name={ARTICLE.name}
         component={ARTICLE.component}
-        options={{
-          headerTintColor: 'black',
+        options={({route}) => ({
           headerStyle: {
-            backgroundColor: colors.white,
-            elevation: 0,
+            backgroundColor: colors.primary,
           },
-          title: '',
+          title: route.params.category,
           headerRight: () => {
             return (
               <Icon
                 name="sharealt"
                 size={24}
-                color={colors.black}
+                color={colors.white}
                 style={styles.icon2}
               />
             );
           },
-        }}
+        })}
       />
       <Stack.Screen
         name={ARTICLES.name}
         component={ARTICLES.component}
-        options={{
-          headerTintColor: 'black',
+        options={({route}) => ({
           headerStyle: {
-            backgroundColor: colors.white,
-            elevation: 0,
+            backgroundColor: colors.primary,
           },
-          title: '',
+          title: route.params.category,
           headerRight: () => {
             return (
               <Icon
                 name="search1"
                 size={24}
-                color={colors.black}
+                color={colors.white}
                 style={styles.icon2}
               />
             );
           },
-        }}
+        })}
       />
     </Stack.Navigator>
   );

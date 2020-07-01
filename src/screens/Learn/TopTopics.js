@@ -10,46 +10,51 @@ import {
 
 import colors from '../../utils/colors';
 
-const temp1 = {backgroundColor: '#f0b3c5'};
-const temp2 = {backgroundColor: '#c4e5d6'};
-const temp3 = {backgroundColor: '#d7f2fd'};
-const temp4 = {backgroundColor: '#ecd1fc'};
-
 const {width} = Dimensions.get('window');
 
-const TopTopics = ({navigation}) => {
-  const handleClick = () => {
-    navigation.navigate('Articles');
-  };
+const topics = [
+  {
+    id: 1,
+    title: 'Loans',
+    color: '#f0b3c5',
+    icon: 'API',
+  },
+  {
+    id: 2,
+    title: 'Savings',
+    color: '#c4e5d6',
+    icon: 'pay-circle-o1',
+  },
+  {
+    id: 3,
+    title: 'Business',
+    color: '#d7f2fd',
+    icon: 'woman',
+  },
+  {
+    id: 4,
+    title: 'General',
+    color: '#ecd1fc',
+    icon: 'shake',
+  },
+];
 
+const TopTopics = ({navigation}) => {
   return (
     <View style={styles.topSpacer}>
       <Text style={styles.sectionHeader}>Top topics</Text>
       <View style={styles.topics}>
-        <TouchableOpacity
-          style={[styles.boxer, styles.shadow, temp1]}
-          onPress={handleClick}>
-          <AntDesign name="aliwangwang-o1" size={40} color={colors.backDrop} />
-          <Text>Loans</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.boxer, styles.shadow, temp2]}
-          onPress={handleClick}>
-          <AntDesign name="pay-circle1" size={40} color={colors.backDrop} />
-          <Text>Savings</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.boxer, styles.shadow, temp3]}
-          onPress={handleClick}>
-          <AntDesign name="sound" size={40} color={colors.backDrop} />
-          <Text>Business</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.boxer, styles.shadow, temp4]}
-          onPress={handleClick}>
-          <AntDesign name="alipay-square" size={40} color={colors.backDrop} />
-          <Text>General</Text>
-        </TouchableOpacity>
+        {topics.map(item => (
+          <TouchableOpacity
+            key={item.id}
+            style={[styles.boxer, styles.shadow, {backgroundColor: item.color}]}
+            onPress={() =>
+              navigation.navigate('Articles', {category: item.title})
+            }>
+            <AntDesign name={item.icon} size={40} color={colors.backDrop} />
+            <Text>{item.title}</Text>
+          </TouchableOpacity>
+        ))}
       </View>
     </View>
   );
