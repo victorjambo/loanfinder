@@ -17,24 +17,36 @@ const temp4 = {backgroundColor: '#ecd1fc'};
 
 const {width} = Dimensions.get('window');
 
-const TopTopics = () => {
+const TopTopics = ({navigation}) => {
+  const handleClick = () => {
+    navigation.navigate('Articles');
+  };
+
   return (
     <View style={styles.topSpacer}>
       <Text style={styles.sectionHeader}>Top topics</Text>
       <View style={styles.topics}>
-        <TouchableOpacity style={[styles.boxer, styles.shadow, temp1]}>
+        <TouchableOpacity
+          style={[styles.boxer, styles.shadow, temp1]}
+          onPress={handleClick}>
           <AntDesign name="aliwangwang-o1" size={40} color={colors.backDrop} />
           <Text>Loans</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.boxer, styles.shadow, temp2]}>
+        <TouchableOpacity
+          style={[styles.boxer, styles.shadow, temp2]}
+          onPress={handleClick}>
           <AntDesign name="pay-circle1" size={40} color={colors.backDrop} />
           <Text>Savings</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.boxer, styles.shadow, temp3]}>
+        <TouchableOpacity
+          style={[styles.boxer, styles.shadow, temp3]}
+          onPress={handleClick}>
           <AntDesign name="sound" size={40} color={colors.backDrop} />
           <Text>Business</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.boxer, styles.shadow, temp4]}>
+        <TouchableOpacity
+          style={[styles.boxer, styles.shadow, temp4]}
+          onPress={handleClick}>
           <AntDesign name="alipay-square" size={40} color={colors.backDrop} />
           <Text>General</Text>
         </TouchableOpacity>

@@ -12,6 +12,8 @@ import {
   SEARCH_RESULTS,
   SETTINGS,
   FAQS,
+  ARTICLE,
+  ARTICLES,
 } from './routes';
 import colors from '../utils/colors';
 import {saveApp} from '../redux/actions';
@@ -82,6 +84,50 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
           },
         }}
       />
+      <Stack.Screen
+        name={ARTICLE.name}
+        component={ARTICLE.component}
+        options={{
+          headerTintColor: 'black',
+          headerStyle: {
+            backgroundColor: colors.white,
+            elevation: 0,
+          },
+          title: '',
+          headerRight: () => {
+            return (
+              <Icon
+                name="sharealt"
+                size={24}
+                color={colors.black}
+                style={styles.icon2}
+              />
+            );
+          },
+        }}
+      />
+      <Stack.Screen
+        name={ARTICLES.name}
+        component={ARTICLES.component}
+        options={{
+          headerTintColor: 'black',
+          headerStyle: {
+            backgroundColor: colors.white,
+            elevation: 0,
+          },
+          title: '',
+          headerRight: () => {
+            return (
+              <Icon
+                name="search1"
+                size={24}
+                color={colors.black}
+                style={styles.icon2}
+              />
+            );
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 };
@@ -89,6 +135,9 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
 const styles = StyleSheet.create({
   icon: {
     marginRight: 10,
+  },
+  icon2: {
+    marginRight: 20,
   },
 });
 

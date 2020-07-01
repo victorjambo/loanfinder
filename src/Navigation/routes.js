@@ -12,6 +12,8 @@ import Language from '../screens/PostAuth/Language';
 import ProfileAuth from '../screens/Profile/ProfileAuth';
 import Settings from '../screens/Settings/Settings';
 import FAQ from '../screens/Learn/FAQ';
+import Article from '../screens/Learn/Blog/Article';
+import Articles from '../screens/Learn/Blog/Articles';
 
 export const BOTTOM_TAB = {
   name: 'Bottom Tab',
@@ -81,4 +83,14 @@ export const SETTINGS = {
 export const FAQS = {
   name: 'FAQS',
   component: FAQ,
+};
+
+export const ARTICLE = {
+  name: 'Article',
+  component: Article,
+};
+
+export const ARTICLES = {
+  name: 'Articles',
+  component: Articles,
 };

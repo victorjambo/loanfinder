@@ -17,8 +17,8 @@ const Learn = ({navigation}) => {
       </View>
 
       <View style={styles.body}>
-        <RecentArticles />
-        <TopTopics />
+        <RecentArticles navigation={navigation} />
+        <TopTopics navigation={navigation} />
 
         <TouchableOpacity
           style={[styles.faqContainer, styles.shadow, styles.row]}

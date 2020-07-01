@@ -19,7 +19,11 @@ const temp4 = {backgroundColor: '#fabec0'};
 
 const {width} = Dimensions.get('window');
 
-const RecentArticles = () => {
+const RecentArticles = ({navigation}) => {
+  const handleClick = () => {
+    navigation.navigate('Article');
+  };
+
   return (
     <View style={styles.topSpacer}>
       <Text style={styles.sectionHeader}>Recent articles</Text>
@@ -29,7 +33,7 @@ const RecentArticles = () => {
         scrollEventThrottle={200}
         decelerationRate="fast"
         pagingEnabled>
-        <TouchableOpacity style={[styles.boxer, temp1]}>
+        <TouchableOpacity style={[styles.boxer, temp1]} onPress={handleClick}>
           <View style={{flex: 4}}>
             <Text style={styles.title}>5 tips to reopen your business</Text>
             <Text style={styles.subTitle}>Loans</Text>
@@ -44,7 +48,7 @@ const RecentArticles = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.boxer, temp2]}>
+        <TouchableOpacity style={[styles.boxer, temp2]} onPress={handleClick}>
           <View style={{flex: 4}}>
             <Text style={styles.title}>How to adapt your business</Text>
             <Text style={styles.subTitle}>Business</Text>
@@ -59,7 +63,7 @@ const RecentArticles = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.boxer, temp3]}>
+        <TouchableOpacity style={[styles.boxer, temp3]} onPress={handleClick}>
           <View style={{flex: 4}}>
             <Text style={styles.title}>4 tips to get money</Text>
             <Text style={styles.subTitle}>Business</Text>
@@ -74,7 +78,7 @@ const RecentArticles = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.boxer, temp4]}>
+        <TouchableOpacity style={[styles.boxer, temp4]} onPress={handleClick}>
           <View style={{flex: 4}}>
             <Text style={styles.title}>5 tips to get money</Text>
             <Text style={styles.subTitle}>Business</Text>
