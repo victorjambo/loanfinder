@@ -1,10 +1,23 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const Article = () => {
+const Article = ({navigation, route}) => {
+  const {params} = route;
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+    if (!params) {
+      return navigation.goBack();
+    } else {
+      setItem(params.item);
+    }
+  }, [params]);
+
   return (
     <View style={styles.container}>
-      <Text>Article</Text>
+      <Text>{item.title}</Text>
+      <Text>{item.desc}</Text>
     </View>
   );
 };
