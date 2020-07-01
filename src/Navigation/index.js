@@ -13,6 +13,7 @@ import PrivateScreens from './PrivateScreens';
 import PostAuth from './PostAuth';
 import {getUserInfo} from '../redux/actions';
 import {ADMOB_PROD_IDS, ADMOB_TEST_IDS} from '../redux/consts';
+import {OverlaySpinnerContainer} from '../Components/OverlaySpinner';
 
 let admob = Object.assign({}, ADMOB_PROD_IDS);
 
@@ -32,10 +33,19 @@ const Screens = ({appState}) => {
 const Navigator = props => {
   const {
     auth,
-    fetch,
+    fetch, // TODO what is this
     getAuth,
     appState: {location, isTermsAccepted, isLanguageSet},
   } = props;
+
+  const linking = {
+    prefixes: ['loaner://'],
+    config: {
+      screens: {
+        Articles: 'Article/:id',
+      },
+    },
+  };
 
   useEffect(() => {
     // Auth
@@ -55,7 +65,9 @@ const Navigator = props => {
   }, [fetch, getAuth]);
 
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      linking={linking}
+      fallback={<OverlaySpinnerContainer />}>
       {auth.isLoggedIn || auth.skipAuth ? (
         <Screens appState={{location, isTermsAccepted, isLanguageSet}} />
       ) : (
@@ -74,7 +86,4 @@ const mapDispatchToProps = dispatch => ({
   getAuth: bindActionCreators(getUserInfo, dispatch),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Navigator);
+export default connect(mapStateToProps, mapDispatchToProps)(Navigator);
