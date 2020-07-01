@@ -76,8 +76,10 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
         name={FAQS.name}
         component={FAQS.component}
         options={{
-          title: FAQS.name,
-          headerTintColor: 'black',
+          title: 'FAQs',
+          headerStyle: {
+            backgroundColor: colors.primary,
+          },
         }}
       />
     </Stack.Navigator>
