@@ -9,6 +9,7 @@ import ProfileAuth from '../screens/Profile/ProfileAuth';
 import Profile from '../screens/Profile/Profile';
 import Search from '../screens/Search/SearchPage';
 import Home from '../screens/Home';
+import Learn from '../screens/Learn';
 
 const PROFILE_AUTH = {
   name: 'ProfileAuth',
@@ -30,6 +31,11 @@ export const HOME = {
   component: Home,
 };
 
+export const LEARN = {
+  name: 'Learn',
+  component: Learn,
+};
+
 const Tab = createBottomTabNavigator();
 
 const BottomTab = ({isLoggedIn}) => {
@@ -47,6 +53,9 @@ const BottomTab = ({isLoggedIn}) => {
               break;
             case SEARCH.name:
               iconName = 'search1';
+              break;
+            case LEARN.name:
+              iconName = 'profile';
               break;
             default:
               break;
@@ -70,6 +79,7 @@ const BottomTab = ({isLoggedIn}) => {
       }}>
       <Tab.Screen name={HOME.name} component={HOME.component} />
       <Tab.Screen name={SEARCH.name} component={SEARCH.component} />
+      <Tab.Screen name={LEARN.name} component={LEARN.component} />
       <Tab.Screen
         name={PROFILE.name}
         component={isLoggedIn ? PROFILE.component : PROFILE_AUTH.component}

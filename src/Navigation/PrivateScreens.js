@@ -11,6 +11,7 @@ import {
   ABOUT_APP_FULL_DESC,
   SEARCH_RESULTS,
   SETTINGS,
+  FAQS,
 } from './routes';
 import colors from '../utils/colors';
 import {saveApp} from '../redux/actions';
@@ -71,6 +72,14 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
           headerTintColor: 'black',
         }}
       />
+      <Stack.Screen
+        name={FAQS.name}
+        component={FAQS.component}
+        options={{
+          title: FAQS.name,
+          headerTintColor: 'black',
+        }}
+      />
     </Stack.Navigator>
   );
 };
@@ -90,7 +99,4 @@ const mapDispatchToProps = dispatch => ({
   saveCurrentApp: bindActionCreators(saveApp, dispatch),
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(PrivateScreens);
+export default connect(mapStateToProps, mapDispatchToProps)(PrivateScreens);
