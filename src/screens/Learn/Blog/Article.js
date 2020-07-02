@@ -1,12 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {CommonActions} from '@react-navigation/native';
 
 import {articles} from '../../../utils/blog';
 
 const Article = ({navigation, route}) => {
-  const {params, name} = route;
+  const {params} = route;
   const [item, setItem] = useState({});
 
   useEffect(() => {
@@ -14,24 +13,13 @@ const Article = ({navigation, route}) => {
       return navigation.navigate('Bottom Tab');
     } else {
       const article = articles.find(i => i.id === params.id);
-      if (!article && name === 'learn') {
-        return navigation.navigate('Onboarding');
+      if (!article) {
+        return navigation.goBack();
       } else {
         setItem(article);
       }
     }
-
-    if (name === 'learn') {
-      navigation.dispatch(state => {
-        const routes = [{name: 'Onboarding'}, ...state.routes];
-        return CommonActions.reset({
-          ...state,
-          routes,
-          index: routes.length - 1,
-        });
-      });
-    }
-  }, [params, name]);
+  }, [params]);
 
   return (
     <View style={styles.container}>

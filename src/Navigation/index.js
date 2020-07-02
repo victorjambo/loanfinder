@@ -1,6 +1,3 @@
-/**
- * 1. check connnection and set the notification thing
- */
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
@@ -13,7 +10,6 @@ import PrivateScreens from './PrivateScreens';
 import PostAuth from './PostAuth';
 import {getUserInfo} from '../redux/actions';
 import {ADMOB_PROD_IDS, ADMOB_TEST_IDS} from '../redux/consts';
-import {OverlaySpinnerContainer} from '../Components/OverlaySpinner';
 
 let admob = Object.assign({}, ADMOB_PROD_IDS);
 
@@ -33,19 +29,9 @@ const Screens = ({appState}) => {
 const Navigator = props => {
   const {
     auth,
-    fetch, // TODO what is this
     getAuth,
     appState: {location, isTermsAccepted, isLanguageSet},
   } = props;
-
-  const linking = {
-    prefixes: ['loaner://'],
-    config: {
-      screens: {
-        Article: 'learn/:id',
-      },
-    },
-  };
 
   useEffect(() => {
     // Auth
@@ -62,12 +48,10 @@ const Navigator = props => {
       .catch(() => {
         RNBootSplash.hide({duration: 250});
       });
-  }, [fetch, getAuth]);
+  }, [getAuth]);
 
   return (
-    <NavigationContainer
-      linking={linking}
-      fallback={<OverlaySpinnerContainer />}>
+    <NavigationContainer>
       {auth.isLoggedIn || auth.skipAuth ? (
         <Screens appState={{location, isTermsAccepted, isLanguageSet}} />
       ) : (
