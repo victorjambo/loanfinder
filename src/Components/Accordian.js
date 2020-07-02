@@ -31,19 +31,25 @@ class Accordian extends Component {
         <TouchableOpacity
           ref={this.accordian}
           style={styles.row}
-          onPress={() => this.toggleExpand()}>
-          <Text style={styles.title}>{this.props.title}</Text>
-          <Icon
-            name={
-              this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'
-            }
-            size={30}
-            color={colors.primary}
-          />
+          onPress={this.toggleExpand}>
+          <View style={styles.leftContainer}>
+            <Text style={styles.title}>{this.props.title}</Text>
+          </View>
+          <View style={styles.rightContainer}>
+            <Icon
+              name={
+                this.state.expanded
+                  ? 'keyboard-arrow-up'
+                  : 'keyboard-arrow-down'
+              }
+              size={30}
+              color={colors.primary}
+            />
+          </View>
         </TouchableOpacity>
         {this.state.expanded && (
           <View style={styles.child}>
-            <Text>{this.props.data}</Text>
+            <Text style={styles.description}>{this.props.data}</Text>
           </View>
         )}
       </View>
@@ -58,22 +64,39 @@ class Accordian extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderColor: colors.lightgrey,
+    borderTopWidth: 0.5,
+    borderBottomWidth: 0.5,
+    borderColor: colors.primary,
   },
   title: {
-    fontSize: 19, // TODO font family
-    fontWeight: 'bold',
+    fontSize: 25,
+    fontWeight: '700',
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 25,
-    alignItems: 'flex-end',
+    alignItems: 'center',
+    padding: 15,
+  },
+  leftContainer: {
+    flex: 1,
+    justifyContent: 'flex-start',
+  },
+  rightContainer: {
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
   child: {
-    padding: 25,
+    marginTop: -25,
+    marginBottom: 10,
+  },
+  description: {
+    margin: 15,
+    marginTop: 20,
+    textAlign: 'justify',
+    lineHeight: 30,
+    color: colors.textGrey,
+    fontSize: 18,
   },
 });
 

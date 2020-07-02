@@ -158,3 +158,36 @@ export const recentArticles = [
     category: 'General',
   },
 ];
+
+export const faqs = [
+  {
+    id: '1',
+    title: 'How can I pay?',
+    desc: lorem,
+  },
+  {
+    id: '2',
+    title: 'What is Talas Paybill number?',
+    desc: lorem,
+  },
+  {
+    id: '3',
+    title: 'What is my loan balance?',
+    desc: lorem,
+  },
+  {
+    id: '4',
+    title: 'What happens if I pay early or late?',
+    desc: lorem,
+  },
+  {
+    id: '5',
+    title: 'Who is authorized to contact me regarding past due payments?',
+    desc: lorem,
+  },
+  {
+    id: '6',
+    title: 'Why isnt my payment reflected on my account?',
+    desc: lorem,
+  },
+];

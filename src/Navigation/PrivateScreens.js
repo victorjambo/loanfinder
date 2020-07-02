@@ -88,9 +88,7 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
         component={FAQS.component}
         options={{
           title: 'FAQs',
-          headerStyle: {
-            backgroundColor: colors.primary,
-          },
+          headerTransparent: true,
         }}
       />
       <Stack.Screen
@@ -118,16 +116,17 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
         options={({route}) => ({
           headerTransparent: true,
           title: route.params.category,
-          headerRight: () => {
-            return (
-              <Icon
-                name="search1"
-                size={24}
-                color={colors.white}
-                style={styles.icon2}
-              />
-            );
-          },
+          // headerRight: () => {
+          //   // TODO handle this in the next version
+          //   return (
+          //     <Icon
+          //       name="search1"
+          //       size={24}
+          //       color={colors.white}
+          //       style={styles.icon2}
+          //     />
+          //   );
+          // },
         })}
       />
     </Stack.Navigator>
