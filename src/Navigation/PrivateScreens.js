@@ -97,10 +97,8 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
         name={ARTICLE.name}
         component={ARTICLE.component}
         options={({route}) => ({
-          headerStyle: {
-            backgroundColor: colors.primary,
-          },
-          title: 'Article', // TODO
+          title: '',
+          headerTransparent: true,
           headerRight: () => {
             return (
               <Icon
