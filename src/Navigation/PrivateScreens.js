@@ -91,7 +91,7 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
           headerStyle: {
             backgroundColor: colors.primary,
           },
-          title: route.params.category,
+          title: 'Article', // TODO
           headerRight: () => {
             return (
               <Icon
