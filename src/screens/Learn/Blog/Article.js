@@ -46,7 +46,7 @@ const Article = ({navigation, route}) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: colors.white,
     height: '100%',
   },
   solid: {
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     textAlign: 'justify',
     lineHeight: 30,
-    color: '#A0A0A0',
+    color: colors.textGrey,
     fontSize: 18,
   },
 });

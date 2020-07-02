@@ -11,6 +11,7 @@ const colors = {
   lightgrey: '#d3d3d3',
   magenta: '#EC2E53',
   red: '#DF4840',
+  textGrey: '#A0A0A0',
 };
 
 export default colors;
