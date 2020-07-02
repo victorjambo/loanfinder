@@ -3,12 +3,14 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import {View, Text, StyleSheet, TouchableOpacity, Share} from 'react-native';
 
 import colors from '../../../utils/colors';
+import ads from '../../../utils/AdsV2/triggerAds';
 
 const appStoreUrl =
   'http://play.google.com/store/apps/details?id=com.mutaidev.loanfinder';
 
 const SingleArticleItem = ({navigation, item}) => {
   const handleClick = () => {
+    // ads.showInterstitial(); // TODO ADS
     navigation.navigate('Article', {
       id: item.id,
     });
@@ -61,6 +63,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     fontWeight: '700',
+    color: colors.backDrop,
   },
   row: {
     flexDirection: 'row',

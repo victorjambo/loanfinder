@@ -12,11 +12,13 @@ import {
 
 import colors from '../../utils/colors';
 import {recentArticles} from '../../utils/blog';
+import ads from '../../utils/AdsV2/triggerAds';
 
 const {width} = Dimensions.get('window');
 
 const RecentArticles = ({navigation}) => {
   const handleClick = id => {
+    // ads.showInterstitial(); // TODO ADS
     navigation.navigate('Article', {id});
   };
 

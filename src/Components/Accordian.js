@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     fontWeight: '700',
+    color: colors.backDrop,
   },
   row: {
     flexDirection: 'row',

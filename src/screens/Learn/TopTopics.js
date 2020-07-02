@@ -1,5 +1,5 @@
 import React from 'react';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import AntDesign from 'react-native-vector-icons/AntDesign'; // TODO need relatable icons
 import {
   View,
   Text,
@@ -10,23 +10,31 @@ import {
 
 import colors from '../../utils/colors';
 import {topics} from '../../utils/blog';
+import ads from '../../utils/AdsV2/triggerAds';
 
 const {width} = Dimensions.get('window');
 
 const TopTopics = ({navigation}) => {
+  const handleClick = category => {
+    // ads.showInterstitial(); // TODO ADS
+    navigation.navigate('Articles', {category});
+  };
+
   return (
     <View style={styles.topSpacer}>
       <Text style={styles.sectionHeader}>Top topics</Text>
       <View style={styles.topics}>
-        {topics.map(item => (
+        {topics.map(topic => (
           <TouchableOpacity
-            key={item.id}
-            style={[styles.boxer, styles.shadow, {backgroundColor: item.color}]}
-            onPress={() =>
-              navigation.navigate('Articles', {category: item.title})
-            }>
-            <AntDesign name={item.icon} size={40} color={colors.backDrop} />
-            <Text>{item.title}</Text>
+            key={topic.id}
+            style={[
+              styles.boxer,
+              styles.shadow,
+              {backgroundColor: topic.color},
+            ]}
+            onPress={() => handleClick(topic.title)}>
+            <AntDesign name={topic.icon} size={40} color={colors.backDrop} />
+            <Text>{topic.title}</Text>
           </TouchableOpacity>
         ))}
       </View>

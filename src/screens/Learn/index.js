@@ -5,8 +5,14 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import colors from '../../utils/colors';
 import RecentArticles from './RecentArticles';
 import TopTopics from './TopTopics';
+import ads from '../../utils/AdsV2/triggerAds';
 
 const Learn = ({navigation}) => {
+  const handleClick = () => {
+    // ads.showInterstitial(); // TODO ADS
+    navigation.navigate('FAQS');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.hero}>
@@ -22,7 +28,7 @@ const Learn = ({navigation}) => {
 
         <TouchableOpacity
           style={[styles.faqContainer, styles.shadow, styles.row]}
-          onPress={() => navigation.navigate('FAQS')}>
+          onPress={handleClick}>
           <Text style={styles.faqText}>FAQs</Text>
           <FontAwesome
             name="chevron-right"
