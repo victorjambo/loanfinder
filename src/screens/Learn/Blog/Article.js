@@ -1,13 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, Dimensions, ScrollView} from 'react-native';
+import {View, StyleSheet, ScrollView} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Text} from 'react-native-elements';
 
 import {articles} from '../../../utils/blog';
 import colors from '../../../utils/colors';
-
-const {width} = Dimensions.get('window');
 
 const Article = ({navigation, route}) => {
   const {params} = route;
@@ -51,7 +49,7 @@ const styles = StyleSheet.create({
   },
   solid: {
     height: 120,
-    width: width,
+    width: '100%',
   },
   dashes: {
     flexDirection: 'row',
