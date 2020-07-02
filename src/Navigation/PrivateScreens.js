@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Share} from 'react-native';
 import {bindActionCreators} from 'redux';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -20,6 +20,9 @@ import {saveApp} from '../redux/actions';
 
 const Stack = createStackNavigator();
 
+const appStoreUrl =
+  'http://play.google.com/store/apps/details?id=com.mutaidev.loanfinder';
+
 const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
   const saveIcon = {
     headerRight: () => {
@@ -35,6 +38,12 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
         );
       }
     },
+  };
+
+  const handleShare = () => {
+    Share.share({
+      message: `Hi, Try this amazing app \n ${appStoreUrl}`,
+    });
   };
 
   return (
@@ -99,6 +108,7 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
                 size={24}
                 color={colors.white}
                 style={styles.icon2}
+                onPress={handleShare}
               />
             );
           },
