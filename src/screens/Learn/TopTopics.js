@@ -9,35 +9,9 @@ import {
 } from 'react-native';
 
 import colors from '../../utils/colors';
+import {topics} from '../../utils/blog';
 
 const {width} = Dimensions.get('window');
-
-const topics = [
-  {
-    id: 1,
-    title: 'Loans',
-    color: '#f0b3c5',
-    icon: 'API',
-  },
-  {
-    id: 2,
-    title: 'Savings',
-    color: '#c4e5d6',
-    icon: 'pay-circle-o1',
-  },
-  {
-    id: 3,
-    title: 'Business',
-    color: '#d7f2fd',
-    icon: 'woman',
-  },
-  {
-    id: 4,
-    title: 'General',
-    color: '#ecd1fc',
-    icon: 'shake',
-  },
-];
 
 const TopTopics = ({navigation}) => {
   return (

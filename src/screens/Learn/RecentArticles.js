@@ -11,11 +11,7 @@ import {
 } from 'react-native';
 
 import colors from '../../utils/colors';
-
-const temp1 = {backgroundColor: '#fef4ca'};
-const temp2 = {backgroundColor: '#d5e5f5'};
-const temp3 = {backgroundColor: '#dcbdf8'};
-const temp4 = {backgroundColor: '#fabec0'};
+import {recentArticles} from '../../utils/blog';
 
 const {width} = Dimensions.get('window');
 
@@ -33,65 +29,25 @@ const RecentArticles = ({navigation}) => {
         scrollEventThrottle={200}
         decelerationRate="fast"
         pagingEnabled>
-        <TouchableOpacity style={[styles.boxer, temp1]} onPress={handleClick}>
-          <View style={{flex: 4}}>
-            <Text style={styles.title}>5 tips to reopen your business</Text>
-            <Text style={styles.subTitle}>Loans</Text>
-          </View>
-          <View style={styles.readmore}>
-            <Text>Read more </Text>
-            <FontAwesome
-              name="chevron-right"
-              size={10}
-              color={colors.primaryText}
-            />
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={[styles.boxer, temp2]} onPress={handleClick}>
-          <View style={{flex: 4}}>
-            <Text style={styles.title}>How to adapt your business</Text>
-            <Text style={styles.subTitle}>Business</Text>
-          </View>
-          <View style={styles.readmore}>
-            <Text>Read more </Text>
-            <FontAwesome
-              name="chevron-right"
-              size={10}
-              color={colors.primaryText}
-            />
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={[styles.boxer, temp3]} onPress={handleClick}>
-          <View style={{flex: 4}}>
-            <Text style={styles.title}>4 tips to get money</Text>
-            <Text style={styles.subTitle}>Business</Text>
-          </View>
-          <View style={styles.readmore}>
-            <Text>Read more </Text>
-            <FontAwesome
-              name="chevron-right"
-              size={10}
-              color={colors.primaryText}
-            />
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={[styles.boxer, temp4]} onPress={handleClick}>
-          <View style={{flex: 4}}>
-            <Text style={styles.title}>5 tips to get money</Text>
-            <Text style={styles.subTitle}>Business</Text>
-          </View>
-          <View style={styles.readmore}>
-            <Text>Read more </Text>
-            <FontAwesome
-              name="chevron-right"
-              size={10}
-              color={colors.primaryText}
-            />
-          </View>
-        </TouchableOpacity>
+        {recentArticles.map(item => (
+          <TouchableOpacity
+            key={item.id}
+            style={[styles.boxer, {backgroundColor: item.color}]}
+            onPress={handleClick}>
+            <View style={{flex: 4}}>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.subTitle}>{item.category}</Text>
+            </View>
+            <View style={styles.readmore}>
+              <Text>Read more </Text>
+              <FontAwesome
+                name="chevron-right"
+                size={10}
+                color={colors.primaryText}
+              />
+            </View>
+          </TouchableOpacity>
+        ))}
       </ScrollView>
     </View>
   );
