@@ -96,7 +96,7 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
       <Stack.Screen
         name={ARTICLE.name}
         component={ARTICLE.component}
-        options={({route}) => ({
+        options={{
           title: '',
           headerTransparent: true,
           headerRight: () => {
@@ -110,15 +110,13 @@ const PrivateScreens = ({isCurrentAppSaved, saveCurrentApp, isLoggedIn}) => {
               />
             );
           },
-        })}
+        }}
       />
       <Stack.Screen
         name={ARTICLES.name}
         component={ARTICLES.component}
         options={({route}) => ({
-          headerStyle: {
-            backgroundColor: colors.primary,
-          },
+          headerTransparent: true,
           title: route.params.category,
           headerRight: () => {
             return (

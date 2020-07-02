@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, ScrollView} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import colors from '../../../utils/colors';
 import SingleArticleItem from './SingleArticleItem';
@@ -28,11 +29,21 @@ const Articles = ({navigation, route}) => {
   }
 
   return (
-    <ScrollView style={styles.container}>
-      {_articles.map(item => (
-        <SingleArticleItem key={item.id} item={item} navigation={navigation} />
-      ))}
-    </ScrollView>
+    <>
+      <LinearGradient
+        style={styles.solid}
+        colors={[colors.primary, colors.white]}
+      />
+      <ScrollView style={styles.container}>
+        {_articles.map(item => (
+          <SingleArticleItem
+            key={item.id}
+            item={item}
+            navigation={navigation}
+          />
+        ))}
+      </ScrollView>
+    </>
   );
 };
 
@@ -41,6 +52,10 @@ const styles = StyleSheet.create({
     flex: 1,
     height: '100%',
     backgroundColor: colors.white,
+  },
+  solid: {
+    height: 80,
+    width: '100%',
   },
 });
 

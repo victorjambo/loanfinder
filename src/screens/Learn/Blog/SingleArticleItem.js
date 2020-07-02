@@ -1,13 +1,22 @@
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity, Share} from 'react-native';
 
 import colors from '../../../utils/colors';
+
+const appStoreUrl =
+  'http://play.google.com/store/apps/details?id=com.mutaidev.loanfinder';
 
 const SingleArticleItem = ({navigation, item}) => {
   const handleClick = () => {
     navigation.navigate('Article', {
       id: item.id,
+    });
+  };
+
+  const handleShare = () => {
+    Share.share({
+      message: `Hi, Try this amazing app \n ${appStoreUrl}`,
     });
   };
 
@@ -25,6 +34,7 @@ const SingleArticleItem = ({navigation, item}) => {
               size={27}
               color={colors.primary}
               style={styles.ico}
+              onPress={handleShare}
             />
             <AntDesign
               name="arrowright"
@@ -45,11 +55,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     backgroundColor: colors.white,
     borderWidth: 0.5,
-    borderColor: colors.grey,
+    borderColor: colors.primary,
+    borderRadius: 20,
   },
   title: {
     fontSize: 25,
-    fontWeight: '800',
+    fontWeight: '700',
   },
   row: {
     flexDirection: 'row',
