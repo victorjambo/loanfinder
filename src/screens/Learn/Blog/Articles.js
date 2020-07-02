@@ -30,12 +30,7 @@ const Articles = ({navigation, route}) => {
   return (
     <ScrollView style={styles.container}>
       {_articles.map(item => (
-        <SingleArticleItem
-          key={item.id}
-          item={item}
-          navigation={navigation}
-          category={route.params}
-        />
+        <SingleArticleItem key={item.id} item={item} navigation={navigation} />
       ))}
     </ScrollView>
   );

@@ -42,7 +42,7 @@ const Navigator = props => {
     prefixes: ['loaner://'],
     config: {
       screens: {
-        Articles: 'Article/:id',
+        Article: 'learn/:id',
       },
     },
   };

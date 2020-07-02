@@ -16,8 +16,8 @@ import {recentArticles} from '../../utils/blog';
 const {width} = Dimensions.get('window');
 
 const RecentArticles = ({navigation}) => {
-  const handleClick = () => {
-    navigation.navigate('Article');
+  const handleClick = id => {
+    navigation.navigate('Article', {id});
   };
 
   return (
@@ -33,7 +33,7 @@ const RecentArticles = ({navigation}) => {
           <TouchableOpacity
             key={item.id}
             style={[styles.boxer, {backgroundColor: item.color}]}
-            onPress={handleClick}>
+            onPress={() => handleClick(item.id)}>
             <View style={{flex: 4}}>
               <Text style={styles.title}>{item.title}</Text>
               <Text style={styles.subTitle}>{item.category}</Text>

@@ -4,12 +4,10 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 import colors from '../../../utils/colors';
 
-const SingleArticleItem = ({navigation, item, category}) => {
+const SingleArticleItem = ({navigation, item}) => {
   const handleClick = () => {
     navigation.navigate('Article', {
-      id: item.id, // TODO this will determine which item to show
-      item,
-      category: category.category ? category.category : '',
+      id: item.id,
     });
   };
 

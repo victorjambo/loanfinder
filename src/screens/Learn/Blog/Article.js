@@ -1,18 +1,37 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {CommonActions} from '@react-navigation/native';
+
+import {articles} from '../../../utils/blog';
 
 const Article = ({navigation, route}) => {
-  const {params} = route;
+  const {params, name} = route;
   const [item, setItem] = useState({});
 
   useEffect(() => {
     if (!params) {
-      return navigation.goBack();
+      return navigation.navigate('Bottom Tab');
     } else {
-      setItem(params.item);
+      const article = articles.find(i => i.id === params.id);
+      if (!article && name === 'learn') {
+        return navigation.navigate('Onboarding');
+      } else {
+        setItem(article);
+      }
     }
-  }, [params]);
+
+    if (name === 'learn') {
+      navigation.dispatch(state => {
+        const routes = [{name: 'Onboarding'}, ...state.routes];
+        return CommonActions.reset({
+          ...state,
+          routes,
+          index: routes.length - 1,
+        });
+      });
+    }
+  }, [params, name]);
 
   return (
     <View style={styles.container}>
